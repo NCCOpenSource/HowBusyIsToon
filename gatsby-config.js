@@ -36,7 +36,7 @@ if (!spaceId || !accessToken) {
 
 module.exports = {
   siteMetadata: {
-    title: "Gatsby Contentful starter",
+    title: "How Busy Is...",
   },
   pathPrefix: "/gatsby-contentful-starter",
   plugins: [
@@ -44,9 +44,39 @@ module.exports = {
     "gatsby-transformer-sharp",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sharp",
+    `gatsby-plugin-image`,
+    `gatsby-transformer-sharp`,
     {
       resolve: "gatsby-source-contentful",
       options: contentfulConfig,
     },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "images",
+        path: "./src/images/",
+      },
+      __key: "images",
+    },
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /assets/
+        },
+      },
+    },
+    // following for calling fetch on 
+    // {
+    //   resolve: `gatsby-source-graphql`,
+    //   options: {
+    //     typeName: `GitHub`,
+    //     fieldName: `github`,
+    //     url: `https://api.github.com/graphql`,
+    //     headers: {
+    //       Authorization: `Bearer ${process.env.GATSBY_GITHUB_TOKEN}`,
+    //     },
+    //   },
+    // },
   ],
 };

@@ -1,0 +1,15 @@
+.globalHeader {
+    position: relative;
+    padding: 4rem 0;
+    background: #FFFFFF;
+  }
+  
+  .outer {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  
+  .inner {
+    max-width: 120.8rem;
+    margin: 0 auto;
+  }

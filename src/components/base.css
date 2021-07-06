@@ -6,12 +6,35 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: "Europa-Bold";
+  font-style: normal;
+  font-weight: 700;
+  line-height: 36px;
+  letter-spacing: 0em;
+  src: url("../fonts/Europa\ Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: 'Lato';
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 29px;
+  letter-spacing: 0em;
+  text-align: center;
+  
+  src: url("https://fonts.googleapis.com/css2?family=Lato&display=swap") format("woff2");
+}
+
 body {
-  font-family: "Avenir", Tahoma, Arial, Helvetica, sans-serif;
-  font-size: 1em;
-  line-height: 1.65;
-  color: #373F49;
-  background: #eee;
+  font-family: "Europa-Bold";
+  font-size: 16px;
+  font-style: normal;
+  line-height: 16px;
+  letter-spacing: 0em;
+  color: #333333;
+  background: rgb(255, 255, 255);
   margin: 0;
 }
 
@@ -67,6 +90,7 @@ a {
   list-style: none;
 }
 
-  .list-inline li {
-    display: inline-block;
-  }
+.list-inline li {
+  display: inline-block;
+  
+}

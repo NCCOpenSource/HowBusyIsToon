@@ -1,0 +1,47 @@
+.logoContainer {
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+}
+
+.logoList {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.logoItem {
+}
+.bottom {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-evenly;
+  /* change when enojicon comes in so links are right */
+  align-items: center;
+  
+  height: 66px;  
+  /* delete when emojicon is implimented */
+
+
+  padding: 0 23px 0 23px;
+
+}
+.emojiconContainer {
+  width: 66%;
+}
+
+
+.linkList{
+  width: 100%;
+  text-align: right;
+
+
+}
+.linkListItem{
+
+text-decoration: none;
+font-size: 18px;
+line-height: 18px;
+/* identical to box height */
+padding-left: 41px;
+
+}
