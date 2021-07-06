@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./navigation.module.css";
-import Dropdown from "./micro/dropdown";
+import Dropdown from "./atom/dropdown";
 import Icon from "../assets/icons/icon_location.svg";
 
 export default function Nav() {

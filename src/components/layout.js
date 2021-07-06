@@ -4,7 +4,7 @@ import Container from "./container";
 import Navigation from "./navigation";
 import styles from "./layout.module.css";
 import Footer from "./footer";
-import Callout from "./micro/callout";
+import Callout from "./atom/callout";
 
 class Template extends React.Component {
   render() {

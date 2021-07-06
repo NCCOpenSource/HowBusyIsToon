@@ -30,6 +30,8 @@
 
 .location {
   font-family: "Europa-Bold";
+  font-family: europa, sans-serif;
+
   font-style: normal;
   font-weight: bold;
   font-size: 18px;
