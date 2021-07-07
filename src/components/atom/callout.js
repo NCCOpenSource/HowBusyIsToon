@@ -14,14 +14,14 @@ export default function Callout() {
   //   fetch(
   //     `https://nccfootfallparking.blob.core.windows.net/api-data/latest_city_state.json`
   //   )
-  //     .then((response) => organsieData(response)) // parse JSON from request
+  //     .then((response) => setData(response)) // parse JSON from request
   //     .catch((error) => {
   //       console.log(error);
   //     });
   // }, []);
 
   
-  function organsieData(data) {
+  function setData(data) {
     console.log(data);
     //set states with logic below
 

@@ -17,10 +17,15 @@
 
 .top {
   /* grid-area: 'header'; */
-  grid-area: header;
+  grid-area: 'header';
 }
 .middle {
   grid-area: content;
+  display: grid;
+  /* grid-gap: 10px; */
+  grid-template-columns: 1fr 1fr;
+
+
 }
 
 .trafficFeed {

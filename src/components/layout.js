@@ -5,33 +5,34 @@ import Navigation from "./molecule/navigation";
 import styles from "./layout.module.css";
 import Footer from "./footer";
 import Callout from "./atom/callout";
-import useViewport from "./hooks/useViewport";
-// import TwitterFeed from './atom/twitterFeed'
-
+// import useViewport from "./hooks/useViewport";
+import TwitterFeed from "./atom/twitterFeed";
+import CarParksData from "./atom/carParksData";
+import GetFeedImage from "./atom/GetFeedImage";
+import WazeMap from "./atom/WazeMap";
 export default function Template(props) {
   const { children } = props;
 
   const NavLinkItems = [
     {
       title: "City Center",
-      subTitles: ["the Roads", "shops and resturants"],
-      slugs: ["roads", "shopping"],
+
+      subInfo: [
+        { subTitles: "the Roads", slug: "road" },
+        { subTitles: "Resturants", slug: "restaurant" },
+        { subTitles: "Shopping", slug: "shopping" },
+      ],
     },
     {
-      title: "Driving",
-      subTitles: ["the Roads", "shops and resturants"],
-      slugs: ["roads", "shopping"],
-    },
-    {
-      title: "Public Transport",
-      subTitles: ["Public Transport", "shops and resturants"],
-      slugs: ["roads", "shopping"],
+      title: "City Center2",
+
+      subInfo: [
+        { subTitles: "the Roads", slug: "road" },
+        { subTitles: "Resturants", slug: "restaurant" },
+        { subTitles: "Shopping", slug: "shopping" },
+      ],
     },
   ];
-  console.log(
-    "🚀 ~ file: layout.js ~ line 26 ~ Template ~ NavLinkItems",
-    NavLinkItems
-  );
 
   return (
     <Container>
@@ -39,9 +40,12 @@ export default function Template(props) {
         <Navigation navLinks={NavLinkItems} />
       </div>
       <div className={styles.middle}>
-        <Callout />
-        {/* <TwitterFeed className={styles.TrafficFeed}/> */}
-        {/* {children} */}
+        {/* <Callout /> */}
+        {/* <TwitterFeed /> */}
+        {/* <WazeMap /> */}
+        {/* <CarParksData/> */}
+        {/* <GetFeedImage /> */}
+        {children}
       </div>
       <div className={styles.bottom}>
         <Footer />

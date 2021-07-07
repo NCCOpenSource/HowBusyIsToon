@@ -1,21 +1,5 @@
-work out Font/font sources 
-
-get access to api's to start incorportating
-- callout , callout logic ( what degrees of busyness?)
-- 
-
-replace logos in footer 
-
-create links in overlay in the same way as dropdown, same data
-
-Twitter feed ? 
-- react twitter npm
-- twitter embed/iframe
-- twitter Gatsby
 
 fully responsive design 
-- css grid?
-- flex?
 - create responsive based on the old site 
 
 emojicons 
@@ -38,7 +22,6 @@ gitlab , russel
  - Logos? jpeg 
 
  responsive grid css website 
-
  meta data fixed 
  headers editable 
  alter content outgoing links 
@@ -48,3 +31,9 @@ manage articles
  navigation fixed 
  nuke links in footer 
  manage links 
+
+
+
+
+ // leftoff finish off css for camerafeed.module 
+ 

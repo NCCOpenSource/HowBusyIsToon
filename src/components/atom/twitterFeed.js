@@ -1,27 +1,17 @@
 import React from "react";
-import { graphql } from "gatsby";
+import styles from "./twitterFeed";
+import { TwitterTimelineEmbed } from "react-twitter-embed";
 
-
-const TwitterFeed = (data) => {
-  console.log("🚀 ~ file: twitterFeed.js ~ line 6 ~ twitterFeed ~ data", data);
-  console.log("🚀 ~ file: twitterFeed.js ~ line 6 ~ twitterFeed ~ data", data.twitterStatusesUserTimelineHackersTweets);
+const TwitterFeed = () => {
   return (
-    <div>
-      <p>{data.full_text}</p>
-      <h1>hello</h1>
-      <p>{data.lang}</p>
-      <p>{data}</p>
-      <p>{data.retweeted}</p>
+    <div className={styles.TrafficFeed}>
+      <TwitterTimelineEmbed
+        sourceType="profile"
+        screenName="My_Metro"
+        options={{ height: 400 }}
+      />
     </div>
   );
 };
-
-export const query = graphql`
-query MyQuery {
-  twitterSearchTweetsWesbos {
-    full_text
-  }
-}
-`;
 
 export default TwitterFeed;

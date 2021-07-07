@@ -18,8 +18,7 @@ export default function Nav(props) {
   const NavLinkItem = NavData.map((NavLinkItems) => (
     <Dropdown
       title={NavLinkItems.title}
-      subTitles={NavLinkItems.subTitles}
-      slug={NavLinkItems.slug}
+      subInfo={NavLinkItems.subInfo}
     ></Dropdown>
   ));
 
@@ -36,7 +35,7 @@ export default function Nav(props) {
           {show ? (
             <CloseIcon
               onClick={showNavOverlay}
-              className={styles.exitbutton}
+              className={styles.exit_button}
             ></CloseIcon>
           ) : (
             <BurgerIcon
@@ -44,7 +43,7 @@ export default function Nav(props) {
               className={styles.mobile_Burger_menu}
             ></BurgerIcon>
           )}
-          {show ? <NavMobileOverlay /> : <div />}
+          {show ? <NavMobileOverlay Links={props.navLinks} /> : <div />}
         </nav>
         {/* endMobileNav */}
       </div>
