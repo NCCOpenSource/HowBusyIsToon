@@ -1,15 +1,43 @@
-.globalHeader {
-    position: relative;
-    padding: 4rem 0;
-    background: #FFFFFF;
+/* container.js */
+
+.container {
+  margin: 24px 32px 24px 32px;
+  display: grid;
+  gap: 32px;
+
+  /* grid-template-columns: 1fr 3fr; */
+
+  grid-template-areas:
+    "header"
+    "content"
+    "footer";
+}
+
+/* layout.js */
+
+.top {
+  /* grid-area: 'header'; */
+  grid-area: header;
+}
+.middle {
+  grid-area: content;
+}
+
+.trafficFeed {
+  width: 100%;
+  height: 100%;
+}
+.bottom {
+  grid-area: "footer";
+}
+
+@media only screen and (max-width: 1025px) {
+  .desktopNavigation {
+    display: none;
   }
-  
-  .outer {
-    padding-left: 5%;
-    padding-right: 5%;
+}
+@media only screen and (min-width: 1025px) {
+  .mobileNavigation {
+    display: none;
   }
-  
-  .inner {
-    max-width: 120.8rem;
-    margin: 0 auto;
-  }
+}

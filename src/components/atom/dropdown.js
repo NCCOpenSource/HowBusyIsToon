@@ -3,7 +3,7 @@ import styles from './dropdown.module.css'
 export default function dropdown(props) {
     const subTitles = props.subTitles
     const listItems = subTitles.map((subTitles) =>
-  <a  className={styles.dropdownLink} href={'/' + subTitles}>{subTitles}</a>
+  <a  className={styles.dropdownLink} href={'/' + props.slug}>{subTitles}</a>
 );
     return (
         <div class={styles.dropdown}>

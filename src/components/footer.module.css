@@ -1,47 +1,57 @@
-.logoContainer {
+.top {
   background: rgba(0, 0, 0, 0.05);
+  border-radius: 8px 8px 0 0;
+  /* height: 80px; */
+
+  display: flex;
+  padding: 10px 24px 10px 24px;
+}
+
+.logoContainer {
+  background: rgba(160, 114, 114, 0.05);
   border-radius: 8px;
 }
 
 .logoList {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  flex-flow: wrap;
+
 }
 
 .logoItem {
+  margin: 10px;
 }
+
 .bottom {
   background: rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
+  border-radius: 0 0 8px 8px;
   display: flex;
   justify-content: space-evenly;
   /* change when enojicon comes in so links are right */
   align-items: center;
-  
-  height: 66px;  
+
+  height: 66px;
   /* delete when emojicon is implimented */
 
-
   padding: 0 23px 0 23px;
-
 }
 .emojiconContainer {
   width: 66%;
 }
+.emojicon{
+  display: flex;
+}
 
-
-.linkList{
+/* .linkList {
   width: 100%;
   text-align: right;
-
-
 }
-.linkListItem{
-
-text-decoration: none;
-font-size: 18px;
-line-height: 18px;
-/* identical to box height */
-padding-left: 41px;
-
-}
+.linkListItem {
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 18px;
+  padding-left: 41px;
+} */

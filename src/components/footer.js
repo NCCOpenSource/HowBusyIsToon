@@ -1,22 +1,8 @@
 import React, { useEffect } from "react";
 import { StaticImage } from "gatsby-plugin-image";
-import logo from "../images/logo.png";
 import styles from "./footer.module.css";
+import Emojicon from "./atom/emojicon";
 export default function Footer() {
-  useEffect(() => {
-    const script = document.createElement("script");
-
-    script.src = "https://use.typekit.net/foobar.js";
-    script.async = true;
-    script.emojicom_widget = { campaign: "laqwioA130yrS6JhyToJ" };
-    // window.emojicom_widget = { campaign: "laqwioA130yrS6JhyToJ" }
-    document.body.appendChild(script);
-
-    return () => {
-      document.body.removeChild(script);
-    };
-  }, []);
-
   return (
     <>
       <div>
@@ -56,11 +42,13 @@ export default function Footer() {
         </div>
       </div>
       <div className={styles.bottom}>
-        <div
-          className={styles.emojiconContainer}
-          id="emojicom-widget-inline"
-        ></div>
-        <ul className={styles.linkList}>
+        <div className={styles.emojiconContainer} id="emojicom-widget-inline">
+          <Emojicon
+            className={styles.emojicon}
+            campaignId="laqwioA130yrS6JhyToJ"
+          />
+        </div>
+        {/* <ul className={styles.linkList}>
           <a
             className={styles.linkListItem}
             target="_blank"
@@ -75,7 +63,7 @@ export default function Footer() {
           >
             Council Compliance >
           </a>
-        </ul>
+        </ul> */}
       </div>
     </>
   );

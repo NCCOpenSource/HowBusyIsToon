@@ -1,0 +1,77 @@
+.overlay {
+  position: fixed; /* Sit on top of the page content */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+
+  display: flex;
+  align-content: center;
+  justify-content: center;
+
+  background-color: rgb(255, 254, 254);
+  box-shadow: 0 10px 24px 0 rgba(0, 0, 0, 0.25);
+  /* transition: margin .5s; */
+  /* margin: 100vh 0 0 0; */
+  /* 
+  animation-name: slideon ;  
+  animation-duration: .5s;
+  animation-timing-function: linear; */
+}
+/* 
+@keyframes slideon {
+  from {
+    transform: translateY(100vh);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+@keyframes slideoff {
+  from {
+    transform: translateY(0%);
+  }
+  to {
+    transform: translateY(100vh);
+  }
+} */
+
+.exitbutton {
+  -webkit-appearance: button;
+  background-color: transparent;
+  border: 0;
+  /* background-image: url(../../assets/icons/icon_closeMenu.svg); */
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 4.8rem;
+  position: absolute;
+  right: 3rem;
+  top: 5rem;
+  width: 4.8rem;
+}
+
+.mobile__list {
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+  margin: auto;
+  height: 75%;
+  justify-content: space-evenly;
+  padding: 0;
+  /* margin-top: 15vh; */
+  /* padding-left: 5vw; */
+}
+
+.mobile_list_item {
+  color: #55aee4;
+  cursor: pointer;
+  font-family: europa, sans-serif;
+  font-size: 26px;
+  /* padding: 1vh; */
+  text-decoration: none;
+  /* white-space: nowrap; */
+}

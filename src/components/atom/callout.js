@@ -10,27 +10,17 @@ export default function Callout() {
   const [calloutSubText, setCalloutSubText] = useState("loading");
   const [calloutClass, setCalloutClass] = useState(true);
 
-  useEffect(() => {
-    fetch(
-      `https://nccfootfallparking.blob.core.windows.net/api-data/latest_city_state.json`
-    )
-      .then((response) => organsieData(response)) // parse JSON from request
-      .catch((error) => {
-        console.log(error);
-      });
-  }, []);
-
   // useEffect(() => {
-  //   fetc
-  //     .get(
-  //       "https://nccfootfallparking.blob.core.windows.net/api-data/latest_city_state.json"
-  //     )
-  //     .then((response) => organsieData(response))
+  //   fetch(
+  //     `https://nccfootfallparking.blob.core.windows.net/api-data/latest_city_state.json`
+  //   )
+  //     .then((response) => organsieData(response)) // parse JSON from request
   //     .catch((error) => {
   //       console.log(error);
   //     });
   // }, []);
 
+  
   function organsieData(data) {
     console.log(data);
     //set states with logic below

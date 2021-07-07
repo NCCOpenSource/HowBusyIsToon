@@ -1,5 +1,6 @@
-import React from 'react'
+import React from "react";
+import Styles from "./layout.module.css";
 
 export default ({ children }) => (
-  <div style={{margin: '24px 32px 24px 32px'}}>{children}</div>
-)
+  <div className={Styles.container}>{children}</div>
+);

@@ -6,3 +6,45 @@ get access to api's to start incorportating
 
 replace logos in footer 
 
+create links in overlay in the same way as dropdown, same data
+
+Twitter feed ? 
+- react twitter npm
+- twitter embed/iframe
+- twitter Gatsby
+
+fully responsive design 
+- css grid?
+- flex?
+- create responsive based on the old site 
+
+emojicons 
+- iframe based, not sure i can custom css
+
+ stand up 
+ - access to gitlab ( ssh key then username and password)
+gitlab , russel
+ - emojicon.io is working in gatsby (contacted the company) but styling is more complicated (extra hour or 2)
+ capaign nyumber transfer
+ - twitter feed ? embed/iframe? twitter-gatsby? 
+ - APi access towns Busyness ?
+ russell urban observatory (luke) 
+ carparks 
+ webcams 
+ driving data? 
+ - any another other API access codes?
+ - alex maps postcode to postcode? can i change? yes
+ - Fonts? typekit 
+ - Logos? jpeg 
+
+ responsive grid css website 
+
+ meta data fixed 
+ headers editable 
+ alter content outgoing links 
+
+manage articles 
+ change ordering of items 
+ navigation fixed 
+ nuke links in footer 
+ manage links 
