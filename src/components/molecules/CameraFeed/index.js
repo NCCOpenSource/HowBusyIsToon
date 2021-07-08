@@ -1,8 +1,8 @@
 import React from "react";
-import SelectDropdown from "../atom/filter";
+import SelectDropdown from "../index";
 import styles from "./CameraFeed.module.css";
-import TimeIcon from "../../assets/icons/time.svg";
-import GetFeedImage from "../atom/getFeedImage";
+import TimeIcon from "../../../assets/icons/time.svg";
+import GetFeedImage from "../../atoms";
 import { StaticImage } from "gatsby-plugin-image";
 
 export default function CameraFeed() {

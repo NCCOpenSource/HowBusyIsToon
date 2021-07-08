@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import styles from "./navigation.module.css";
-import Dropdown from "../atom/dropdown";
-import LocationIcon from "../../assets/icons/icon_location.svg";
-import BurgerIcon from "../../assets/icons/icon_mobileNavButton.svg";
-import CloseIcon from "../../assets/icons/icon_closeMenu.svg";
-import NavMobileOverlay from "../atom/navOverlay";
+import Dropdown from "../../atoms";
+import LocationIcon from "../../../assets/icons/icon_location.svg";
+import BurgerIcon from "../../../assets/icons/icon_mobileNavButton.svg";
+import CloseIcon from "../../../assets/icons/icon_closeMenu.svg";
+import NavMobileOverlay from "../../molecules";
 
 export default function Nav(props) {
   const [show, setShow] = useState(false);

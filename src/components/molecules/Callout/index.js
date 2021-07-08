@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styles from "./callout.module.css";
 // import Icon from "../../images/car.png";
-import Icon from "../../assets/icons/graphic_car.svg";
+import Icon from "../../../assets/icons/graphic_car.svg";
 import { graphql, useStaticQuery } from "gatsby";
 
 export default function Callout() {

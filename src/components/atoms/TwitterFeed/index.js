@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./twitterFeed";
+import styles from ".";
 import { TwitterTimelineEmbed } from "react-twitter-embed";
 
 const TwitterFeed = () => {

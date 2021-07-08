@@ -3,7 +3,7 @@
 // import { Map, TileLayer, Marker, Popup } from "react-leaflet";
 // // import './leafletmap.css'
 
-// export default function leafletmap() {
+// export default function LeafletMap() {
 //   const propTypes = {
 //     /** Latitude and Longitude of the map centre in an array, eg [51, -1] **/
 //     position: PropTypes.array,

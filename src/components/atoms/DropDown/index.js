@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./dropdown.module.css";
-export default function dropdown(props) {
+export default function DropDown(props) {
   const subInfo = props.subInfo;
 
   const listItems = subInfo.map((subInformation) => (

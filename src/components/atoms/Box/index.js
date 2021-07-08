@@ -51,14 +51,12 @@ export default function Box({
     display: flex;
     align-items: center;
     padding: 0 23px 0 23px;
-    // width: 100%;
     height: ${height};
     font-size: ${fontSize};
-    // font-size: 31px;
     ${finalColour};
     ${finalFontColor};
     ${radius};
-    font-weight: ${({ bold }) => (bold ? 'bold' : 'normal')};
+    font-weight: ${({ bold }) => (bold ? "bold" : "normal")};
   `;
   return <Container>{children}</Container>;
 }

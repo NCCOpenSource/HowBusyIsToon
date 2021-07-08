@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import styles from "./footer.module.css";
-import Emojicon from "./atom/emojicon";
+import Emojicon from "./molecules";
 export default function Footer() {
   return (
     <>

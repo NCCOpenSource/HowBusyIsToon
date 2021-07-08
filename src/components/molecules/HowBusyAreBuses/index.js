@@ -1,9 +1,9 @@
 import React from "react";
-import Box from "../atom/box";
+import Box from "../../atoms";
 // import GreyBox from "../atom/greybox";
-import styles from "./howBusyAreRoads.module.css";
+import styles from "./howBusyAreBuses.module.css";
 
-export default function HowBusyAreRoads() {
+export default function HowBusyAreBuses() {
   return (
     <div>
       <Box
@@ -15,7 +15,7 @@ export default function HowBusyAreRoads() {
         // classname={styles.top}
         fontSize={"31px"}
       >
-        <p classname={styles.topFont}>How Busy Are Roads?</p>
+        <p classname={styles.topFont}>How Busy Are Buses?</p>
       </Box>
       <Box
         fontColor="black"
@@ -27,8 +27,8 @@ export default function HowBusyAreRoads() {
         // classname={styles.top}
       >
         <p>
-          View live traffic updates of the busiest commuter routes in and out of
-          the city centre
+          View real time bus data on a map of the region to see exactly where
+          your next bus is
         </p>
       </Box>
     </div>
