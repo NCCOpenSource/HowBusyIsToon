@@ -46,6 +46,7 @@ module.exports = {
     "gatsby-plugin-sharp",
     `gatsby-plugin-image`,
     `gatsby-transformer-sharp`,
+    `gatsby-plugin-styled-components`,
     {
       resolve: "gatsby-source-contentful",
       options: contentfulConfig,
@@ -98,6 +99,7 @@ module.exports = {
         },
       },
     },
+
     // {
     //   resolve: "gatsby-plugin-react-leaflet",
     //   options: {

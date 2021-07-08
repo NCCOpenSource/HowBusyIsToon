@@ -12,7 +12,6 @@ export default function index() {
     <Layout>
       <Callout />
       <CameraFeed />
-      <HowBusyAreRoads />
     </Layout>
   );
 }
