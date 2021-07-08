@@ -5,6 +5,7 @@ import LocationIcon from "../../assets/icons/icon_location.svg";
 import BurgerIcon from "../../assets/icons/icon_mobileNavButton.svg";
 import CloseIcon from "../../assets/icons/icon_closeMenu.svg";
 import NavMobileOverlay from "../atom/navOverlay";
+import BlackBox from "../atom/blackBox";
 
 export default function Nav(props) {
   const [show, setShow] = useState(false);

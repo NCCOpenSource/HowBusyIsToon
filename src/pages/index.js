@@ -5,12 +5,14 @@ import GetFeedImage from "../components/atom/GetFeedImage";
 import TimeIcon from "../assets/icons/time.svg";
 import styles from "./index.module.css";
 import CameraFeed from "../components/molecule/CameraFeed";
+import HowBusyAreRoads from "../components/molecule/howBusyAreRoads";
 
 export default function index() {
   return (
     <Layout>
       <Callout />
       <CameraFeed />
+      <HowBusyAreRoads />
     </Layout>
   );
 }

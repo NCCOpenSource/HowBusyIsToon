@@ -8,11 +8,21 @@ export default function SelectDropdown(props) {
     setOption(event.target.value);
   }
   return (
-    <select name="option" onChange={handleChange}>
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-    </select>
+    <div className={styles.selectbox}>
+      <select className={styles.select} name="option" onChange={handleChange}>
+        <option className={styles.option} value="1">
+          1
+        </option>
+        <option className={styles.option} value="2">
+          2
+        </option>
+        <option className={styles.option} value="3">
+          3
+        </option>
+        <option className={styles.option} value="4">
+          4
+        </option>
+      </select>
+    </div>
   );
 }

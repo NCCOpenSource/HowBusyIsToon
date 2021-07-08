@@ -7,12 +7,12 @@ emojicons
 
  stand up 
  - access to gitlab ( ssh key then username and password)
-gitlab , russel
+gitlab , russel /////////////////////////////////////////// 
  - emojicon.io is working in gatsby (contacted the company) but styling is more complicated (extra hour or 2)
  capaign nyumber transfer
  - twitter feed ? embed/iframe? twitter-gatsby? 
  - APi access towns Busyness ?
- russell urban observatory (luke) 
+ russell urban observatory (luke) ////////////////////////////
  carparks 
  webcams 
  driving data? 
@@ -26,7 +26,14 @@ gitlab , russel
  headers editable 
  alter content outgoing links 
 
-manage articles 
+
+
+ russel /luke
+ APi access ?
+ Api new calls Webcam
+
+
+ manage articles 
  change ordering of items 
  navigation fixed 
  nuke links in footer 
@@ -37,3 +44,14 @@ manage articles
 
  // leftoff finish off css for camerafeed.module 
  
+
+content management 
+
+Luke -
+
+geolcation for maps location
+(postition of busses on a map)
+
+road closure data 
+
+16th friday show and tell

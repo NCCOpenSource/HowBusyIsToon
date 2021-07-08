@@ -10,6 +10,8 @@ import TwitterFeed from "./atom/twitterFeed";
 import CarParksData from "./atom/carParksData";
 import GetFeedImage from "./atom/GetFeedImage";
 import WazeMap from "./atom/WazeMap";
+
+import HowBusyAreRoads from "./molecule/howBusyAreRoads";
 export default function Template(props) {
   const { children } = props;
 
@@ -45,6 +47,7 @@ export default function Template(props) {
         {/* <WazeMap /> */}
         {/* <CarParksData/> */}
         {/* <GetFeedImage /> */}
+        <HowBusyAreRoads/>
         {children}
       </div>
       <div className={styles.bottom}>
