@@ -17,33 +17,27 @@
 .box {
   display: flex;
   padding: 32px;
-  margin: 32px;
+  /* margin: 32px; */
   height: 100%;
   font-size: auto;
-  background-color: #F8F8F8;
+  background-color: #f8f8f8;
   color: black;
   border-radius: 8px;
   font-weight: normal;
-}
-.box {
-  display: flex;
   flex-direction: column;
+  text-decoration: none;
 }
-.subHeading{
+.subHeading {
   display: flex;
   flex-direction: row;
   align-items: baseline;
   width: 100%;
   justify-content: space-between;
-
 }
 .subHeadingText {
   font-size: 25px;
-
 }
-.IconArrow{
-
-
+.IconArrow {
 }
 .bottomText {
   font-size: 20px;

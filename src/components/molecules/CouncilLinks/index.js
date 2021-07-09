@@ -2,6 +2,7 @@ import React from "react";
 import Box from "../../atoms/Box";
 import styles from "./CouncilLinks.module.css";
 import IconArrow from "../../../assets/icons/arrow.svg";
+import { Link } from "gatsby";
 
 export default function CouncilLinks() {
   return (
@@ -12,7 +13,8 @@ export default function CouncilLinks() {
         </p>
       </Box>
       <div className={styles.container}>
-        <div
+        <Link
+          href={"/"}
           className={styles.box}
           fontColor="black"
           fullBorderRadius="full"
@@ -28,9 +30,10 @@ export default function CouncilLinks() {
             for social distancing. Look for the arrows at on the floor and the
             barriers placed at shop entrances for customer queues
           </p>
-        </div>
+        </Link>
 
-        <div
+        <Link
+          href={"/"}
           className={styles.box}
           fontColor="black"
           fullBorderRadius="full"
@@ -46,9 +49,10 @@ export default function CouncilLinks() {
             for social distancing. Look for the arrows at on the floor and the
             barriers placed at shop entrances for customer queues
           </p>
-        </div>
+        </Link>
 
-        <div
+        <Link
+          href={"/"}
           className={styles.box}
           fontColor="black"
           fullBorderRadius="full"
@@ -64,7 +68,7 @@ export default function CouncilLinks() {
             for social distancing. Look for the arrows at on the floor and the
             barriers placed at shop entrances for customer queues
           </p>
-        </div>
+        </Link>
       </div>
     </div>
   );
