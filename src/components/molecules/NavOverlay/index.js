@@ -2,7 +2,7 @@ import React from "react";
 import stylesOverlay from "./navOverlay.module.css";
 import { Link } from "gatsby";
 
-export default function NavMobileOverlay(props) {
+export default function NavOverlay(props) {
   const subInfo = props.Links;
   const linkList = subInfo.map((subInformation) => {
     return (

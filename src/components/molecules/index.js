@@ -4,5 +4,6 @@ export { EmojicomWidget } from "./EmojicomWidget/index.js";
 export { Filter } from "./Filter/index.js";
 export { HowBusyAreBuses } from "./HowBusyAreBuses/index.js";
 export { HowBusyAreRoads } from "./HowBusyAreRoads/index.js";
-export { NavMobileOverlay } from "./NavOverlay/index.js";
+export { NavOverlay } from "./NavOverlay/index.js";
 export { NexusFeed } from "./NexusFeed/index.js";
+

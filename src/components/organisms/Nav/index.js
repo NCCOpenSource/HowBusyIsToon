@@ -4,7 +4,7 @@ import Dropdown from "../../atoms";
 import LocationIcon from "../../../assets/icons/icon_location.svg";
 import BurgerIcon from "../../../assets/icons/icon_mobileNavButton.svg";
 import CloseIcon from "../../../assets/icons/icon_closeMenu.svg";
-import NavMobileOverlay from "../../molecules";
+import NavOverlay from "../../molecules";
 
 export default function Nav(props) {
   const [show, setShow] = useState(false);
@@ -43,7 +43,7 @@ export default function Nav(props) {
               className={styles.mobile_Burger_menu}
             ></BurgerIcon>
           )}
-          {show ? <NavMobileOverlay Links={props.navLinks} /> : <div />}
+          {show ? <NavOverlay Links={props.navLinks} /> : <div />}
         </nav>
         {/* endMobileNav */}
       </div>

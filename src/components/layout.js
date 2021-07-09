@@ -3,7 +3,7 @@ import "./base.css";
 import Container from "./container";
 import Navigation from "./organisms";
 import styles from "./layout.module.css";
-import Footer from "./footer";
+import Footer from "./templates";
 
 export default function Template(props) {
   const { children } = props;
