@@ -51,7 +51,7 @@ export default function Box({
     display: flex;
     align-items: center;
     padding: 0 23px 0 23px;
-    height: ${height ? height: 'auto'};
+    height: ${height ? height: '100%'};
     font-size: ${fontSize? fontSize: 'auto'};
     ${finalColour};
     ${finalFontColor};

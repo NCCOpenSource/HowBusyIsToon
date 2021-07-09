@@ -1,0 +1,27 @@
+.container {
+  width: 100%;
+
+  grid-template-areas: none;
+  display: grid;
+  gap: 32px;
+
+  grid-template-columns: 33% auto auto;
+  grid-template-rows: auto auto 33%;
+  grid-template-areas:
+    "Callout CameraFeed CameraFeed "
+    "Callout CameraFeed CameraFeed "
+    "Callout HowBusyAreBuses HowBusyAreRoads ";
+}
+
+.Callout {
+  grid-area: Callout;
+}
+.CameraFeed {
+  grid-area: CameraFeed;
+}
+.HowBusyAreRoads {
+  grid-area: HowBusyAreRoads;
+}
+.HowBusyAreBuses {
+  grid-area: HowBusyAreBuses;
+}

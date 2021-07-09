@@ -19,7 +19,6 @@ export default function Callout() {
   //     });
   // }, []);
 
-  
   function setData(data) {
     console.log(data);
     //set states with logic below
@@ -43,14 +42,14 @@ export default function Callout() {
 
   return (
     <div className={calloutClass ? styles.calloutQuiet : styles.calloutBusy}>
-        <h1 className={styles.calloutText}>
-          The Roads are usually quiet at this time. you should be ok but check
-          the cameras to see if you should take an alternatve route.
-        </h1>
-        <div className={styles.calloutIconContainer}>
-          {/* <img className={styles.calloutIcon} src={Icon} /> */}
-          <Icon className={styles.calloutIcon} />
-          <div className={styles.calloutIconRoad}></div>
+      <h1 className={styles.calloutText}>
+        The Roads are usually quiet at this time. you should be ok but check the
+        cameras to see if you should take an alternatve route.
+      </h1>
+      <div className={styles.calloutIconContainer}>
+        {/* <img className={styles.calloutIcon} src={Icon} /> */}
+        <Icon className={styles.calloutIcon} />
+        <div className={styles.calloutIconRoad}></div>
       </div>
     </div>
   );

@@ -24,8 +24,10 @@ export default function CameraFeed() {
       <div className={styles.feed}>
         <StaticImage
           //   className={styles.Feed}
-            width={918}
-            height={615}
+            // width={918}
+            // height={615}
+            style={{ height: "100%", width: "100%" }}
+
           src="../../../images/placeholder.jpg"
         />
       </div>

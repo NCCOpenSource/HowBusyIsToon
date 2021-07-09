@@ -11,32 +11,32 @@ export default function Footer() {
         <div className={styles.top}>
           <ul className={styles.logoList}>
             <StaticImage
-              src="../images/logo.png"
+              src="../../../images/logo.png"
               height={50}
               className={styles.logoItem}
             ></StaticImage>
             <StaticImage
-              src="../images/logo2.png"
+              src="../../../images/logo2.png"
               height={50}
               className={styles.logoItem}
             ></StaticImage>
             <StaticImage
-              src="../images/logo3.png"
+              src="../../../images/logo3.png"
               height={50}
               className={styles.logoItem}
             ></StaticImage>
             <StaticImage
-              src="../images/logo4.png"
+              src="../../../images/logo4.png"
               height={50}
               className={styles.logoItem}
             ></StaticImage>
             <StaticImage
-              src="../images/logo5.png"
+              src="../../../images/logo5.png"
               height={50}
               className={styles.logoItem}
             ></StaticImage>
             <StaticImage
-              src="../images/logo1.png"
+              src="../../../images/logo1.png"
               height={50}
               className={styles.logoItem}
             ></StaticImage>

@@ -31,7 +31,7 @@ body {
   font-family: "Europa-Bold";
   font-size: 16px;
   font-style: normal;
-  line-height: 16px;
+  /* line-height: 16px; */
   letter-spacing: 0em;
   color: #333333;
   background: rgb(255, 255, 255);
