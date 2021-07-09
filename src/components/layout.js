@@ -32,11 +32,16 @@ export default function Layout(props) {
 
   return (
     <Container>
+      <div className={styles.container}></div>
+      
       <div className={styles.top}>
         <Nav navLinks={NavLinkItems} />
       </div>
     
       <div className={styles.middle}>{children}</div>
+
+
+
       <div className={styles.bottom}>
         <Footer />
       </div>

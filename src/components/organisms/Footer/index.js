@@ -6,7 +6,7 @@ import { BottomBox } from "../../atoms/Box/BottomBox";
 
 export default function Footer() {
   return (
-    <>
+    <div className={styles.Footer}>
       <div>
         <div className={styles.top}>
           <ul className={styles.logoList}>
@@ -68,6 +68,6 @@ export default function Footer() {
           </a>
         </ul> */}
       </div>
-    </>
+    </div>
   );
 }

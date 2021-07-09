@@ -5,6 +5,8 @@ import HowBusyAreBuses from "../../molecules/HowBusyAreBuses";
 import HowBusyAreRoads from "../../molecules/HowBusyAreRoads";
 import CameraFeed from "../../molecules/CameraFeed";
 import Callout from "../../molecules/Callout";
+import SectionExample from "../../molecules/SectionExample";
+import CouncilLinks from "../../molecules/CouncilLinks";
 
 export default function Home() {
   return (
@@ -20,6 +22,12 @@ export default function Home() {
       </div>
       <div className={styles.HowBusyAreBuses}>
         <HowBusyAreBuses />
+      </div>
+      <div className={styles.SectionExample}>
+        <SectionExample />
+      </div>
+      <div className={styles.CouncilLinks}>
+        <CouncilLinks />
       </div>
     </div>
   );

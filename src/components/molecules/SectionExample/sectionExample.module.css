@@ -1,0 +1,19 @@
+.SectionExample {
+
+}
+.top {
+  
+}
+.topFont {
+  font-size: 32px;
+}
+.OuterContainer {
+  display: flex;
+  flex-direction: row;
+}
+.Container {
+  display: flex;
+  flex-direction: column;
+  padding: 32px;
+}
+
