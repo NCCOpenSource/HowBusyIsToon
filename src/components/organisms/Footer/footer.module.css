@@ -18,7 +18,6 @@
   align-items: center;
   width: 100%;
   flex-flow: wrap;
-
 }
 
 .logoItem {
@@ -28,30 +27,28 @@
 .bottom {
   background: rgba(0, 0, 0, 0.1);
   border-radius: 0 0 8px 8px;
-  display: flex;
-  justify-content: space-evenly;
+  width: 100%;
+  /* height: 100%; */
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* justify-content: space-evenly; */
   /* change when enojicon comes in so links are right */
   align-items: center;
 
-  height: 66px;
+  /* height: 66px; */
   /* delete when emojicon is implimented */
-
   padding: 0 23px 0 23px;
 }
-.emojiconContainer {
-  width: 66%;
-}
-.emojicon{
-  display: flex;
-}
 
-/* .linkList {
-  width: 100%;
-  text-align: right;
+.emojiconContainer {
+  display: flex;
+  align-content: center;
+  /* width: 100%; */
+  /* height: 100%; */
+  /* width: 66%; */
+} 
+.emojiconContainer p {
+  /* width: 100%; */
+  /* height: 100%; */
+  /* width: 66%; */
 }
-.linkListItem {
-  text-decoration: none;
-  font-size: 18px;
-  line-height: 18px;
-  padding-left: 41px;
-} */

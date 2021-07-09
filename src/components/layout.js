@@ -4,6 +4,7 @@ import Container from "./container";
 import Nav from "./organisms/Nav";
 import styles from "./layout.module.css";
 import Footer from "./organisms/Footer";
+import EmojicomWidget from "./molecules/EmojicomWidget/index";
 
 export default function Layout(props) {
   const { children } = props;
@@ -34,6 +35,7 @@ export default function Layout(props) {
       <div className={styles.top}>
         <Nav navLinks={NavLinkItems} />
       </div>
+    
       <div className={styles.middle}>{children}</div>
       <div className={styles.bottom}>
         <Footer />

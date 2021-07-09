@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import styles from "./footer.module.css";
 import EmojicomWidget from "../../molecules/EmojicomWidget";
-
+import { BottomBox } from "../../atoms/Box/BottomBox";
 
 export default function Footer() {
   return (
@@ -45,8 +45,9 @@ export default function Footer() {
       </div>
       <div className={styles.bottom}>
         <div className={styles.emojiconContainer} id="emojicom-widget-inline">
+          <p>How useful was this information?</p>
           <EmojicomWidget
-            className={styles.emojicon}
+            // className={styles.emojicon}
             campaignId="laqwioA130yrS6JhyToJ"
           />
         </div>
