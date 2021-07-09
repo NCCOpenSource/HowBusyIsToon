@@ -1,10 +1,15 @@
 import React, { useState } from "react";
 import styles from "./navigation.module.css";
-import Dropdown from "../../atoms";
+// import DropDown from "../../atoms";
+import DropDown from "../../atoms/DropDown";
 import LocationIcon from "../../../assets/icons/icon_location.svg";
 import BurgerIcon from "../../../assets/icons/icon_mobileNavButton.svg";
 import CloseIcon from "../../../assets/icons/icon_closeMenu.svg";
-import NavOverlay from "../../molecules";
+// import NavOverlay from "../../molecules";
+import NavOverlay from "../../molecules/NavOverlay";
+import Box from "../../atoms/Box";
+import { TopBox } from "../../atoms/Box/TopBox";
+import { BottomBox } from "../../atoms/Box/BottomBox";
 
 export default function Nav(props) {
   const [show, setShow] = useState(false);
@@ -16,15 +21,15 @@ export default function Nav(props) {
   };
   const NavData = props.navLinks;
   const NavLinkItem = NavData.map((NavLinkItems) => (
-    <Dropdown
+    <DropDown
       title={NavLinkItems.title}
       subInfo={NavLinkItems.subInfo}
-    ></Dropdown>
+    ></DropDown>
   ));
 
   return (
     <div>
-      <div className={styles.top}>
+      <TopBox height={"112px"} fontSize={"31px"} className={styles.top}>
         <a href="/" className={styles.title}>
           How Busy Is...
         </a>
@@ -46,8 +51,8 @@ export default function Nav(props) {
           {show ? <NavOverlay Links={props.navLinks} /> : <div />}
         </nav>
         {/* endMobileNav */}
-      </div>
-      <div className={styles.bottom}>
+      </TopBox>
+      <BottomBox fontSize={"25px"} height={"56px"} className={styles.bottom}>
         <LocationIcon className={styles.locationIcon} />
         <span className={styles.location}>Newcastle</span>
 
@@ -70,7 +75,7 @@ export default function Nav(props) {
             Council Compliance >
           </a>
         </ul>
-      </div>
+      </BottomBox>
     </div>
   );
 }

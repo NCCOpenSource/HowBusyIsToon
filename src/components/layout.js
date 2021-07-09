@@ -1,11 +1,11 @@
 import React from "react";
 import "./base.css";
 import Container from "./container";
-import Navigation from "./organisms";
+import Nav from "./organisms/Nav";
 import styles from "./layout.module.css";
-import Footer from "./templates";
+import Footer from "./organisms/Footer";
 
-export default function Template(props) {
+export default function Layout(props) {
   const { children } = props;
 
   const NavLinkItems = [
@@ -32,7 +32,7 @@ export default function Template(props) {
   return (
     <Container>
       <div className={styles.top}>
-        <Navigation navLinks={NavLinkItems} />
+        <Nav navLinks={NavLinkItems} />
       </div>
       <div className={styles.middle}>{children}</div>
       <div className={styles.bottom}>

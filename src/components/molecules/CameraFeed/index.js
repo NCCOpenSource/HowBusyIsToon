@@ -1,9 +1,10 @@
 import React from "react";
-import SelectDropdown from "../index";
+// import SelectDropdown from "../index";
 import styles from "./CameraFeed.module.css";
 import TimeIcon from "../../../assets/icons/time.svg";
-import GetFeedImage from "../../atoms";
+import GetFeedImage from "../../atoms/GetFeedImage";
 import { StaticImage } from "gatsby-plugin-image";
+import Filter from "../Filter";
 
 export default function CameraFeed() {
   return (
@@ -15,17 +16,17 @@ export default function CameraFeed() {
         </p>
       </div>
       <div className={styles.select}>
-        <SelectDropdown
-          // className={styles.select}
-        //   onChange
-        />
+        <Filter
+          className={styles.select}
+           onChange
+         />
       </div>
       <div className={styles.feed}>
         <StaticImage
           //   className={styles.Feed}
             width={918}
             height={615}
-          src="../../images/placeholder.jpg"
+          src="../../../images/placeholder.jpg"
         />
       </div>
       {/* <GetFeedImage /> */}

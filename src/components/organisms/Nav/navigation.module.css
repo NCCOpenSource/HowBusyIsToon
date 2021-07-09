@@ -1,16 +1,10 @@
 .top {
-  background-color: black;
-  height: 112px;
-  border-radius: 8px 8px 0 0;
-  display: flex;
   align-items: center;
   padding: 0 23px 0 23px;
+  display: flex;
 }
 
 .bottom {
-  background-color: #f2f2f2;
-  border-radius: 0 0 8px 8px;
-  height: 56px;
   display: flex;
   align-items: center;
   padding: 0 23px 0 23px;

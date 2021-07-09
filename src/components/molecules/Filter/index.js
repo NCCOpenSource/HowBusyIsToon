@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styles from "./filter.module.css";
 
-export default function Filter(props) {
+export default function Filter (props) {
   const [option, setOption] = useState();
   function handleChange(event) {
     setOption(event.target.value);

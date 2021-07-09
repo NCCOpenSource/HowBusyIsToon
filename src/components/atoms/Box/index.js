@@ -51,8 +51,8 @@ export default function Box({
     display: flex;
     align-items: center;
     padding: 0 23px 0 23px;
-    height: ${height};
-    font-size: ${fontSize};
+    height: ${height ? height: 'auto'};
+    font-size: ${fontSize? fontSize: 'auto'};
     ${finalColour};
     ${finalFontColor};
     ${radius};
