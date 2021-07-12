@@ -73,10 +73,10 @@ module.exports = {
     //   options: {
     //     typeName: `GitHub`,
     //     fieldName: `github`,
-    //     url: `https://api.github.com/graphql`,
-    //     headers: {
-    //       Authorization: `Bearer ${process.env.GATSBY_GITHUB_TOKEN}`,
-    //     },
+    //     url: `https://randomuser.me/api/`,
+    // headers: {
+    //   Authorization: `Bearer ${process.env.GATSBY_GITHUB_TOKEN}`,
+    // },
     //   },
     // },
     {

@@ -3,6 +3,7 @@ import styles from "./callout.module.css";
 // import Icon from "../../images/car.png";
 import Icon from "../../../assets/icons/graphic_car.svg";
 import { graphql, useStaticQuery } from "gatsby";
+import CalloutData from "../../atoms/CalloutData";
 
 export default function Callout() {
   const [calloutText, setCalloutText] = useState("loading");
@@ -42,6 +43,7 @@ export default function Callout() {
 
   return (
     <div className={calloutClass ? styles.calloutQuiet : styles.calloutBusy}>
+      {/* <CalloutData /> */}
       <h1 className={styles.calloutText}>
         The Roads are usually quiet at this time. you should be ok but check the
         cameras to see if you should take an alternatve route.
