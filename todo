@@ -1,60 +1,28 @@
-
-fully responsive design 
-- create responsive based on the old site 
-
-emojicons 
-- iframe based, not sure i can custom css
-
- stand up 
- - access to gitlab ( ssh key then username and password)
-gitlab , russel /////////////////////////////////////////// 
- - emojicon.io is working in gatsby (contacted the company) but styling is more complicated (extra hour or 2)
- capaign nyumber transfer
- - twitter feed ? embed/iframe? twitter-gatsby? 
- - APi access towns Busyness ?
- russell urban observatory (luke) ////////////////////////////
- carparks 
- webcams 
- driving data? 
- - any another other API access codes?
- - alex maps postcode to postcode? can i change? yes
- - Fonts? typekit 
- - Logos? jpeg 
-
- responsive grid css website 
- meta data fixed 
- headers editable 
- alter content outgoing links 
-
-
-
- russel /luke
- APi access ?
- Api new calls Webcam
-
-
- manage articles 
- change ordering of items 
- navigation fixed 
- nuke links in footer 
- manage links 
-
-
-
-
- // leftoff finish off css for camerafeed.module 
- 
-
-content management 
-
-Luke -
-
-geolcation for maps location
-(postition of busses on a map)
-
-road closure data 
-
-16th friday show and tell
-
 ///////////////////////////////////////////////////////////////////
 emojicon - cant edit the css , it needs to come as is. 
+
+
+personal -
+remove styled component replace with logic and classes 
+replace flex with grid box
+add council links 
+simplify css Grid / 1 gridtemplatearea , responsiveness
+Css Variables 
+
+research 
+graphql heirachy and contentfull hook
+content naming conventions
+
+
+ask:
+help with maps 
+busyness API authorization
+Russel Api Help
+Dropdown Menu's 
+
+
+
+leaflet Gatsby Help 
+
+
+

@@ -1,0 +1,5 @@
+.articleExampleContainer{
+    display: grid;
+    grid-auto-flow: row;
+
+}

@@ -32,17 +32,11 @@ export default function Layout(props) {
 
   return (
     <Container>
-      <div className={styles.container}></div>
-      
-      <div className={styles.top}>
+      <div className={styles.containerGrid}>
         <Nav navLinks={NavLinkItems} />
-      </div>
-    
-      <div className={styles.middle}>{children}</div>
 
+        {children}
 
-
-      <div className={styles.bottom}>
         <Footer />
       </div>
     </Container>

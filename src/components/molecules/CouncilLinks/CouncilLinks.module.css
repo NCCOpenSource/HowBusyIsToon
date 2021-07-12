@@ -4,28 +4,36 @@
     display: flex;
     flex-direction: column; */
   /* background-color: aqua; */
+
+  /* margin: 24px 32px 24px 32px; */
+  display: grid;
+  gap: 32px;
+  /* grid-template-rows: auto auto auto auto ;  */
+  /* refine this */
+  /* grid-template-columns: auto auto ; */
+  grid-template-areas:
+    "topContainer topContainer topContainer"
+    "LeftContainer MiddleContainer RightContainer";
 }
 
 .heading {
   font-size: 32px;
 }
-
-.container {
-  display: flex;
-  flex-direction: row;
+.topContainer {
+  grid-area: topContainer;
 }
-.box {
-  display: flex;
-  padding: 32px;
-  /* margin: 32px; */
-  height: 100%;
-  font-size: auto;
+
+
+.LinkBox {
   background-color: #f8f8f8;
   color: black;
-  border-radius: 8px;
   font-weight: normal;
-  flex-direction: column;
   text-decoration: none;
+  padding: 32px;
+  border-radius: 8px;
+
+  display: grid;
+  gap: 18px;
 }
 .subHeading {
   display: flex;
@@ -36,6 +44,7 @@
 }
 .subHeadingText {
   font-size: 25px;
+  margin: 0;
 }
 .IconArrow {
 }

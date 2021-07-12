@@ -7,15 +7,16 @@ import { Link } from "gatsby";
 export default function CouncilLinks() {
   return (
     <div className={styles.CouncilLinks}>
-      <Box fontColor="white" fullBorderRadius="full" color="black" bold>
-        <p className={styles.heading}>
-          How Newcastle City Council is Protecting You
-        </p>
-      </Box>
-      <div className={styles.container}>
+      <div className={styles.topContainer}>
+        <Box fontColor="white" fullBorderRadius="full" color="black" bold>
+          <p className={styles.heading}>
+            How Newcastle City Council is Protecting You
+          </p>
+        </Box>
+      </div>
         <Link
           href={"/"}
-          className={styles.box}
+          className={styles.LinkBox}
           fontColor="black"
           fullBorderRadius="full"
           color="white"
@@ -31,10 +32,9 @@ export default function CouncilLinks() {
             barriers placed at shop entrances for customer queues
           </p>
         </Link>
-
         <Link
           href={"/"}
-          className={styles.box}
+          className={styles.LinkBox}
           fontColor="black"
           fullBorderRadius="full"
           color="white"
@@ -50,10 +50,10 @@ export default function CouncilLinks() {
             barriers placed at shop entrances for customer queues
           </p>
         </Link>
-
+  
         <Link
           href={"/"}
-          className={styles.box}
+          className={styles.LinkBox}
           fontColor="black"
           fullBorderRadius="full"
           color="white"
@@ -69,7 +69,6 @@ export default function CouncilLinks() {
             barriers placed at shop entrances for customer queues
           </p>
         </Link>
-      </div>
     </div>
   );
 }
