@@ -47,7 +47,7 @@ export default function Footer() {
         <div className={styles.emojiconContainer} id="emojicom-widget-inline">
           <p>How useful was this information?</p>
           <EmojicomWidget
-            // className={styles.emojicon}
+            className={styles.emojicon}
             campaignId="laqwioA130yrS6JhyToJ"
           />
         </div>
