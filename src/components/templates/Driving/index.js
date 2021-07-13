@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import styles from "./home.module.css";
+import styles from "./Driving.module.css";
 import HowBusyAreBuses from "../../molecules/HowBusyAreBuses";
 import HowBusyAreRoads from "../../molecules/HowBusyAreRoads";
 import CameraFeed from "../../molecules/CameraFeed";
@@ -10,7 +10,8 @@ import CouncilLinks from "../../molecules/CouncilLinks";
 import Nav from "../../organisms/Nav";
 import WazeMap from "../../atoms/WazeMap";
 import VisitCitySafetly from "../../atoms/VisitCitySafely";
-export default function Home() {
+
+export default function DrivingTemplate() {
   const [state, setState] = useState("FootFall Camera");
 
   return (
@@ -19,21 +20,29 @@ export default function Home() {
         <div
           className={styles.NavSubLink}
           onClick={() => {
-            setState("FootFall Camera");
+            setState("Parking Data");
           }}
         >
-          <p className={styles.NavSubLinkText}>FootFall Camera</p>
+          <p className={styles.NavSubLinkText}>Parking Data</p>
         </div>
         <div
           className={styles.NavSubLink}
           onClick={() => {
-            setState("Shops And Resturants");
+            setState("Ev Charging Stations");
           }}
         >
-          <p className={styles.NavSubLinkText}>Shops And Resturants</p>
+          <p className={styles.NavSubLinkText}>Ev Charging Stations</p>
+        </div>
+
+        <div
+          className={styles.NavSubLink}
+          onClick={() => {
+            setState("Cameras And Maps");
+          }}
+        >
+          <p className={styles.NavSubLinkText}>Cameras And Maps</p>
         </div>
       </Nav>
-
       <div
         className={
           state == "FootFall Camera" ? styles.containerFF : styles.containerSR
@@ -52,24 +61,21 @@ export default function Home() {
           ""
         )}
 
-        {state == "FootFall Camera" ? (
-          <>
-            <div className={styles.Callout}>
-              <Callout />
-            </div>
-            <div className={styles.CameraFeed}>
-              <CameraFeed />
-            </div>{" "}
-            <div className={styles.HowBusyAreRoads}>
-              <HowBusyAreRoads />
-            </div>
-            <div className={styles.HowBusyAreBuses}>
-              <HowBusyAreBuses />
-            </div>
-          </>
-        ) : (
-          ""
-        )}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         <div className={styles.SectionExample}>
           <SectionExample />

@@ -1,12 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 // import SelectDropdown from "../index";
 import styles from "./CameraFeed.module.css";
 import TimeIcon from "../../../assets/icons/time.svg";
 import { StaticImage } from "gatsby-plugin-image";
-import GetFeedImage from '../../atoms/GetFeedImage'
+import GetFeedImage from "../../atoms/GetFeedImage";
 import Filter from "../Filter";
 
 export default function CameraFeed() {
+  const [option, setOption] = useState();
+  console.log("🚀 ~ file: index.js ~ line 6 ~ Filter ~ option", option);
+  function handleChange(event) {
+    setOption(event.target.value);
+  }
   return (
     <div className={styles.cityCenterCameraFeed}>
       <div className={styles.infoContainer}>
@@ -16,10 +21,31 @@ export default function CameraFeed() {
         </p>
       </div>
       <div className={styles.select}>
-        <Filter className={styles.select} onChange />
+        <div className={styles.selectbox}>
+          <select
+            className={styles.selector}
+            name="option"
+            onChange={handleChange}
+          >
+            <option className={styles.option} value="1">
+              1
+            </option>
+            <option className={styles.option} value="2">
+              2
+            </option>
+            <option className={styles.option} value="3">
+              3
+            </option>
+            <option className={styles.option} value="4">
+              4
+            </option>
+          </select>
+        </div>
+
+        {/* <Filter className={styles.select} onChange={handleChange} /> */}
       </div>
       <div className={styles.feed}>
-        <GetFeedImage />
+        <GetFeedImage option={option} />
         {/* <StaticImage
           //   className={styles.Feed}
             // width={918}

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { StaticImage } from "gatsby-plugin-image";
 
-export default function GetFeedImage() {
+export default function GetFeedImage({ option }) {
   const [camera1, setCamera1] = useState("");
   console.log("🚀 ~ file: index.js ~ line 5 ~ GetFeedImage ~ camera1", camera1);
   const [camera2, setCamera2] = useState("");
@@ -57,7 +57,11 @@ export default function GetFeedImage() {
 
   return (
     <>
-      <img src={camera1} 
+      {option == 1 || option == undefined ? <img src={camera1} /> : ""}
+      {option == 2 ? <img src={camera2} /> : ""}
+      {option == 3 ? <img src={camera3} /> : ""}
+      {option == 4 ? <img src={camera4} /> : ""}
+      {/* <img src={camera1} 
       // style={{ height: "100%", width: "100%" }}
       ></img>
       <img
@@ -71,7 +75,7 @@ export default function GetFeedImage() {
       <img
         src={camera4}
         // style={{ height: "100%", width: "100%" }}
-      ></img>
+      ></img> */}
     </>
   );
 }

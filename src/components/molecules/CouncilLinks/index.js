@@ -18,10 +18,6 @@ export default function CouncilLinks() {
         target="_blank"
         href="https://newcastle.gov.uk/services/public-health-wellbeing-and-leisure/public-health-services/coronavirus-covid-19"
         className={styles.LinkBox}
-        fontColor="black"
-        fullBorderRadius="full"
-        color="white"
-        bold
       >
         <div className={styles.subHeading}>
           <p className={styles.subHeadingText}>Covid Compliance</p>
@@ -37,10 +33,6 @@ export default function CouncilLinks() {
         target="_blank"
         href="https://www.gov.uk/coronavirus?gclid=CjwKCAiAkan9BRAqEiwAP9X6UULwnfwW9PPhWLDxgcsV9SRU4xHQ4pgLU-YAy4KXFvL4EDikA-4RthoCZ10QAvD_BwE"
         className={styles.LinkBox}
-        fontColor="black"
-        fullBorderRadius="full"
-        color="white"
-        bold
       >
         <div className={styles.subHeading}>
           <p className={styles.subHeadingText}>Council Guidance</p>
@@ -53,14 +45,7 @@ export default function CouncilLinks() {
         </p>
       </Link>
 
-      <Link
-        href={"/"}
-        className={styles.LinkBox}
-        fontColor="black"
-        fullBorderRadius="full"
-        color="white"
-        bold
-      >
+      <Link href={"/"} className={styles.LinkBox}>
         <div className={styles.subHeading}>
           <p className={styles.subHeadingText}>Onboarding Guide</p>
           <IconArrow className={styles.IconArrow} />

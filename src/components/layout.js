@@ -9,34 +9,10 @@ import EmojicomWidget from "./molecules/EmojicomWidget/index";
 export default function Layout(props) {
   const { children } = props;
 
-  const NavLinkItems = [
-    {
-      title: "City Center",
-
-      subInfo: [
-        { subTitles: "the Roads", slug: "road" },
-        { subTitles: "Resturants", slug: "restaurant" },
-        { subTitles: "Shopping", slug: "shopping" },
-      ],
-    },
-    {
-      title: "City Center2",
-
-      subInfo: [
-        { subTitles: "the Roads", slug: "road" },
-        { subTitles: "Resturants", slug: "restaurant" },
-        { subTitles: "Shopping", slug: "shopping" },
-      ],
-    },
-  ];
-
   return (
     <Container>
       <div className={styles.containerGrid}>
-        <Nav navLinks={NavLinkItems} />
-
         {children}
-
         <Footer />
       </div>
     </Container>

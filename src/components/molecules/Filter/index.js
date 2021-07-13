@@ -3,11 +3,12 @@ import styles from "./filter.module.css";
 
 export default function Filter (props) {
   const [option, setOption] = useState();
+  console.log("🚀 ~ file: index.js ~ line 6 ~ Filter ~ option", option)
   function handleChange(event) {
     setOption(event.target.value);
   }
   return (
-    <div className={styles.selectbox}>
+    <div className={styles.selectbox} >
       <select className={styles.select} name="option" onChange={handleChange}>
         <option className={styles.option} value="1">
           1

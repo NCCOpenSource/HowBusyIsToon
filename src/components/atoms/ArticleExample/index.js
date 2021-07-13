@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "gatsby";
 import styles from "./ArticleExample.module.css";
-export default function ArticleExample({
+export default function   ArticleExample({
   children,
   Title,
   Content,

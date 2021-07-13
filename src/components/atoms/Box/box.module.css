@@ -1,0 +1,28 @@
+.Backgroundblack {
+  background-color: #000000;
+}
+.Backgroundgrey {
+  background-color: #f8f8f8;
+}
+.Backgroundwhite {
+  background-color: #ffffff;
+}
+.Fontblack {
+  color: #000000;
+}
+.Fontgrey {
+  color: #f8f8f8;
+}
+.Fontwhite {
+  color: #ffffff;
+}
+
+.borderRadiusFull {
+  border-radius: 8px;
+}
+.borderRadiusTop {
+  border-radius: 0 0 8px 8px;
+}
+.borderRadiusBottom {
+  border-radius: 8px 8px 0 0;
+}
