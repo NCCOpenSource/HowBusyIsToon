@@ -10,13 +10,25 @@ import CouncilLinks from "../../molecules/CouncilLinks";
 import Nav from "../../organisms/Nav";
 import WazeMap from "../../atoms/WazeMap";
 import VisitCitySafetly from "../../atoms/VisitCitySafely";
+import RoadClosureAroundTown from "../../molecules/RoadClosureAroundTown";
+import LocalRoadUpdates from "../../molecules/LocalRoadUpdates";
+
 
 export default function DrivingTemplate() {
-  const [state, setState] = useState("FootFall Camera");
+  const [state, setState] = useState("Traffic");
 
   return (
     <>
       <Nav>
+        <div
+          className={styles.NavSubLink}
+          onClick={() => {
+            setState("Traffic");
+          }}
+        >
+          <p className={styles.NavSubLinkText}>Traffic</p>
+        </div>
+
         <div
           className={styles.NavSubLink}
           onClick={() => {
@@ -43,39 +55,28 @@ export default function DrivingTemplate() {
           <p className={styles.NavSubLinkText}>Cameras And Maps</p>
         </div>
       </Nav>
+
+
       <div
         className={
-          state == "FootFall Camera" ? styles.containerFF : styles.containerSR
+          state == "Traffic" ? styles.container1 : ''
         }
       >
-        {state == "Shops And Resturants" ? (
+
+
+
+        {state == "Traffic" ? (
           <>
-            <div className={styles.VisitCitySafetly}>
-              <VisitCitySafetly />
+            <div className={styles.RoadClosureAroundTown}>
+              <RoadClosureAroundTown />
             </div>
-            <div className={styles.WazeMap}>
-              <WazeMap />
+            <div className={styles.LocalRoadUpdates}>
+              <LocalRoadUpdates />
             </div>
           </>
         ) : (
           ""
         )}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
         <div className={styles.SectionExample}>
           <SectionExample />

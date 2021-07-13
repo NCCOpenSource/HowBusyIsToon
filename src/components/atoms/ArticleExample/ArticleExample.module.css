@@ -1,5 +1,5 @@
-.articleExampleContainer{
-    display: grid;
-    grid-auto-flow: row;
-
+.articleExampleContainer {
+  display: grid;
+  grid-auto-flow: row;
+  font-size: 20px;
 }

@@ -1,9 +1,14 @@
 import React from "react";
-
-export default function index() {
+import { TopBox } from "../../atoms/Box/TopBox";
+import ArticleExample from "../../atoms/ArticleExample";
+import { StaticImage } from "gatsby-plugin-image";
+import styles from "./RoadClosure.module.css";
+export default function RoadClosureAroundTown() {
   return (
-    <>
-    <Box />
+    <div className={styles.container}>
+      <TopBox height={"72px"} fontSize={"31px"}>
+        <p classname={styles.topFont}>Road Closures Around Town</p>
+      </TopBox>
       <ArticleExample
         //   classname={styles.ArticleExample}
         Title={""}
@@ -18,6 +23,6 @@ export default function index() {
           src={"../../../images/bus-Example.jpg"}
         />
       </ArticleExample>
-    </>
+    </div>
   );
 }

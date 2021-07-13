@@ -1,13 +1,16 @@
-.containerFF {
+.container1 {
   width: 100%;
+
   grid-template-areas: none;
   display: grid;
   gap: 32px;
+
   grid-template-columns: 33% auto auto;
+  /* grid-template-rows: auto auto auto auto; */
   grid-template-areas:
-    "Callout CameraFeed CameraFeed "
-    "Callout CameraFeed CameraFeed "
-    "Callout HowBusyAreBuses HowBusyAreRoads "
+    ". . . "
+    ". . . "
+    "RoadClosureAroundTown LocalRoadUpdates LocalRoadUpdates "
     "SectionExample SectionExample SectionExample"
     "CouncilLinks CouncilLinks CouncilLinks";
 }
@@ -22,9 +25,9 @@
   grid-template-columns: 33% auto auto;
   /* grid-template-rows: auto auto auto auto; */
   grid-template-areas:
-    "VisitCitySafetly WazeMap WazeMap "
-    "VisitCitySafetly WazeMap WazeMap "
-    "VisitCitySafetly WazeMap WazeMap "
+    ". . . "
+    ". . . "
+    "RoadClosureAroundTown LocalRoadUpdates LocalRoadUpdates "
     "SectionExample SectionExample SectionExample"
     "CouncilLinks CouncilLinks CouncilLinks";
 }
@@ -35,6 +38,14 @@
 .CameraFeed {
   grid-area: CameraFeed;
 }
+
+.RoadClosureAroundTown {
+  grid-area: RoadClosureAroundTown;
+}
+.LocalRoadUpdates {
+  grid-area: LocalRoadUpdates;
+}
+
 .HowBusyAreRoads {
   grid-area: HowBusyAreRoads;
 }

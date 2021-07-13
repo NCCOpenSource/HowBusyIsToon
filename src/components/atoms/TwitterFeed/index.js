@@ -1,5 +1,5 @@
 import React from "react";
-import styles from ".";
+import styles from "./twitterFeed.module.css";
 import { TwitterTimelineEmbed } from "react-twitter-embed";
 
 const TwitterFeed = () => {
@@ -8,7 +8,8 @@ const TwitterFeed = () => {
       <TwitterTimelineEmbed
         sourceType="profile"
         screenName="My_Metro"
-        options={{ height: 400 }}
+        // options={{ height: 400 }}
+        options={{ height: 709 }}
       />
     </div>
   );
