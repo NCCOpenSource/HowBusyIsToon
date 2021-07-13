@@ -32,16 +32,12 @@
     "CouncilLinks CouncilLinks CouncilLinks";
 }
 
-
-
 .RoadClosureAroundTown {
   grid-area: RoadClosureAroundTown;
 }
 .LocalRoadUpdates {
   grid-area: LocalRoadUpdates;
 }
-
-
 
 .HowBusyAreRoads {
   grid-area: HowBusyAreRoads;
@@ -55,8 +51,6 @@
 .CouncilLinks {
   grid-area: CouncilLinks;
 }
-
-
 
 //nav
 .NavSubLinkItem {
