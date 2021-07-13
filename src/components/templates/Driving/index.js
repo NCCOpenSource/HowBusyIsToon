@@ -13,7 +13,6 @@ import VisitCitySafetly from "../../atoms/VisitCitySafely";
 import RoadClosureAroundTown from "../../molecules/RoadClosureAroundTown";
 import LocalRoadUpdates from "../../molecules/LocalRoadUpdates";
 
-
 export default function DrivingTemplate() {
   const [state, setState] = useState("Traffic");
 
@@ -56,15 +55,7 @@ export default function DrivingTemplate() {
         </div>
       </Nav>
 
-
-      <div
-        className={
-          state == "Traffic" ? styles.container1 : ''
-        }
-      >
-
-
-
+      <div className={state == "Traffic" ? styles.container1 : ""}>
         {state == "Traffic" ? (
           <>
             <div className={styles.RoadClosureAroundTown}>

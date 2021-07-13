@@ -32,12 +32,7 @@
     "CouncilLinks CouncilLinks CouncilLinks";
 }
 
-.Callout {
-  grid-area: Callout;
-}
-.CameraFeed {
-  grid-area: CameraFeed;
-}
+
 
 .RoadClosureAroundTown {
   grid-area: RoadClosureAroundTown;
@@ -45,6 +40,8 @@
 .LocalRoadUpdates {
   grid-area: LocalRoadUpdates;
 }
+
+
 
 .HowBusyAreRoads {
   grid-area: HowBusyAreRoads;
@@ -59,13 +56,9 @@
   grid-area: CouncilLinks;
 }
 
-.VisitCitySafetly {
-  grid-area: VisitCitySafetly;
-}
-.WazeMap {
-  grid-area: WazeMap;
-}
 
+
+//nav
 .NavSubLinkItem {
   width: 100%;
   height: 100%;
