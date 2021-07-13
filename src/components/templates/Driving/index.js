@@ -12,6 +12,7 @@ import WazeMap from "../../atoms/WazeMap";
 import VisitCitySafetly from "../../atoms/VisitCitySafely";
 import RoadClosureAroundTown from "../../molecules/RoadClosureAroundTown";
 import LocalRoadUpdates from "../../molecules/LocalRoadUpdates";
+import EvMap from "../../molecules/EvMap";
 
 export default function DrivingTemplate() {
   const [state, setState] = useState("Traffic");
@@ -68,6 +69,8 @@ export default function DrivingTemplate() {
         ) : (
           ""
         )}
+
+        {state == "Ev Charging Stations" ? <EvMap /> : ""}
 
         <div className={styles.SectionExample}>
           <SectionExample />
