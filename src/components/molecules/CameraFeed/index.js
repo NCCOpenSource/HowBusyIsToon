@@ -46,7 +46,7 @@ export default function CameraFeed() {
       </div>
       <div className={styles.feed}>
         <GetFeedImage option={option} />
-        {/* <StaticImage
+        {/* <StaticImage alt=''
           //   className={styles.Feed}
             // width={918}
             // height={615}

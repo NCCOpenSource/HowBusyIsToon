@@ -9,10 +9,10 @@ import styles from "./howBusyAreRoads.module.css";
 export default function HowBusyAreRoads() {
   return (
     <div>
-      <TopBox classname={styles.top} fontSize={"31px"}>
-        <p classname={styles.topFont}>How Busy Are Roads?</p>
+      <TopBox className={styles.top} fontSize={"31px"}>
+        <p className={styles.topFont}>How Busy Are Roads?</p>
       </TopBox>
-      <BottomBox fontSize={"25px"} classname={styles.bottom}>
+      <BottomBox fontSize={"25px"} className={styles.bottom}>
         <p>
           View live traffic updates of the busiest commuter routes in and out of
           the city centre

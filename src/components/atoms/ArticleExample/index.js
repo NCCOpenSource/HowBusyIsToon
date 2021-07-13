@@ -13,7 +13,7 @@ export default function   ArticleExample({
       {children}
       <p>{Title}</p>
       <p>{Content}</p>
-      <Link href={Linkurl}>{LinkTitle}</Link>
+      <Link to={Linkurl}>{LinkTitle}</Link>
     </div>
   );
 }

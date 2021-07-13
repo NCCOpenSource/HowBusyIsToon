@@ -14,7 +14,7 @@ export default function CouncilLinks() {
           </p>
         </Box>
       </div>
-      <Link
+      <a
         target="_blank"
         href="https://newcastle.gov.uk/services/public-health-wellbeing-and-leisure/public-health-services/coronavirus-covid-19"
         className={styles.LinkBox}
@@ -28,8 +28,8 @@ export default function CouncilLinks() {
           for social distancing. Look for the arrows at on the floor and the
           barriers placed at shop entrances for customer queues
         </p>
-      </Link>
-      <Link
+      </a>
+      <a
         target="_blank"
         href="https://www.gov.uk/coronavirus?gclid=CjwKCAiAkan9BRAqEiwAP9X6UULwnfwW9PPhWLDxgcsV9SRU4xHQ4pgLU-YAy4KXFvL4EDikA-4RthoCZ10QAvD_BwE"
         className={styles.LinkBox}
@@ -43,9 +43,9 @@ export default function CouncilLinks() {
           for social distancing. Look for the arrows at on the floor and the
           barriers placed at shop entrances for customer queues
         </p>
-      </Link>
+      </a>
 
-      <Link href={"/"} className={styles.LinkBox}>
+      <a href={"/"} className={styles.LinkBox}>
         <div className={styles.subHeading}>
           <p className={styles.subHeadingText}>Onboarding Guide</p>
           <IconArrow className={styles.IconArrow} />
@@ -55,7 +55,7 @@ export default function CouncilLinks() {
           for social distancing. Look for the arrows at on the floor and the
           barriers placed at shop entrances for customer queues
         </p>
-      </Link>
+      </a>
     </div>
   );
 }

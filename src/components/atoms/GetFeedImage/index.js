@@ -51,6 +51,43 @@ export default function GetFeedImage({ option }) {
         .catch((error) => {
           console.log(error);
         });
+
+
+
+
+
+
+
+
+
+        console.log('test1');
+
+
+        fetch(
+          `https://chargepoints.dft.gov.uk/api/retrieve/registry/postcode/NE1+8XG/limit/10/
+          `,
+          {
+            mode: "no-cors",
+            headers: {
+              "Access-Control-Allow-Origin": "*",
+            },
+          }
+        )
+          // .then((response) => {response.json(); console.log(response)})
+          .then((response) => response.json())
+          .then((response) => {
+            console.log("🚀 ~ file: index.js ~ line 29 ~ .then ~ response", response)
+            console.log("🚀 ~ file: index.js ~ line 29 ~ .then ~ response", response)
+            console.log(response);
+            console.log('test2');
+          })
+          .catch((error) => {
+            console.log(error);
+          });
+          console.log('test3');
+
+
+
     }
     fetchFeedImages();
   }, []);

@@ -7,10 +7,10 @@ export default function RoadClosureAroundTown() {
   return (
     <div className={styles.container}>
       <TopBox height={"72px"} fontSize={"31px"}>
-        <p classname={styles.topFont}>Road Closures Around Town</p>
+        <p className={styles.topFont}>Road Closures Around Town</p>
       </TopBox>
       <ArticleExample
-        //   classname={styles.ArticleExample}
+        //   className={styles.ArticleExample}
         Title={""}
         Content={
           "Our buses are running to times similar to their pre-coronavirus timetables, making it even easier to reconnect with the faces and places you love."
@@ -18,7 +18,7 @@ export default function RoadClosureAroundTown() {
         LinkTitle={"Go to Arriva Guidance"}
         Linkurl={"/slug"}
       >
-        <StaticImage
+        <StaticImage alt=''
           // style={{ height: "10%", width: "10%" }}
           src={"../../../images/bus-Example.jpg"}
         />

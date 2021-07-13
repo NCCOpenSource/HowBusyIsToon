@@ -7,7 +7,7 @@ export default function LocalRoadUpdates() {
   return (
     <div className={styles.container}>
       <TopBox height={"72px"} fontSize={"31px"}>
-        <p classname={styles.topFont}>Local Road Updates</p>
+        <p className={styles.topFont}>Local Road Updates</p>
       </TopBox>
       <TwitterFeed />
     </div>

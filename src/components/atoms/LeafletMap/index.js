@@ -1,35 +1,23 @@
-// import React from "react";
-// import PropTypes from "prop-types";
-// import { Map, TileLayer, Marker, Popup } from "react-leaflet";
-// // import './leafletmap.css'
+import React, { Component } from "react";
+import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import "./leafletmap.css";
+export default class MyMap extends Component {
+  render() {
+    const { options } = this.props;
 
-// export default function LeafletMap() {
-//   const propTypes = {
-//     /** Latitude and Longitude of the map centre in an array, eg [51, -1] **/
-//     position: PropTypes.array,
-
-//     /** Initial zoom level for the map (default 13) **/
-//     zoom: PropTypes.number,
-
-//     /** If set, will display a marker, which when clicked will display this text **/
-//     markerText: PropTypes.string,
-//   };
-
-//   const defaultProps = {
-//     position: [51, -1],
-//     zoom: 13,
-//     markerText: "",
-//   };
-
-//   return (
-//     <Map>
-//       <TileLayer
-//         url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"
-//         attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-//       />
-//       <Marker>
-//         <Popup></Popup>
-//       </Marker>
-//     </Map>
-//   );
-// }
+    if (typeof window !== "undefined") {
+      return (
+        <MapContainer center={[54.97206769445005, -1.6132124536205563]} zoom={14}>
+          <TileLayer
+            url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"
+            attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+          />
+          {/* <Marker>
+            <Popup></Popup>
+          </Marker> */}
+        </MapContainer>
+      );
+    }
+    return null;
+  }
+}

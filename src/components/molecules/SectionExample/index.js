@@ -18,7 +18,7 @@ export default function SectionExample() {
       </Box>
       <div className={styles.OuterContainer}>
         <ArticleExample
-          classname={styles.ArticleExample}
+          className={styles.ArticleExample}
           Title={"Arriva Guidance"}
           Content={
             "Our buses are running to times similar to their pre-coronavirus timetables, making it even easier to reconnect with the faces and places you love."
@@ -26,13 +26,13 @@ export default function SectionExample() {
           LinkTitle={"Go to Arriva Guidance"}
           Linkurl={"/slug"}
         >
-          <StaticImage
+          <StaticImage alt=''
             // style={{ height: "10%", width: "10%" }}
             src={"../../../images/bus-Example.jpg"}
           />
         </ArticleExample>
         <ArticleExample
-          classname={styles.ArticleExample}
+          className={styles.ArticleExample}
           Title={"Arriva Guidance"}
           Content={
             "Our buses are running to times similar to their pre-coronavirus timetables, making it even easier to reconnect with the faces and places you love."
@@ -40,13 +40,13 @@ export default function SectionExample() {
           LinkTitle={"Go to Arriva Guidance"}
           Linkurl={"/slug"}
         >
-          <StaticImage
+          <StaticImage alt=''
             // style={{ height: "10%", width: "10%" }}
             src={"../../../images/bus-Example.jpg"}
           />
         </ArticleExample>
         <ArticleExample
-          classname={styles.ArticleExample}
+          className={styles.ArticleExample}
           Title={"Arriva Guidance"}
           Content={
             "Our buses are running to times similar to their pre-coronavirus timetables, making it even easier to reconnect with the faces and places you love."
@@ -54,7 +54,7 @@ export default function SectionExample() {
           LinkTitle={"Go to Arriva Guidance"}
           Linkurl={"/slug"}
         >
-          <StaticImage
+          <StaticImage alt=''
             // style={{ height: "10%", width: "10%" }}
             src={"../../../images/bus-Example.jpg"}
           />
