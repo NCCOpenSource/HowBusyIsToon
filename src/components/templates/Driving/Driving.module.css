@@ -17,7 +17,7 @@
     "CouncilLinks CouncilLinks CouncilLinks";
 }
 
-.containerSR {
+.containerEvMap {
   width: 100%;
 
   grid-template-areas: none;
@@ -52,6 +52,9 @@
 }
 .CouncilLinks {
   grid-area: CouncilLinks;
+}
+.EvMap{
+  grid-area: EvMap;
 }
 
 //nav
