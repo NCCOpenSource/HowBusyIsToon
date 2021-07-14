@@ -1,14 +1,23 @@
-@import '../../CSS/variables.css';
+@import "../../CSS/variables.css";
+
+.Container {
+  display: flex;
+  align-items: center;
+  padding: 0 23px 0 23px;
+  color: #ffffff;
+}
 
 .Backgroundblack {
   background-color: #000000;
 }
+
 .Backgroundgrey {
   background-color: #f8f8f8;
 }
 .Backgroundwhite {
   background-color: #ffffff;
 }
+
 .Fontblack {
   color: #000000;
 }
@@ -20,11 +29,11 @@
 }
 
 .borderRadiusFull {
-  border-radius: 8px;
+  border-radius: var(--border-radius);
 }
 .borderRadiusTop {
-  border-radius: 0 0 8px 8px;
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
 }
 .borderRadiusBottom {
-  border-radius: 8px 8px 0 0;
+  border-radius: 0 0 var(--border-radius) var(--border-radius);
 }

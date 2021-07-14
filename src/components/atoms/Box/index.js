@@ -1,62 +1,53 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
+import style from "./box.module.css";
+import "../../CSS/variables.css";
+import { set } from "lodash";
 
-export default function Box({
-  children,
-  fullBorderRadius,
-  color,
-  height,
-  fontColor,
-  fontSize,
-  bold,
-}) {
-  const radius = () => {
-    if (fullBorderRadius == "top") {
-      return "border-radius: 8px 8px 0 0";
-    }
-    if (fullBorderRadius == "bottom") {
-      return "border-radius: 0 0 8px 8px ";
-    }
-    if (fullBorderRadius == "full") {
-      return "border-radius: 8px";
-    }
-    return "auto";
-  };
+export default function Box({ children, fullBorderRadius, color, fontColor }) {
+  // const [fontColor, setstate] = useState(initialState)
+  const [backgroundColor, setBackgroundColor] = useState(style.Backgroundblack);
+  const [finalFontColor, setFontColor] = useState(style.Fontwhite);
+  const [borderRadius, setBorderRadius] = useState(style.borderRadiusFull);
 
-  const finalColour = () => {
+  const ContainerClassName = style.Container;
+
+  useEffect(() => {
     if (color == "black") {
-      return "background-color: #000000;";
+      setBackgroundColor(style.Backgroundblack);
     }
     if (color == "grey") {
-      return "background-color: #F8F8F8;";
+      setBackgroundColor(style.Backgroundgrey);
     }
     if (color == "white") {
-      return "background-color: #FFFFFF;";
+      setBackgroundColor(style.Backgroundwhite);
     }
-  };
-
-  const finalFontColor = () => {
     if (fontColor == "black") {
-      return "color: #000000;";
+      setFontColor(style.Fontblack);
     }
     if (fontColor == "grey") {
-      return "color: #F8F8F8;";
+      setFontColor(style.Fontgrey);
     }
     if (fontColor == "white") {
-      return "color: #FFFFFF;";
+      setFontColor(style.Fontwhite);
     }
-  };
 
-  const Container = styled.div`
-    display: flex;
-    align-items: center;
-    padding: 0 23px 0 23px;
-    height: ${height ? height: '100%'};
-    font-size: ${fontSize? fontSize: 'auto'};
-    ${finalColour};
-    ${finalFontColor};
-    ${radius};
-    font-weight: ${({ bold }) => (bold ? "bold" : "normal")};
-  `;
-  return <Container>{children}</Container>;
+    if (fullBorderRadius == "top") {
+      setBorderRadius(style.borderRadiusTop);
+    }
+    if (fullBorderRadius == "bottom") {
+      setBorderRadius(style.borderRadiusBottom);
+    }
+    if (fullBorderRadius == "full") {
+      setBorderRadius(style.borderRadiusFull);
+    }
+  }, []);
+
+  return (
+    <div
+      className={`${ContainerClassName}  ${backgroundColor}   ${finalFontColor} ${borderRadius}`}
+    >
+      {children}
+    </div>
+  );
 }
