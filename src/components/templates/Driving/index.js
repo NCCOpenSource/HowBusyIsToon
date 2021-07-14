@@ -13,23 +13,21 @@ import VisitCitySafetly from "../../atoms/VisitCitySafely";
 import RoadClosureAroundTown from "../../molecules/RoadClosureAroundTown";
 import LocalRoadUpdates from "../../molecules/LocalRoadUpdates";
 import EvMap from "../../molecules/EvMap";
+import "./Driving.css";
 
 export default function DrivingTemplate() {
-  const [state, setState] = useState("Traffic");
+  const [state, setState] = useState("Driving-Traffic");
 
-  const finalClass =()=>{
-if(state == 'Traffic'){
-  return `${styles.container}`
-}
-  }
+  console.log("🚀 ~ file: index.js ~ line 34 ~ state ~ state", state);
 
   return (
     <>
+      {/* ////////////////////////////nav//////////////////// */}
       <Nav>
         <div
           className={styles.NavSubLink}
           onClick={() => {
-            setState("Traffic");
+            setState("Driving-Traffic");
           }}
         >
           <p className={styles.NavSubLinkText}>Traffic</p>
@@ -38,7 +36,7 @@ if(state == 'Traffic'){
         <div
           className={styles.NavSubLink}
           onClick={() => {
-            setState("Parking Data");
+            setState("Driving-ParkingData");
           }}
         >
           <p className={styles.NavSubLinkText}>Parking Data</p>
@@ -46,7 +44,7 @@ if(state == 'Traffic'){
         <div
           className={styles.NavSubLink}
           onClick={() => {
-            setState("Ev Charging Stations");
+            setState("Driving-EvChargingStations");
           }}
         >
           <p className={styles.NavSubLinkText}>Ev Charging Stations</p>
@@ -55,20 +53,20 @@ if(state == 'Traffic'){
         <div
           className={styles.NavSubLink}
           onClick={() => {
-            setState("Cameras And Maps");
+            setState("Driving-CamerasAndMaps");
           }}
         >
           <p className={styles.NavSubLinkText}>Cameras And Maps</p>
         </div>
       </Nav>
-
-      <div className={state == "Traffic" ? styles.container1 : ""}>
-        {state == "Traffic" ? (
+      {/* ////////////////////////////////////////////////////////////// */}
+      <div className={state}>
+        {state === "Driving-Traffic" ? (
           <>
-            <div className={styles.RoadClosureAroundTown}>
+            <div className="DrivingRoadClosureAroundTown">
               <RoadClosureAroundTown />
             </div>
-            <div className={styles.LocalRoadUpdates}>
+            <div className={"DrivingLocalRoadUpdates"}>
               <LocalRoadUpdates />
             </div>
           </>
@@ -76,12 +74,18 @@ if(state == 'Traffic'){
           ""
         )}
 
-        {state == "Ev Charging Stations" ? <EvMap className={styles.EvMap}/> : ""}
+        {state === "Driving-EvChargingStations" ? (
+          <div className="Driving-EvMap">
+            <EvMap />
+          </div>
+        ) : (
+          ""
+        )}
 
-        <div className={styles.SectionExample}>
+        <div className="Driving-SectionExample">
           <SectionExample />
         </div>
-        <div className={styles.CouncilLinks}>
+        <div className={"Driving-CouncilLinks"}>
           <CouncilLinks />
         </div>
       </div>
