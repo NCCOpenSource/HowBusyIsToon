@@ -22,9 +22,9 @@
   grid-template-columns: 33% auto auto;
   /* grid-template-rows: auto auto auto auto; */
   grid-template-areas:
-    "VisitCitySafetly WazeMap WazeMap "
-    "VisitCitySafetly WazeMap WazeMap "
-    "VisitCitySafetly WazeMap WazeMap "
+    "VisitCitySafetly ShopsRestaurantsMap ShopsRestaurantsMap "
+    "VisitCitySafetly ShopsRestaurantsMap ShopsRestaurantsMap "
+    "VisitCitySafetly ShopsRestaurantsMap ShopsRestaurantsMap "
     "SectionExample SectionExample SectionExample"
     "CouncilLinks CouncilLinks CouncilLinks";
 }
@@ -51,8 +51,8 @@
 .VisitCitySafetly {
   grid-area: VisitCitySafetly;
 }
-.WazeMap {
-  grid-area: WazeMap;
+.ShopsRestaurantsMap {
+  grid-area: ShopsRestaurantsMap;
 }
 
 .NavSubLinkItem {

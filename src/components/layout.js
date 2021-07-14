@@ -1,5 +1,5 @@
 import React from "react";
-import "./base.css";
+import "./CSS/base.css";
 import Container from "./container";
 import Nav from "./organisms/Nav";
 import styles from "./layout.module.css";

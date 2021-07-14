@@ -9,6 +9,7 @@ import SectionExample from "../../molecules/SectionExample";
 import CouncilLinks from "../../molecules/CouncilLinks";
 import Nav from "../../organisms/Nav";
 import WazeMap from "../../atoms/WazeMap";
+import ShopsRestaurantsMap from "../../atoms/Shops&RestaurantsMap";
 import VisitCitySafetly from "../../atoms/VisitCitySafely";
 export default function Home() {
   const [state, setState] = useState("FootFall Camera");
@@ -44,8 +45,8 @@ export default function Home() {
             <div className={styles.VisitCitySafetly}>
               <VisitCitySafetly />
             </div>
-            <div className={styles.WazeMap}>
-              <WazeMap />
+            <div className={styles.ShopsRestaurantsMap}>
+              <ShopsRestaurantsMap />
             </div>
           </>
         ) : (
