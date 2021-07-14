@@ -8,7 +8,7 @@ import Filter from "../Filter";
 
 export default function CameraFeed() {
   const [option, setOption] = useState();
-  console.log("🚀 ~ file: index.js ~ line 6 ~ Filter ~ option", option);
+  // console.log("🚀 ~ file: index.js ~ line 6 ~ Filter ~ option", option);
   function handleChange(event) {
     setOption(event.target.value);
   }

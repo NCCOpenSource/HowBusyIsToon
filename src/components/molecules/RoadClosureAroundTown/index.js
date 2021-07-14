@@ -18,8 +18,9 @@ export default function RoadClosureAroundTown() {
         LinkTitle={"Go to Arriva Guidance"}
         Linkurl={"/slug"}
       >
-        <StaticImage alt=''
-          // style={{ height: "10%", width: "10%" }}
+        <StaticImage
+          alt=""
+          className={styles.image}
           src={"../../../images/bus-Example.jpg"}
         />
       </ArticleExample>

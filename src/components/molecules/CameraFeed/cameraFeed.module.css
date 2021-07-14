@@ -1,8 +1,11 @@
+@import "../../CSS/variables.css";
+
 .cityCenterCameraFeed {
   width: 100%;
   height: 100%;
   display: grid;
-  gap: 32px;
+  gap: var(--grid-gap);
+
   /* grid-template-columns: 80% 20%; */
   /* grid-template-rows: 100% 100%; */
   grid-template-areas:
@@ -18,7 +21,7 @@
 
 .infoContainer {
   background: #f8f8f8;
-  border-radius: 8px;
+  border-radius: var(--border-radius);
   grid-area: a;
   height: 48px;
   display: flex;
@@ -75,5 +78,5 @@
   width: 100%;
   height: 100%;
   background: #f8f8f8;
-  border-radius: 8px;
+  border-radius: var(--border-radius);
 }

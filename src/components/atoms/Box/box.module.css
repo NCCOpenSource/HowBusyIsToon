@@ -1,3 +1,5 @@
+@import "../../CSS/variables.css";
+
 .Backgroundblack {
   background-color: #000000;
 }
@@ -18,11 +20,11 @@
 }
 
 .borderRadiusFull {
-  border-radius: 8px;
+  border-radius: var(--border-radius);
 }
 .borderRadiusTop {
-  border-radius: 0 0 8px 8px;
+  border-radius: 0 0 var(--border-radius) var(--border-radius);
 }
 .borderRadiusBottom {
-  border-radius: 8px 8px 0 0;
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
 }

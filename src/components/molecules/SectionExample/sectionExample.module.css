@@ -1,6 +1,6 @@
 .SectionExample {
   display: grid;
-  gap: 32px;
+  gap: var(--grid-gap);
 }
 .top {
 }
@@ -10,7 +10,8 @@
 .OuterContainer {
   display: grid;
   grid-auto-flow: column;
-  gap: 32px;
+  gap: var(--grid-gap);
+
   /* display: flex; */
   /* flex-direction: row; */
 }
@@ -21,4 +22,8 @@
   /* display: flex; */
   /* flex-direction: column; */
   /* padding: 32px; */
+}
+
+.image {
+  border-radius: var(--border-radius);
 }

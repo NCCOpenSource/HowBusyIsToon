@@ -1,9 +1,12 @@
+@import "./CSS/variables.css";
+
 /* container.js */
 
 .containerGrid {
   margin: 24px 32px 24px 32px;
   display: grid;
-  gap: 32px;
+  gap: var(--grid-gap);
+
   /* grid-auto-flow: column; */
   /* grid-template-rows: auto auto 1fr; */
   /* grid-template-areas:
@@ -11,9 +14,8 @@
     "middle"
     "bottom"; */
 
-    /* display: flex;
+  /* display: flex;
     flex-direction: column; */
-    
 }
 
 .top {

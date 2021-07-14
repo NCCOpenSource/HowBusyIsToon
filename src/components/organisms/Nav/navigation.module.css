@@ -10,6 +10,9 @@
   padding: 0 23px 0 23px;
 }
 
+@import '../../CSS/variables.css';
+
+
 .title {
   width: 100%;
   text-decoration: none;

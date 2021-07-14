@@ -26,7 +26,9 @@ export default function SectionExample() {
           LinkTitle={"Go to Arriva Guidance"}
           Linkurl={"/slug"}
         >
-          <StaticImage alt=''
+          <StaticImage
+            alt=""
+            className={styles.image}
             // style={{ height: "10%", width: "10%" }}
             src={"../../../images/bus-Example.jpg"}
           />
@@ -40,7 +42,9 @@ export default function SectionExample() {
           LinkTitle={"Go to Arriva Guidance"}
           Linkurl={"/slug"}
         >
-          <StaticImage alt=''
+          <StaticImage
+            alt=""
+            className={styles.image}
             // style={{ height: "10%", width: "10%" }}
             src={"../../../images/bus-Example.jpg"}
           />
@@ -54,7 +58,9 @@ export default function SectionExample() {
           LinkTitle={"Go to Arriva Guidance"}
           Linkurl={"/slug"}
         >
-          <StaticImage alt=''
+          <StaticImage
+            alt=""
+            className={styles.image}
             // style={{ height: "10%", width: "10%" }}
             src={"../../../images/bus-Example.jpg"}
           />

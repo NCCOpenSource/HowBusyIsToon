@@ -1,9 +1,11 @@
+@import "../../CSS/variables.css";
+
 .calloutQuiet {
   /* width: 442px; */
   /* height: 889px; */
   height: 100%;
   width: 100%;
-  border-radius: 8px;
+  border-radius: var(--border-radius);
   background: #00b67b;
   display: flex;
   flex-direction: column;

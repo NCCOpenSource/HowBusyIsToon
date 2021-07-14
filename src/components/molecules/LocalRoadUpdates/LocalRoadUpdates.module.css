@@ -1,6 +1,8 @@
-.container{
-    display: grid;
-    gap: 32px;
+@import "../../CSS/variables.css";
+
+.container {
+  display: grid;
+  gap: var(--grid-gap);
 }
 
 .topFont {

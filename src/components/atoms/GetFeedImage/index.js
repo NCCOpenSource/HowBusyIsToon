@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { StaticImage } from "gatsby-plugin-image";
-
+import styles from "./GetFeedImage.module.css";
 export default function GetFeedImage({ option }) {
   const [camera1, setCamera1] = useState("");
   console.log("🚀 ~ file: index.js ~ line 5 ~ GetFeedImage ~ camera1", camera1);
@@ -52,52 +52,50 @@ export default function GetFeedImage({ option }) {
           console.log(error);
         });
 
+      console.log("test1");
 
-
-
-
-
-
-
-
-        console.log('test1');
-
-
-        fetch(
-          `https://chargepoints.dft.gov.uk/api/retrieve/registry/postcode/NE1+8XG/limit/10/
+      fetch(
+        `https://chargepoints.dft.gov.uk/api/retrieve/registry/postcode/NE1+8XG/limit/10/
           `,
-          {
-            mode: "no-cors",
-            headers: {
-              "Access-Control-Allow-Origin": "*",
-            },
-          }
-        )
-          // .then((response) => {response.json(); console.log(response)})
-          .then((response) => response.json())
-          .then((response) => {
-            console.log("🚀 ~ file: index.js ~ line 29 ~ .then ~ response", response)
-            console.log("🚀 ~ file: index.js ~ line 29 ~ .then ~ response", response)
-            console.log(response);
-            console.log('test2');
-          })
-          .catch((error) => {
-            console.log(error);
-          });
-          console.log('test3');
-
-
-
+        {
+          mode: "no-cors",
+          headers: {
+            "Access-Control-Allow-Origin": "*",
+          },
+        }
+      )
+        // .then((response) => {response.json(); console.log(response)})
+        .then((response) => response.json())
+        .then((response) => {
+          console.log(
+            "🚀 ~ file: index.js ~ line 29 ~ .then ~ response",
+            response
+          );
+          console.log(
+            "🚀 ~ file: index.js ~ line 29 ~ .then ~ response",
+            response
+          );
+          console.log(response);
+          console.log("test2");
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+      console.log("test3");
     }
     fetchFeedImages();
   }, []);
 
   return (
     <>
-      {option == 1 || option == undefined ? <img src={camera1} /> : ""}
-      {option == 2 ? <img src={camera2} /> : ""}
-      {option == 3 ? <img src={camera3} /> : ""}
-      {option == 4 ? <img src={camera4} /> : ""}
+      {option == 1 || option == undefined ? (
+        <img src={camera1} alt="" className={styles.image} />
+      ) : (
+        ""
+      )}
+      {option == 2 ? <img src={camera2} alt="" className={styles.image} /> : ""}
+      {option == 3 ? <img src={camera3} alt="" className={styles.image} /> : ""}
+      {option == 4 ? <img src={camera4} alt="" className={styles.image} /> : ""}
       {/* <img src={camera1} 
       // style={{ height: "100%", width: "100%" }}
       ></img>
