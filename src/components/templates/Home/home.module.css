@@ -67,3 +67,31 @@
   margin-left: 21px;
   cursor: pointer;
 }
+
+@media only screen and (max-width: 1025px) {
+  .containerFF {
+    /* width: 100%; */
+
+    grid-template-areas: none;
+    display: flex;
+    flex-direction: column;
+    /* margin: 0 18px; */
+  }
+
+  .containerSR {
+    width: 100%;
+
+    grid-template-areas: none;
+    display: flex;
+    flex-direction: column;
+    margin: 0 18px;
+
+    /* grid-auto-flow: column; */
+  }
+}
+
+/* @media only screen and (min-width: 1026px) {
+  .mobileNav {
+    display: none;
+  }
+} */
