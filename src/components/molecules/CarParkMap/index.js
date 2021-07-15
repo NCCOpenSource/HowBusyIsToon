@@ -33,7 +33,11 @@ export default function CarParkMap() {
           key={Math.floor(Math.random() * 999999999999)}
           position={getLatLon(carPark.name)}
         >
-          <Popup></Popup>
+          <p>100</p>
+          <Popup>
+          <p>100</p>
+
+          </Popup>
         </Marker>
       ))}
     </MapContainer>

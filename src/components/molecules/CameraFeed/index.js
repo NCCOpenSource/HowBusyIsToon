@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 // import SelectDropdown from "../index";
-import styles from "./CameraFeed.module.css";
+import styles from "./cameraFeed.module.css";
 import TimeIcon from "../../../assets/icons/time.svg";
 import { StaticImage } from "gatsby-plugin-image";
 import GetFeedImage from "../../atoms/GetFeedImage";
