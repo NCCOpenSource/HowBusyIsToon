@@ -1,5 +1,7 @@
 import React from "react";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import L from "leaflet";
+
 import "./index.module.css";
 import CarParksData from "../../atoms/CarParksData/carparkdata.json";
 export default function CarParkMap() {
@@ -21,6 +23,23 @@ export default function CarParkMap() {
     if (carParkName === "Manors")
       return [54.97269238272554, -1.6062653286128759];
   }
+
+  function createMarkerIcon(carPark) {
+    const marker = L.divIcon({
+      // html:
+      //   '<img alt="marker-' +
+      //   state +
+      //   '" src="assets/images/map-marker-' +
+      //   state +
+      //   '.png"><span class="spaces">' +
+      //   spaces +
+      //   "</span>",
+      // iconSize: [60, 60],
+      // iconAnchor: [30, 60],
+      // className: "car-park-marker",
+    });
+    return marker;
+  }
   return (
     <MapContainer center={[54.97206769445005, -1.6132124536205563]} zoom={14}>
       <TileLayer
@@ -30,13 +49,13 @@ export default function CarParkMap() {
 
       {CarParksData.carparks.map((carPark) => (
         <Marker
+          icon={createMarkerIcon(carPark)}
           key={Math.floor(Math.random() * 999999999999)}
           position={getLatLon(carPark.name)}
         >
           <p>100</p>
           <Popup>
-          <p>100</p>
-
+            <p>100</p>
           </Popup>
         </Marker>
       ))}
