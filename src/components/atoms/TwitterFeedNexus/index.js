@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./twitterFeed.module.css";
 import { TwitterTimelineEmbed } from "react-twitter-embed";
 
-const TwitterFeed = () => {
+const TwitterFeedNexus = () => {
   return (
     <div className={styles.TrafficFeed}>
       <TwitterTimelineEmbed
@@ -15,4 +15,4 @@ const TwitterFeed = () => {
   );
 };
 
-export default TwitterFeed;
+export default TwitterFeedNexus;

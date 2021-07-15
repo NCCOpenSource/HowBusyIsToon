@@ -1,14 +1,14 @@
 import React from "react";
-import { TopBox } from "../../atoms/Box/TopBox";
 import ArticleExample from "../../atoms/ArticleExample";
 import { StaticImage } from "gatsby-plugin-image";
 import styles from "./RoadClosure.module.css";
+import Box from "../../atoms/Box";
 export default function RoadClosureAroundTown() {
   return (
     <div className={styles.container}>
-      <TopBox height={"72px"} fontSize={"31px"}>
+      <Box >
         <p className={styles.topFont}>Road Closures Around Town</p>
-      </TopBox>
+      </Box>
       <ArticleExample
         //   className={styles.ArticleExample}
         Title={""}

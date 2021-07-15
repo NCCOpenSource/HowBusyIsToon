@@ -1,7 +1,4 @@
 @import "../../CSS/variables.css";
-
-.leaflet-container {
-  height: 100%;
-  width: 100%;
+.TrafficFeed {
   border-radius: var(--border-radius);
 }

@@ -1,15 +1,14 @@
 import React from "react";
-import TwitterFeed from "../../atoms/TwitterFeed";
-import { TopBox } from "../../atoms/Box/TopBox";
+import TwitterFeedNexus from "../../atoms/TwitterFeedNETravel";
 import styles from "./LocalRoadUpdates.module.css";
-
+import Box from "../../atoms/Box";
 export default function LocalRoadUpdates() {
   return (
     <div className={styles.container}>
-      <TopBox height={"72px"} fontSize={"31px"}>
+      <Box >
         <p className={styles.topFont}>Local Road Updates</p>
-      </TopBox>
-      <TwitterFeed />
+      </Box>
+      <TwitterFeedNexus />
     </div>
   );
 }

@@ -1,19 +1,14 @@
 import React, { useState } from "react";
 
 import styles from "./Driving.module.css";
-import HowBusyAreBuses from "../../molecules/HowBusyAreBuses";
-import HowBusyAreRoads from "../../molecules/HowBusyAreRoads";
-import CameraFeed from "../../molecules/CameraFeed";
-import Callout from "../../molecules/Callout";
 import SectionExample from "../../molecules/SectionExample";
 import CouncilLinks from "../../molecules/CouncilLinks";
 import Nav from "../../organisms/Nav";
-import WazeMap from "../../atoms/WazeMap";
-import VisitCitySafetly from "../../atoms/VisitCitySafely";
 import RoadClosureAroundTown from "../../molecules/RoadClosureAroundTown";
 import LocalRoadUpdates from "../../molecules/LocalRoadUpdates";
 import EvMap from "../../molecules/EvMap";
 import "./Driving.css";
+import CarParkMap from "../../molecules/CarParkMap";
 
 export default function DrivingTemplate() {
   const [state, setState] = useState("Driving-Traffic");
@@ -70,6 +65,14 @@ export default function DrivingTemplate() {
               <LocalRoadUpdates />
             </div>
           </>
+        ) : (
+          ""
+        )}
+
+        {state === "Driving-ParkingData" ? (
+          <div>
+            <CarParkMap />
+          </div>
         ) : (
           ""
         )}
