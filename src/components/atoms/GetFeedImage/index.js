@@ -28,7 +28,7 @@ export default function GetFeedImage({ option }) {
         });
 
       fetch(
-        `https://api.newcastle.urbanobservatory.ac.uk/api/v2/sensors/timeseries/b0cf0739-8bf0-4edc-83ff-99be42d0dc21`
+        `https://file.newcastle.urbanobservatory.ac.uk/camera-feeds/NC_PS_001_c1/20210715/114700.jpg`
       )
         .then((response) => response.json())
         .then((response) => setCamera3(response.latest.value))
@@ -37,7 +37,7 @@ export default function GetFeedImage({ option }) {
         });
 
       fetch(
-        `https://api.newcastle.urbanobservatory.ac.uk/api/v2/sensors/timeseries/b0cf0739-8bf0-4edc-83ff-99be42d0dc21`
+        `https://file.newcastle.urbanobservatory.ac.uk/camera-feeds/NC_PS_003_c1/20210715/114857.jpg`
       )
         .then((response) => response.json())
         .then((response) => setCamera4(response.latest.value))

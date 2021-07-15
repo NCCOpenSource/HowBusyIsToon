@@ -8,6 +8,7 @@ import RoadClosureAroundTown from "../../molecules/RoadClosureAroundTown";
 import LocalRoadUpdates from "../../molecules/LocalRoadUpdates";
 import EvMap from "../../molecules/EvMap";
 import "./Driving.css";
+import CarParkMap from "../../molecules/CarParkMap";
 
 export default function DrivingTemplate() {
   const [state, setState] = useState("Driving-Traffic");
@@ -64,6 +65,14 @@ export default function DrivingTemplate() {
               <LocalRoadUpdates />
             </div>
           </>
+        ) : (
+          ""
+        )}
+
+        {state === "Driving-ParkingData" ? (
+          <div>
+            <CarParkMap />
+          </div>
         ) : (
           ""
         )}

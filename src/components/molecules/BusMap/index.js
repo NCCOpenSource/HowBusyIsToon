@@ -29,7 +29,7 @@ import face from "../../../images/smiley-face2.jpg";
 
 
 export default function BusMap() {
-  console.log("🚀 ~ file: index.js ~ line 6 ~ BusesData", BusDataExample);
+  // console.log("🚀 ~ file: index.js ~ line 6 ~ BusesData", BusDataExample);
 
   // delete L.Icon.Default.prototype._getIconUrl;
 

@@ -1,0 +1,1 @@
+{"timestamp": "2021-07-15T12:16:39.465984+00:00", "response_time_us": 141256, "city_state": "busy", "footfall": [{"sensor_name": "PER_PEOPLE_NORTHUMERLAND_LINE_LONG_DISTANCE_HEAD_0", "number_of_datapoints": 12.0, "average_people_count": 157.92}, {"sensor_name": "PER_PEOPLE_NORTHUMERLAND_LINE_LONG_DISTANCE_HEAD_1", "number_of_datapoints": 12.0, "average_people_count": 204.08}]}
