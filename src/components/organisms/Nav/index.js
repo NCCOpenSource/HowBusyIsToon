@@ -8,12 +8,10 @@ import CloseIcon from "../../../assets/icons/icon_closeMenu.svg";
 // import NavOverlay from "../../molecules";
 import NavOverlay from "../../molecules/NavOverlay";
 import Box from "../../atoms/Box";
-import { TopBox } from "../../atoms/Box/TopBox";
-import { BottomBox } from "../../atoms/Box/BottomBox";
+
 import NavLinkItems from "../../molecules/NavLinkItems";
 export default function Nav(props) {
   const [show, setShow] = useState(false);
-
 
   const showNavOverlay = (event) => {
     console.log(show);
@@ -21,11 +19,9 @@ export default function Nav(props) {
     setShow(!show);
   };
 
-
-
   return (
     <div>
-      <TopBox height={"112px"} fontSize={"31px"} className={styles.top}>
+      <Box fullBorderRadius="top" className={styles.top}>
         <a href="/" className={styles.title}>
           How Busy Is...
         </a>
@@ -57,12 +53,17 @@ export default function Nav(props) {
           )}
         </nav>
         {/* endMobileNav */}
-      </TopBox>
-      <BottomBox fontSize={"25px"} height={"56px"} className={styles.bottom}>
+      </Box>
+      <Box
+        fullBorderRadius="bottom"
+        fontColor="black"
+        color="grey"
+        className={styles.bottom}
+      >
         <LocationIcon className={styles.locationIcon} />
         <span className={styles.location}>Newcastle</span>
         <ul className={styles.linkList}>{props.children}</ul>
-      </BottomBox>
+      </Box>
     </div>
   );
 }

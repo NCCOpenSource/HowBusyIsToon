@@ -1,8 +1,5 @@
 import React from "react";
-// import Box from "../../atoms";
 import Box from "../../atoms/Box";
-// import GreyBox from "../atom/greybox";
-import { BottomBox } from "../../atoms/Box/BottomBox";
 import styles from "./sectionExample.module.css";
 import { StaticImage } from "gatsby-plugin-image";
 
@@ -11,7 +8,7 @@ import ArticleExample from "../../atoms/ArticleExample";
 export default function SectionExample() {
   return (
     <div className={styles.SectionExample}>
-      <Box fontColor="white" fullBorderRadius="full" color="black" bold>
+      <Box>
         <p className={styles.topFont}>
           Alternative Tranpsport and Our Green Initiative
         </p>

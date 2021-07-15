@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 // import SelectDropdown from "../index";
-import styles from "./CameraFeed.module.css";
+import styles from "./cameraFeed.module.css";
 import TimeIcon from "../../../assets/icons/time.svg";
 import { StaticImage } from "gatsby-plugin-image";
 import GetFeedImage from "../../atoms/GetFeedImage";
 import Filter from "../Filter";
 
 export default function CameraFeed() {
-  const [option, setOption] = useState();
+  const [option, setOption] = useState('1');
   // console.log("🚀 ~ file: index.js ~ line 6 ~ Filter ~ option", option);
   function handleChange(event) {
     setOption(event.target.value);

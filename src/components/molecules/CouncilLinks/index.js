@@ -8,7 +8,7 @@ export default function CouncilLinks() {
   return (
     <div className={styles.CouncilLinks}>
       <div className={styles.topContainer}>
-        <Box fontColor="white" fullBorderRadius="full" color="black" bold>
+        <Box fontColor="white" fullBorderRadius="full" color="black" >
           <p className={styles.heading}>
             How Newcastle City Council is Protecting You
           </p>

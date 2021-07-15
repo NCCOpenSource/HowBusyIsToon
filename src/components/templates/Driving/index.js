@@ -1,29 +1,28 @@
 import React, { useState } from "react";
 
 import styles from "./Driving.module.css";
-import HowBusyAreBuses from "../../molecules/HowBusyAreBuses";
-import HowBusyAreRoads from "../../molecules/HowBusyAreRoads";
-import CameraFeed from "../../molecules/CameraFeed";
-import Callout from "../../molecules/Callout";
 import SectionExample from "../../molecules/SectionExample";
 import CouncilLinks from "../../molecules/CouncilLinks";
 import Nav from "../../organisms/Nav";
-import WazeMap from "../../atoms/WazeMap";
-import VisitCitySafetly from "../../atoms/VisitCitySafely";
 import RoadClosureAroundTown from "../../molecules/RoadClosureAroundTown";
 import LocalRoadUpdates from "../../molecules/LocalRoadUpdates";
 import EvMap from "../../molecules/EvMap";
+import "./Driving.css";
+import CarParkMap from "../../molecules/CarParkMap";
 
 export default function DrivingTemplate() {
-  const [state, setState] = useState("Traffic");
+  const [state, setState] = useState("Driving-Traffic");
+
+  console.log("🚀 ~ file: index.js ~ line 34 ~ state ~ state", state);
 
   return (
     <>
+      {/* ////////////////////////////nav//////////////////// */}
       <Nav>
         <div
           className={styles.NavSubLink}
           onClick={() => {
-            setState("Traffic");
+            setState("Driving-Traffic");
           }}
         >
           <p className={styles.NavSubLinkText}>Traffic</p>
@@ -32,7 +31,7 @@ export default function DrivingTemplate() {
         <div
           className={styles.NavSubLink}
           onClick={() => {
-            setState("Parking Data");
+            setState("Driving-ParkingData");
           }}
         >
           <p className={styles.NavSubLinkText}>Parking Data</p>
@@ -40,7 +39,7 @@ export default function DrivingTemplate() {
         <div
           className={styles.NavSubLink}
           onClick={() => {
-            setState("Ev Charging Stations");
+            setState("Driving-EvChargingStations");
           }}
         >
           <p className={styles.NavSubLinkText}>Ev Charging Stations</p>
@@ -49,20 +48,20 @@ export default function DrivingTemplate() {
         <div
           className={styles.NavSubLink}
           onClick={() => {
-            setState("Cameras And Maps");
+            setState("Driving-CamerasAndMaps");
           }}
         >
           <p className={styles.NavSubLinkText}>Cameras And Maps</p>
         </div>
       </Nav>
-
-      <div className={state == "Traffic" ? styles.container1 : ""}>
-        {state == "Traffic" ? (
+      {/* ////////////////////////////////////////////////////////////// */}
+      <div className={state}>
+        {state === "Driving-Traffic" ? (
           <>
-            <div className={styles.RoadClosureAroundTown}>
+            <div className="DrivingRoadClosureAroundTown">
               <RoadClosureAroundTown />
             </div>
-            <div className={styles.LocalRoadUpdates}>
+            <div className={"DrivingLocalRoadUpdates"}>
               <LocalRoadUpdates />
             </div>
           </>
@@ -70,12 +69,26 @@ export default function DrivingTemplate() {
           ""
         )}
 
-        {state == "Ev Charging Stations" ? <EvMap /> : ""}
+        {state === "Driving-ParkingData" ? (
+          <div>
+            <CarParkMap />
+          </div>
+        ) : (
+          ""
+        )}
 
-        <div className={styles.SectionExample}>
+        {state === "Driving-EvChargingStations" ? (
+          <div className="Driving-EvMap">
+            <EvMap />
+          </div>
+        ) : (
+          ""
+        )}
+
+        <div className="Driving-SectionExample">
           <SectionExample />
         </div>
-        <div className={styles.CouncilLinks}>
+        <div className={"Driving-CouncilLinks"}>
           <CouncilLinks />
         </div>
       </div>
