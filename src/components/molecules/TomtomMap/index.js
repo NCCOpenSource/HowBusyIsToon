@@ -1,8 +1,8 @@
 import React from "react";
-import { MapContainer, TileLayer, Marker, Popup, Tooltip } from "react-leaflet";
+import { MapContainer, TileLayer, Marker, Popup,Tooltip } from "react-leaflet";
 import L from "leaflet";
-import "./BusMap.module.css";
-import "./busMap.css";
+import "./TomTom.module.css";
+import "./TomTom.css";
 import BusesData from "../../atoms/BusesData";
 import BusDataExample from "../../atoms/BusesData/BusDataExample.json";
 import BusIcon from "../../../images/BusBirdsEye.png";
@@ -18,7 +18,7 @@ import "leaflet/dist/leaflet.css";
 // hover to find bus details or have a marker that shows bus no (show buses or just numbers)
 // only show buses within distance (hook) https://leafletjs.com/reference-1.7.1.html#latlng-distanceto
 
-export default function BusMap() {
+export default function TomTomMap() {
   console.log("🚀 ~ file: index.js ~ line 8 ~ BusDataExample", BusDataExample);
 
   const customMarker = L.icon({
@@ -41,6 +41,7 @@ export default function BusMap() {
     return marker;
   }
 
+
   return (
     <MapContainer center={[54.97206769445005, -1.6132124536205563]} zoom={14}>
       <TileLayer
@@ -49,14 +50,6 @@ export default function BusMap() {
       />
       {/* <MarkerClusterGroup > */}
       {BusDataExample.map((bus) => {
-        const seatsavailable =
-          bus.VehicleActivity.Extensions.VehicleJourney.SeatedCapacity -
-          bus.VehicleActivity.Extensions.VehicleJourney.SeatedOccupancy;
-
-        const WheelChaireseatsavailable =
-          bus.VehicleActivity.Extensions.VehicleJourney.WheelchairCapacity -
-          bus.VehicleActivity.Extensions.VehicleJourney.WheelchairOccupancy;
-
         if (
           bus.VehicleActivity.MonitoredVehicleJourney.VehicleLocation.Latitude <
             55.02255 &&
@@ -82,25 +75,10 @@ export default function BusMap() {
                   bus.VehicleActivity.MonitoredVehicleJourney.VehicleLocation
                     .Longitude,
                 ]}
-              >
-                {/* <Tooltip>
-                  {bus.VehicleActivity.MonitoredVehicleJourney.LineRef}
-                </Tooltip> */}
-                <Popup>
-                  <h1>Bus : {bus.VehicleActivity.MonitoredVehicleJourney.LineRef}</h1>
-                  {seatsavailable ? (
-                    <h2>{seatsavailable} seats available</h2>
-                  ) : (
-                    ""
-                  )}
-
-                  {WheelChaireseatsavailable ? (
-                    <h2>
-                      {WheelChaireseatsavailable} wheelchair seats available
-                    </h2>
-                  ) : (
-                    ""
-                  )}
+              ><Tooltip>{bus.VehicleActivity.MonitoredVehicleJourney.LineRef}</Tooltip>
+                <Popup><h1>{bus.VehicleActivity.MonitoredVehicleJourney.LineRef}</h1>
+                
+                
                 </Popup>
               </Marker>
             </>
