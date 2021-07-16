@@ -7,7 +7,7 @@ import GetFeedImage from "../../atoms/GetFeedImage";
 import Filter from "../Filter";
 
 export default function CameraFeed() {
-  const [option, setOption] = useState('1');
+  const [option, setOption] = useState(0);
   // console.log("🚀 ~ file: index.js ~ line 6 ~ Filter ~ option", option);
   function handleChange(event) {
     setOption(event.target.value);
@@ -27,6 +27,9 @@ export default function CameraFeed() {
             name="option"
             onChange={handleChange}
           >
+            <option className={styles.option} value="0">
+              0
+            </option>
             <option className={styles.option} value="1">
               1
             </option>
@@ -38,6 +41,9 @@ export default function CameraFeed() {
             </option>
             <option className={styles.option} value="4">
               4
+            </option>
+            <option className={styles.option} value="5">
+              5
             </option>
           </select>
         </div>

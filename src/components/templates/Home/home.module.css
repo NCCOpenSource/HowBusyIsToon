@@ -57,7 +57,7 @@
 .ShopsRestaurantsMap {
   grid-area: ShopsRestaurantsMap;
 }
-
+/* /////////////////////////nav///////////////////////// */
 .NavSubLinkItem {
   width: 100%;
   height: 100%;
@@ -66,7 +66,17 @@
   height: 100%;
   margin-left: 21px;
   cursor: pointer;
+  height: 100%;
+  padding: 0 23px;
+  text-align: center;
 }
+.ActiveNavSubLink {
+  background-color: var(--color-dark-grey);
+  color: var(--color-white);
+  border-bottom: 5px solid var(--color-white);
+
+}
+/* /////////////////////////endnav///////////////////////// */
 
 @media only screen and (max-width: 1025px) {
   .containerFF {

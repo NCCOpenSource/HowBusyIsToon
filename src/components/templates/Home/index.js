@@ -18,15 +18,24 @@ export default function Home() {
     <>
       <Nav>
         <div
-          className={styles.NavSubLink}
+          className={
+            state == "FootFall Camera"
+              ? `${styles.NavSubLink} ${styles.ActiveNavSubLink} `
+              : `${styles.NavSubLink}  `
+          }
           onClick={() => {
             setState("FootFall Camera");
           }}
         >
           <p className={styles.NavSubLinkText}>FootFall Camera</p>
         </div>
+
         <div
-          className={styles.NavSubLink}
+          className={
+            state == "Shops And Resturants"
+              ? `${styles.NavSubLink} ${styles.ActiveNavSubLink} `
+              : `${styles.NavSubLink}`
+          }
           onClick={() => {
             setState("Shops And Resturants");
           }}

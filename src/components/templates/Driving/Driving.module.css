@@ -88,4 +88,11 @@ nav .NavSubLinkItem {
   height: 100%;
   margin-left: 21px;
   cursor: pointer;
+  height: 100%;
+  padding: 0 23px ;
+
+}
+.ActiveNavSubLink {
+  background-color: var(--color-black);
+  color: var(--color-white);
 }
