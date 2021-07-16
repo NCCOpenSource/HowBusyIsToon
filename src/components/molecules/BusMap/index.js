@@ -9,24 +9,10 @@ import BusIcon from "../../../images/BusBirdsEye.png";
 import car from "../../../assets/icons/graphic_car.svg";
 import face from "../../../images/smiley-face2.jpg";
 
-
-
 // get current location optional
 // rotate bus to bounding or create an arrow (https://www.npmjs.com/package/leaflet-marker-rotation)(https://codesandbox.io/s/9hrd3?file=/main.js)
 // hover to find bus details or have a marker that shows bus no (show buses or just numbers)
 // only show buses within distance (hook) https://leafletjs.com/reference-1.7.1.html#latlng-distanceto
-
-
-
-
-
-
-
-
-
-
-
-
 
 export default function BusMap() {
   // console.log("🚀 ~ file: index.js ~ line 6 ~ BusesData", BusDataExample);
@@ -38,11 +24,36 @@ export default function BusMap() {
   //   iconUrl: require("leaflet/dist/images/marker-icon.png"),
   //   shadowUrl: require("leaflet/dist/images/marker-shadow.png"),
   // });
-  console.log(Marker);
+  // console.log(Marker);
+
+  // const customMarker = L.divIcon({
+  //   html:
+  //     '<img alt="marker" src="' +
+  //     `${BusIcon}` >",
+  //   iconSize: [60, 60],
+  //   iconAnchor: [30, 60],
+  //   className: "carparkmarker",
+  // });
+
+  // L.rotatedMarker([48.8631169, 2.3708919], {
+  //   rotationAngle: 45,
+  // })
+  // var customMarker = L.RotatedMarker({
+  //   iconUrl: BusIcon,
+  //   iconSize: [33, 100],
+  //   rotationAngle: 145,
+  //   rotationOrigin: "bottom center",
+  // });
+  // const
+
   const customMarker = L.icon({
     iconUrl: BusIcon,
     iconSize: [33, 100],
+    className: "BusIcon",
+    rotationAngle: "45",
+    rotationOrigin: "center",
   });
+
 
   return (
     <MapContainer center={[54.97206769445005, -1.6132124536205563]} zoom={14}>
@@ -54,8 +65,10 @@ export default function BusMap() {
       {BusDataExample.map((bus) => (
         <>
           <Marker
+            rotationAngle={180}
+            rotationOrigin={"center"}
             icon={customMarker}
-            rotationAngle={'45'}
+            rotationAngle={"45"}
             key={Math.floor(Math.random() * 999999999999)}
             position={[
               bus.VehicleActivity.MonitoredVehicleJourney.VehicleLocation

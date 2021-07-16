@@ -1,9 +1,10 @@
 import React from "react";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import L from "leaflet";
-
-import "./index.module.css";
+import "./CarPark.css";
+import styles from "./index.module.css";
 import CarParksData from "../../atoms/CarParksData/carparkdata.json";
+import average from "../../../images/map-marker-average.png";
 export default function CarParkMap() {
   console.log("🚀 ~ file: index.js ~ line 5 ~ CarParksData", CarParksData);
 
@@ -25,18 +26,29 @@ export default function CarParkMap() {
   }
 
   function createMarkerIcon(carPark) {
+    console.log(
+      "🚀 ~ file: index.js ~ line 28 ~ createMarkerIcon ~ carPark",
+      carPark
+    );
+
+    const state = carPark.state;
+    // const spaces = carpark.capacity - carpark.occupancy;
+    const spaces = carPark.occupancy;
+
     const marker = L.divIcon({
-      // html:
-      //   '<img alt="marker-' +
-      //   state +
-      //   '" src="assets/images/map-marker-' +
-      //   state +
-      //   '.png"><span class="spaces">' +
-      //   spaces +
-      //   "</span>",
-      // iconSize: [60, 60],
-      // iconAnchor: [30, 60],
-      // className: "car-park-marker",
+      html:
+        '<img alt="marker-' +
+        state +
+        '" src="' +
+        `${average}` +
+        '"><span className=' +
+        `${styles.spaces}` +
+        ">" +
+        spaces +
+        "</span>",
+      iconSize: [60, 60],
+      iconAnchor: [30, 60],
+      className: "carparkmarker",
     });
     return marker;
   }
@@ -52,10 +64,12 @@ export default function CarParkMap() {
           icon={createMarkerIcon(carPark)}
           key={Math.floor(Math.random() * 999999999999)}
           position={getLatLon(carPark.name)}
+          // className="carparkmarker"
         >
-          <p>100</p>
           <Popup>
-            <p>100</p>
+            <p>
+              There are {carPark.occupancy} spaces available at {carPark.name}
+            </p>
           </Popup>
         </Marker>
       ))}

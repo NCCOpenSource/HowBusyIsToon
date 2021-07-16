@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import navStyles from "../../organisms/Nav/navExtension.module.css";
 
 import styles from "./home.module.css";
 import HowBusyAreBuses from "../../molecules/HowBusyAreBuses";
@@ -16,24 +17,36 @@ export default function Home() {
 
   return (
     <>
+      {/* ////////////////////////////nav//////////////////// */}
+
       <Nav>
         <div
-          className={styles.NavSubLink}
+          className={
+            state == "FootFall Camera"
+              ? `${navStyles.NavSubLink} ${navStyles.ActiveNavSubLink} `
+              : `${navStyles.NavSubLink}  `
+          }
           onClick={() => {
             setState("FootFall Camera");
           }}
         >
-          <p className={styles.NavSubLinkText}>FootFall Camera</p>
+          <p className={navStyles.NavSubLinkText}>FootFall Camera</p>
         </div>
+
         <div
-          className={styles.NavSubLink}
+          className={
+            state == "Shops And Resturants"
+              ? `${navStyles.NavSubLink} ${navStyles.ActiveNavSubLink} `
+              : `${navStyles.NavSubLink}`
+          }
           onClick={() => {
             setState("Shops And Resturants");
           }}
         >
-          <p className={styles.NavSubLinkText}>Shops And Resturants</p>
+          <p className={navStyles.NavSubLinkText}>Shops And Resturants</p>
         </div>
       </Nav>
+      {/* ////////////////////////////////////////////////////////////// */}
 
       <div
         className={
@@ -71,6 +84,10 @@ export default function Home() {
         ) : (
           ""
         )}
+
+
+
+        
 
         <div className={styles.SectionExample}>
           <SectionExample />

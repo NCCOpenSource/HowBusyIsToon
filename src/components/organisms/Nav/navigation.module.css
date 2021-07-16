@@ -1,29 +1,35 @@
-.top {
-  align-items: center;
-  padding: 0 23px 0 23px;
+.titlecontainer {
+  /* align-items: center;
+  padding: 0 23px 0 23px; */
+  /* display: flex; */
+  height: 112px;
+  line-height: 36px;
   display: flex;
+  align-items: center;
 }
 
 .bottom {
   display: flex;
   align-items: center;
-  padding: 0 23px 0 23px;
+  padding: 0 23px;
 }
 
-@import '../../CSS/variables.css';
-
+@import "../../CSS/variables.css";
 
 .title {
-  width: 100%;
+  padding: 0 8px;
   text-decoration: none;
   font-size: 36px;
   color: #ffffff;
+  white-space: nowrap;
 }
 
 .nav {
   width: 100%;
   height: 100%;
   /* text-align: right; */
+  height: 112px;
+  line-height: 36px;
 }
 
 .NavLinkList {
@@ -37,7 +43,6 @@
   padding: 0;
   align-items: center;
 }
-
 
 .location {
   font-family: "Europa-Bold";
@@ -58,14 +63,20 @@
   padding: 0%;
   display: inline;
   font-size: 18px;
-  line-height: 18px;
+  /* height: 56px; */
+  line-height: 22px;
+
+  /* line-height: 56px; */
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
+  margin: 0;
 }
 
 /* mobile  */
-
+.mobileNav {
+  margin-left: auto;
+}
 .mobile_Burger_menu {
   -webkit-text-size-adjust: 100%;
   word-break: break-word;
@@ -114,5 +125,6 @@
 @media only screen and (min-width: 1026px) {
   .mobileNav {
     display: none;
+    margin-left: auto;
   }
 }

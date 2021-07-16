@@ -1,17 +1,21 @@
 import React, { useEffect, useState } from "react";
 import { StaticImage } from "gatsby-plugin-image";
-import styles from "./GetFeedImage.module.css";
-export default function GetFeedImage({ option }) {
+import styles from "./GetRoadFeedImage.module.css";
+export default function GetRoadFeedImage({ option }) {
   const [imageList, setImageList] = useState(null);
 
   useEffect(() => {
     async function fetchFeedImages() {
       const imageArray = [];
       fetch(
-        `https://api.newcastle.urbanobservatory.ac.uk/api/v2/sensors/timeseries/685e0b8e-9c97-41df-94db-c039205814d1`
+        `https://api.newcastle.urbanobservatory.ac.uk/api/v2/sensors/timeseries/aeafb185-4463-4ac0-b048-7579d604d792`
       )
         .then((response) => response.json())
         .then((response) => {
+          console.log(
+            "🚀 ~ file: index.js ~ line 15 ~ .then ~ response",
+            response
+          );
           // setCamera2(response.latest.value);
           imageArray.push(response.latest.value);
           setImageList(imageArray);
@@ -21,11 +25,15 @@ export default function GetFeedImage({ option }) {
         });
 
       fetch(
-        "https://api.newcastle.urbanobservatory.ac.uk/api/v2/sensors/entity/239cb433-d521-4e07-a239-eff22b826342"
+        "https://api.newcastle.urbanobservatory.ac.uk/api/v2/sensors/timeseries/b2363f18-0696-4381-8461-a351ef51bbb1"
       )
         .then((response) => response.json())
         .then((response) => {
-          imageArray.push(response.feed[3].timeseries[0].latest.value);
+          console.log(
+            "🚀 ~ file: index.js ~ line 29 ~ .then ~ response",
+            response
+          );
+          imageArray.push(response.latest.value);
           setImageList(imageArray);
 
           // console.log(
@@ -37,10 +45,14 @@ export default function GetFeedImage({ option }) {
           console.log(error);
         });
       fetch(
-        `https://api.newcastle.urbanobservatory.ac.uk/api/v2/sensors/timeseries/b0cf0739-8bf0-4edc-83ff-99be42d0dc21`
+        `https://api.newcastle.urbanobservatory.ac.uk/api/v2/sensors/timeseries/d93ca40c-183a-433a-9834-959943477bc4`
       )
         .then((response) => response.json())
         .then((response) => {
+          console.log(
+            "🚀 ~ file: index.js ~ line 46 ~ .then ~ response",
+            response
+          );
           // setCamera1(response.latest.value);
           imageArray.push(response.latest.value);
           setImageList(imageArray);
@@ -55,39 +67,15 @@ export default function GetFeedImage({ option }) {
         });
 
       fetch(
-        "https://api.newcastle.urbanobservatory.ac.uk/api/v2/sensors/feed/a9f0600c-7967-4c4a-83e1-0a37dbf7981a"
-      )
-        .then((response) => response.json())
-        .then((response) => {
-          // console.log("🚀 ~ file: index.js ~ line 77 ~ .then ~ response", response.timeseries[0].latest.value)
-          imageArray.push(response.timeseries[0].latest.value);
-          setImageList(imageArray);
-        })
-        .catch((error) => {
-          console.log(error);
-        });
-
-      fetch(
-        "https://api.newcastle.urbanobservatory.ac.uk/api/v2/sensors/timeseries/46c43d37-9575-48f7-9688-a20664addf91"
+        "https://api.newcastle.urbanobservatory.ac.uk/api/v2/sensors/timeseries/5baa2ac0-b2d7-4273-8007-09e253f7a8b9"
       )
         .then((response) => response.json())
         .then((response) => {
           console.log(
-            "🚀 ~ file: index.js ~ line 98 ~ .then ~ response",
+            "🚀 ~ file: index.js ~ line 65 ~ .then ~ response",
             response
           );
-          imageArray.push(response.latest.value);
-          setImageList(imageArray);
-        })
-        .catch((error) => {
-          console.log(error);
-        });
-
-      fetch(
-        "https://api.newcastle.urbanobservatory.ac.uk/api/v2/sensors/timeseries/36dbe148-6e59-4538-91d6-ffeea1e262a9"
-      )
-        .then((response) => response.json())
-        .then((response) => {
+          // console.log("🚀 ~ file: index.js ~ line 77 ~ .then ~ response", response.timeseries[0].latest.value)
           imageArray.push(response.latest.value);
           setImageList(imageArray);
         })
