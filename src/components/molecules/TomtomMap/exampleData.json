@@ -1,0 +1,188 @@
+{
+  "incidents": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "8ea35d093cf29a68cc306686c6485c1f",
+        "iconCategory": 8,
+        "magnitudeOfDelay": 4,
+        "startTime": "2021-06-28T08:11:00Z",
+        "endTime": null,
+        "from": "Hartenstraat / Gasthuismolensteeg",
+        "to": "Raadhuisstraat",
+        "length": 120.672,
+        "delay": 0,
+        "roadNumbers": [],
+        "events": [
+          {
+            "code": 401,
+            "description": "Closed"
+          }
+        ],
+        "aci": null
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            4.8873053083,
+            52.3722486223
+          ],
+          [
+            4.8874353955,
+            52.3733309378
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "5655fe3a3a654ead17d0e21afac4d45f",
+        "iconCategory": 8,
+        "magnitudeOfDelay": 4,
+        "startTime": "2021-06-22T07:34:00Z",
+        "endTime": "2021-08-31T21:59:00Z",
+        "from": "Spuistraat",
+        "to": "Nieuwezijds Voorburgwal",
+        "length": 63.3409934265,
+        "delay": 0,
+        "roadNumbers": [],
+        "events": [
+          {
+            "code": 401,
+            "description": "Closed"
+          }
+        ],
+        "aci": null
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            4.8893679271,
+            52.3715365312
+          ],
+          [
+            4.8897166142,
+            52.3715780851
+          ],
+          [
+            4.8902865837,
+            52.371635759
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "7b42c5fb9647c0925a2b559daf5f8644",
+        "iconCategory": 8,
+        "magnitudeOfDelay": 4,
+        "startTime": "2021-07-12T07:27:37Z",
+        "endTime": "2021-08-31T21:59:00Z",
+        "from": "Nieuwezijds Voorburgwal",
+        "to": "Spuistraat",
+        "length": 60.4854709011,
+        "delay": 0,
+        "roadNumbers": [],
+        "events": [
+          {
+            "code": 401,
+            "description": "Closed"
+          }
+        ],
+        "aci": null
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            4.8905963788,
+            52.371663905
+          ],
+          [
+            4.8902865837,
+            52.371635759
+          ],
+          [
+            4.8897166142,
+            52.3715780851
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "2f0cc24db8a5b1896d5bb5064b8ac1fa",
+        "iconCategory": 8,
+        "magnitudeOfDelay": 4,
+        "startTime": "2021-02-08T15:08:30Z",
+        "endTime": "2021-08-31T21:59:00Z",
+        "from": "Paleisstraat",
+        "to": "Rosmarijnsteeg",
+        "length": 135.2427278189,
+        "delay": 0,
+        "roadNumbers": [],
+        "events": [
+          {
+            "code": 401,
+            "description": "Closed"
+          }
+        ],
+        "aci": null
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            4.8905963788,
+            52.371663905
+          ],
+          [
+            4.8905936966,
+            52.371524454
+          ],
+          [
+            4.8905749211,
+            52.3714278871
+          ],
+          [
+            4.8905440757,
+            52.3713393544
+          ],
+          [
+            4.8905065248,
+            52.3712669418
+          ],
+          [
+            4.8904555628,
+            52.3711703743
+          ],
+          [
+            4.8904166708,
+            52.3711100387
+          ],
+          [
+            4.8903268168,
+            52.3709759593
+          ],
+          [
+            4.8901725898,
+            52.370765372
+          ],
+          [
+            4.8900062928,
+            52.370581651
+          ],
+          [
+            4.8899472842,
+            52.3705320104
+          ]
+        ]
+      }
+    }
+  ]
+}

@@ -1,4 +1,4 @@
-.carparkspacesmap {
+.busmarker {
   font-size: 12px;
   line-height: 38px;
   position: absolute;
@@ -7,27 +7,20 @@
   right: 0;
 }
 
-.carparkmarker {
+.busmarker {
   text-align: center;
   position: relative;
+  margin: auto;
 }
 
 
-.carparkmarker span {
+.busmarker p {
   font-size: 12px;
   line-height: 38px;
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
+  margin: 0;
 }
-.carparkmarker p {
-  font-size: 12px;
-  line-height: 38px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-}
-.carparkmarker {
-}
+

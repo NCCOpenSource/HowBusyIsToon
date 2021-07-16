@@ -53,7 +53,8 @@ export default function CarParkMap() {
     return marker;
   }
   return (
-    <MapContainer center={[54.97206769445005, -1.6132124536205563]} zoom={14}>
+    <MapContainer         preferCanvas={false}
+    center={[54.97206769445005, -1.6132124536205563]} zoom={14}>
       <TileLayer
         url="https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}"
         attribution="Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ"
