@@ -1,15 +1,7 @@
-@import "../../CSS/variables.css";
-
-.leaflet-container {
-  height: 100%;
-  width: 100%;
-  border-radius: var(--border-radius);
-}
-
-.spaces {
+.carparkspacesmap {
   font-size: 12px;
   line-height: 38px;
-  position: absolute important!;
+  position: absolute;
   top: 0;
   left: 0;
   right: 0;
@@ -19,10 +11,7 @@
   text-align: center;
   position: relative;
 }
-.carparkmarker img {
-  height: 60px !important;
-  width: 60px !important;
-}
+
 
 .carparkmarker span {
   font-size: 12px;
@@ -31,4 +20,14 @@
   top: 0;
   left: 0;
   right: 0;
+}
+.carparkmarker p {
+  font-size: 12px;
+  line-height: 38px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.carparkmarker {
 }

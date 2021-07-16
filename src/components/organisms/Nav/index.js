@@ -21,16 +21,18 @@ export default function Nav(props) {
 
   return (
     <div>
-      <Box fullBorderRadius="top" className={styles.top}>
-        <a href="/" className={styles.title}>
-          How Busy Is...
-        </a>
+      <Box fullBorderRadius="top">
+        {" "}
+        <div className={styles.titlecontainer}>
+          <a href="/" className={styles.title}>
+            How Busy Is...
+          </a>
+        </div>
         <nav className={styles.nav}>
           <ul className={styles.NavLinkList}>
             <NavLinkItems />
           </ul>
         </nav>
-
         {/* mobileNav */}
         <nav className={styles.mobileNav}>
           {show ? (

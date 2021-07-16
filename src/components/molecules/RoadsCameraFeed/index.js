@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 // import SelectDropdown from "../index";
-import styles from "./cameraFeed.module.css";
+import styles from "./roadscameraFeed.module.css";
 import TimeIcon from "../../../assets/icons/time.svg";
 import { StaticImage } from "gatsby-plugin-image";
-import GetFeedImage from "../../atoms/GetFeedImage";
+import GetRoadFeedImage from "../../atoms/GetRoadFeedImage";
 import Filter from "../Filter";
 
-export default function CameraFeed() {
+export default function RoadsCameraFeed() {
   const [option, setOption] = useState(0);
   // console.log("🚀 ~ file: index.js ~ line 6 ~ Filter ~ option", option);
   function handleChange(event) {
@@ -39,19 +39,14 @@ export default function CameraFeed() {
             <option className={styles.option} value="3">
               3
             </option>
-            <option className={styles.option} value="4">
-              4
-            </option>
-            <option className={styles.option} value="5">
-              5
-            </option>
+    
           </select>
         </div>
 
         {/* <Filter className={styles.select} onChange={handleChange} /> */}
       </div>
       <div className={styles.feed}>
-        <GetFeedImage option={option} />
+        <GetRoadFeedImage option={option} />
         {/* <StaticImage alt=''
           //   className={styles.Feed}
             // width={918}
