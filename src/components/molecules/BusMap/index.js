@@ -12,6 +12,7 @@ import customArrow from "../../../images/customarrow.png";
 import average from "../../../images/map-marker-average.png";
 import MarkerClusterGroup from "react-leaflet-markercluster";
 import "leaflet/dist/leaflet.css";
+import SelectSearch from "react-select-search";
 
 // get current location optional
 // rotate bus to bounding or create an arrow (https://www.npmjs.com/package/leaflet-marker-rotation)(https://codesandbox.io/s/9hrd3?file=/main.js)
@@ -42,12 +43,16 @@ export default function BusMap() {
   }
 
   return (
+    <>
+  
     <MapContainer center={[54.97206769445005, -1.6132124536205563]} zoom={14}>
+    
       <TileLayer
         url="https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png"
         attribution='&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
       />
       {/* <MarkerClusterGroup > */}
+
       {BusDataExample.map((bus) => {
         const seatsavailable =
           bus.VehicleActivity.Extensions.VehicleJourney.SeatedCapacity -
@@ -68,7 +73,6 @@ export default function BusMap() {
             .Longitude > -1.7132124536205563
         ) {
           return (
-            <>
               <Marker
                 rotationAngle={180}
                 rotationOrigin={"center"}
@@ -87,7 +91,9 @@ export default function BusMap() {
                   {bus.VehicleActivity.MonitoredVehicleJourney.LineRef}
                 </Tooltip> */}
                 <Popup>
-                  <h1>Bus : {bus.VehicleActivity.MonitoredVehicleJourney.LineRef}</h1>
+                  <h1>
+                    Bus : {bus.VehicleActivity.MonitoredVehicleJourney.LineRef}
+                  </h1>
                   {seatsavailable ? (
                     <h2>{seatsavailable} seats available</h2>
                   ) : (
@@ -103,11 +109,12 @@ export default function BusMap() {
                   )}
                 </Popup>
               </Marker>
-            </>
           );
         }
       })}
       {/* </MarkerClusterGroup> */}
+
+    
     </MapContainer>
   );
 }
