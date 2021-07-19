@@ -1,0 +1,81 @@
+@import "../../CSS/variables.css";
+/* 
+.containerTraffic {
+  width: 100%;
+  grid-template-areas: none;
+  display: grid;
+  gap: var(--grid-gap);
+  grid-template-columns: 33% auto auto;
+  grid-template-areas:
+    ". . . "
+    ". . . "
+    "RoadClosureAroundTown LocalRoadUpdates LocalRoadUpdates "
+    "SectionExample SectionExample SectionExample"
+    "CouncilLinks CouncilLinks CouncilLinks";
+}
+
+.containerParkingData {
+  width: 100%;
+  grid-template-areas: none;
+  display: grid;
+  gap: var(--grid-gap);
+  grid-template-columns: 33% auto auto;
+  grid-template-areas:
+    ". . . "
+    ". . . "
+    "RoadClosureAroundTown LocalRoadUpdates LocalRoadUpdates "
+    "SectionExample SectionExample SectionExample"
+    "CouncilLinks CouncilLinks CouncilLinks";
+}
+.containerEvChargingStations {
+  width: 100%;
+
+  grid-template-areas: none;
+  display: grid;
+  gap: var(--grid-gap);
+
+  grid-template-columns: 33% auto auto;
+  grid-template-areas:
+    ". . . "
+    ". . . "
+    "RoadClosureAroundTown LocalRoadUpdates LocalRoadUpdates "
+    "SectionExample SectionExample SectionExample"
+    "CouncilLinks CouncilLinks CouncilLinks";
+}
+.containerCamerasAndMaps {
+  width: 100%;
+  grid-template-areas: none;
+  display: grid;
+  gap: var(--grid-gap);
+  grid-template-columns: 33% auto auto;
+  grid-template-areas:
+    ". . . "
+    ". . . "
+    "RoadClosureAroundTown LocalRoadUpdates LocalRoadUpdates "
+    "SectionExample SectionExample SectionExample"
+    "CouncilLinks CouncilLinks CouncilLinks";
+}
+
+.RoadClosureAroundTown {
+  grid-area: RoadClosureAroundTown;
+}
+.LocalRoadUpdates {
+  grid-area: LocalRoadUpdates;
+}
+
+.HowBusyAreRoads {
+  grid-area: HowBusyAreRoads;
+}
+.HowBusyAreBuses {
+  grid-area: HowBusyAreBuses;
+}
+.SectionExample {
+  grid-area: SectionExample;
+}
+.CouncilLinks {
+  grid-area: CouncilLinks;
+}
+.EvMap {
+  grid-area: EvMap;
+} */
+

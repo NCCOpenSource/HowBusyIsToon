@@ -1,0 +1,56 @@
+@import "../../CSS/variables.css";
+
+.Driving-Traffic {
+  width: 100%;
+  grid-template-areas: none;
+  display: grid;
+  gap: var(--grid-gap);
+  grid-template-columns: 33% auto auto;
+  grid-template-areas:
+    ". . . "
+    ". . . "
+    "Driving-RoadClosureAroundTown Driving-LocalRoadUpdates Driving-LocalRoadUpdates "
+    "Driving-SectionExample Driving-SectionExample Driving-SectionExample"
+    "Driving-CouncilLinks Driving-CouncilLinks Driving-CouncilLinks";
+}
+
+.Driving-ParkingData {
+}
+.Driving-EvChargingStations {
+  width: 100%;
+  grid-template-areas: none;
+  display: grid;
+  gap: var(--grid-gap);
+  grid-template-columns: 33% auto auto;
+  grid-template-areas:
+    "Driving-EvMap Driving-EvMap Driving-EvMap"
+    "Driving-EvMap Driving-EvMap Driving-EvMap"
+    "Driving-RoadClosureAroundTown Driving-LocalRoadUpdates Driving-LocalRoadUpdates "
+    "Driving-SectionExample Driving-SectionExample Driving-SectionExample"
+    "Driving-CouncilLinks Driving-CouncilLinks Driving-CouncilLinks";
+}
+.Driving-CamerasAndMaps {
+}
+
+.DrivingRoadClosureAroundTown {
+  grid-area: Driving-RoadClosureAroundTown;
+}
+.DrivingLocalRoadUpdates {
+  grid-area: Driving-LocalRoadUpdates;
+}
+
+.Driving-HowBusyAreRoads {
+  grid-area: Driving-HowBusyAreRoads;
+}
+.Driving-HowBusyAreBuses {
+  grid-area: Driving-HowBusyAreBuses;
+}
+.Driving-SectionExample {
+  grid-area: Driving-SectionExample;
+}
+.Driving-CouncilLinks {
+  grid-area: Driving-CouncilLinks;
+}
+.Driving-EvMap {
+  grid-area: Driving-EvMap;
+}

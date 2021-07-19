@@ -1,0 +1,13 @@
+@import "../../CSS/variables.css";
+
+.container {
+  display: grid;
+  gap: var(--grid-gap);
+}
+
+.topFont {
+  font-size: 32px;
+}
+.image {
+  border-radius: var(--border-radius);
+}

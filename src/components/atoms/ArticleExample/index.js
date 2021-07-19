@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "gatsby";
 import styles from "./ArticleExample.module.css";
-export default function   ArticleExample({
+export default function ArticleExample({
   children,
   Title,
   Content,
@@ -11,7 +11,7 @@ export default function   ArticleExample({
   return (
     <div className={styles.articleExampleContainer}>
       {children}
-      <p>{Title}</p>
+      {Title ? <p>{Title}</p> : ""}
       <p>{Content}</p>
       <Link to={Linkurl}>{LinkTitle}</Link>
     </div>
