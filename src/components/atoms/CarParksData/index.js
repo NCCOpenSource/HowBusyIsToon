@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
-import CarParksData from "./carparkdata.json";
+// import CarParksData from "./carparkdata.json";
+
+
 
 export default function CarParksData() {
   const [data, setData] = useState(CarParksData);
@@ -8,17 +10,19 @@ export default function CarParksData() {
     data
   );
 
-  // useEffect(() => {
-  //   fetch(
-  //     `https://nccfootfallparking.blob.core.windows.net/api-data/latest_car_parks.json`
-  //   )
-  //     // .then((response) => {response.json(); console.log(response)})
-  //     .then((response) => {setData(response); console.log(response)})
-  //     .catch((error) => {
-  //       console.log(error);
-  //     });
+  useEffect(() => {
+    fetch(
+      ` https://api.newcastle.urbanobservatory.ac.uk/api/v2/sensors/entity?metric="Occupied%20spaces"&page=1`
+    )
+      // .then((response) => {response.json(); console.log(response)})
+      .then((response) => {
+        setData(response);
+        console.log(response);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, []);
 
-  // }, []);
-
-  return <div>{data}</div>;
+  return data;
 }

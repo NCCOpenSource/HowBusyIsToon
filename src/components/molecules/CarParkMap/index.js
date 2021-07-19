@@ -1,17 +1,51 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import L from "leaflet";
 import "./CarPark.css";
 import styles from "./index.module.css";
 import CarParksData from "../../atoms/CarParksData/carparkdata.json";
+import NewCarParkData from '../../atoms/CarParksData/newCarParkData.json'
 import Average from "../../../images/map-marker-average.png";
 import Busy from "../../../images/map-marker-busy.png";
 import Quiet from "../../../images/map-marker-quiet.png";
 import Unkown from "../../../images/map-marker-unknown.png";
 import StaticCarParkData from "../../atoms/CarParksData/carparkHardData.json";
 
+// function CarParksApiCall() {
+//   const [data, setData] = useState('');
+//   console.log(
+//     "🚀 ~ file: carParksData.js ~ line 5 ~ CarParksData ~ data",
+//     data
+//   );
+
+//   useEffect(() => {
+//     fetch(
+//       ` https://api.newcastle.urbanobservatory.ac.uk/api/v2/sensors/entity?metric="Occupied%20spaces"&page=1`
+//     )
+//       // .then((response) => {response.json(); console.log(response)})
+//       .then((response) => {
+//         setData(response);
+//         console.log(response);
+//       })
+//       .catch((error) => {
+//         console.log(error);
+//       });
+//   }, []);
+
+//   return data;
+// }
+
 export default function CarParkMap() {
-  console.log("🚀 ~ file: index.js ~ line 5 ~ CarParksData", CarParksData);
+  // const data = CarParksApiCall()
+  // console.log("🚀 ~ file: index.js ~ line 39 ~ CarParkMap ~ data", data)
+ 
+
+
+  console.log("🚀 ~ file: index.js ~ line 142 ~ CarParkMap ~ NewCarParkData", NewCarParkData)
+  console.log("🚀 ~ file: index.js ~ line 142 ~ CarParkMap ~ NewCarParkData", CarParksData)
+
+
+  
 
   function getLatLon(carParkName) {
     if (carParkName === "Eldon Square")
@@ -31,10 +65,7 @@ export default function CarParkMap() {
   }
 
   function createMarkerIcon(carPark) {
-    console.log(
-      "🚀 ~ file: index.js ~ line 28 ~ createMarkerIcon ~ carPark",
-      carPark
-    );
+ 
     let icon = Unkown;
     let state = carPark.state;
     if (state == "busy") {
