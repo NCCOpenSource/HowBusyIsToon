@@ -4,7 +4,12 @@ import L from "leaflet";
 import "./CarPark.css";
 import styles from "./index.module.css";
 import CarParksData from "../../atoms/CarParksData/carparkdata.json";
-import average from "../../../images/map-marker-average.png";
+import Average from "../../../images/map-marker-average.png";
+import Busy from "../../../images/map-marker-busy.png";
+import Quiet from "../../../images/map-marker-quiet.png";
+import Unkown from "../../../images/map-marker-unknown.png";
+import StaticCarParkData from "../../atoms/CarParksData/carparkHardData.json";
+
 export default function CarParkMap() {
   console.log("🚀 ~ file: index.js ~ line 5 ~ CarParksData", CarParksData);
 
@@ -30,17 +35,28 @@ export default function CarParkMap() {
       "🚀 ~ file: index.js ~ line 28 ~ createMarkerIcon ~ carPark",
       carPark
     );
-
-    const state = carPark.state;
+    let icon = Unkown;
+    let state = carPark.state;
+    if (state == "busy") {
+      icon = Busy;
+    }
+    if (state == "average") {
+      icon = Average;
+    }
+    if (state == "quiet") {
+      icon = Quiet;
+    }
     // const spaces = carpark.capacity - carpark.occupancy;
-    const spaces = carPark.occupancy;
-
+    let spaces = carPark.occupancy;
+    if (carPark.occupancy == undefined) {
+      spaces = "";
+    }
     const marker = L.divIcon({
       html:
         '<img alt="marker-' +
         state +
         '" src="' +
-        `${average}` +
+        `${icon}` +
         '"><span className=' +
         `${styles.spaces}` +
         ">" +
@@ -53,13 +69,15 @@ export default function CarParkMap() {
     return marker;
   }
   return (
-    <MapContainer         preferCanvas={false}
-    center={[54.97206769445005, -1.6132124536205563]} zoom={14}>
+    <MapContainer
+      preferCanvas={false}
+      center={[54.97206769445005, -1.6132124536205563]}
+      zoom={14}
+    >
       <TileLayer
         url="https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}"
         attribution="Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ"
       />
-
       {CarParksData.carparks.map((carPark) => (
         <Marker
           icon={createMarkerIcon(carPark)}
@@ -67,9 +85,24 @@ export default function CarParkMap() {
           position={getLatLon(carPark.name)}
           // className="carparkmarker"
         >
-          <Popup>
+          <Popup className={styles.popup}>
             <p>
               There are {carPark.occupancy} spaces available at {carPark.name}
+            </p>
+          </Popup>
+        </Marker>
+      ))}
+      {StaticCarParkData.map((carPark) => (
+        <Marker
+          icon={createMarkerIcon(carPark)}
+          key={Math.floor(Math.random() * 999999999999)}
+          position={carPark.location}
+          // className="carparkmarker"
+        >
+          <Popup className={styles.popup}>
+            <p>
+              There are {carPark.capacity} potential spaces available at{" "}
+              {carPark.name}
             </p>
           </Popup>
         </Marker>
