@@ -30,7 +30,7 @@ export default function DrivingTemplate() {
             setState("Driving-Traffic");
           }}
         >
-          <p className={navStyles.NavSubLinkText}>Traffic</p>
+          <p className={navStyles.NavSubLinkText}>Traffic    </p>
         </div>
 
         <div

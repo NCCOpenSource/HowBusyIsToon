@@ -25,7 +25,6 @@ export default function EvMap() {
             <Popup>
               <p>{ChargeDevice.OrganisationName}</p>
               <p>{ChargeDevice.ChargeDeviceName}</p>
-              {/* <p>{ChargeDevice.ChargeDeviceStatus}</p> */}
               {ChargeDevice.Connector.map((connnector) => (
                 <>
                   <p>{connnector.ConnectorType}</p>
