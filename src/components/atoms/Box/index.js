@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from "react";
-import style from "./box.module.css";
+import React, { useEffect, useState } from "react";
 import "../../CSS/variables.css";
-import { set } from "lodash";
+import style from "./box.module.css";
 
 export default function Box({ children, fullBorderRadius, color, fontColor }) {
   // const [fontColor, setstate] = useState(initialState)

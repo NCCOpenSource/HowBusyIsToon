@@ -1,17 +1,16 @@
 import React, { useState } from "react";
-import navStyles from "../../organisms/Nav/navExtension.module.css";
-import styles from "./Driving.module.css";
-import SectionExample from "../../molecules/SectionExample";
-import CouncilLinks from "../../molecules/CouncilLinks";
-import Nav from "../../organisms/Nav";
-import RoadClosureAroundTown from "../../molecules/RoadClosureAroundTown";
-import LocalRoadUpdates from "../../molecules/LocalRoadUpdates";
-import EvMap from "../../molecules/EvMap";
-import "./Driving.css";
 import CarParkMap from "../../molecules/CarParkMap";
-import RoadsCameraFeed from "../../molecules/RoadsCameraFeed";
+import CouncilLinks from "../../molecules/CouncilLinks";
 import EVArticle from "../../molecules/EVArticle";
-
+import EvMap from "../../molecules/EvMap";
+import LocalRoadUpdates from "../../molecules/LocalRoadUpdates";
+import RoadClosureAroundTown from "../../molecules/RoadClosureAroundTown";
+import RoadsCameraFeed from "../../molecules/RoadsCameraFeed";
+import SectionExample from "../../molecules/SectionExample";
+import TrafficBusynessMap from "../../molecules/TrafficBusynessMap";
+import Nav from "../../organisms/Nav";
+import navStyles from "../../organisms/Nav/navExtension.module.css";
+import "./Driving.css";
 export default function DrivingTemplate() {
   const [state, setState] = useState("Driving-Traffic");
 
@@ -76,10 +75,13 @@ export default function DrivingTemplate() {
       <div className={state}>
         {state === "Driving-Traffic" ? (
           <>
-            <div className="DrivingRoadClosureAroundTown">
+            <div className="Driving-TrafficBusynessMap">
+              <TrafficBusynessMap />
+            </div>
+            <div className="Driving-RoadClosureAroundTown">
               <RoadClosureAroundTown />
             </div>
-            <div className={"DrivingLocalRoadUpdates"}>
+            <div className={"Driving-LocalRoadUpdates"}>
               <LocalRoadUpdates />
             </div>
           </>

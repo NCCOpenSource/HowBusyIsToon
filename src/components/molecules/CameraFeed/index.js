@@ -1,10 +1,8 @@
 import React, { useState } from "react";
+import TimeIcon from "../../../assets/icons/time.svg";
+import GetFeedImage from "../../atoms/GetFeedImage";
 // import SelectDropdown from "../index";
 import styles from "./cameraFeed.module.css";
-import TimeIcon from "../../../assets/icons/time.svg";
-import { StaticImage } from "gatsby-plugin-image";
-import GetFeedImage from "../../atoms/GetFeedImage";
-import Filter from "../Filter";
 
 export default function CameraFeed() {
   const [option, setOption] = useState(0);

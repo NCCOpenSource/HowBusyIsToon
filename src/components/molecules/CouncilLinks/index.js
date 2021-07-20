@@ -1,8 +1,7 @@
 import React from "react";
+import IconArrow from "../../../assets/icons/arrow.svg";
 import Box from "../../atoms/Box";
 import styles from "./CouncilLinks.module.css";
-import IconArrow from "../../../assets/icons/arrow.svg";
-import { Link } from "gatsby";
 
 export default function CouncilLinks() {
   return (

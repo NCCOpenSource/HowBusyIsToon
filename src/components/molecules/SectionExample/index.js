@@ -1,9 +1,9 @@
+import { StaticImage } from "gatsby-plugin-image";
 import React from "react";
+import ArticleExample from "../../atoms/ArticleExample";
 import Box from "../../atoms/Box";
 import styles from "./sectionExample.module.css";
-import { StaticImage } from "gatsby-plugin-image";
 
-import ArticleExample from "../../atoms/ArticleExample";
 
 export default function SectionExample() {
   return (

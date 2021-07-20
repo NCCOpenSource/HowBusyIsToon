@@ -1,15 +1,14 @@
-import React, { useState, useEffect } from "react";
-import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import L from "leaflet";
-import "./CarPark.css";
-import styles from "./index.module.css";
-import CarParksData from "../../atoms/CarParksData/carparkdata.json";
-import NewCarParkData from "../../atoms/CarParksData/newCarParkData.json";
+import React, { useEffect, useState } from "react";
+import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 import Average from "../../../images/map-marker-average.png";
 import Busy from "../../../images/map-marker-busy.png";
 import Quiet from "../../../images/map-marker-quiet.png";
 import Unkown from "../../../images/map-marker-unknown.png";
+import CarParksData from "../../atoms/CarParksData/carparkdata.json";
 import StaticCarParkData from "../../atoms/CarParksData/carparkHardData.json";
+import "./CarPark.css";
+import styles from "./index.module.css";
 
 function CarParksApiCall() {
   const [data, setData] = useState("");

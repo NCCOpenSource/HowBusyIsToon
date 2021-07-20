@@ -1,7 +1,7 @@
 import React from "react";
-import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
-import "./index.module.css";
+import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 import ExampleData from "../../atoms/EVData/example.json";
+import "./index.module.css";
 
 export default function EvMap() {
   console.log("🚀 ~ file: index.js ~ line 5 ~ ExampleData", ExampleData);

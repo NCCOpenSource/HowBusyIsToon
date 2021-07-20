@@ -1,17 +1,16 @@
 import React, { useState } from "react";
-import navStyles from "../../organisms/Nav/navExtension.module.css";
-
-import styles from "./home.module.css";
-import HowBusyAreBuses from "../../molecules/HowBusyAreBuses";
-import HowBusyAreRoads from "../../molecules/HowBusyAreRoads";
-import CameraFeed from "../../molecules/CameraFeed";
-import Callout from "../../molecules/Callout";
-import SectionExample from "../../molecules/SectionExample";
-import CouncilLinks from "../../molecules/CouncilLinks";
-import Nav from "../../organisms/Nav";
-import WazeMap from "../../atoms/WazeMap";
 import ShopsRestaurantsMap from "../../atoms/Shops&RestaurantsMap";
 import VisitCitySafetly from "../../atoms/VisitCitySafely";
+import Callout from "../../molecules/Callout";
+import CameraFeed from "../../molecules/CameraFeed";
+import CouncilLinks from "../../molecules/CouncilLinks";
+import HowBusyAreBuses from "../../molecules/HowBusyAreBuses";
+import HowBusyAreRoads from "../../molecules/HowBusyAreRoads";
+import SectionExample from "../../molecules/SectionExample";
+import Nav from "../../organisms/Nav";
+import navStyles from "../../organisms/Nav/navExtension.module.css";
+import styles from "./home.module.css";
+
 export default function Home() {
   const [state, setState] = useState("FootFall Camera");
 
