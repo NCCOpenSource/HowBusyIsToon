@@ -24,13 +24,13 @@ export default function BusMap() {
   const [input, setInput] = useState("11");
   console.log("🚀 ~ file: index.js ~ line 8 ~ BusDataExample", BusDataExample);
 
-  const customMarker = L.icon({
-    iconUrl: BusIcon,
-    iconSize: [33, 100],
-    className: "BusIcon",
-    rotationAngle: "45",
-    rotationOrigin: "center",
-  });
+  // const customMarker = L.icon({
+  //   iconUrl: BusIcon,
+  //   iconSize: [33, 100],
+  //   className: "BusIcon",
+  //   rotationAngle: "45",
+  //   rotationOrigin: "center",
+  // });
 
   function createMarkerIcon(bus) {
     const marker = L.divIcon({
