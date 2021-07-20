@@ -10,10 +10,8 @@ import car from "../../../assets/icons/graphic_car.svg";
 import face from "../../../images/smiley-face2.jpg";
 import customArrow from "../../../images/customarrow.png";
 import average from "../../../images/map-marker-average.png";
-import MarkerClusterGroup from "react-leaflet-markercluster";
 import "leaflet/dist/leaflet.css";
-import SelectSearch from "react-select-search";
-import SearchField from "react-search-field";
+
 
 // get current location optional
 // rotate bus to bounding or create an arrow (https://www.npmjs.com/package/leaflet-marker-rotation)(https://codesandbox.io/s/9hrd3?file=/main.js)
@@ -24,13 +22,13 @@ export default function BusMap() {
   const [input, setInput] = useState("11");
   console.log("🚀 ~ file: index.js ~ line 8 ~ BusDataExample", BusDataExample);
 
-  const customMarker = L.icon({
-    iconUrl: BusIcon,
-    iconSize: [33, 100],
-    className: "BusIcon",
-    rotationAngle: "45",
-    rotationOrigin: "center",
-  });
+  // const customMarker = L.icon({
+  //   iconUrl: BusIcon,
+  //   iconSize: [33, 100],
+  //   className: "BusIcon",
+  //   rotationAngle: "45",
+  //   rotationOrigin: "center",
+  // });
 
   function createMarkerIcon(bus) {
     const marker = L.divIcon({
