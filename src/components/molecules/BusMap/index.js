@@ -10,10 +10,8 @@ import car from "../../../assets/icons/graphic_car.svg";
 import face from "../../../images/smiley-face2.jpg";
 import customArrow from "../../../images/customarrow.png";
 import average from "../../../images/map-marker-average.png";
-import MarkerClusterGroup from "react-leaflet-markercluster";
 import "leaflet/dist/leaflet.css";
-import SelectSearch from "react-select-search";
-import SearchField from "react-search-field";
+
 
 // get current location optional
 // rotate bus to bounding or create an arrow (https://www.npmjs.com/package/leaflet-marker-rotation)(https://codesandbox.io/s/9hrd3?file=/main.js)
