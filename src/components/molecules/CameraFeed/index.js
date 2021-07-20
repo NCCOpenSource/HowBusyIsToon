@@ -26,22 +26,22 @@ export default function CameraFeed() {
             onChange={handleChange}
           >
             <option className={styles.option} value="0">
-              0
+              GREY STREET
             </option>
             <option className={styles.option} value="1">
-              1
+              Collingwood Street
             </option>
             <option className={styles.option} value="2">
-              2
+              NORTHUMBERLAND STREET
             </option>
             <option className={styles.option} value="3">
-              3
+              Barrack Road - Gallowgate / St James' Boulevard
             </option>
             <option className={styles.option} value="4">
-              4
+              blackett-street-pilgrim-street{" "}
             </option>
             <option className={styles.option} value="5">
-              5
+              Blackett Street / Blackett Place
             </option>
           </select>
         </div>

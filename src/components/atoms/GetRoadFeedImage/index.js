@@ -3,6 +3,8 @@ import styles from "./GetRoadFeedImage.module.css";
 export default function GetRoadFeedImage({ option }) {
   const [imageList, setImageList] = useState(null);
 
+  // Theres a better way of loading images , currently on page load/first load the image is not visible
+
   useEffect(() => {
     async function fetchFeedImages() {
       const imageArray = [];
@@ -16,7 +18,9 @@ export default function GetRoadFeedImage({ option }) {
             response
           );
           // setCamera2(response.latest.value);
-          imageArray.push(response.latest.value);
+          // cant trust .push() as we dont know order Api fetches
+          //  imageArray.push()
+          imageArray[0] = response.latest.value;
           setImageList(imageArray);
         })
         .catch((error) => {
@@ -32,7 +36,7 @@ export default function GetRoadFeedImage({ option }) {
             "🚀 ~ file: index.js ~ line 29 ~ .then ~ response",
             response
           );
-          imageArray.push(response.latest.value);
+          imageArray[1] = response.latest.value;
           setImageList(imageArray);
 
           // console.log(
@@ -53,7 +57,7 @@ export default function GetRoadFeedImage({ option }) {
             response
           );
           // setCamera1(response.latest.value);
-          imageArray.push(response.latest.value);
+          imageArray[2] = response.latest.value;
           setImageList(imageArray);
 
           // console.log(
@@ -75,7 +79,7 @@ export default function GetRoadFeedImage({ option }) {
             response
           );
           // console.log("🚀 ~ file: index.js ~ line 77 ~ .then ~ response", response.timeseries[0].latest.value)
-          imageArray.push(response.latest.value);
+          imageArray[3] = response.latest.value;
           setImageList(imageArray);
         })
         .catch((error) => {
@@ -103,9 +107,7 @@ export default function GetRoadFeedImage({ option }) {
           alt="Images from street cameras"
           className={styles.image}
         />
-      ) : (
-        ""
-      )}
+      ) : null}
     </>
   );
 }
