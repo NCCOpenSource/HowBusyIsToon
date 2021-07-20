@@ -8,7 +8,6 @@ import customArrow from "../../../images/customarrow.png";
 import BusDataExample from "../../atoms/BusesData/BusDataExample.json";
 import "./busMap.css";
 
-
 // get current location optional
 // rotate bus to bounding or create an arrow (https://www.npmjs.com/package/leaflet-marker-rotation)(https://codesandbox.io/s/9hrd3?file=/main.js)
 // hover to find bus details or have a marker that shows bus no (show buses or just numbers)

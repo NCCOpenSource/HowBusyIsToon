@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import BusMap from "../../molecules/BusMap";
 import CouncilLinks from "../../molecules/CouncilLinks";
-import LocalRoadUpdates from "../../molecules/LocalRoadUpdates";
+import LocalTravelUpdates from "../../molecules/LocalTravelUpdates";
 import RoadClosureAroundTown from "../../molecules/RoadClosureAroundTown";
 import SectionExample from "../../molecules/SectionExample";
 import Nav from "../../organisms/Nav";
@@ -58,8 +58,8 @@ export default function PublicTransport() {
             <div className="PublicTransport-RoadClosureAroundTown">
               <RoadClosureAroundTown />
             </div>
-            <div className={"PublicTransport-LocalRoadUpdates"}>
-              <LocalRoadUpdates />
+            <div className={"PublicTransport-LocalTravelUpdates"}>
+              <LocalTravelUpdates />
             </div>
           </>
         ) : (

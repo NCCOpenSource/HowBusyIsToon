@@ -26,18 +26,17 @@ export default function RoadsCameraFeed() {
             onChange={handleChange}
           >
             <option className={styles.option} value="0">
-              0
+              Stephenson Road
             </option>
             <option className={styles.option} value="1">
-              1
+              Stamfordham Road
             </option>
             <option className={styles.option} value="2">
-              2
+              A186 Pilgrim Street / Mosley Street
             </option>
             <option className={styles.option} value="3">
-              3
+              B1318 High Street / A191 Church Road & Salters' Road
             </option>
-    
           </select>
         </div>
 

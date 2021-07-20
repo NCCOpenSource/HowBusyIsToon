@@ -11,8 +11,12 @@ export default function GetFeedImage({ option }) {
       )
         .then((response) => response.json())
         .then((response) => {
+          console.log(
+            "🚀 ~ file: index.js ~ line 14 ~ .then ~ response",
+            response
+          );
           // setCamera2(response.latest.value);
-          imageArray.push(response.latest.value);
+          imageArray[0] = response.latest.value;
           setImageList(imageArray);
         })
         .catch((error) => {
@@ -24,7 +28,7 @@ export default function GetFeedImage({ option }) {
       )
         .then((response) => response.json())
         .then((response) => {
-          imageArray.push(response.feed[3].timeseries[0].latest.value);
+          imageArray[1] = response.feed[3].timeseries[0].latest.value;
           setImageList(imageArray);
 
           // console.log(
@@ -41,7 +45,7 @@ export default function GetFeedImage({ option }) {
         .then((response) => response.json())
         .then((response) => {
           // setCamera1(response.latest.value);
-          imageArray.push(response.latest.value);
+          imageArray[2] = response.latest.value;
           setImageList(imageArray);
 
           // console.log(
@@ -59,7 +63,7 @@ export default function GetFeedImage({ option }) {
         .then((response) => response.json())
         .then((response) => {
           // console.log("🚀 ~ file: index.js ~ line 77 ~ .then ~ response", response.timeseries[0].latest.value)
-          imageArray.push(response.timeseries[0].latest.value);
+          imageArray[3] = response.timeseries[0].latest.value;
           setImageList(imageArray);
         })
         .catch((error) => {
@@ -75,7 +79,7 @@ export default function GetFeedImage({ option }) {
             "🚀 ~ file: index.js ~ line 98 ~ .then ~ response",
             response
           );
-          imageArray.push(response.latest.value);
+          imageArray[4] = response.latest.value;
           setImageList(imageArray);
         })
         .catch((error) => {
@@ -87,7 +91,7 @@ export default function GetFeedImage({ option }) {
       )
         .then((response) => response.json())
         .then((response) => {
-          imageArray.push(response.latest.value);
+          imageArray[5] = response.latest.value;
           setImageList(imageArray);
         })
         .catch((error) => {
@@ -115,9 +119,7 @@ export default function GetFeedImage({ option }) {
           alt="Images from street cameras"
           className={styles.image}
         />
-      ) : (
-        ""
-      )}
+      ) : null}
     </>
   );
 }
