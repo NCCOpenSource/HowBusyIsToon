@@ -1,5 +1,4 @@
 import React from "react";
-import styles from './shops.module.css'
 
 export default function ShopsRestaurantsMap() {
   return (

@@ -1,7 +1,7 @@
 import React from "react";
+import Box from "../../atoms/Box";
 import TwitterFeedNexus from "../../atoms/TwitterFeedNexus";
 import styles from "./LocalTravelUpdates.module.css";
-import Box from "../../atoms/Box";
 export default function LocalTravelUpdates() {
   return (
     <div className={styles.container}>

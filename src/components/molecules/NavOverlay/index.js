@@ -1,6 +1,5 @@
 import React from "react";
 import stylesOverlay from "./navOverlay.module.css";
-import { Link } from "gatsby";
 
 export default function NavOverlay({ children }) {
   return (

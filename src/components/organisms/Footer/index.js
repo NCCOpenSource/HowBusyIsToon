@@ -1,7 +1,7 @@
-import React, { useEffect } from "react";
 import { StaticImage } from "gatsby-plugin-image";
-import styles from "./footer.module.css";
+import React from "react";
 import EmojicomWidget from "../../molecules/EmojicomWidget";
+import styles from "./footer.module.css";
 
 export default function Footer() {
   return (

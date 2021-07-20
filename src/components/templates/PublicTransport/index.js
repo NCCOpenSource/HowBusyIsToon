@@ -1,17 +1,12 @@
 import React, { useState } from "react";
-import navStyles from "../../organisms/Nav/navExtension.module.css";
-import styles from "./PublicTransport.module.css";
-import SectionExample from "../../molecules/SectionExample";
-import CouncilLinks from "../../molecules/CouncilLinks";
-import Nav from "../../organisms/Nav";
-import RoadClosureAroundTown from "../../molecules/RoadClosureAroundTown";
-import LocalRoadUpdates from "../../molecules/LocalRoadUpdates";
-import EvMap from "../../molecules/EvMap";
-import "./PublicTransport.css";
-import CarParkMap from "../../molecules/CarParkMap";
-import RoadsCameraFeed from "../../molecules/RoadsCameraFeed";
 import BusMap from "../../molecules/BusMap";
-import TomTomMap from "../../molecules/TomtomMap";
+import CouncilLinks from "../../molecules/CouncilLinks";
+import LocalRoadUpdates from "../../molecules/LocalRoadUpdates";
+import RoadClosureAroundTown from "../../molecules/RoadClosureAroundTown";
+import SectionExample from "../../molecules/SectionExample";
+import Nav from "../../organisms/Nav";
+import navStyles from "../../organisms/Nav/navExtension.module.css";
+import "./PublicTransport.css";
 export default function PublicTransport() {
   const [state, setState] = useState("Travel by Bus");
 
@@ -23,7 +18,7 @@ export default function PublicTransport() {
       <Nav>
         <div
           className={
-            state == "Travel by Bus"
+            state === "Travel by Bus"
               ? `${navStyles.NavSubLink} ${navStyles.ActiveNavSubLink} `
               : `${navStyles.NavSubLink}  `
           }
@@ -36,7 +31,7 @@ export default function PublicTransport() {
 
         <div
           className={
-            state == "Travelling By Metro"
+            state === "Travelling By Metro"
               ? `${navStyles.NavSubLink} ${navStyles.ActiveNavSubLink} `
               : `${navStyles.NavSubLink}  `
           }
@@ -59,9 +54,7 @@ export default function PublicTransport() {
 
         {state === "Travelling By Metro" ? (
           <>
-            <div className="PublicTransport-TomtomMap">
-              <TomTomMap />
-            </div>
+         
             <div className="PublicTransport-RoadClosureAroundTown">
               <RoadClosureAroundTown />
             </div>

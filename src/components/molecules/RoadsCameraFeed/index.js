@@ -1,10 +1,8 @@
 import React, { useState } from "react";
+import TimeIcon from "../../../assets/icons/time.svg";
+import GetRoadFeedImage from "../../atoms/GetRoadFeedImage";
 // import SelectDropdown from "../index";
 import styles from "./roadscameraFeed.module.css";
-import TimeIcon from "../../../assets/icons/time.svg";
-import { StaticImage } from "gatsby-plugin-image";
-import GetRoadFeedImage from "../../atoms/GetRoadFeedImage";
-import Filter from "../Filter";
 
 export default function RoadsCameraFeed() {
   const [option, setOption] = useState(0);
