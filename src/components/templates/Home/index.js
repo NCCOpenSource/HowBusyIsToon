@@ -22,7 +22,7 @@ export default function Home() {
       <Nav>
         <div
           className={
-            state == "FootFall Camera"
+            state === "FootFall Camera"
               ? `${navStyles.NavSubLink} ${navStyles.ActiveNavSubLink} `
               : `${navStyles.NavSubLink}  `
           }
@@ -35,7 +35,7 @@ export default function Home() {
 
         <div
           className={
-            state == "Shops And Resturants"
+            state === "Shops And Resturants"
               ? `${navStyles.NavSubLink} ${navStyles.ActiveNavSubLink} `
               : `${navStyles.NavSubLink}`
           }
@@ -50,10 +50,10 @@ export default function Home() {
 
       <div
         className={
-          state == "FootFall Camera" ? styles.containerFF : styles.containerSR
+          state === "FootFall Camera" ? styles.containerFF : styles.containerSR
         }
       >
-        {state == "Shops And Resturants" ? (
+        {state === "Shops And Resturants" ? (
           <>
             <div className={styles.VisitCitySafetly}>
               <VisitCitySafetly />
@@ -66,7 +66,7 @@ export default function Home() {
           ""
         )}
 
-        {state == "FootFall Camera" ? (
+        {state === "FootFall Camera" ? (
           <>
             <div className={styles.Callout}>
               <Callout />
@@ -84,10 +84,6 @@ export default function Home() {
         ) : (
           ""
         )}
-
-
-
-        
 
         <div className={styles.SectionExample}>
           <SectionExample />

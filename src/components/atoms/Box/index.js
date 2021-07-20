@@ -12,32 +12,32 @@ export default function Box({ children, fullBorderRadius, color, fontColor }) {
   const ContainerClassName = style.Container;
 
   useEffect(() => {
-    if (color == "black") {
+    if (color === "black") {
       setBackgroundColor(style.Backgroundblack);
     }
-    if (color == "grey") {
+    if (color === "grey") {
       setBackgroundColor(style.Backgroundgrey);
     }
-    if (color == "white") {
+    if (color === "white") {
       setBackgroundColor(style.Backgroundwhite);
     }
-    if (fontColor == "black") {
+    if (fontColor === "black") {
       setFontColor(style.Fontblack);
     }
-    if (fontColor == "grey") {
+    if (fontColor === "grey") {
       setFontColor(style.Fontgrey);
     }
-    if (fontColor == "white") {
+    if (fontColor === "white") {
       setFontColor(style.Fontwhite);
     }
 
-    if (fullBorderRadius == "top") {
+    if (fullBorderRadius === "top") {
       setBorderRadius(style.borderRadiusTop);
     }
-    if (fullBorderRadius == "bottom") {
+    if (fullBorderRadius === "bottom") {
       setBorderRadius(style.borderRadiusBottom);
     }
-    if (fullBorderRadius == "full") {
+    if (fullBorderRadius === "full") {
       setBorderRadius(style.borderRadiusFull);
     }
   }, []);

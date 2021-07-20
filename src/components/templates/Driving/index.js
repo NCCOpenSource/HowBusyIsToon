@@ -23,7 +23,7 @@ export default function DrivingTemplate() {
       <Nav>
         <div
           className={
-            state == "Driving-Traffic"
+            state === "Driving-Traffic"
               ? `${navStyles.NavSubLink} ${navStyles.ActiveNavSubLink} `
               : `${navStyles.NavSubLink}  `
           }
@@ -36,7 +36,7 @@ export default function DrivingTemplate() {
 
         <div
           className={
-            state == "Driving-ParkingData"
+            state === "Driving-ParkingData"
               ? `${navStyles.NavSubLink} ${navStyles.ActiveNavSubLink} `
               : `${navStyles.NavSubLink}  `
           }
@@ -48,7 +48,7 @@ export default function DrivingTemplate() {
         </div>
         <div
           className={
-            state == "Driving-EvChargingStations"
+            state === "Driving-EvChargingStations"
               ? `${navStyles.NavSubLink} ${navStyles.ActiveNavSubLink} `
               : `${navStyles.NavSubLink}  `
           }
@@ -61,7 +61,7 @@ export default function DrivingTemplate() {
 
         <div
           className={
-            state == "Driving-CamerasAndMaps"
+            state === "Driving-CamerasAndMaps"
               ? `${navStyles.NavSubLink} ${navStyles.ActiveNavSubLink} `
               : `${navStyles.NavSubLink}`
           }

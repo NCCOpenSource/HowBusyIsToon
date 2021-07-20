@@ -23,7 +23,7 @@ export default function PublicTransport() {
       <Nav>
         <div
           className={
-            state == "Travel by Bus"
+            state === "Travel by Bus"
               ? `${navStyles.NavSubLink} ${navStyles.ActiveNavSubLink} `
               : `${navStyles.NavSubLink}  `
           }
@@ -36,7 +36,7 @@ export default function PublicTransport() {
 
         <div
           className={
-            state == "Travelling By Metro"
+            state === "Travelling By Metro"
               ? `${navStyles.NavSubLink} ${navStyles.ActiveNavSubLink} `
               : `${navStyles.NavSubLink}  `
           }

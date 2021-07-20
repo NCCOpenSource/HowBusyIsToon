@@ -4,7 +4,7 @@ import L from "leaflet";
 import "./CarPark.css";
 import styles from "./index.module.css";
 import CarParksData from "../../atoms/CarParksData/carparkdata.json";
-import NewCarParkData from '../../atoms/CarParksData/newCarParkData.json'
+import NewCarParkData from "../../atoms/CarParksData/newCarParkData.json";
 import Average from "../../../images/map-marker-average.png";
 import Busy from "../../../images/map-marker-busy.png";
 import Quiet from "../../../images/map-marker-quiet.png";
@@ -12,17 +12,18 @@ import Unkown from "../../../images/map-marker-unknown.png";
 import StaticCarParkData from "../../atoms/CarParksData/carparkHardData.json";
 
 function CarParksApiCall() {
-  const [data, setData] = useState('');
+  const [data, setData] = useState("");
   console.log(
     "🚀 ~ file: carParksData.js ~ line 5 ~ CarParksData ~ data",
     data
   );
 
   useEffect(() => {
-    fetch(
-      `https://howbusyistoon.com/ncc-car-parks.json`
-    )
-      .then((response) => {response.json(); console.log(response)})
+    fetch(`https://howbusyistoon.com/ncc-car-parks.json`)
+      .then((response) => {
+        response.json();
+        console.log(response);
+      })
       .then((response) => {
         setData(response);
         console.log(response);
@@ -36,14 +37,8 @@ function CarParksApiCall() {
 }
 
 export default function CarParkMap() {
-  const data = CarParksApiCall()
-  console.log("🚀 ~ file: index.js ~ line 39 ~ CarParkMap ~ data", data)
- 
-
-
-
-
-  
+  const data = CarParksApiCall();
+  console.log("🚀 ~ file: index.js ~ line 39 ~ CarParkMap ~ data", data);
 
   function getLatLon(carParkName) {
     if (carParkName === "Eldon Square")
@@ -63,21 +58,20 @@ export default function CarParkMap() {
   }
 
   function createMarkerIcon(carPark) {
- 
     let icon = Unkown;
     let state = carPark.state;
-    if (state == "busy") {
+    if (state === "busy") {
       icon = Busy;
     }
-    if (state == "average") {
+    if (state === "average") {
       icon = Average;
     }
-    if (state == "quiet") {
+    if (state === "quiet") {
       icon = Quiet;
     }
     // const spaces = carpark.capacity - carpark.occupancy;
     let spaces = carPark.occupancy;
-    if (carPark.occupancy == undefined) {
+    if (carPark.occupancy === undefined) {
       spaces = "";
     }
     const marker = L.divIcon({
