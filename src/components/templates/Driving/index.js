@@ -10,6 +10,7 @@ import EvMap from "../../molecules/EvMap";
 import "./Driving.css";
 import CarParkMap from "../../molecules/CarParkMap";
 import RoadsCameraFeed from "../../molecules/RoadsCameraFeed";
+import EVArticle from "../../molecules/EVArticle";
 
 export default function DrivingTemplate() {
   const [state, setState] = useState("Driving-Traffic");
@@ -95,9 +96,14 @@ export default function DrivingTemplate() {
         )}
 
         {state === "Driving-EvChargingStations" ? (
-          <div className="Driving-EvMap">
-            <EvMap />
-          </div>
+          <>
+            <div className="Driving-EvMap">
+              <EvMap />
+            </div>
+            <div className="Driving-EVArticle">
+              <EVArticle />
+            </div>
+          </>
         ) : (
           ""
         )}

@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import styled from "styled-components";
 import style from "./box.module.css";
 import "../../CSS/variables.css";
 import { set } from "lodash";

@@ -44,7 +44,7 @@
   align-items: center;
 }
 
-.location {
+.Tagline {
   font-family: "Europa-Bold";
   font-family: europa, sans-serif;
 
@@ -55,7 +55,21 @@
   padding-left: 8px;
 
   color: #333333;
+  width: 100%;
+  /* white-space: nowrap; */
 }
+/* .location {
+  font-family: "Europa-Bold";
+  font-family: europa, sans-serif;
+
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 18px;
+  padding-left: 8px;
+
+  color: #333333;
+} */
 
 .linkList {
   width: 100%;

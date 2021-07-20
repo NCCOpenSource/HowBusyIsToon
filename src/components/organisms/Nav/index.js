@@ -62,8 +62,8 @@ export default function Nav(props) {
         color="grey"
         className={styles.bottom}
       >
-        <LocationIcon className={styles.locationIcon} />
-        <span className={styles.location}>Newcastle</span>
+        {/* <LocationIcon className={styles.locationIcon} /> */}
+        <h2 className={styles.Tagline}>Your home for real time data</h2>
         <ul className={styles.linkList}>{props.children}</ul>
       </Box>
     </div>
