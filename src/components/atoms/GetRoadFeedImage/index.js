@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { StaticImage } from "gatsby-plugin-image";
 import styles from "./GetRoadFeedImage.module.css";
 export default function GetRoadFeedImage({ option }) {
   const [imageList, setImageList] = useState(null);

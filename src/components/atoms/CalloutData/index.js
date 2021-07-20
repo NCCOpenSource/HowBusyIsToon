@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
-import footfallData from "./footfallbusyData.json";
+import React, { useEffect, useState } from "react";
 import styles from "./callout.module.css";
+import footfallData from "./footfallbusyData.json";
 export default function CalloutData() {
   const [data, setData] = useState(footfallData);
   const [header, setHeader] = useState("");

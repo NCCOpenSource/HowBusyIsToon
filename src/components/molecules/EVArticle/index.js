@@ -1,9 +1,8 @@
+import { graphql, useStaticQuery } from "gatsby";
 import React from "react";
 import ArticleExample from "../../atoms/ArticleExample";
-import { StaticImage } from "gatsby-plugin-image";
-import styles from "./EVArticle.module.css";
 import Box from "../../atoms/Box";
-import { useStaticQuery, graphql } from "gatsby";
+import styles from "./EVArticle.module.css";
 // import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 export default function EVArticle() {

@@ -1,8 +1,8 @@
+import { StaticImage } from "gatsby-plugin-image";
 import React from "react";
 import ArticleExample from "../../atoms/ArticleExample";
-import { StaticImage } from "gatsby-plugin-image";
-import styles from "./RoadClosure.module.css";
 import Box from "../../atoms/Box";
+import styles from "./RoadClosure.module.css";
 export default function RoadClosureAroundTown() {
   return (
     <div className={styles.container}>
