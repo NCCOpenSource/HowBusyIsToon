@@ -18,8 +18,11 @@ export default function EVData() {
           // console.log("🚀 ~ file: index.js ~ line 29 ~ .then ~ response", response)
         })
         .catch((error) => {
+          setData(ExampleData);
+
           console.log(error);
         });
+
     }
 
     callData();
