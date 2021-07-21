@@ -2,8 +2,7 @@ import React, { useEffect, useState } from "react";
 import styles from "./GetRoadFeedImage.module.css";
 export default function GetRoadFeedImage({ option }) {
   const [imageList, setImageList] = useState(null);
-
-  // Theres a better way of loading images , currently on page load/first load the image is not visible
+  const [apiFinished, setApiFinished] = useState(false);
 
   useEffect(() => {
     async function fetchFeedImages() {
@@ -13,15 +12,9 @@ export default function GetRoadFeedImage({ option }) {
       )
         .then((response) => response.json())
         .then((response) => {
-          console.log(
-            "🚀 ~ file: index.js ~ line 15 ~ .then ~ response",
-            response
-          );
-          // setCamera2(response.latest.value);
-          // cant trust .push() as we dont know order Api fetches
-          //  imageArray.push()
           imageArray[0] = response.latest.value;
           setImageList(imageArray);
+          setApiFinished(true);
         })
         .catch((error) => {
           console.log(error);
@@ -32,38 +25,20 @@ export default function GetRoadFeedImage({ option }) {
       )
         .then((response) => response.json())
         .then((response) => {
-          console.log(
-            "🚀 ~ file: index.js ~ line 29 ~ .then ~ response",
-            response
-          );
           imageArray[1] = response.latest.value;
           setImageList(imageArray);
-
-          // console.log(
-          //   "🚀 ~ file: index.js ~ line 35 ~ fetchFeedImages ~ response",
-          //   response
-          // );
         })
         .catch((error) => {
           console.log(error);
         });
+
       fetch(
         `https://api.newcastle.urbanobservatory.ac.uk/api/v2/sensors/timeseries/d93ca40c-183a-433a-9834-959943477bc4`
       )
         .then((response) => response.json())
         .then((response) => {
-          console.log(
-            "🚀 ~ file: index.js ~ line 46 ~ .then ~ response",
-            response
-          );
-          // setCamera1(response.latest.value);
           imageArray[2] = response.latest.value;
           setImageList(imageArray);
-
-          // console.log(
-          //   "🚀 ~ file: index.js ~ line 49 ~ fetchFeedImages ~ response",
-          //   response
-          // );
         })
         .catch((error) => {
           console.log(error);
@@ -74,26 +49,12 @@ export default function GetRoadFeedImage({ option }) {
       )
         .then((response) => response.json())
         .then((response) => {
-          console.log(
-            "🚀 ~ file: index.js ~ line 65 ~ .then ~ response",
-            response
-          );
-          // console.log("🚀 ~ file: index.js ~ line 77 ~ .then ~ response", response.timeseries[0].latest.value)
           imageArray[3] = response.latest.value;
           setImageList(imageArray);
         })
         .catch((error) => {
           console.log(error);
         });
-
-      console.log(
-        "🚀 ~ file: index.js ~ line 104 ~ fetchFeedImages ~ imageArray",
-        imageArray
-      );
-      console.log(
-        "🚀 ~ file: index.js ~ line 104 ~ fetchFeedImages ~ imageArray",
-        imageArray
-      );
     }
 
     fetchFeedImages();
@@ -101,10 +62,10 @@ export default function GetRoadFeedImage({ option }) {
 
   return (
     <>
-      {imageList != null ? (
+      {apiFinished ? (
         <img
           src={imageList[option ? option : 0]}
-          alt="Images from street cameras"
+          alt="Images from street cameras of roads"
           className={styles.image}
         />
       ) : null}
