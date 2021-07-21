@@ -47,6 +47,13 @@ module.exports = {
     `gatsby-plugin-image`,
     `gatsby-transformer-sharp`,
     {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        start_url: `/`,
+        icon: `src/images/favicon.png`,
+      },
+    },
+    {
       resolve: "gatsby-source-contentful",
       options: contentfulConfig,
     },
