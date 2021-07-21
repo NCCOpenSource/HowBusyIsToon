@@ -14,7 +14,7 @@ export default function CarParksData() {
     "🚀 ~ file: carParksData.js ~ line 5 ~ CarParksData ~ data",
     data
   );
-
+  console.log("testingApi");
   useEffect(() => {
     fetch(`https://howbusyistoon.com/ncc-car-parks.json`)
       // .then((response) => {
@@ -23,6 +23,10 @@ export default function CarParksData() {
       // })
       .then((response) => {
         setData(response);
+        console.log(
+          "🚀 ~ file: index.js ~ line 26 ~ .then ~ response",
+          response
+        );
         // setData(CarParkExampleData);
 
         console.log(response);
