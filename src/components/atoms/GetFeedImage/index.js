@@ -2,22 +2,19 @@ import React, { useEffect, useState } from "react";
 import styles from "./GetFeedImage.module.css";
 export default function GetFeedImage({ option }) {
   const [imageList, setImageList] = useState(null);
+  const [apiFinished, setApiFinished] = useState(false);
 
   useEffect(() => {
-    async function fetchFeedImages() {
+    function fetchFeedImages() {
       const imageArray = [];
       fetch(
         `https://api.newcastle.urbanobservatory.ac.uk/api/v2/sensors/timeseries/685e0b8e-9c97-41df-94db-c039205814d1`
       )
         .then((response) => response.json())
         .then((response) => {
-          console.log(
-            "🚀 ~ file: index.js ~ line 14 ~ .then ~ response",
-            response
-          );
-          // setCamera2(response.latest.value);
           imageArray[0] = response.latest.value;
           setImageList(imageArray);
+          setApiFinished(true);
         })
         .catch((error) => {
           console.log(error);
@@ -30,28 +27,18 @@ export default function GetFeedImage({ option }) {
         .then((response) => {
           imageArray[1] = response.feed[3].timeseries[0].latest.value;
           setImageList(imageArray);
-
-          // console.log(
-          //   "🚀 ~ file: index.js ~ line 35 ~ fetchFeedImages ~ response",
-          //   response
-          // );
         })
         .catch((error) => {
           console.log(error);
         });
+
       fetch(
         `https://api.newcastle.urbanobservatory.ac.uk/api/v2/sensors/timeseries/b0cf0739-8bf0-4edc-83ff-99be42d0dc21`
       )
         .then((response) => response.json())
         .then((response) => {
-          // setCamera1(response.latest.value);
           imageArray[2] = response.latest.value;
           setImageList(imageArray);
-
-          // console.log(
-          //   "🚀 ~ file: index.js ~ line 49 ~ fetchFeedImages ~ response",
-          //   response
-          // );
         })
         .catch((error) => {
           console.log(error);
@@ -62,7 +49,6 @@ export default function GetFeedImage({ option }) {
       )
         .then((response) => response.json())
         .then((response) => {
-          // console.log("🚀 ~ file: index.js ~ line 77 ~ .then ~ response", response.timeseries[0].latest.value)
           imageArray[3] = response.timeseries[0].latest.value;
           setImageList(imageArray);
         })
@@ -75,10 +61,6 @@ export default function GetFeedImage({ option }) {
       )
         .then((response) => response.json())
         .then((response) => {
-          console.log(
-            "🚀 ~ file: index.js ~ line 98 ~ .then ~ response",
-            response
-          );
           imageArray[4] = response.latest.value;
           setImageList(imageArray);
         })
@@ -97,15 +79,6 @@ export default function GetFeedImage({ option }) {
         .catch((error) => {
           console.log(error);
         });
-
-      console.log(
-        "🚀 ~ file: index.js ~ line 104 ~ fetchFeedImages ~ imageArray",
-        imageArray
-      );
-      console.log(
-        "🚀 ~ file: index.js ~ line 104 ~ fetchFeedImages ~ imageArray",
-        imageArray
-      );
     }
 
     fetchFeedImages();
@@ -113,10 +86,10 @@ export default function GetFeedImage({ option }) {
 
   return (
     <>
-      {imageList != null ? (
+      {apiFinished ? (
         <img
-          src={imageList[option ? option : 0]}
-          alt="Images from street cameras"
+          src={imageList[option]}
+          alt="Images from street cameras of roads"
           className={styles.image}
         />
       ) : null}
