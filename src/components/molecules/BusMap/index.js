@@ -2,19 +2,38 @@
 import L from "leaflet";
 import "leaflet/dist/leaflet";
 import "leaflet/dist/leaflet.css";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 import customArrow from "../../../images/customarrow.png";
-import BusDataExample from "../../atoms/BusesData/BusDataExample.json";
 import "./busMap.css";
-
-// get current location optional
-// rotate bus to bounding or create an arrow (https://www.npmjs.com/package/leaflet-marker-rotation)(https://codesandbox.io/s/9hrd3?file=/main.js)
-// hover to find bus details or have a marker that shows bus no (show buses or just numbers)
-// only show buses within distance (hook) https://leafletjs.com/reference-1.7.1.html#latlng-distanceto
 
 export default function BusMap() {
   const [input, setInput] = useState("3");
+  const [data, setData] = useState(null);
+
+  useEffect(() => {
+    function callData() {
+      fetch(
+        `https://buses.dev.urbanobservatory.ac.uk/vm
+      `
+      )
+        // .then((response) => {response.json(); console.log(response)})
+        // .then((response) => response.json())
+        .then((response) => {
+          setData(response);
+          console.log(
+            "🚀 ~ file: index.js ~ line 25 ~ .then ~ response",
+            response
+          );
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    }
+
+    callData();
+  }, []);
+
   // console.log("🚀 ~ file: index.js ~ line 8 ~ BusDataExample", BusDataExample);
 
   // if (typeof window !== 'undefined') {
@@ -42,13 +61,11 @@ export default function BusMap() {
     }
   }
 
-  const filteredBuses = BusDataExample.filter((bus) =>
-    bus.VehicleActivity.MonitoredVehicleJourney.LineRef.includes(input)
-  );
-  // console.log(
-  //   "🚀 ~ file: index.js ~ line 49 ~ BusMap ~ filteredBuses",
-  //   filteredBuses
-  // );
+  const filteredBuses = data
+    ? data.filter((bus) =>
+        bus.VehicleActivity.MonitoredVehicleJourney.LineRef.includes(input)
+      )
+    : null;
 
   function onChange(event) {
     setInput(event.target.value);
@@ -68,71 +85,74 @@ export default function BusMap() {
           center={[54.97206769445005, -1.6132124536205563]}
           zoom={14}
         >
-          {" "}
           <TileLayer
             url="https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png"
             attribution='&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
           />
-          {filteredBuses.map((bus) => {
-            const seatsavailable =
-              bus.VehicleActivity.Extensions.VehicleJourney.SeatedCapacity -
-              bus.VehicleActivity.Extensions.VehicleJourney.SeatedOccupancy;
+          {data
+            ? filteredBuses.map((bus) => {
+                const seatsavailable =
+                  bus.VehicleActivity.Extensions.VehicleJourney.SeatedCapacity -
+                  bus.VehicleActivity.Extensions.VehicleJourney.SeatedOccupancy;
 
-            const WheelChaireseatsavailable =
-              bus.VehicleActivity.Extensions.VehicleJourney.WheelchairCapacity -
-              bus.VehicleActivity.Extensions.VehicleJourney.WheelchairOccupancy;
+                const WheelChaireseatsavailable =
+                  bus.VehicleActivity.Extensions.VehicleJourney
+                    .WheelchairCapacity -
+                  bus.VehicleActivity.Extensions.VehicleJourney
+                    .WheelchairOccupancy;
 
-            if (
-              bus.VehicleActivity.MonitoredVehicleJourney.VehicleLocation
-                .Latitude < 55.02255 &&
-              bus.VehicleActivity.MonitoredVehicleJourney.VehicleLocation
-                .Latitude > 54.92255 &&
-              bus.VehicleActivity.MonitoredVehicleJourney.VehicleLocation
-                .Longitude < -1.5132124536205563 &&
-              bus.VehicleActivity.MonitoredVehicleJourney.VehicleLocation
-                .Longitude > -1.7132124536205563
-            ) {
-              return (
-                <Marker
-                  rotationAngle={180}
-                  rotationOrigin={"center"}
-                  icon={createMarkerIcon(bus)}
-                  rotationAngle={"45"}
-                  key={Math.floor(Math.random() * 999999999999)}
-                  position={[
-                    bus.VehicleActivity.MonitoredVehicleJourney.VehicleLocation
-                      .Latitude,
-                    bus.VehicleActivity.MonitoredVehicleJourney.VehicleLocation
-                      .Longitude,
-                  ]}
-                >
-                  {/* <Tooltip>
+                if (
+                  bus.VehicleActivity.MonitoredVehicleJourney.VehicleLocation
+                    .Latitude < 55.02255 &&
+                  bus.VehicleActivity.MonitoredVehicleJourney.VehicleLocation
+                    .Latitude > 54.92255 &&
+                  bus.VehicleActivity.MonitoredVehicleJourney.VehicleLocation
+                    .Longitude < -1.5132124536205563 &&
+                  bus.VehicleActivity.MonitoredVehicleJourney.VehicleLocation
+                    .Longitude > -1.7132124536205563
+                ) {
+                  return (
+                    <Marker
+                      rotationAngle={180}
+                      rotationOrigin={"center"}
+                      icon={createMarkerIcon(bus)}
+                      rotationAngle={"45"}
+                      key={Math.floor(Math.random() * 999999999999)}
+                      position={[
+                        bus.VehicleActivity.MonitoredVehicleJourney
+                          .VehicleLocation.Latitude,
+                        bus.VehicleActivity.MonitoredVehicleJourney
+                          .VehicleLocation.Longitude,
+                      ]}
+                    >
+                      {/* <Tooltip>
                   {bus.VehicleActivity.MonitoredVehicleJourney.LineRef}
                 </Tooltip> */}
-                  <Popup>
-                    <h1>
-                      Bus :{" "}
-                      {bus.VehicleActivity.MonitoredVehicleJourney.LineRef}
-                    </h1>
-                    {seatsavailable ? (
-                      <h2>{seatsavailable} seats available</h2>
-                    ) : (
-                      ""
-                    )}
+                      <Popup>
+                        <h1>
+                          Bus :{" "}
+                          {bus.VehicleActivity.MonitoredVehicleJourney.LineRef}
+                        </h1>
+                        {seatsavailable ? (
+                          <h2>{seatsavailable} seats available</h2>
+                        ) : (
+                          ""
+                        )}
 
-                    {WheelChaireseatsavailable ? (
-                      <h2>
-                        {WheelChaireseatsavailable} wheelchair seats available
-                      </h2>
-                    ) : (
-                      ""
-                    )}
-                  </Popup>
-                </Marker>
-              );
-            }
-          })}
-          {/* </MarkerClusterGroup> */}
+                        {WheelChaireseatsavailable ? (
+                          <h2>
+                            {WheelChaireseatsavailable} wheelchair seats
+                            available
+                          </h2>
+                        ) : (
+                          ""
+                        )}
+                      </Popup>
+                    </Marker>
+                  );
+                }
+              })
+            : null}
         </MapContainer>
       ) : null}
     </>
