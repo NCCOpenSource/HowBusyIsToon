@@ -6,13 +6,14 @@ import React, { useEffect, useState } from "react";
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 import customArrow from "../../../images/customarrow.png";
 import "./busMap.css";
-
+import BusMapExampleData from "../../atoms/BusesData/BusDataExample.json";
 export default function BusMap() {
   const [input, setInput] = useState("3");
   const [data, setData] = useState(null);
-
   useEffect(() => {
     function callData() {
+      setData(BusMapExampleData);
+
       fetch(
         `https://buses.dev.urbanobservatory.ac.uk/vm
       `
@@ -86,7 +87,8 @@ export default function BusMap() {
           zoom={14}
         >
           <TileLayer
-            url="https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png"
+            maxZoom={16}
+            url="https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}"
             attribution='&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
           />
           {data

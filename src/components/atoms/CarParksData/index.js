@@ -7,7 +7,7 @@ import Quiet from "../../../images/map-marker-quiet.png";
 import Unkown from "../../../images/map-marker-unknown.png";
 import styles from "./CarParkData.module.css";
 import StaticCarParkData from "./carparkHardData.json";
-
+import CarParkExampleData from "./carparkdata.json";
 export default function CarParksData() {
   const [data, setData] = useState(null);
   console.log(
@@ -17,12 +17,14 @@ export default function CarParksData() {
 
   useEffect(() => {
     fetch(`https://howbusyistoon.com/ncc-car-parks.json`)
-      .then((response) => {
-        response.json();
-        console.log(response);
-      })
+      // .then((response) => {
+      //   response.json();
+      //   console.log(response);
+      // })
       .then((response) => {
         setData(response);
+        // setData(CarParkExampleData);
+
         console.log(response);
       })
       .catch((error) => {
