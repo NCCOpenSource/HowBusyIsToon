@@ -7,10 +7,14 @@ export default class MyMap extends Component {
 
     if (typeof window !== "undefined") {
       return (
-        <MapContainer center={[54.97206769445005, -1.6132124536205563]} zoom={14}>
+        <MapContainer
+          center={[54.97206769445005, -1.6132124536205563]}
+          zoom={14}
+        >
           <TileLayer
-            url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"
-            attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+            maxZoom={16}
+            url="https://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}{r}.png"
+            attribution='&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
           />
           {/* <Marker>
             <Popup></Popup>

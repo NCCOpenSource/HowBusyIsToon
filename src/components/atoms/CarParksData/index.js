@@ -17,17 +17,17 @@ export default function CarParksData() {
   console.log("testingApi");
   useEffect(() => {
     fetch(`https://howbusyistoon.com/ncc-car-parks.json`)
-      // .then((response) => {
-      //   response.json();
-      //   console.log(response);
-      // })
+      .then((response) => {
+        response.json();
+        console.log(response);
+      })
       .then((response) => {
         setData(response);
         console.log(
           "🚀 ~ file: index.js ~ line 26 ~ .then ~ response",
           response
         );
-        // setData(CarParkExampleData);
+        setData(CarParkExampleData);
 
         console.log(response);
       })
