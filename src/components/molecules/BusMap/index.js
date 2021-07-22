@@ -7,6 +7,8 @@ import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 import customArrow from "../../../images/customarrow.png";
 import "./busMap.css";
 import BusMapExampleData from "../../atoms/BusesData/BusDataExample.json";
+import styles from "./BusMap.module.css";
+
 export default function BusMap() {
   const [input, setInput] = useState("3");
   const [data, setData] = useState(null);
@@ -85,6 +87,7 @@ export default function BusMap() {
         <MapContainer
           center={[54.97206769445005, -1.6132124536205563]}
           zoom={14}
+          className={styles.leafletcontainer}
         >
           <TileLayer
             maxZoom={19}

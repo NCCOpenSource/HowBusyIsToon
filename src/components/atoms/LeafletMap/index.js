@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { MapContainer, TileLayer } from "react-leaflet";
 import "./leafletmap.css";
+import styles from "./leafletmap.css";
 export default class MyMap extends Component {
   render() {
     const { options } = this.props;
@@ -10,6 +11,7 @@ export default class MyMap extends Component {
         <MapContainer
           center={[54.97206769445005, -1.6132124536205563]}
           zoom={14}
+          className={styles.leafletcontainer}
         >
           <TileLayer
             maxZoom={16}
