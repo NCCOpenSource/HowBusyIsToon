@@ -7,6 +7,7 @@ import NavLinkItems from "../../molecules/NavLinkItems";
 import NavOverlay from "../../molecules/NavOverlay";
 import styles from "./navigation.module.css";
 import DropDown from "../../atoms/DropDown";
+import { Link } from "gatsby";
 export default function Nav(props) {
   const [show, setShow] = useState(false);
 
@@ -50,15 +51,16 @@ export default function Nav(props) {
   return (
     <div>
       <Box fullBorderRadius="top">
-        {" "}
-        <div className={styles.titlecontainer}>
-          <a href="/" className={styles.title}>
+        <Link href="/" className={styles.titlecontainer}>
+          <h1 className={styles.title}>
             How Busy Is...
-          </a>
-        </div>
+          </h1>
+        <p className={styles.Tagline}>Your home for real time data</p>
+
+        </Link>
         <nav className={styles.nav}>
           <ul className={styles.NavLinkList}>
-            <NavLinkItems></NavLinkItems>
+            <NavLinkItems/>
           </ul>
         </nav>
         {/* mobileNav */}
@@ -84,16 +86,15 @@ export default function Nav(props) {
         </nav>
         {/* endMobileNav */}
       </Box>
-      <Box
+      {/* <Box
         fullBorderRadius="bottom"
         fontColor="black"
         color="grey"
         className={styles.bottom}
       >
-        {/* <LocationIcon className={styles.locationIcon} /> */}
         <h2 className={styles.Tagline}>Your home for real time data</h2>
         <ul className={styles.linkList}>{props.children}</ul>
-      </Box>
+      </Box> */}
     </div>
   );
 }

@@ -7,8 +7,8 @@ export default function NavLinkItems() {
       <Link
         className={styles.navLinkItems}
         activeClassName={styles.navLinkItemsGrey}
-        to="/"
         to="/shopsandrestaurants"
+        to="/"
       >
         <p className={styles.navLinkItemText}>City Center</p>
         <div className={styles.subnavLinkItems}>
@@ -31,9 +31,9 @@ export default function NavLinkItems() {
       <Link
         className={styles.navLinkItems}
         activeClassName={styles.navLinkItemsGrey}
-        to="/roads"
         to="/parking"
         to="/evcharging"
+        to="/roads"
       >
         <p className={styles.navLinkItemText}>Driving</p>
         <div className={styles.subnavLinkItems}>
@@ -64,8 +64,8 @@ export default function NavLinkItems() {
       <Link
         className={styles.navLinkItems}
         activeClassName={styles.navLinkItemsGrey}
-        to="/transport"
         to="/nexus"
+        to="/transport"
       >
         <p className={styles.navLinkItemText}>Public Transport</p>
 
