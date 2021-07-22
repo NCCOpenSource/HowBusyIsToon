@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import ExampleData from "./example.json";
 import { Marker, Popup } from "react-leaflet";
+import ExampleData from "./example.json";
 
 export default function EVData() {
   const [data, setData] = useState(null);

@@ -1,3 +1,4 @@
+import { Link } from "gatsby";
 import React, { useState } from "react";
 import CloseIcon from "../../../assets/icons/icon_closeMenu.svg";
 import BurgerIcon from "../../../assets/icons/icon_mobileNavButton.svg";
@@ -6,8 +7,6 @@ import NavLinkItems from "../../molecules/NavLinkItems";
 // import NavOverlay from "../../molecules";
 import NavOverlay from "../../molecules/NavOverlay";
 import styles from "./navigation.module.css";
-import DropDown from "../../atoms/DropDown";
-import { Link } from "gatsby";
 export default function Nav(props) {
   const [show, setShow] = useState(false);
 

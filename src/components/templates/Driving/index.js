@@ -8,8 +8,6 @@ import RoadClosureAroundTown from "../../molecules/RoadClosureAroundTown";
 import RoadsCameraFeed from "../../molecules/RoadsCameraFeed";
 import SectionExample from "../../molecules/SectionExample";
 import TrafficBusynessMap from "../../molecules/TrafficBusynessMap";
-import Nav from "../../organisms/Nav";
-import navStyles from "../../organisms/Nav/navExtension.module.css";
 import "./Driving.css";
 export default function DrivingTemplate() {
   const [state, setState] = useState("Driving-Traffic");

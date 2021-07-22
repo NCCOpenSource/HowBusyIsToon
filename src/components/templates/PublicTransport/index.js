@@ -4,8 +4,6 @@ import CouncilLinks from "../../molecules/CouncilLinks";
 import LocalTravelUpdates from "../../molecules/LocalTravelUpdates";
 import RoadClosureAroundTown from "../../molecules/RoadClosureAroundTown";
 import SectionExample from "../../molecules/SectionExample";
-import Nav from "../../organisms/Nav";
-import navStyles from "../../organisms/Nav/navExtension.module.css";
 import "./PublicTransport.css";
 export default function PublicTransport() {
   const [state, setState] = useState("Travel by Bus");

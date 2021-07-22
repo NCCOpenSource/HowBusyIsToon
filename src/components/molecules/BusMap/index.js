@@ -4,13 +4,12 @@ import "leaflet/dist/leaflet";
 import "leaflet/dist/leaflet.css";
 import React, { useEffect, useState } from "react";
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
-import customArrow from "../../../images/customarrow.png";
-import redbus from "../../../images/redbus.png";
-import orangebus from "../../../images/orangebus.png";
-import greenbus from "../../../images/greenbus.png";
 import blackbus from "../../../images/blackbus.png";
-import "./busMap.css";
+import greenbus from "../../../images/greenbus.png";
+import orangebus from "../../../images/orangebus.png";
+import redbus from "../../../images/redbus.png";
 import BusMapExampleData from "../../atoms/BusesData/BusDataExample.json";
+import "./busMap.css";
 import styles from "./BusMap.module.css";
 export default function BusMap() {
   const [input, setInput] = useState("3");

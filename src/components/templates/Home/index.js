@@ -7,8 +7,6 @@ import CouncilLinks from "../../molecules/CouncilLinks";
 import HowBusyAreBuses from "../../molecules/HowBusyAreBuses";
 import HowBusyAreRoads from "../../molecules/HowBusyAreRoads";
 import SectionExample from "../../molecules/SectionExample";
-import Nav from "../../organisms/Nav";
-import navStyles from "../../organisms/Nav/navExtension.module.css";
 import styles from "./home.module.css";
 
 export default function Home() {
