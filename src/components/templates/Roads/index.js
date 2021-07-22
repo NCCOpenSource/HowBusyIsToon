@@ -2,15 +2,14 @@ import React from "react";
 import RoadsCameraFeed from "../../molecules/RoadsCameraFeed";
 import EVArticle from "../../molecules/EVArticle";
 import styles from "./Roads.module.css";
+import RoadsSection from "../../organisms/RoadsSection";
+import RoadsSection2 from "../../organisms/RoadsSection2";
+import LocalRoadUpdates from "../../molecules/LocalRoadUpdates";
 export default function Roads() {
   return (
     <div className={styles.container}>
-      <div className={styles.RoadsCameraFeed}>
-        <RoadsCameraFeed />
-      </div>
-      <div className={styles.EVArticle}>
-        <EVArticle />
-      </div>
+      <RoadsSection />
+      <RoadsSection2 />
     </div>
   );
 }

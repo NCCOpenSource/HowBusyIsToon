@@ -5,7 +5,6 @@ import footfallData from "./footfallbusyData.json";
 export default function CalloutData() {
   const [data, setData] = useState(footfallData);
   const [header, setHeader] = useState("");
-  const [headerhighlight, setHeaderhighlight] = useState("");
   const [calloutClass, setcalloutClass] = useState("");
   console.log("🚀 ~ file: carParksData.js ~ line 5 ~ CalloutData ~ data", data);
   console.log("apiTest");

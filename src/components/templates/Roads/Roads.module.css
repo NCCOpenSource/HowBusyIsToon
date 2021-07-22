@@ -1,4 +1,4 @@
-@import "../../CSS/variables.css";
+ @import "../../CSS/variables.css";
 
 .container {
   width: 100%;
@@ -6,13 +6,13 @@
   display: grid;
   gap: var(--grid-gap);
 
-  grid-template-columns: 33% auto auto;
-  grid-template-areas:
+  /* grid-template-columns: 33% auto auto; */
+  /* grid-template-areas:
     "Callout CameraFeed CameraFeed "
     "Callout CameraFeed CameraFeed "
     "Callout HowBusyAreBuses HowBusyAreRoads "
     "SectionExample SectionExample SectionExample"
-    "CouncilLinks CouncilLinks CouncilLinks";
+    "CouncilLinks CouncilLinks CouncilLinks"; */
 }
 
 .Callout {
@@ -36,11 +36,9 @@
 
 @media only screen and (max-width: 1025px) {
   .container {
-    /* width: 100%; */
 
     grid-template-areas: none;
     display: flex;
     flex-direction: column;
-    /* margin: 0 18px; */
   }
-}
+} 

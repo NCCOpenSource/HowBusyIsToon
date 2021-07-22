@@ -1,18 +1,17 @@
 import React, { useState } from "react";
-import TimeIcon from "../../../assets/icons/time.svg";
+import RoadsLookingBusy from "../../atoms/RoadsLookingBusy";
+import styles from "./RoadSection.module.css";
 import GetRoadFeedImage from "../../atoms/GetRoadFeedImage";
-// import SelectDropdown from "../index";
-import styles from "./roadscameraFeed.module.css";
-
-export default function RoadsCameraFeed() {
+import SimpleArticle from "../../atoms/SimpleArticle";
+export default function RoadsSection() {
   const [option, setOption] = useState(0);
-  // console.log("🚀 ~ file: index.js ~ line 6 ~ Filter ~ option", option);
   function handleChange(event) {
     setOption(event.target.value);
   }
-  return (
-    <div className={styles.cityCenterCameraFeed}>
 
+  return (
+    <div className={styles.container}>
+      {/* ////////////////////Selector/////////////////////// */}
       <div className={styles.select}>
         <div className={styles.selectbox}>
           <select
@@ -34,11 +33,26 @@ export default function RoadsCameraFeed() {
             </option>
           </select>
         </div>
-
       </div>
-      <div className={styles.feed}>
+      {/* /////////////////////////////////////////// */}
+      <div className={styles.RoadsCameraFeed}>
         <GetRoadFeedImage option={option} />
-  
+      </div>
+      <div className={styles.RoadsLookingBusy}>
+        <RoadsLookingBusy />
+      </div>
+      <div className={styles.WalkingOrCycling}>
+        <SimpleArticle
+          TopText="Walking or Cycling?"
+          BottomText="User Google Maps to help you decide on which route you’d like to take"
+        />
+      </div>
+      <div className={styles.CycleParking}>
+        <SimpleArticle
+          TopText="Cycle Parking?"
+          BottomText=" Nexus Cycle lockers are located around the City Centre. Find out where
+      they are located here"
+        />
       </div>
     </div>
   );

@@ -1,13 +1,18 @@
 import L from "leaflet";
 import React, { useEffect, useState } from "react";
 import { Marker, Popup } from "react-leaflet";
-import Average from "../../../images/map-marker-average.png";
-import Busy from "../../../images/map-marker-busy.png";
-import Quiet from "../../../images/map-marker-quiet.png";
-import Unkown from "../../../images/map-marker-unknown.png";
+// import Average from "../../../images/map-marker-average.png";
+// import Busy from "../../../images/map-marker-busy.png";
+// import Quiet from "../../../images/map-marker-quiet.png";
+// import Unkown from "../../../images/map-marker-unknown.png";
 import CarParkExampleData from "./carparkdata.json";
 import styles from "./CarParkData.module.css";
 import StaticCarParkData from "./carparkHardData.json";
+import "./CarPark.css";
+import Quiet from "../../../images/carparkicons.png";
+import Busy from "../../../images/carparkiconsred.png";
+import Unkown from "../../../images/carparkiconsBlack.png";
+import Average from "../../../images/carparkiconsOrange.png";
 export default function CarParksData() {
   const [data, setData] = useState(null);
   console.log(
@@ -76,13 +81,12 @@ export default function CarParksData() {
         state +
         '" src="' +
         `${icon}` +
-        '"><span className=' +
-        `${styles.spaces}` +
+        '"><p ' +
         ">" +
         spaces +
-        "</span>",
-      iconSize: [60, 60],
-      iconAnchor: [30, 60],
+        "</p>",
+      iconSize: [35, 35],
+      // iconAnchor: [30, 60],
       className: "carparkmarker",
     });
     return marker;
@@ -99,9 +103,9 @@ export default function CarParksData() {
               // className="carparkmarker"
             >
               <Popup className={styles.popup}>
+                <h1>{carPark.name}</h1>
                 <p>
-                  There are {carPark.occupancy} spaces available at{" "}
-                  {carPark.name}
+                  {carPark.occupancy} spaces remaining
                 </p>
               </Popup>
             </Marker>
@@ -115,9 +119,10 @@ export default function CarParksData() {
           // className="carparkmarker"
         >
           <Popup className={styles.popup}>
+          <h1>{carPark.name}</h1>
+
             <p>
-              There are {carPark.capacity} potential spaces available at{" "}
-              {carPark.name}
+              There are {carPark.capacity} potential spaces available 
             </p>
           </Popup>
         </Marker>
