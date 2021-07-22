@@ -1,11 +1,11 @@
 import React from "react";
 import Layout from "../components/layout";
-import Home from "../components/templates/Home";
+import ShopsAndRestaurants from "../components/templates/ShopsAndRestaurants";
 
 export default function index() {
   return (
     <Layout>
-      <Home />
+      <ShopsAndRestaurants />
     </Layout>
   );
 }

@@ -15,7 +15,6 @@
     "CouncilLinks CouncilLinks CouncilLinks";
 }
 
-
 .Callout {
   grid-area: Callout;
 }
@@ -35,8 +34,6 @@
   grid-area: CouncilLinks;
 }
 
-
-
 @media only screen and (max-width: 1025px) {
   .container {
     /* width: 100%; */
@@ -46,6 +43,4 @@
     flex-direction: column;
     /* margin: 0 18px; */
   }
-
 }
-

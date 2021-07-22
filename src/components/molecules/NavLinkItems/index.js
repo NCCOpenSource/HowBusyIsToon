@@ -75,7 +75,7 @@ export default function NavLinkItems() {
             activeClassName={styles.activesubnavLinkItemText}
             className={styles.subnavLinkItemText}
           >
-            Busses
+            Buses
           </Link>
           <Link
             to="/nexus"

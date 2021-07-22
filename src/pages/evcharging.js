@@ -1,11 +1,11 @@
 import React from "react";
 import Layout from "../components/layout";
-import Home from "../components/templates/Home";
+import EVChargingStations from "../components/templates/EVChargingStations";
 
 export default function index() {
   return (
     <Layout>
-      <Home />
+      <EVChargingStations />
     </Layout>
   );
 }
