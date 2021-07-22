@@ -15,7 +15,7 @@ export default function PublicTransport() {
   return (
     <>
       {/* ////////////////////////////nav//////////////////// */}
-      <Nav>
+      {/* <Nav>
         <div
           className={
             state === "Travel by Bus"
@@ -41,7 +41,7 @@ export default function PublicTransport() {
         >
           <p className={navStyles.NavSubLinkText}>Travelling By Metro</p>
         </div>
-      </Nav>
+      </Nav> */}
       {/* ////////////////////////////////////////////////////////////// */}
       <div className={state}>
         {state === "Travel by Bus" ? (

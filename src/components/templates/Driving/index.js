@@ -19,8 +19,8 @@ export default function DrivingTemplate() {
   return (
     <>
       {/* ////////////////////////////nav//////////////////// */}
-      <Nav>
-        <div
+      {/* <Nav> */}
+        {/* <div
           className={
             state === "Driving-Traffic"
               ? `${navStyles.NavSubLink} ${navStyles.ActiveNavSubLink} `
@@ -69,8 +69,8 @@ export default function DrivingTemplate() {
           }}
         >
           <p className={navStyles.NavSubLinkText}>Cameras And Maps</p>
-        </div>
-      </Nav>
+        </div> */}
+      {/* </Nav> */}
       {/* ////////////////////////////////////////////////////////////// */}
       <div className={state}>
         {state === "Driving-Traffic" ? (

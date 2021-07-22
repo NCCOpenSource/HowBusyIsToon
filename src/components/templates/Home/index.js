@@ -17,7 +17,7 @@ export default function Home() {
   return (
     <>
       {/* ////////////////////////////nav//////////////////// */}
-
+{/* 
       <Nav>
         <div
           className={
@@ -44,7 +44,7 @@ export default function Home() {
         >
           <p className={navStyles.NavSubLinkText}>Shops And Resturants</p>
         </div>
-      </Nav>
+      </Nav> */}
       {/* ////////////////////////////////////////////////////////////// */}
 
       <div
