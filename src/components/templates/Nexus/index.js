@@ -17,6 +17,7 @@ export default function Nexus() {
     <div className={styles.container}>
       <UnfortunatelyNexus />
       <div className={styles.Innercontainer}>
+          {/* //! refactor Article  */}
         <div className={styles.ArticleExample}>
           <Box>
             <h className={styles.topFont}>Nexus</h>

@@ -3,7 +3,7 @@ import L from "leaflet";
 import "leaflet/dist/leaflet";
 import "leaflet/dist/leaflet.css";
 import React, { useEffect, useState } from "react";
-import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
+import { MapContainer, Marker, Popup, TileLayer, ZoomControl } from "react-leaflet";
 import blackbus from "../../../images/blackbus.png";
 import greenbus from "../../../images/greenbus.png";
 import orangebus from "../../../images/orangebus.png";
@@ -14,7 +14,7 @@ import styles from "./BusMap.module.css";
 export default function BusMap() {
   // ? to reduce data on first sight
   // const [input, setInput] = useState(String(Math.floor(Math.random() * 10)));
-  const [input, setInput] = useState('');
+  const [input, setInput] = useState("");
   const [data, setData] = useState(null);
   useEffect(() => {
     callData();
@@ -90,6 +90,7 @@ export default function BusMap() {
   return (
     <>
       <input
+        className={styles.search}
         type="text"
         id="header-search"
         placeholder="Search bus number"
@@ -101,12 +102,14 @@ export default function BusMap() {
           center={[54.97206769445005, -1.6132124536205563]}
           zoom={14}
           className={styles.leafletcontainer}
+          zoomControl={false}
         >
           <TileLayer
             maxZoom={19}
             url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"
             attribution='&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
           />
+          <ZoomControl position="topright" />
           {data
             ? filteredBuses.map((bus) => {
                 const seatsavailable =
