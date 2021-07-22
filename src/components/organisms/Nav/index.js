@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import CloseIcon from "../../../assets/icons/icon_closeMenu.svg";
 import BurgerIcon from "../../../assets/icons/icon_mobileNavButton.svg";
 import Box from "../../atoms/Box";
-// import NavLinkItems from "../../molecules/NavLinkItems";
+import NavLinkItems from "../../molecules/NavLinkItems";
 // import NavOverlay from "../../molecules";
 import NavOverlay from "../../molecules/NavOverlay";
 import styles from "./navigation.module.css";
@@ -16,36 +16,36 @@ export default function Nav(props) {
     setShow(!show);
   };
 
-  const NavLinkItemData = [
-    {
-      title: "City Center",
+  // const NavLinkItemData = [
+  //   {
+  //     title: "City Center",
 
-      subInfo: [
-        { subTitles: "Street Cameras", slug: "" },
-        { subTitles: "Shopping And Restaurants", slug: "shopsandrestaurants" },
-      ],
-    },
-    {
-      title: "Driving",
+  //     subInfo: [
+  //       { subTitles: "Street Cameras", slug: "" },
+  //       { subTitles: "Shopping And Restaurants", slug: "shopsandrestaurants" },
+  //     ],
+  //   },
+  //   {
+  //     title: "Driving",
 
-      subInfo: [
-        { subTitles: "Roads", slug: "roads" },
-        { subTitles: "Parking", slug: "parking" },
-        { subTitles: "EV Charging Stations", slug: "evcharging " },
-      ],
-    },
-    {
-      title: "About",
+  //     subInfo: [
+  //       { subTitles: "Roads", slug: "roads" },
+  //       { subTitles: "Parking", slug: "parking" },
+  //       { subTitles: "EV Charging Stations", slug: "evcharging " },
+  //     ],
+  //   },
+  //   {
+  //     title: "About",
 
-      subInfo: [{ subTitles: "About", slug: "about" }],
-    },
-  ];
-  const NavLinkItems = NavLinkItemData.map((NavLinkItems) => (
-    <DropDown
-      title={NavLinkItems.title}
-      subInfo={NavLinkItems.subInfo}
-    ></DropDown>
-  ));
+  //     subInfo: [{ subTitles: "About", slug: "about" }],
+  //   },
+  // ];
+  // const NavLinkItems = NavLinkItemData.map((NavLinkItems) => (
+  //   <DropDown
+  //     title={NavLinkItems.title}
+  //     subInfo={NavLinkItems.subInfo}
+  //   ></DropDown>
+  // ));
 
   return (
     <div>
@@ -58,7 +58,7 @@ export default function Nav(props) {
         </div>
         <nav className={styles.nav}>
           <ul className={styles.NavLinkList}>
-            {/* <NavLinkItems /> */} {NavLinkItems}
+            <NavLinkItems></NavLinkItems>
           </ul>
         </nav>
         {/* mobileNav */}
@@ -76,8 +76,7 @@ export default function Nav(props) {
           )}
           {show ? (
             <NavOverlay>
-              {/* <NavLinkItems /> */}
-              {NavLinkItems}
+              <NavLinkItems />
             </NavOverlay>
           ) : (
             <div />
