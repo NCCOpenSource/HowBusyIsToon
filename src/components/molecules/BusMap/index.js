@@ -8,38 +8,37 @@ import blackbus from "../../../images/blackbus.png";
 import greenbus from "../../../images/greenbus.png";
 import orangebus from "../../../images/orangebus.png";
 import redbus from "../../../images/redbus.png";
-import BusMapExampleData from "../../atoms/BusesData/BusDataExample.json";
 import "./busMap.css";
 import styles from "./BusMap.module.css";
+
 export default function BusMap() {
-  const [input, setInput] = useState("3");
+  // ? to reduce data on first sight
+  // const [input, setInput] = useState(String(Math.floor(Math.random() * 10)));
+  const [input, setInput] = useState('');
   const [data, setData] = useState(null);
   useEffect(() => {
+    callData();
     function callData() {
-      setData(BusMapExampleData);
-
       fetch(
         `https://buses.dev.urbanobservatory.ac.uk/vm
       `
       )
         // .then((response) => {response.json(); console.log(response)})
-        // .then((response) => response.json())
+        .then((response) => response.json())
         .then((response) => {
           setData(response);
-          console.log(
-            "🚀 ~ file: index.js ~ line 25 ~ .then ~ response",
-            response
-          );
         })
         .catch((error) => {
           console.log(error);
         });
     }
-
-    callData();
+    const interval = setInterval(() => {
+      callData();
+    }, 15000);
+    return () => clearInterval(interval);
   }, []);
 
-  // console.log("🚀 ~ file: index.js ~ line 8 ~ BusDataExample", BusDataExample);
+  // ? alternative icon too cool to delete
 
   // if (typeof window !== 'undefined') {
 
