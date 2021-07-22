@@ -6,6 +6,8 @@ export default function EVData() {
   const [data, setData] = useState(null);
 
   useEffect(() => {
+    setData(ExampleData);
+
     function callData() {
       fetch(
         `https://chargepoints.dft.gov.uk/api/retrieve/registry/postcode/NE1+8XG/limit/10/format/json/
@@ -18,11 +20,10 @@ export default function EVData() {
           // console.log("🚀 ~ file: index.js ~ line 29 ~ .then ~ response", response)
         })
         .catch((error) => {
-          setData(ExampleData);
+          // setData(ExampleData);
 
           console.log(error);
         });
-
     }
 
     callData();
