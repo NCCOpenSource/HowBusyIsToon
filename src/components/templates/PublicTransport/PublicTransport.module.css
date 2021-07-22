@@ -1,81 +1,16 @@
 @import "../../CSS/variables.css";
-/* 
-.containerTraffic {
-  width: 100%;
+.container {
   grid-template-areas: none;
   display: grid;
   gap: var(--grid-gap);
+  /* 
   grid-template-columns: 33% auto auto;
-  grid-template-areas:
-    ". . . "
-    ". . . "
-    "RoadClosureAroundTown LocalRoadUpdates LocalRoadUpdates "
-    "SectionExample SectionExample SectionExample"
-    "CouncilLinks CouncilLinks CouncilLinks";
+  grid-auto-flow: column; */
+  grid-template-rows: auto 1fr 1fr auto;
 }
-
-.containerParkingData {
-  width: 100%;
-  grid-template-areas: none;
-  display: grid;
-  gap: var(--grid-gap);
-  grid-template-columns: 33% auto auto;
-  grid-template-areas:
-    ". . . "
-    ". . . "
-    "RoadClosureAroundTown LocalRoadUpdates LocalRoadUpdates "
-    "SectionExample SectionExample SectionExample"
-    "CouncilLinks CouncilLinks CouncilLinks";
-}
-.containerEvChargingStations {
-  width: 100%;
-
-  grid-template-areas: none;
-  display: grid;
-  gap: var(--grid-gap);
-
-  grid-template-columns: 33% auto auto;
-  grid-template-areas:
-    ". . . "
-    ". . . "
-    "RoadClosureAroundTown LocalRoadUpdates LocalRoadUpdates "
-    "SectionExample SectionExample SectionExample"
-    "CouncilLinks CouncilLinks CouncilLinks";
-}
-.containerCamerasAndMaps {
-  width: 100%;
-  grid-template-areas: none;
-  display: grid;
-  gap: var(--grid-gap);
-  grid-template-columns: 33% auto auto;
-  grid-template-areas:
-    ". . . "
-    ". . . "
-    "RoadClosureAroundTown LocalRoadUpdates LocalRoadUpdates "
-    "SectionExample SectionExample SectionExample"
-    "CouncilLinks CouncilLinks CouncilLinks";
-}
-
-.RoadClosureAroundTown {
-  grid-area: RoadClosureAroundTown;
-}
-.LocalRoadUpdates {
-  grid-area: LocalRoadUpdates;
-}
-
-.HowBusyAreRoads {
-  grid-area: HowBusyAreRoads;
-}
-.HowBusyAreBuses {
-  grid-area: HowBusyAreBuses;
-}
-.SectionExample {
-  grid-area: SectionExample;
+.BusMap {
+  /* width: 100%;
+  height: 100%; */
 }
 .CouncilLinks {
-  grid-area: CouncilLinks;
 }
-.EvMap {
-  grid-area: EvMap;
-} */
-

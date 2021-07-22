@@ -2,22 +2,20 @@ import { StaticImage } from "gatsby-plugin-image";
 import React from "react";
 import ArticleExample from "../../atoms/ArticleExample";
 import Box from "../../atoms/Box";
-import styles from "./sectionExample.module.css";
+import styles from "./UsefulLinks.module.css";
 
-export default function SectionExample() {
+export default function UsefulLinks() {
   return (
     <div className={styles.SectionExample}>
       <Box>
-        <p className={styles.topFont}>
-          Alternative Tranpsport and Our Green Initiative
-        </p>
+        <p className={styles.topFont}>Useful Links & Tools </p>
       </Box>
       <div className={styles.OuterContainer}>
         <ArticleExample
           className={styles.ArticleExample}
-          Title={"Arriva Guidance"}
+          Title={"Go North East"}
           Content={
-            "Our buses are running to times similar to their pre-coronavirus timetables, making it even easier to reconnect with the faces and places you love."
+            "Keep upto date with the latest travel news, book tickets and find out how busy your bus is using the Go North East website and app"
           }
           LinkTitle={"Go to Arriva Guidance"}
           Linkurl={"/slug"}

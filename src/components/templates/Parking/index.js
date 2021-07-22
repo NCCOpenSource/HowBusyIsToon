@@ -7,19 +7,12 @@ import CouncilLinks from "../../molecules/CouncilLinks";
 import CarParkMap from "../../molecules/CarParkMap";
 import Box from "../../atoms/Box";
 import { StaticImage } from "gatsby-plugin-image";
+import ColorKey from "../../molecules/ColorKey";
 
 export default function Parking() {
   return (
     <div className={styles.container}>
-      <Box color="grey" fontColor="black">
-
-        <ul className={styles.list}>
-         <StaticImage width={24} src='../../../images/carparkiconsred.png' /> <li>Limited Spaces</li>
-         <StaticImage width={24} src='../../../images/carparkiconsOrange.png' /> <li>Moderatly Busy</li>
-         <StaticImage width={24} src='../../../images/carparkicons.png' /> <li>Many Spaces Available</li>
-         <StaticImage width={24} src='../../../images/carparkiconsBlack.png' /> <li>No Data</li>
-        </ul>
-      </Box>
+      <ColorKey />
       <div className={styles.SectionExample}>
         <CarParkMap />
       </div>

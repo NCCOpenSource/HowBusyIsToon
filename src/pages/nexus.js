@@ -1,11 +1,11 @@
 import React from "react";
 import Layout from "../components/layout";
-import Home from "../components/templates/Home";
+import Nexus from "../components/templates/Nexus";
 
 export default function index() {
   return (
     <Layout>
-      <Home />
+      <Nexus />
     </Layout>
   );
 }

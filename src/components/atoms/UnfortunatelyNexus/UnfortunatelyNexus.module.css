@@ -1,0 +1,29 @@
+@import "../../CSS/variables.css";
+
+.calloutContainer {
+  /* width: 442px; */
+  /* height: 889px; */
+  /* height: 100%;
+  width: 100%; */
+  border-radius: var(--border-radius);
+  /* display: flex;
+  flex-direction: column;
+  justify-content: space-evenly; */
+  color: var(--black);
+  background-color: var(--color-light-grey);
+}
+
+.calloutText {
+  font-family: Lato;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 60px;
+  letter-spacing: 0em;
+  text-align: left;
+  line-height: 125%;
+
+  padding: 32px;
+
+  /* or 125% */
+}
