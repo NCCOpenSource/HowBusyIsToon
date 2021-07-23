@@ -12,54 +12,54 @@ export default function SectionExample() {
           Alternative Tranpsport and Our Green Initiative
         </p>
       </Box>
-      <ArticleExample
-        className={styles.ArticleExample}
-        Title={"Arriva Guidance"}
-        Content={
-          "Our buses are running to times similar to their pre-coronavirus timetables, making it even easier to reconnect with the faces and places you love."
-        }
-        LinkTitle={"Go to Arriva Guidance"}
-        Linkurl={"/slug"}
-      >
-        <StaticImage
-          alt=""
-          className={styles.image}
-          // style={{ height: "10%", width: "10%" }}
-          src={"../../../images/bus-Example.jpg"}
-        />
-      </ArticleExample>
-      <ArticleExample
-        className={styles.ArticleExample}
-        Title={"Arriva Guidance"}
-        Content={
-          "Our buses are running to times similar to their pre-coronavirus timetables, making it even easier to reconnect with the faces and places you love."
-        }
-        LinkTitle={"Go to Arriva Guidance"}
-        Linkurl={"/slug"}
-      >
-        <StaticImage
-          alt=""
-          className={styles.image}
-          // style={{ height: "10%", width: "10%" }}
-          src={"../../../images/bus-Example.jpg"}
-        />
-      </ArticleExample>
-      <ArticleExample
-        className={styles.ArticleExample}
-        Title={"Arriva Guidance"}
-        Content={
-          "Our buses are running to times similar to their pre-coronavirus timetables, making it even easier to reconnect with the faces and places you love."
-        }
-        LinkTitle={"Go to Arriva Guidance"}
-        Linkurl={"/slug"}
-      >
-        <StaticImage
-          alt=""
-          className={styles.image}
-          // style={{ height: "10%", width: "10%" }}
-          src={"../../../images/bus-Example.jpg"}
-        />
-      </ArticleExample>
+
+      <div className={styles.container}>
+        <ArticleExample
+          Title={"Arriva Guidance"}
+          Content={
+            "Our buses are running to times similar to their pre-coronavirus timetables, making it even easier to reconnect with the faces and places you love."
+          }
+          LinkTitle={"Go to Arriva Guidance"}
+          Linkurl={"/slug"}
+        >
+          <StaticImage
+            alt=""
+            className={styles.image}
+            // style={{ height: "10%", width: "10%" }}
+            src={"../../../images/bus-Example.jpg"}
+          />
+        </ArticleExample>
+        <ArticleExample
+          Title={"Arriva Guidance"}
+          Content={
+            "Our buses are running to times similar to their pre-coronavirus timetables, making it even easier to reconnect with the faces and places you love."
+          }
+          LinkTitle={"Go to Arriva Guidance"}
+          Linkurl={"/slug"}
+        >
+          <StaticImage
+            alt=""
+            className={styles.image}
+            // style={{ height: "10%", width: "10%" }}
+            src={"../../../images/bus-Example.jpg"}
+          />
+        </ArticleExample>
+        <ArticleExample
+          Title={"Arriva Guidance"}
+          Content={
+            "Our buses are running to times similar to their pre-coronavirus timetables, making it even easier to reconnect with the faces and places you love."
+          }
+          LinkTitle={"Go to Arriva Guidance"}
+          Linkurl={"/slug"}
+        >
+          <StaticImage
+            alt=""
+            className={styles.image}
+            // style={{ height: "10%", width: "10%" }}
+            src={"../../../images/bus-Example.jpg"}
+          />
+        </ArticleExample>
+      </div>
     </div>
   );
 }

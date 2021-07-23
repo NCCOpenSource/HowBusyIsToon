@@ -1,9 +1,8 @@
 @import "../../CSS/variables.css";
 .container {
-
   gap: var(--grid-gap);
   /* grid-template-columns: 1fr 1fr 1fr; */
-  /* grid-template-rows: 48px auto 239px; */
+  grid-template-rows: 48px auto 239px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 
@@ -16,11 +15,33 @@
   grid-area: RoadsCameraFeed;
 }
 .RoadsLookingBusy {
+  height: 100%;
+  background-color: aqua;
   grid-area: RoadsLookingBusy;
+  color: var(--black);
+  background-color: var(--color-light-grey);
+  border-radius: var(--border-radius);
+}
+.calloutText {
+  font-family: Lato;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 60px;
+  letter-spacing: 0em;
+  text-align: left;
+  line-height: 125%;
+
+  padding: 32px;
+
+  /* or 125% */
 }
 
 .WalkingOrCycling {
   grid-area: WalkingOrCycling;
+}
+.SimpleArticle{
+  height: 100%;
 }
 
 .CycleParking {

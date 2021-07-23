@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import RoadsLookingBusy from "../../atoms/RoadsLookingBusy";
 import styles from "./RoadSection.module.css";
 import GetRoadFeedImage from "../../atoms/GetRoadFeedImage";
 import SimpleArticle from "../../atoms/SimpleArticle";
@@ -38,8 +37,12 @@ export default function RoadsSection() {
       <div className={styles.RoadsCameraFeed}>
         <GetRoadFeedImage option={option} />
       </div>
+
       <div className={styles.RoadsLookingBusy}>
-        <RoadsLookingBusy />
+        <h1 className={styles.calloutText}>
+          Roads looking busy? Have you considered cycling or walking instead?
+          Our useful links provide tools to help you plan your journey.
+        </h1>
       </div>
       <div className={styles.WalkingOrCycling}>
         <SimpleArticle
