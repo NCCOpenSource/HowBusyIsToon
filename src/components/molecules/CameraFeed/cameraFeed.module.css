@@ -80,3 +80,11 @@
   background: #f8f8f8;
   border-radius: var(--border-radius);
 }
+@media only screen and (max-width: 830px) {
+  .cityCenterCameraFeed {
+    grid-template-areas:
+      "a"
+      "b"
+      "c";
+  }
+}

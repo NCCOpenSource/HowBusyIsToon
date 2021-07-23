@@ -10,9 +10,9 @@ export default function SimpleArticle({ TopText, BottomText }) {
         <p className={styles.topFont}>{TopText}</p>
         <Arrow className={styles.arrow} />
       </Box>
-        <Box color="grey" fontColor="black" fullBorderRadius="bottom">
-          <p className={styles.bottomFont}>{BottomText}</p>
-        </Box>
+      <Box color="grey" fontColor="black" fullBorderRadius="bottom">
+        <p className={styles.bottomFont}>{BottomText}</p>
+      </Box>
     </div>
   );
 }

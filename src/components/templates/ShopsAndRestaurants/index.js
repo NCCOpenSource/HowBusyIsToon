@@ -8,7 +8,7 @@ import styles from "./ShopsAndRestaurants.module.css";
 export default function ShopsAndRestaurants() {
   return (
     <>
-      <div className={styles.containerSR}>
+      <div className={styles.container}>
         <div className={styles.VisitCitySafetly}>
           <VisitCitySafetly />
         </div>
