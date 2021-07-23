@@ -11,28 +11,14 @@ import ColorKey from "../../molecules/ColorKey";
 import LocalTravelUpdates from "../../molecules/LocalTravelUpdates";
 import ArticleExample from "../../atoms/ArticleExample";
 import UnfortunatelyNexus from "../../atoms/UnfortunatelyNexus";
+import NexusArticle from "../../molecules/NexusArticle";
 
 export default function Nexus() {
   return (
     <div className={styles.container}>
       <UnfortunatelyNexus />
       <div className={styles.Innercontainer}>
-          {/* //! refactor Article  */}
-        <div className={styles.ArticleExample}>
-          <Box>
-            <h className={styles.topFont}>Nexus</h>
-          </Box>
-          <StaticImage
-            alt=""
-            className={styles.image}
-            src={"../../../images/bus-Example.jpg"}
-          />
-          <ArticleExample
-            title="Nexus"
-            LinkTitle="Go to Nexus"
-            Content="Plan your journey, view an interactive travel map and discover how Nexus is keeping you sage with the latest COVID-19 updates."
-          />
-        </div>
+        <NexusArticle />
         <div className={styles.SectionExample}>
           <LocalTravelUpdates />
         </div>

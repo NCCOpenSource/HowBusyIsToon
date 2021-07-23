@@ -1,0 +1,44 @@
+@import "../../CSS/variables.css";
+
+.LinkBox {
+  background-color: #f8f8f8;
+  color: black;
+  font-weight: normal;
+  text-decoration: none;
+  padding: 32px;
+  border-radius: var(--border-radius);
+
+  display: grid;
+  gap: 18px;
+}
+.subHeading {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  width: 100%;
+  justify-content: space-between;
+}
+.subHeadingText {
+  font-size: 25px;
+  margin: 0;
+  /* font-family: Europa-Bold; */
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 25px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.IconArrow {
+  /* margin-left: auto; */
+}
+.bottomText {
+  font-size: 20px;
+  /* font-family: Europa-Regular; */
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 0em;
+  text-align: left;
+}
