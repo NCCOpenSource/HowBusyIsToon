@@ -1,8 +1,7 @@
 import React from "react";
+import Arrow from "../../../assets/icons/arrow.svg";
 import Box from "../Box";
 import styles from "./SimpleArticle.module.css";
-import Arrow from "../../../assets/icons/arrow.svg";
-import { Container } from "react-bootstrap";
 export default function SimpleArticle({ TopText, BottomText }) {
   return (
     <div className={styles.container}>

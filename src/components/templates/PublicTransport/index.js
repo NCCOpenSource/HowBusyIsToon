@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import ColorKey from "../../molecules/ColorKey";
+import React from "react";
 import BusMap from "../../molecules/BusMap";
+import ColorKey from "../../molecules/ColorKey";
 import CouncilLinks from "../../molecules/CouncilLinks";
 import UsefulLinks from "../../molecules/UsefulLinks";
 import styles from "./PublicTransport.module.css";

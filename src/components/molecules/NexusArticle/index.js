@@ -1,8 +1,8 @@
-import React from "react";
-import styles from "./NexusArticle.module.css";
-import Box from "../../atoms/Box";
 import { StaticImage } from "gatsby-plugin-image";
+import React from "react";
 import ArticleExample from "../../atoms/ArticleExample";
+import Box from "../../atoms/Box";
+import styles from "./NexusArticle.module.css";
 
 export default function NexusArticle() {
   return (

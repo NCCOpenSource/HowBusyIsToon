@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import styles from "./RoadSection.module.css";
 import GetRoadFeedImage from "../../atoms/GetRoadFeedImage";
 import SimpleArticle from "../../atoms/SimpleArticle";
+import styles from "./RoadSection.module.css";
 export default function RoadsSection() {
   const [option, setOption] = useState(0);
   function handleChange(event) {

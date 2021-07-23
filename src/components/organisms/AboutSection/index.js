@@ -1,6 +1,6 @@
 import React from "react";
-import styles from "./AboutSection.module.css";
 import Box from "../../atoms/Box";
+import styles from "./AboutSection.module.css";
 export default function AboutSection() {
   return (
     <div className={styles.container}>

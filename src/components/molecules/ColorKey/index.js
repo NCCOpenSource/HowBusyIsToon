@@ -1,7 +1,7 @@
-import React from "react";
-import styles from "./ColorKey.module.css";
-import Box from "../../atoms/Box";
 import { StaticImage } from "gatsby-plugin-image";
+import React from "react";
+import Box from "../../atoms/Box";
+import styles from "./ColorKey.module.css";
 export default function ColorKey() {
   return (
     <Box color="grey" fontColor="black">

@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import TimeIcon from "../../../assets/icons/time.svg";
 import GetRoadFeedImage from "../../atoms/GetRoadFeedImage";
 // import SelectDropdown from "../index";
 import styles from "./roadscameraFeed.module.css";

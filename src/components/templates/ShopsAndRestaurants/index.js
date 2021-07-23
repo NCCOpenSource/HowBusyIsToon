@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import ShopsRestaurantsMap from "../../atoms/Shops&RestaurantsMap";
 import VisitCitySafetly from "../../atoms/VisitCitySafely";
 import CouncilLinks from "../../molecules/CouncilLinks";

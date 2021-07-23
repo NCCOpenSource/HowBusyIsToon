@@ -1,6 +1,11 @@
 import L from "leaflet";
 import React, { useEffect, useState } from "react";
 import { Marker, Popup } from "react-leaflet";
+import Quiet from "../../../images/carparkicons.png";
+import Unkown from "../../../images/carparkiconsBlack.png";
+import Average from "../../../images/carparkiconsOrange.png";
+import Busy from "../../../images/carparkiconsred.png";
+import "./CarPark.css";
 // import Average from "../../../images/map-marker-average.png";
 // import Busy from "../../../images/map-marker-busy.png";
 // import Quiet from "../../../images/map-marker-quiet.png";
@@ -8,11 +13,6 @@ import { Marker, Popup } from "react-leaflet";
 import CarParkExampleData from "./carparkdata.json";
 import styles from "./CarParkData.module.css";
 import StaticCarParkData from "./carparkHardData.json";
-import "./CarPark.css";
-import Quiet from "../../../images/carparkicons.png";
-import Busy from "../../../images/carparkiconsred.png";
-import Unkown from "../../../images/carparkiconsBlack.png";
-import Average from "../../../images/carparkiconsOrange.png";
 export default function CarParksData() {
   const [data, setData] = useState(null);
   console.log(

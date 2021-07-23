@@ -1,5 +1,4 @@
 import React from "react";
-import IconArrow from "../../../assets/icons/arrowb.svg";
 import Box from "../../atoms/Box";
 import LinkSection from "../../atoms/LinkSection";
 import styles from "./CouncilLinks.module.css";

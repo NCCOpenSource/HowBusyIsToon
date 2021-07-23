@@ -1,10 +1,8 @@
 import React, { useState } from "react";
-import ShopsRestaurantsMap from "../../atoms/Shops&RestaurantsMap";
-import VisitCitySafetly from "../../atoms/VisitCitySafely";
+import SimpleArticle from "../../atoms/SimpleArticle";
 import Callout from "../../molecules/Callout";
 import CameraFeed from "../../molecules/CameraFeed";
 import CouncilLinks from "../../molecules/CouncilLinks";
-import SimpleArticle from "../../atoms/SimpleArticle";
 import SectionExample from "../../molecules/SectionExample";
 import styles from "./home.module.css";
 
