@@ -1,14 +1,13 @@
-// import { l, divIcon, icon } from "leaflet";
 import L from "leaflet";
 import "leaflet/dist/leaflet";
 import "leaflet/dist/leaflet.css";
 import React, { useEffect, useState } from "react";
 import {
-    MapContainer,
-    Marker,
-    Popup,
-    TileLayer,
-    ZoomControl
+  MapContainer,
+  Marker,
+  Popup,
+  TileLayer,
+  ZoomControl,
 } from "react-leaflet";
 import blackbus from "../../../images/blackbus.png";
 import greenbus from "../../../images/greenbus.png";
@@ -18,8 +17,6 @@ import "./busMap.css";
 import styles from "./BusMap.module.css";
 
 export default function BusMap() {
-  // ? to reduce data on first sight
-  // const [input, setInput] = useState(String(Math.floor(Math.random() * 10)));
   const [input, setInput] = useState("");
   const [data, setData] = useState(null);
   useEffect(() => {
@@ -30,7 +27,6 @@ export default function BusMap() {
         `https://buses.dev.urbanobservatory.ac.uk/vm
       `
       )
-        // .then((response) => {response.json(); console.log(response)})
         .then((response) => response.json())
         .then((response) => {
           setData(response);
@@ -45,19 +41,6 @@ export default function BusMap() {
 
     return () => clearInterval(interval);
   }, []);
-
-  // ? alternative icon too cool to delete
-
-  // if (typeof window !== 'undefined') {
-
-  // const customMarker = icon({
-  //   iconUrl: BusIcon,
-  //   iconSize: [33, 100],
-  //   className: "BusIcon",
-  //   rotationAngle: "45",
-  //   rotationOrigin: "center",
-  // });
-  // }
 
   function createMarkerIcon(bus, seatsavailable) {
     if (typeof window !== "undefined") {
@@ -78,7 +61,6 @@ export default function BusMap() {
               <p>${bus.VehicleActivity.MonitoredVehicleJourney.LineRef}</p>`,
 
         iconSize: [60, 60],
-        // iconAnchor: [30, 60],
         className: "busmarker",
       });
       return icon;
@@ -156,12 +138,9 @@ export default function BusMap() {
                           .VehicleLocation.Longitude,
                       ]}
                     >
-                      {/* <Tooltip>
-                  {bus.VehicleActivity.MonitoredVehicleJourney.LineRef}
-                </Tooltip> */}
-                      <Popup>
+                      <Popup className={styles.Popup}>
                         <h1>
-                          Bus :{" "}
+                          Bus :
                           {bus.VehicleActivity.MonitoredVehicleJourney.LineRef}
                         </h1>
                         {seatsavailable ? (

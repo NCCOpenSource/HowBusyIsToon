@@ -1,6 +1,10 @@
 import { Link } from "gatsby";
 import React from "react";
-import { default as styles, default as stylesOverlay } from "./navOverlay.module.css";
+import {
+  default as styles,
+  default as stylesOverlay,
+} from "./navOverlay.module.css";
+
 export default function NavOverlay({ children }) {
   return (
     <div className={stylesOverlay.overlay}>

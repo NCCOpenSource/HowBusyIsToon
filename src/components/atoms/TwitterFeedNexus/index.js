@@ -8,7 +8,6 @@ const TwitterFeedNexus = () => {
       <TwitterTimelineEmbed
         sourceType="profile"
         screenName="My_Metro"
-        // options={{ height: 400 }}
         options={{ height: 709 }}
       />
     </div>

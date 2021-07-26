@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import GetRoadFeedImage from "../../atoms/GetRoadFeedImage";
-// import SelectDropdown from "../index";
 import styles from "./roadscameraFeed.module.css";
 
 export default function RoadsCameraFeed() {

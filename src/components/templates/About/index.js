@@ -3,6 +3,7 @@ import HowBusyIsAbout from "../../atoms/HowBusyIsAbout";
 import LinkSection from "../../atoms/LinkSection";
 import AboutSection from "../../organisms/AboutSection";
 import styles from "./About.module.css";
+
 export default function About() {
   return (
     <div className={styles.container}>

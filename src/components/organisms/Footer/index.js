@@ -56,22 +56,6 @@ export default function Footer() {
             campaignId="laqwioA130yrS6JhyToJ"
           />
         </div>
-        {/* <ul className={styles.linkList}>
-          <a
-            className={styles.linkListItem}
-            target="_blank"
-            href="https://newcastle.gov.uk/services/public-health-wellbeing-and-leisure/public-health-services/coronavirus-covid-19"
-          >
-            Council Guidance >
-          </a>
-          <a
-            className={styles.linkListItem}
-            target="_blank"
-            href="https://www.gov.uk/coronavirus?gclid=CjwKCAiAkan9BRAqEiwAP9X6UULwnfwW9PPhWLDxgcsV9SRU4xHQ4pgLU-YAy4KXFvL4EDikA-4RthoCZ10QAvD_BwE"
-          >
-            Council Compliance >
-          </a>
-        </ul> */}
       </div>
     </div>
   );

@@ -1,13 +1,9 @@
 @import "../../CSS/variables.css";
 
 .container {
-  /* width: 100%; */
   grid-template-areas: none;
   display: grid;
   gap: var(--grid-gap);
-  /* 
-  grid-template-columns: 33% auto auto;
-  grid-auto-flow: column; */
   grid-template-rows: 1fr 1fr auto;
 }
 
@@ -18,11 +14,8 @@
 
 @media only screen and (max-width: 1025px) {
   .container {
-    /* width: 100%; */
-
     grid-template-areas: none;
     display: flex;
     flex-direction: column;
-    /* margin: 0 18px; */
   }
 }

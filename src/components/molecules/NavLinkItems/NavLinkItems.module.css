@@ -6,18 +6,15 @@
   text-align: center;
   color: #ffffff;
   text-decoration: none;
-  /* display: flex; */
   overflow: hidden;
 }
 
 .navLinkItemsGrey {
-  /* height: 100%; */
   font-size: 24px;
   text-align: center;
   color: #ffffff;
   text-decoration: none;
   background: rgba(255, 255, 255, 0.2);
-  /* display: flex; */
   border-bottom: 5px solid #f2f2f2;
 }
 
@@ -39,13 +36,6 @@
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
-  /* width: 100%; */
-  /* height: 100%;
-  font-size: 24px;
-  text-align: center;
-  color: #ffffff;
-  text-decoration: none;
-  display: flex; */
 }
 
 .subnavLinkItemText {

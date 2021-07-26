@@ -25,7 +25,6 @@ export default function SectionExample() {
           <StaticImage
             alt=""
             className={styles.image}
-            // style={{ height: "10%", width: "10%" }}
             src={"../../../images/bus-Example.jpg"}
           />
         </ArticleExample>
@@ -40,7 +39,6 @@ export default function SectionExample() {
           <StaticImage
             alt=""
             className={styles.image}
-            // style={{ height: "10%", width: "10%" }}
             src={"../../../images/bus-Example.jpg"}
           />
         </ArticleExample>
@@ -55,7 +53,6 @@ export default function SectionExample() {
           <StaticImage
             alt=""
             className={styles.image}
-            // style={{ height: "10%", width: "10%" }}
             src={"../../../images/bus-Example.jpg"}
           />
         </ArticleExample>

@@ -1,8 +1,6 @@
 @import "../../CSS/variables.css";
 
 .calloutQuiet {
-  /* width: 442px; */
-  /* height: 889px; */
   height: 100%;
   width: 100%;
   border-radius: var(--border-radius);
@@ -20,24 +18,12 @@
   font-size: 48px;
   line-height: 60px;
   padding: 32px;
-  /* or 125% */
-  /* width: 100%; */
-  /* height: 100%; */
 }
 
-.calloutIconContainer {
-  /* width: 100%; */
-  /* height: 100%; */
-  /* padding-bottom: 50px; */
-}
+
 
 .calloutIcon {
   margin-left: 50px;
-  /* width: 100%; */
-  /* margin-right: 50px; */
-
-  /* height: 100%; */
-  /* margin: 55px    ; */
 }
 
 .calloutIconRoad {

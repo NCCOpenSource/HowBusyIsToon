@@ -4,7 +4,6 @@
   margin: 0;
 }
 .top {
-  /* font-family: Europa-Bold; */
   font-size: 31px;
   font-style: normal;
   font-weight: 700;
@@ -16,7 +15,6 @@
   margin-left: auto;
 }
 .topFont {
-  /* font-family: Europa-Bold; */
   font-size: 31px;
   font-style: normal;
   font-weight: 700;
@@ -26,7 +24,6 @@
 }
 
 .bottomFont {
-  /* font-family: Europa-Regular; */
   font-size: 25px;
   font-style: normal;
   font-weight: 400;

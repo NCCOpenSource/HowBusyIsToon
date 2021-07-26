@@ -1,31 +1,9 @@
 @import "./CSS/variables.css";
 
-/* container.js */
-
 .containerGrid {
   margin: 24px 32px 24px 32px;
   display: grid;
   gap: var(--grid-gap);
-
-  /* grid-auto-flow: column; */
-  /* grid-template-rows: auto auto 1fr; */
-  /* grid-template-areas:
-    "top"
-    "middle"
-    "bottom"; */
-
-  /* display: flex;
-    flex-direction: column; */
-}
-
-.top {
-  grid-area: top;
-}
-.middle {
-  grid-area: middle;
-}
-.bottom {
-  grid-area: bottom;
 }
 
 @media only screen and (max-width: 1025px) {

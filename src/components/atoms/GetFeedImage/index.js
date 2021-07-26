@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styles from "./GetFeedImage.module.css";
+
 export default function GetFeedImage({ option }) {
   const [imageList, setImageList] = useState(null);
   const [apiFinished, setApiFinished] = useState(false);

@@ -4,9 +4,9 @@ import CloseIcon from "../../../assets/icons/icon_closeMenu.svg";
 import BurgerIcon from "../../../assets/icons/icon_mobileNavButton.svg";
 import Box from "../../atoms/Box";
 import NavLinkItems from "../../molecules/NavLinkItems";
-// import NavOverlay from "../../molecules";
 import NavOverlay from "../../molecules/NavOverlay";
 import styles from "./navigation.module.css";
+
 export default function Nav(props) {
   const [show, setShow] = useState(false);
 
@@ -15,37 +15,6 @@ export default function Nav(props) {
     event.preventDefault();
     setShow(!show);
   };
-
-  // const NavLinkItemData = [
-  //   {
-  //     title: "City Center",
-
-  //     subInfo: [
-  //       { subTitles: "Street Cameras", slug: "" },
-  //       { subTitles: "Shopping And Restaurants", slug: "shopsandrestaurants" },
-  //     ],
-  //   },
-  //   {
-  //     title: "Driving",
-
-  //     subInfo: [
-  //       { subTitles: "Roads", slug: "roads" },
-  //       { subTitles: "Parking", slug: "parking" },
-  //       { subTitles: "EV Charging Stations", slug: "evcharging " },
-  //     ],
-  //   },
-  //   {
-  //     title: "About",
-
-  //     subInfo: [{ subTitles: "About", slug: "about" }],
-  //   },
-  // ];
-  // const NavLinkItems = NavLinkItemData.map((NavLinkItems) => (
-  //   <DropDown
-  //     title={NavLinkItems.title}
-  //     subInfo={NavLinkItems.subInfo}
-  //   ></DropDown>
-  // ));
 
   return (
     <div>
@@ -72,19 +41,10 @@ export default function Nav(props) {
               className={styles.mobile_Burger_menu}
             ></BurgerIcon>
           )}
-          {show ? <NavOverlay>{/* <NavLinkItems /> */}</NavOverlay> : null}
+          {show ? <NavOverlay /> : null}
         </nav>
         {/* endMobileNav */}
       </Box>
-      {/* <Box
-        fullBorderRadius="bottom"
-        fontColor="black"
-        color="grey"
-        className={styles.bottom}
-      >
-        <h2 className={styles.Tagline}>Your home for real time data</h2>
-        <ul className={styles.linkList}>{props.children}</ul>
-      </Box> */}
     </div>
   );
 }

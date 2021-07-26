@@ -12,7 +12,6 @@
   white-space: nowrap;
 }
 .title {
-  /* padding: 0 8px; */
   font-size: 36px;
   margin: 0;
 }
@@ -30,7 +29,6 @@
 .nav {
   width: 100%;
   height: 100%;
-  /* text-align: right; */
   height: 112px;
   line-height: 36px;
 }
@@ -40,7 +38,6 @@
   flex-direction: row;
   justify-content: flex-end;
   white-space: nowrap;
-  /* width: 100%; */
   height: 100%;
   margin: 0;
   padding: 0;
@@ -53,10 +50,7 @@
   padding: 0%;
   display: inline;
   font-size: 18px;
-  /* height: 56px; */
   line-height: 22px;
-
-  /* line-height: 56px; */
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
@@ -67,47 +61,18 @@
 .mobileNav {
   line-height: 112px;
 
-  /* margin-left: auto;
-
-  width: 100%;
-  height: 100%;
-  height: 112px;
-  line-height: 36px; */
   z-index: 2;
 }
 .mobile_Burger_menu {
-  /* -webkit-text-size-adjust: 100%;
-  word-break: break-word;
-  box-sizing: border-box;
-  font-family: inherit;
-  font-size: 100%;
-  line-height: 1.15;
-  overflow: visible;
-  text-transform: none;
-  -webkit-appearance: button;
-  background-color: transparent;
-  border: 0;
-  background-repeat: no-repeat;
-  background-size: contain;
-  height: 2.4rem;
-  margin: 0 0 0 auto;
-  width: 3.2rem; */
   z-index: 2;
 }
 
 .exit_button {
-  /* -webkit-appearance: button;
-  position: fixed;
-
-  background-color: transparent;
-  border: 0; */
-  /* background-image: url(../../assets/icons/icon_closeMenu.svg); */
   background-repeat: no-repeat;
   background-size: contain;
   height: 4.8rem;
   position: absolute;
   right: 3rem;
-  /* top: 5rem; */
   width: 4.8rem;
   z-index: 3;
 }

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import SimpleArticle from "../../atoms/SimpleArticle";
 import Callout from "../../molecules/Callout";
 import CameraFeed from "../../molecules/CameraFeed";
@@ -7,8 +7,6 @@ import SectionExample from "../../molecules/SectionExample";
 import styles from "./home.module.css";
 
 export default function Home() {
-  const [state, setState] = useState("FootFall Camera");
-
   return (
     <>
       <div className={styles.container}>
@@ -31,7 +29,7 @@ export default function Home() {
               TopText="How Busy Are Buses?"
               BottomText="View real time bus data on a map of the region to see exactly where
               your next bus is"
-            />{" "}
+            />
           </div>
         </>
 

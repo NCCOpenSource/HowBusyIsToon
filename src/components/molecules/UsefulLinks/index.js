@@ -23,7 +23,6 @@ export default function UsefulLinks() {
           <StaticImage
             alt=""
             className={styles.image}
-            // style={{ height: "10%", width: "10%" }}
             src={"../../../images/bus-Example.jpg"}
           />
         </ArticleExample>
@@ -39,7 +38,6 @@ export default function UsefulLinks() {
           <StaticImage
             alt=""
             className={styles.image}
-            // style={{ height: "10%", width: "10%" }}
             src={"../../../images/bus-Example.jpg"}
           />
         </ArticleExample>
@@ -55,7 +53,6 @@ export default function UsefulLinks() {
           <StaticImage
             alt=""
             className={styles.image}
-            // style={{ height: "10%", width: "10%" }}
             src={"../../../images/bus-Example.jpg"}
           />
         </ArticleExample>

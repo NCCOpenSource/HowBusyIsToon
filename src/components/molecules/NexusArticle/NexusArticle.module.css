@@ -10,5 +10,4 @@
 .ArticleExample {
   display: grid;
   gap: var(--grid-gap);
-  /* grid-template-rows: auto 1fr 1.5fr; */
 }

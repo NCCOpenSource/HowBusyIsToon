@@ -9,12 +9,10 @@ import "./CarPark.css";
 import CarParkExampleData from "./carparkdata.json";
 import styles from "./CarParkData.module.css";
 import StaticCarParkData from "./carparkHardData.json";
+
 export default function CarParksData() {
   const [data, setData] = useState(null);
-  console.log(
-    "🚀 ~ file: carParksData.js ~ line 5 ~ CarParksData ~ data",
-    data
-  );
+
   console.log("testingApi");
   useEffect(() => {
     fetch(`https://howbusyistoon.com/ncc-car-parks.json`)
@@ -24,13 +22,7 @@ export default function CarParksData() {
       })
       .then((response) => {
         setData(response);
-        console.log(
-          "🚀 ~ file: index.js ~ line 26 ~ .then ~ response",
-          response
-        );
         setData(CarParkExampleData);
-
-        console.log(response);
       })
       .catch((error) => {
         console.log(error);
@@ -66,7 +58,6 @@ export default function CarParksData() {
     if (state === "quiet") {
       icon = Quiet;
     }
-    // const spaces = carpark.capacity - carpark.occupancy;
     let spaces = carPark.occupancy;
     if (carPark.occupancy === undefined) {
       spaces = "";
@@ -79,10 +70,9 @@ export default function CarParksData() {
         `${icon}` +
         '"><p ' +
         ">" +
-        spaces +
+        spaces + 
         "</p>",
       iconSize: [35, 35],
-      // iconAnchor: [30, 60],
       className: "carparkmarker",
     });
     return marker;
@@ -110,7 +100,6 @@ export default function CarParksData() {
           icon={createMarkerIcon(carPark)}
           key={Math.floor(Math.random() * 999999999999)}
           position={carPark.location}
-          // className="carparkmarker"
         >
           <Popup className={styles.popup}>
             <h1>{carPark.name}</h1>

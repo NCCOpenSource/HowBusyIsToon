@@ -1,6 +1,7 @@
 import { Link } from "gatsby";
 import React from "react";
 import styles from "./NavLinkItems.module.css";
+
 export default function NavLinkItems() {
   return (
     <>
