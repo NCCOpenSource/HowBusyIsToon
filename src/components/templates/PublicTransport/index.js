@@ -7,7 +7,7 @@ import styles from "./PublicTransport.module.css";
 export default function PublicTransport() {
   return (
     <div className={styles.container}>
-      <ColorKey/>
+      <ColorKey />
       <div className={styles.BusMap}>
         <BusMap />
       </div>

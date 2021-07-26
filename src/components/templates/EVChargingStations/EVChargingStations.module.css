@@ -5,11 +5,10 @@
   grid-template-areas: none;
   display: grid;
   gap: var(--grid-gap);
-/* 
+  /* 
   grid-template-columns: 33% auto auto;
   grid-auto-flow: column; */
-  grid-template-rows: 1fr 1fr  auto;
-
+  grid-template-rows: 1fr 1fr auto;
 }
 
 .EVMaps {

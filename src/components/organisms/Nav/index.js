@@ -51,15 +51,12 @@ export default function Nav(props) {
     <div>
       <Box fullBorderRadius="top">
         <Link href="/" className={styles.titlecontainer}>
-          <h1 className={styles.title}>
-            How Busy Is...
-          </h1>
-        <p className={styles.Tagline}>Your home for real time data</p>
-
+          <h1 className={styles.title}>How Busy Is...</h1>
+          <p className={styles.Tagline}>Your home for real time data</p>
         </Link>
         <nav className={styles.nav}>
           <ul className={styles.NavLinkList}>
-            <NavLinkItems/>
+            <NavLinkItems />
           </ul>
         </nav>
         {/* mobileNav */}
@@ -75,13 +72,7 @@ export default function Nav(props) {
               className={styles.mobile_Burger_menu}
             ></BurgerIcon>
           )}
-          {show ? (
-            <NavOverlay>
-              {/* <NavLinkItems /> */}
-            </NavOverlay>
-          ) : (
-            null
-          )}
+          {show ? <NavOverlay>{/* <NavLinkItems /> */}</NavOverlay> : null}
         </nav>
         {/* endMobileNav */}
       </Box>

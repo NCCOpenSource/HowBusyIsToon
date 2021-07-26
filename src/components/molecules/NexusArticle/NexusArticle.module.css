@@ -1,13 +1,10 @@
 .topFont {
-
-
-font-size: 31px;
-font-style: normal;
-font-weight: 700;
-line-height: 37px;
-letter-spacing: 0em;
-text-align: left;
-
+  font-size: 31px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 37px;
+  letter-spacing: 0em;
+  text-align: left;
 }
 
 .ArticleExample {

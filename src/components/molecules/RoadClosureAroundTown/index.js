@@ -6,7 +6,7 @@ import styles from "./RoadClosure.module.css";
 export default function RoadClosureAroundTown() {
   return (
     <div className={styles.container}>
-      <Box >
+      <Box>
         <p className={styles.topFont}>Road Closures Around Town</p>
       </Box>
       <ArticleExample

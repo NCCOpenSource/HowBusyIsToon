@@ -9,32 +9,38 @@ export default function Footer() {
       <div>
         <div className={styles.top}>
           <ul className={styles.logoList}>
-            <StaticImage alt=''
+            <StaticImage
+              alt=""
               src="../../../images/logo.png"
               height={50}
               className={styles.logoItem}
             ></StaticImage>
-            <StaticImage alt=''
+            <StaticImage
+              alt=""
               src="../../../images/logo2.png"
               height={50}
               className={styles.logoItem}
             ></StaticImage>
-            <StaticImage alt=''
+            <StaticImage
+              alt=""
               src="../../../images/logo3.png"
               height={50}
               className={styles.logoItem}
             ></StaticImage>
-            <StaticImage alt=''
+            <StaticImage
+              alt=""
               src="../../../images/logo4.png"
               height={50}
               className={styles.logoItem}
             ></StaticImage>
-            <StaticImage alt=''
+            <StaticImage
+              alt=""
               src="../../../images/logo5.png"
               height={50}
               className={styles.logoItem}
             ></StaticImage>
-            <StaticImage alt=''
+            <StaticImage
+              alt=""
               src="../../../images/logo1.png"
               height={50}
               className={styles.logoItem}

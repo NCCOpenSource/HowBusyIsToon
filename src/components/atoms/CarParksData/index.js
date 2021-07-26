@@ -6,10 +6,6 @@ import Unkown from "../../../images/carparkiconsBlack.png";
 import Average from "../../../images/carparkiconsOrange.png";
 import Busy from "../../../images/carparkiconsred.png";
 import "./CarPark.css";
-// import Average from "../../../images/map-marker-average.png";
-// import Busy from "../../../images/map-marker-busy.png";
-// import Quiet from "../../../images/map-marker-quiet.png";
-// import Unkown from "../../../images/map-marker-unknown.png";
 import CarParkExampleData from "./carparkdata.json";
 import styles from "./CarParkData.module.css";
 import StaticCarParkData from "./carparkHardData.json";
@@ -104,9 +100,7 @@ export default function CarParksData() {
             >
               <Popup className={styles.popup}>
                 <h1>{carPark.name}</h1>
-                <p>
-                  {carPark.occupancy} spaces remaining
-                </p>
+                <p>{carPark.occupancy} spaces remaining</p>
               </Popup>
             </Marker>
           ))
@@ -119,11 +113,9 @@ export default function CarParksData() {
           // className="carparkmarker"
         >
           <Popup className={styles.popup}>
-          <h1>{carPark.name}</h1>
+            <h1>{carPark.name}</h1>
 
-            <p>
-              There are {carPark.capacity} potential spaces available 
-            </p>
+            <p>There are {carPark.capacity} potential spaces available</p>
           </Popup>
         </Marker>
       ))}
