@@ -5,22 +5,22 @@ import styles from "./ColorKey.module.css";
 export default function ColorKey() {
   return (
     <Box color="grey" fontColor="black">
-      <ul className={styles.list}>
+      <key className={styles.key}>
         <StaticImage width={24} src="../../../images/carparkiconsred.png" />{" "}
-        <li>Limited Spaces</li>
+        <p className={styles.keyText}>Limited Spaces</p>
         <StaticImage
           width={24}
           src="../../../images/carparkiconsOrange.png"
         />{" "}
-        <li>Moderatly Busy</li>
+        <p className={styles.keyText}>Moderatly Busy</p>
         <StaticImage width={24} src="../../../images/carparkicons.png" />{" "}
-        <li>Many Spaces Available</li>
+        <p className={styles.keyText}>Many Spaces Available</p>
         <StaticImage
           width={24}
           src="../../../images/carparkiconsBlack.png"
         />{" "}
-        <li>No Data</li>
-      </ul>
+        <p className={styles.keyText}>No Data</p>
+      </key>
     </Box>
   );
 }

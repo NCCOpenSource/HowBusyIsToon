@@ -74,7 +74,6 @@
   height: 112px;
   line-height: 36px; */
   z-index: 2;
-
 }
 .mobile_Burger_menu {
   /* -webkit-text-size-adjust: 100%;
@@ -125,8 +124,11 @@
   .mobileNav {
     position: fixed;
     right: 25px;
+    top: 20px;
     background-color: black;
     line-height: 0;
+    padding: 5px;
+    border-radius: var(--border-radius);
   }
 }
 @media only screen and (min-width: 1026px) {

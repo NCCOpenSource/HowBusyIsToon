@@ -3,7 +3,13 @@ import L from "leaflet";
 import "leaflet/dist/leaflet";
 import "leaflet/dist/leaflet.css";
 import React, { useEffect, useState } from "react";
-import { MapContainer, Marker, Popup, TileLayer, ZoomControl } from "react-leaflet";
+import {
+  MapContainer,
+  Marker,
+  Popup,
+  TileLayer,
+  ZoomControl,
+} from "react-leaflet";
 import blackbus from "../../../images/blackbus.png";
 import greenbus from "../../../images/greenbus.png";
 import orangebus from "../../../images/orangebus.png";
@@ -18,6 +24,7 @@ export default function BusMap() {
   const [data, setData] = useState(null);
   useEffect(() => {
     callData();
+
     function callData() {
       fetch(
         `https://buses.dev.urbanobservatory.ac.uk/vm
@@ -35,6 +42,7 @@ export default function BusMap() {
     const interval = setInterval(() => {
       callData();
     }, 15000);
+
     return () => clearInterval(interval);
   }, []);
 
@@ -79,7 +87,9 @@ export default function BusMap() {
 
   const filteredBuses = data
     ? data.filter((bus) =>
-        bus.VehicleActivity.MonitoredVehicleJourney.LineRef.includes(input)
+        bus.VehicleActivity.MonitoredVehicleJourney.LineRef
+          ? bus.VehicleActivity.MonitoredVehicleJourney.LineRef.includes(input)
+          : null
       )
     : null;
 
