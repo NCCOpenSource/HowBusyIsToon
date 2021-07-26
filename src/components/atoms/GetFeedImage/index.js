@@ -85,15 +85,18 @@ export default function GetFeedImage({ option }) {
   }, []);
 
   return (
-    <div className={styles.imageContainer}>
+    <>
       {imageList !== null && imageList[option] !== null && apiFinished ? (
         <img
           src={imageList[option]}
           alt="Images from street cameras of City Center"
           className={styles.image}
-         
+          width="1280"
+          height="720"
         />
-      ) : null}
-    </div>
+      ) : (
+        <div className={styles.imagePlaceholder} />
+      )}
+    </>
   );
 }

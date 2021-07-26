@@ -11,7 +11,6 @@ export default function RoadsCameraFeed() {
   }
   return (
     <div className={styles.cityCenterCameraFeed}>
-
       <div className={styles.select}>
         <div className={styles.selectbox}>
           <select
@@ -33,11 +32,9 @@ export default function RoadsCameraFeed() {
             </option>
           </select>
         </div>
-
       </div>
       <div className={styles.feed}>
         <GetRoadFeedImage option={option} />
-  
       </div>
     </div>
   );

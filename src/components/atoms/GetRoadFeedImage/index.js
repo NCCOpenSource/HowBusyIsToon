@@ -61,16 +61,18 @@ export default function GetRoadFeedImage({ option }) {
   }, []);
 
   return (
-    <div className={styles.imageContainer}>
+    <>
       {imageList !== null && imageList[option] !== null && apiFinished ? (
         <img
           src={imageList[option]}
-          alt="Images from street cameras of roads"
+          alt="Images from street cameras Showing Roads and the traffic on them"
           className={styles.image}
           width="1280"
           height="720"
         />
-      ) : null}
-    </div>
+      ) : (
+        <div className={styles.imagePlaceholder} />
+      )}
+    </>
   );
 }

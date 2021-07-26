@@ -88,7 +88,7 @@ h3 {
 .list-inline li {
   display: inline-block;
 }
-@media only screen and (max-width: 1025px) {
+/* @media only screen and (max-width: 1025px) {
   h1 {
     font-size: 39px !important;
     line-height: 47px !important;
@@ -101,5 +101,5 @@ h3 {
     font-size: 19px !important;
     line-height: 22.8px !important;
   }
-}
+} */
 

@@ -1,7 +1,7 @@
 @import "../../CSS/variables.css";
 
 .LinkBox {
-  background-color: #f8f8f8;
+  background-color: var(--color-light-grey);
   color: black;
   font-weight: normal;
   text-decoration: none;

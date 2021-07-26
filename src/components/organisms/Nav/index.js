@@ -77,10 +77,10 @@ export default function Nav(props) {
           )}
           {show ? (
             <NavOverlay>
-              <NavLinkItems />
+              {/* <NavLinkItems /> */}
             </NavOverlay>
           ) : (
-            <div />
+            null
           )}
         </nav>
         {/* endMobileNav */}

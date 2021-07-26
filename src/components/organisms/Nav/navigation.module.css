@@ -97,6 +97,8 @@
 
 .exit_button {
   /* -webkit-appearance: button;
+  position: fixed;
+
   background-color: transparent;
   border: 0; */
   /* background-image: url(../../assets/icons/icon_closeMenu.svg); */
