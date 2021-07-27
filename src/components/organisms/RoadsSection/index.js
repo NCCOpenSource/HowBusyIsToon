@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import styles from "./RoadSection.module.css";
 import GetRoadFeedImage from "../../atoms/GetRoadFeedImage";
 import SimpleArticle from "../../atoms/SimpleArticle";
+import styles from "./RoadSection.module.css";
+
 export default function RoadsSection() {
   const [option, setOption] = useState(0);
   function handleChange(event) {
@@ -17,7 +18,7 @@ export default function RoadsSection() {
             className={styles.selector}
             name="option"
             onChange={handleChange}
-          >
+            >
             <option className={styles.option} value="0">
               Stephenson Road
             </option>
@@ -44,19 +45,25 @@ export default function RoadsSection() {
           Our useful links provide tools to help you plan your journey.
         </h1>
       </div>
-      <div className={styles.WalkingOrCycling}>
+      <a
+        href="https://www.google.co.uk/maps"
+        className={styles.WalkingOrCycling}
+      >
         <SimpleArticle
           TopText="Walking or Cycling?"
           BottomText="User Google Maps to help you decide on which route you’d like to take"
         />
-      </div>
-      <div className={styles.CycleParking}>
+      </a>
+      <a
+        href={"https://www.nexus.org.uk/cycle"}
+        className={styles.CycleParking}
+      >
         <SimpleArticle
           TopText="Cycle Parking?"
           BottomText=" Nexus Cycle lockers are located around the City Centre. Find out where
       they are located here"
         />
-      </div>
+      </a>
     </div>
   );
 }

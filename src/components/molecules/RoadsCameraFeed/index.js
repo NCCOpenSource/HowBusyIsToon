@@ -1,18 +1,14 @@
 import React, { useState } from "react";
-import TimeIcon from "../../../assets/icons/time.svg";
 import GetRoadFeedImage from "../../atoms/GetRoadFeedImage";
-// import SelectDropdown from "../index";
 import styles from "./roadscameraFeed.module.css";
 
 export default function RoadsCameraFeed() {
   const [option, setOption] = useState(0);
-  // console.log("🚀 ~ file: index.js ~ line 6 ~ Filter ~ option", option);
   function handleChange(event) {
     setOption(event.target.value);
   }
   return (
     <div className={styles.cityCenterCameraFeed}>
-
       <div className={styles.select}>
         <div className={styles.selectbox}>
           <select
@@ -34,11 +30,9 @@ export default function RoadsCameraFeed() {
             </option>
           </select>
         </div>
-
       </div>
       <div className={styles.feed}>
         <GetRoadFeedImage option={option} />
-  
       </div>
     </div>
   );

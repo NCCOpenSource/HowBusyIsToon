@@ -1,7 +1,7 @@
-import { Component } from 'react';
+import { Component } from "react";
 
 export default class EmojicomWidget extends Component {
-  componentDidMount () {
+  componentDidMount() {
     if (window.emojicom_widget) return;
 
     window.emojicom_widget = { campaign: this.props.campaignId };
@@ -11,7 +11,7 @@ export default class EmojicomWidget extends Component {
     document.body.appendChild(script);
   }
 
-  render () {
+  render() {
     return null;
   }
 }

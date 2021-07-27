@@ -85,26 +85,26 @@ module.exports = {
     // },
     //   },
     // },
-    {
-      resolve: `gatsby-source-twitter`,
-      options: {
-        credentials: {
-          consumer_key: "51DGcuFARdKw4hBX7gNBdWOmX",
-          consumer_secret: "AqqZ568zzCfrpgOPfJc24lbcbA01Yq7eg0kQy7hfWlhae4QY5n",
-          bearer_token:
-            "AAAAAAAAAAAAAAAAAAAAAEeJRQEAAAAAQGzRFzSjS6uU10%2BunZluylfg%2Fg8%3DdERjxKinDIcZmr59WDxUXQcocpl37ZkzL0elQ91UvN9B1G8tBm",
-        },
-        queries: {
-          wesbos: {
-            endpoint: "search/tweets",
-            params: {
-              q: "@wesbos",
-              tweet_mode: "extended",
-            },
-          },
-        },
-      },
-    },
+    // {
+    //   resolve: `gatsby-source-twitter`,
+    //   options: {
+    //     credentials: {
+    //       consumer_key: "51DGcuFARdKw4hBX7gNBdWOmX",
+    //       consumer_secret: "AqqZ568zzCfrpgOPfJc24lbcbA01Yq7eg0kQy7hfWlhae4QY5n",
+    //       bearer_token:
+    //         "AAAAAAAAAAAAAAAAAAAAAEeJRQEAAAAAQGzRFzSjS6uU10%2BunZluylfg%2Fg8%3DdERjxKinDIcZmr59WDxUXQcocpl37ZkzL0elQ91UvN9B1G8tBm",
+    //     },
+    //     queries: {
+    //       wesbos: {
+    //         endpoint: "search/tweets",
+    //         params: {
+    //           q: "@wesbos",
+    //           tweet_mode: "extended",
+    //         },
+    //       },
+    //     },
+    //   },
+    // },
 
     {
       resolve: "gatsby-plugin-react-leaflet",

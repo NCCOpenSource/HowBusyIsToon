@@ -13,13 +13,23 @@
   gap: var(--grid-gap);
 }
 
-
 .image {
   border-radius: var(--border-radius);
+
+  object-fit: contain;
+  background-size: cover;
+  height: 350px;
+  background-position: center;
 }
+
 @media only screen and (max-width: 1025px) {
   .OuterContainer {
     display: flex;
     flex-direction: column;
+  }
+}
+@media only screen and (max-width: 830px) {
+  .container {
+    grid-auto-flow: row;
   }
 }

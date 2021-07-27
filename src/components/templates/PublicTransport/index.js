@@ -1,13 +1,14 @@
-import React, { useState } from "react";
-import ColorKey from "../../molecules/ColorKey";
+import React from "react";
 import BusMap from "../../molecules/BusMap";
+import ColorKey from "../../molecules/ColorKey";
 import CouncilLinks from "../../molecules/CouncilLinks";
-import UsefulLinks from "../../molecules/UsefulLinks";
+import UsefulLinks from "../../organisms/UsefulLinks";
 import styles from "./PublicTransport.module.css";
+
 export default function PublicTransport() {
   return (
     <div className={styles.container}>
-      <ColorKey/>
+      <ColorKey />
       <div className={styles.BusMap}>
         <BusMap />
       </div>

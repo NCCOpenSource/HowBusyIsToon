@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styles from "./GetRoadFeedImage.module.css";
+
 export default function GetRoadFeedImage({ option }) {
   const [imageList, setImageList] = useState(null);
   const [apiFinished, setApiFinished] = useState(false);
@@ -62,13 +63,19 @@ export default function GetRoadFeedImage({ option }) {
 
   return (
     <>
-      {apiFinished ? (
-        <img
-          src={imageList[option ? option : 0]}
-          alt="Images from street cameras of roads"
+      {imageList !== null && imageList[option] !== null && apiFinished ? (
+        <div
+          style={{
+            backgroundImage: `url(${imageList[option]})`,
+          }}
+          alt="Images from street cameras Showing Roads and the traffic on them"
           className={styles.image}
+          width="1280"
+          height="720"
         />
-      ) : null}
+      ) : (
+        <div className={styles.imagePlaceholder} />
+      )}
     </>
   );
 }

@@ -8,7 +8,6 @@ const TwitterFeedNELive = () => {
       <TwitterTimelineEmbed
         sourceType="profile"
         screenName="NELiveTraffic"
-        // options={{ height: 400 }}
         options={{ height: 709 }}
       />
     </div>

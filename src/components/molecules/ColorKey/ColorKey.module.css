@@ -1,18 +1,23 @@
-.list {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
-    text-decoration: none;
-    list-style-type: none; /* Remove bullets */
+.key {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  text-decoration: none;
+  list-style-type: none;
+}
+.keyText {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 14px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+@media only screen and (max-width: 700px) {
+  .list {
+    flex-direction: column;
   }
-  .list li {
-    font-family: Europa-Bold;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 14px;
-    letter-spacing: 0em;
-    text-align: left;
-  }
+}

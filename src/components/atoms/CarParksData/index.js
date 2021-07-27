@@ -1,40 +1,27 @@
 import L from "leaflet";
 import React, { useEffect, useState } from "react";
 import { Marker, Popup } from "react-leaflet";
-// import Average from "../../../images/map-marker-average.png";
-// import Busy from "../../../images/map-marker-busy.png";
-// import Quiet from "../../../images/map-marker-quiet.png";
-// import Unkown from "../../../images/map-marker-unknown.png";
+import Quiet from "../../../images/carparkicons.png";
+import Unkown from "../../../images/carparkiconsBlack.png";
+import Average from "../../../images/carparkiconsOrange.png";
+import Busy from "../../../images/carparkiconsred.png";
+import "./CarPark.css";
 import CarParkExampleData from "./carparkdata.json";
 import styles from "./CarParkData.module.css";
 import StaticCarParkData from "./carparkHardData.json";
-import "./CarPark.css";
-import Quiet from "../../../images/carparkicons.png";
-import Busy from "../../../images/carparkiconsred.png";
-import Unkown from "../../../images/carparkiconsBlack.png";
-import Average from "../../../images/carparkiconsOrange.png";
+
 export default function CarParksData() {
   const [data, setData] = useState(null);
-  console.log(
-    "🚀 ~ file: carParksData.js ~ line 5 ~ CarParksData ~ data",
-    data
-  );
+
   console.log("testingApi");
   useEffect(() => {
     fetch(`https://howbusyistoon.com/ncc-car-parks.json`)
       .then((response) => {
         response.json();
-        console.log(response);
       })
       .then((response) => {
         setData(response);
-        console.log(
-          "🚀 ~ file: index.js ~ line 26 ~ .then ~ response",
-          response
-        );
         setData(CarParkExampleData);
-
-        console.log(response);
       })
       .catch((error) => {
         console.log(error);
@@ -70,7 +57,6 @@ export default function CarParksData() {
     if (state === "quiet") {
       icon = Quiet;
     }
-    // const spaces = carpark.capacity - carpark.occupancy;
     let spaces = carPark.occupancy;
     if (carPark.occupancy === undefined) {
       spaces = "";
@@ -86,7 +72,6 @@ export default function CarParksData() {
         spaces +
         "</p>",
       iconSize: [35, 35],
-      // iconAnchor: [30, 60],
       className: "carparkmarker",
     });
     return marker;
@@ -104,9 +89,7 @@ export default function CarParksData() {
             >
               <Popup className={styles.popup}>
                 <h1>{carPark.name}</h1>
-                <p>
-                  {carPark.occupancy} spaces remaining
-                </p>
+                <p>{carPark.occupancy} spaces remaining</p>
               </Popup>
             </Marker>
           ))
@@ -116,14 +99,11 @@ export default function CarParksData() {
           icon={createMarkerIcon(carPark)}
           key={Math.floor(Math.random() * 999999999999)}
           position={carPark.location}
-          // className="carparkmarker"
         >
           <Popup className={styles.popup}>
-          <h1>{carPark.name}</h1>
+            <h1>{carPark.name}</h1>
 
-            <p>
-              There are {carPark.capacity} potential spaces available 
-            </p>
+            <p>There are {carPark.capacity} potential spaces available</p>
           </Popup>
         </Marker>
       ))}

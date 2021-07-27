@@ -6,7 +6,7 @@ export default function WazeMap() {
       src="https://embed.waze.com/iframe?zoom=14&lat=55.953261&lon=-3.188267&ct=livemap"
       width="100%"
       height="100%"
-      style={{border:0, 'border-radius': '8px'}}   
+      style={{ border: 0, "border-radius": "8px" }}
       allowfullscreen
     ></iframe>
   );

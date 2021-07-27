@@ -1,6 +1,8 @@
 @import "../../CSS/variables.css";
+.container {
+  height: 112px;
+}
 .titlecontainer {
-
   display: flex;
   flex-direction: column;
   display: flex;
@@ -10,7 +12,6 @@
   white-space: nowrap;
 }
 .title {
-  /* padding: 0 8px; */
   font-size: 36px;
   margin: 0;
 }
@@ -28,7 +29,6 @@
 .nav {
   width: 100%;
   height: 100%;
-  /* text-align: right; */
   height: 112px;
   line-height: 36px;
 }
@@ -38,15 +38,11 @@
   flex-direction: row;
   justify-content: flex-end;
   white-space: nowrap;
-  /* width: 100%; */
   height: 100%;
   margin: 0;
   padding: 0;
   align-items: center;
 }
-
-
-
 
 .linkList {
   width: 100%;
@@ -54,10 +50,7 @@
   padding: 0%;
   display: inline;
   font-size: 18px;
-  /* height: 56px; */
   line-height: 22px;
-
-  /* line-height: 56px; */
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
@@ -66,40 +59,20 @@
 
 /* mobile  */
 .mobileNav {
-  margin-left: auto;
+  line-height: 112px;
+
+  z-index: 2;
 }
 .mobile_Burger_menu {
-  -webkit-text-size-adjust: 100%;
-  word-break: break-word;
-  box-sizing: border-box;
-  font-family: inherit;
-  font-size: 100%;
-  line-height: 1.15;
-  overflow: visible;
-  text-transform: none;
-  -webkit-appearance: button;
-  background-color: transparent;
-  border: 0;
-  /* background-image: url(../../assets/icons/icon_mobileNavButton.svg); */
-  background-repeat: no-repeat;
-  background-size: contain;
-  height: 2.4rem;
-  margin: 0 0 0 auto;
-  width: 3.2rem;
   z-index: 2;
 }
 
 .exit_button {
-  /* -webkit-appearance: button;
-  background-color: transparent;
-  border: 0; */
-  /* background-image: url(../../assets/icons/icon_closeMenu.svg); */
   background-repeat: no-repeat;
   background-size: contain;
   height: 4.8rem;
   position: absolute;
   right: 3rem;
-  top: 5rem;
   width: 4.8rem;
   z-index: 3;
 }
@@ -112,6 +85,18 @@
   /* .linkList {
     display: none;
   } */
+}
+
+@media only screen and (max-width: 350px) {
+  .mobileNav {
+    position: fixed;
+    right: 25px;
+    top: 20px;
+    background-color: black;
+    line-height: 0;
+    padding: 5px;
+    border-radius: var(--border-radius);
+  }
 }
 @media only screen and (min-width: 1026px) {
   .mobileNav {

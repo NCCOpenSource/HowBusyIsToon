@@ -6,18 +6,15 @@ export default function CalloutData() {
   const [data, setData] = useState(footfallData);
   const [header, setHeader] = useState("");
   const [calloutClass, setcalloutClass] = useState("");
-  console.log("🚀 ~ file: carParksData.js ~ line 5 ~ CalloutData ~ data", data);
-  console.log("apiTest");
+
   useEffect(() => {
     function getCalloutData() {
       fetch(`https://howbusyistoon.com/ncc-city-state.json`)
         .then((response) => {
           response.json();
-          console.log(response);
         })
         .then((response) => {
           setData(response);
-          console.log(response);
           setCalloutData();
         })
         .catch((error) => {

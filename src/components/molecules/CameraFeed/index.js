@@ -1,12 +1,10 @@
 import React, { useState } from "react";
 import TimeIcon from "../../../assets/icons/time.svg";
 import GetFeedImage from "../../atoms/GetFeedImage";
-// import SelectDropdown from "../index";
 import styles from "./cameraFeed.module.css";
 
 export default function CameraFeed() {
   const [option, setOption] = useState(0);
-  // console.log("🚀 ~ file: index.js ~ line 6 ~ Filter ~ option", option);
   function handleChange(event) {
     setOption(event.target.value);
   }
@@ -45,21 +43,10 @@ export default function CameraFeed() {
             </option>
           </select>
         </div>
-
-        {/* <Filter className={styles.select} onChange={handleChange} /> */}
       </div>
       <div className={styles.feed}>
         <GetFeedImage option={option} />
-        {/* <StaticImage alt=''
-          //   className={styles.Feed}
-            // width={918}
-            // height={615}
-            style={{ height: "100%", width: "100%" }}
-
-          src="../../../images/placeholder.jpg"
-        /> */}
       </div>
-      {/* <GetFeedImage /> */}
     </div>
   );
 }

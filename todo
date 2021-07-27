@@ -1,33 +1,8 @@
-///////////////////////////////////////////////////////////////////
-emojicon - cant edit the css , it needs to come as is. 
-
-
-personal -
-remove styled component replace with logic and classes 
-replace flex with grid box
-add council links 
-simplify css Grid / 1 gridtemplatearea , responsiveness
 Css Variables 
-
-research 
-graphql heirachy and contentfull hook
-content naming conventions
-
-
-ask:
-help with maps 
-busyness API authorization
-Russel Api Help
-Dropdown Menu's 
-
-
-
-leaflet Gatsby Help 
-//////////////////
 
 make links and articles surrounding editable
 
-
+emojicon follow up question and incorporate link 
 emojicon account / handover
 Contentify account / handover
 Netlify account / handover
@@ -44,55 +19,17 @@ main things :
 Api's 
 contnentful
 
-rotate icon https://www.npmjs.com/package/leaflet-marker-rotation
-
-I’d suggest giving people these options on the city centre cameras:
-Current N’land St
-Current Grey St
-https://www.netrafficcams.co.uk/newcastle-a186-collingwood-street-st-nicholas-square-st-nicholas-street-groat-market (night-time economy) - @Luke Smith any idea if the Bigg Mkt one is coming online?
-https://www.netrafficcams.co.uk/newcastle-a189-barrack-road-gallowgate-st-james-boulevard (for the football)
-https://www.netrafficcams.co.uk/newcastle-blackett-street-pilgrim-street (retail)
-https://www.netrafficcams.co.uk/newcastle-blackett-street-blackett-place (retail)
- 
-Tried to pick ones where the footpaths were a bit more visible – kind of makes me think we might need some of Tom B’s if its not too much of a headache – the Quayside one in particular – but start with these. (edited) 
-
-
-
-carpark pricing and list https://www.newcastle.gov.uk/sites/default/files/Christmas%202020%20-%20alternative%20parking%20to%20Eldon%20car%20parks__3.pdf
-
-
-
-
-Make EV map on a unique page / 
-
-
-
-resize bus icons to 60px x 60px
-
 remove car park 
 
 cors header added to car park and footfall API 
 scripts take api call and generate the files lets output them to new website 
 
 
-emojicon follow up question and incorporate link 
-
+////
 
 we are hosting project , luke is not hosting this time so what about the scripts 
-
 cors header for the busses 
-
-
 check if what we are hosting on front end only because of python 
-
-footfall parking : 
-
-can you 
-
-
-files will be saved to api.howbusyis...
-
-mark container stack. leave the files that write the file 
 domain records mark turner newcastle uni 
-
 close off api calls and other website breakages
+

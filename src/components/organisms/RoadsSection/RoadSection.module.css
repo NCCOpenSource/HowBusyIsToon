@@ -1,11 +1,8 @@
 @import "../../CSS/variables.css";
 .container {
-  gap: var(--grid-gap);
-  /* grid-template-columns: 1fr 1fr 1fr; */
-  grid-template-rows: 48px auto 239px;
   display: grid;
+  gap: var(--grid-gap);
   grid-template-columns: 1fr 1fr 1fr;
-
   grid-template-areas:
     "selectbox  RoadsCameraFeed RoadsCameraFeed"
     "RoadsLookingBusy RoadsCameraFeed RoadsCameraFeed"
@@ -31,21 +28,17 @@
   letter-spacing: 0em;
   text-align: left;
   line-height: 125%;
-
   padding: 32px;
-
-  /* or 125% */
 }
 
 .WalkingOrCycling {
   grid-area: WalkingOrCycling;
-}
-.SimpleArticle{
-  height: 100%;
+  text-decoration: none;
 }
 
 .CycleParking {
   grid-area: CycleParking;
+  text-decoration: none;
 }
 
 .selectbox {
@@ -82,6 +75,21 @@
   appearance: none;
   width: 100%;
   height: 100%;
-  background: #f8f8f8;
+  background: var(--color-light-grey);
+  background: var(--color-light-grey);
   border-radius: var(--border-radius);
+}
+
+@media only screen and (max-width: 1025px) {
+  .container {
+    grid-template-areas:
+      "RoadsLookingBusy"
+      "selectbox"
+      "RoadsCameraFeed"
+      "WalkingOrCycling"
+      "CycleParking";
+    grid-template-rows: 1fr;
+
+    grid-template-columns: 1fr;
+  }
 }

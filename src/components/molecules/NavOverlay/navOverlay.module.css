@@ -1,4 +1,4 @@
-@import '../../CSS/variables.css';
+@import "../../CSS/variables.css";
 
 .overlay {
   position: fixed; /* Sit on top of the page content */
@@ -9,73 +9,24 @@
   right: 0;
   bottom: 0;
   z-index: 2;
-  /* cursor: pointer;  */
-
+  background-color: rgba(0, 0, 0, 0.95);
+  overflow-x: hidden;
+  margin: 0;
+  transition: 0.5s;
   display: flex;
-  align-content: center;
   justify-content: center;
-
-  /* background-color: rgb(255, 254, 254); */
-  /* box-shadow: 0 10px 24px 0 rgba(0, 0, 0, 0.25); */
-  background-color: black;
-  /* background-color: white; */
-
-  /* transition: margin .5s; */
-  /* margin: 100vh 0 0 0; */
-  
-  /* animation-name: slideon ;  
-  animation-duration: .5s;
-  animation-timing-function: linear; */
+  align-items: center;
 }
-/* 
-@keyframes slideon {
-  from {
-    transform: translateY(100vh);
-  }
-  to {
-    transform: translateY(0%);
-  }
-}
-@keyframes slideoff {
-  from {
-    transform: translateY(0%);
-  }
-  to {
-    transform: translateY(100vh);
-  }
-} */
-
-.exitbutton {
-  /* -webkit-appearance: button; */
-  /* background-color: transparent; */
-  /* border: 0; */
-  /* background-image: url(../../assets/icons/icon_closeMenu.svg); */
-  /* background-repeat: no-repeat;
-  background-size: contain;
-  height: 4.8rem;
-  position: absolute;
-  right: 3rem;
-  top: 5rem;
-  width: 4.8rem; */
-}
-
-.mobile__list {
-  display: flex;
-  flex-direction: column;
-  width: 75%;
-  margin: auto;
-  height: 75%;
-  justify-content: space-evenly;
-  padding: 0;
-  /* margin-top: 15vh; */
-  /* padding-left: 5vw; */
-}
-.mobile_list_title {
-}
-.mobile_list_item {
+.subnavLinkItemText {
+  padding: 18px;
+  line-height: normal;
   color: white;
   cursor: pointer;
-  font-family: europa, sans-serif;
-  font-size: 26px;
   text-decoration: none;
+  font-size: 36px;
+  display: block;
+  transition: 0.3s;
+}
+.activesubnavLinkItemText {
+  background-color: var(--color-dark-grey);
 }

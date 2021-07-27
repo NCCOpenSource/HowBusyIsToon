@@ -1,17 +1,9 @@
 import React from "react";
-import RoadsCameraFeed from "../../molecules/RoadsCameraFeed";
-import EVArticle from "../../molecules/EVArticle";
-import styles from "./Nexus.module.css";
-import SectionExample from "../../molecules/SectionExample";
-import CouncilLinks from "../../molecules/CouncilLinks";
-import CarParkMap from "../../molecules/CarParkMap";
-import Box from "../../atoms/Box";
-import { StaticImage } from "gatsby-plugin-image";
-import ColorKey from "../../molecules/ColorKey";
-import LocalTravelUpdates from "../../molecules/LocalTravelUpdates";
-import ArticleExample from "../../atoms/ArticleExample";
 import UnfortunatelyNexus from "../../atoms/UnfortunatelyNexus";
+import CouncilLinks from "../../molecules/CouncilLinks";
+import LocalTravelUpdates from "../../molecules/LocalTravelUpdates";
 import NexusArticle from "../../molecules/NexusArticle";
+import styles from "./Nexus.module.css";
 
 export default function Nexus() {
   return (

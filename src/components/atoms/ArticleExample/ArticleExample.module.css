@@ -1,9 +1,8 @@
-@import '../../CSS/variables.css';
-
+@import "../../CSS/variables.css";
 
 .articleExampleContainer {
   display: grid;
   grid-auto-flow: row;
   font-size: 20px;
+  /* grid-auto-rows: 350px auto auto auto; */
 }
- 

@@ -3,10 +3,11 @@ import React from "react";
 import ArticleExample from "../../atoms/ArticleExample";
 import Box from "../../atoms/Box";
 import styles from "./RoadClosure.module.css";
+
 export default function RoadClosureAroundTown() {
   return (
     <div className={styles.container}>
-      <Box >
+      <Box>
         <p className={styles.topFont}>Road Closures Around Town</p>
       </Box>
       <ArticleExample

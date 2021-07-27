@@ -1,12 +1,10 @@
 import React from "react";
 import { MapContainer, TileLayer } from "react-leaflet";
 import EVData from "../../atoms/EVData";
-import ExampleData from "../../atoms/EVData/example.json";
 import "./index.module.css";
 import styles from "./index.module.css";
-export default function EvMap() {
-  console.log("🚀 ~ file: index.js ~ line 5 ~ ExampleData", ExampleData);
 
+export default function EvMap() {
   return (
     <MapContainer
       center={[54.97206769445005, -1.6132124536205563]}

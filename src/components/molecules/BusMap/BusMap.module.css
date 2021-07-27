@@ -4,9 +4,7 @@
   height: 100%;
   width: 100%;
   border-radius: var(--border-radius);
-  /* z-index: 1 !important; */
   position: relative;
-
 }
 .leafletcontainer {
   height: 100%;
@@ -14,11 +12,14 @@
   border-radius: var(--border-radius);
   z-index: 0 !important;
   position: relative !important;
+  height: 600px;
 }
 .search {
   position: absolute;
   margin: 18px;
-  /* top: 0; */
-  /* right: 0; */
-  z-index: 2;
+
+  z-index: 1;
+}
+.Popup {
+  bottom: 10px !important;
 }

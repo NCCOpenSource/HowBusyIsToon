@@ -4,7 +4,7 @@ import Parking from "../components/templates/Parking";
 
 export default function index() {
   return (
-    <Layout>
+    <Layout pageTitle="Parking">
       <Parking />
     </Layout>
   );

@@ -1,15 +1,7 @@
 @import "../../CSS/variables.css";
 
 .LinkBox {
-  background-color: var(--color-light-grey);
-  color: black;
-  font-weight: normal;
-  text-decoration: none;
-  padding: 32px;
-  border-radius: var(--border-radius);
-
-  display: grid;
-  gap: 18px;
+  padding: 32px 41px;
 }
 .subHeading {
   display: flex;
@@ -21,18 +13,15 @@
 .subHeadingText {
   font-size: 25px;
   margin: 0;
-
-  font-size: 25px;
+  font-size: 31px;
   font-style: normal;
   font-weight: 700;
-  line-height: 25px;
+  line-height: 37px;
   letter-spacing: 0em;
   text-align: left;
 }
 
-.bottomText {
-  font-size: 20px;
-
+.contentText {
   font-size: 20px;
   font-style: normal;
   font-weight: 400;

@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./VisitCitySafely.module.css";
+
 export default function VisitCitySafetly() {
   return (
     <div className={styles.container}>
