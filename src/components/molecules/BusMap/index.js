@@ -3,11 +3,11 @@ import "leaflet/dist/leaflet";
 import "leaflet/dist/leaflet.css";
 import React, { useEffect, useState } from "react";
 import {
-    MapContainer,
-    Marker,
-    Popup,
-    TileLayer,
-    ZoomControl
+  MapContainer,
+  Marker,
+  Popup,
+  TileLayer,
+  ZoomControl,
 } from "react-leaflet";
 import blackbus from "../../../images/blackbus.png";
 import greenbus from "../../../images/greenbus.png";
@@ -126,10 +126,7 @@ export default function BusMap() {
                 ) {
                   return (
                     <Marker
-                      rotationAngle={180}
-                      rotationOrigin={"center"}
                       icon={createMarkerIcon(bus, seatsavailable)}
-                      rotationAngle={"45"}
                       key={Math.floor(Math.random() * 999999999999)}
                       position={[
                         bus.VehicleActivity.MonitoredVehicleJourney

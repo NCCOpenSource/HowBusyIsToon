@@ -1,7 +1,7 @@
 import { graphql, Link, useStaticQuery } from "gatsby";
 import React from "react";
 import SimpleArticle from "../../atoms/SimpleArticle";
-import Callout from "../../molecules/Callout";
+import CalloutData from "../../atoms/CalloutData";
 import CameraFeed from "../../molecules/CameraFeed";
 import CouncilLinks from "../../molecules/CouncilLinks";
 import SectionExample from "../../molecules/SectionExample";
@@ -110,7 +110,7 @@ export default function Home() {
       <div className={styles.container}>
         <>
           <div className={styles.Callout}>
-            <Callout />
+            <CalloutData />
           </div>
           <div className={styles.CameraFeed}>
             <CameraFeed />
