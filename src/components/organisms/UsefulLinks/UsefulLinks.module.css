@@ -2,8 +2,7 @@
   display: grid;
   gap: var(--grid-gap);
 }
-.top {
-}
+
 .topFont {
   font-size: 32px;
 }
@@ -11,17 +10,6 @@
   display: grid;
   grid-auto-flow: column;
   gap: var(--grid-gap);
-
-  /* display: flex; */
-  /* flex-direction: row; */
-}
-
-.Container {
-  /* grid-auto-flow: row; */
-
-  /* display: flex; */
-  /* flex-direction: column; */
-  /* padding: 32px; */
 }
 
 .image {

@@ -50,16 +50,9 @@ export default function UsefulLinks() {
       }
     }
   `);
-  console.log(
-    "🚀 ~ file: index.js ~ line 53 ~ UsefulLinks ~ data",
-    data.allContentfulUsefulLinks.edges[0].node.article1
-  );
 
   const UsefulData = data.allContentfulUsefulLinks.edges[0].node;
-  console.log(
-    "🚀 ~ file: index.js ~ line 56 ~ UsefulLinks ~ UsefulData",
-    UsefulData
-  );
+
   const altSections = [
     {
       id: 1,

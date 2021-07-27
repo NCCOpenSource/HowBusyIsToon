@@ -75,9 +75,7 @@ export default function Home() {
     }
   `);
 
-  console.log("🚀 ~ file: index.js ~ line 61 ~ Home ~ data", data);
   const homeData = data.allContentfulCityCentreHomepage.edges[0].node;
-  console.log("🚀 ~ file: index.js ~ line 80 ~ Home ~ homeData", homeData);
   const homeSections = [
     {
       id: 1,

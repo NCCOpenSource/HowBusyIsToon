@@ -16,7 +16,7 @@
   letter-spacing: 0em;
   text-align: center;
 
-  src: url("https://fonts.googleapis.com/css2?family=Lato&display=swap")
+  src: url("../../fonts/Lato-Regular.ttf")
     format("woff2");
 }
 

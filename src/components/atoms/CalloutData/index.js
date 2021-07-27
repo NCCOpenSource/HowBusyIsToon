@@ -12,11 +12,9 @@ export default function CalloutData() {
       fetch(`https://howbusyistoon.com/ncc-city-state.json`)
         .then((response) => {
           response.json();
-          console.log(response);
         })
         .then((response) => {
           setData(response);
-          console.log(response);
           setCalloutData();
         })
         .catch((error) => {

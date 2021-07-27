@@ -1,6 +1,6 @@
 import { StaticImage } from "gatsby-plugin-image";
 import React from "react";
-import EmojiconBar from "../../molecules/EmojiconBar";
+import EmojicomWidget from "../../molecules/EmojicomWidget";
 import styles from "./footer.module.css";
 
 export default function Footer() {
@@ -48,7 +48,7 @@ export default function Footer() {
           </ul>
         </div>
       </div>
-      <EmojiconBar />
+      <EmojicomWidget />
     </div>
   );
 }
