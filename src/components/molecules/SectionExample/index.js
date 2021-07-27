@@ -24,7 +24,10 @@ export default function SectionExample({ homeData }) {
           LinkTitle={homeData.article1Link}
           Linkurl={homeData.article1Url}
         >
-          <img
+          <div
+            style={{
+              backgroundImage: `url(${homeData.article1.file.url})`,
+            }}
             alt={homeData.article1.description}
             className={styles.image}
             src={homeData.article1.file.url}
@@ -36,7 +39,11 @@ export default function SectionExample({ homeData }) {
           LinkTitle={homeData.articleLink2}
           Linkurl={homeData.articleUrl2}
         >
-          <img
+          
+          <div
+            style={{
+              backgroundImage: `url(${homeData.article2Image.file.url})`,
+            }}
             alt={homeData.article2Image.description}
             className={styles.image}
             src={homeData.article2Image.file.url}
@@ -48,7 +55,10 @@ export default function SectionExample({ homeData }) {
           LinkTitle={homeData.articleLink3}
           Linkurl={homeData.linkUrl3}
         >
-          <img
+          <div
+            style={{
+              backgroundImage: `url(${homeData.articleImage3.file.url})`,
+            }}
             alt={homeData.articleImage3.description}
             className={styles.image}
             src={homeData.articleImage3.file.url}
