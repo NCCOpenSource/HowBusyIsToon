@@ -16,31 +16,11 @@
   letter-spacing: 0em;
   text-align: center;
 
-  src: url("../../fonts/Lato-Regular.ttf")
-    format("woff2");
+  src: url("../../fonts/Lato-Regular.ttf") format("woff2");
 }
 
 body {
   font-family: "Europa-Bold";
-  /* font-size: 16px;
-  font-style: normal;
-  letter-spacing: 0em;
-  color: #333333;
-  background: rgb(255, 255, 255); */
+
   margin: 0;
 }
-
-/* @media only screen and (max-width: 1025px) {
-  h1 {
-    font-size: 39px !important;
-    line-height: 47px !important;
-  }
-  h2 {
-    font-size: 31px !important;
-    line-height: 37.2px !important;
-  }
-  p {
-    font-size: 19px !important;
-    line-height: 22.8px !important;
-  }
-} */
