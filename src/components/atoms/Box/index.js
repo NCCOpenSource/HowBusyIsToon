@@ -11,7 +11,7 @@ export default function Box({ children, fullBorderRadius, color, fontColor }) {
 
   const ContainerClassName = style.Container;
 
-  useEffect((color, fontColor, fullBorderRadius) => {
+  useEffect(() => {
     if (color === "black") {
       setBackgroundColor(style.Backgroundblack);
     }
@@ -40,7 +40,9 @@ export default function Box({ children, fullBorderRadius, color, fontColor }) {
     if (fullBorderRadius === "full") {
       setBorderRadius(style.borderRadiusFull);
     }
+    /* eslint-disable */
   }, []);
+  /* eslint-enable */
 
   return (
     <div
