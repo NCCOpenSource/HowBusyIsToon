@@ -23,9 +23,11 @@
 }
 .HowBusyAreRoads {
   grid-area: HowBusyAreRoads;
+  text-decoration: none;
 }
 .HowBusyAreBuses {
   grid-area: HowBusyAreBuses;
+  text-decoration: none;
 }
 .SectionExample {
   grid-area: SectionExample;

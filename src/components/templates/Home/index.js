@@ -6,6 +6,7 @@ import CouncilLinks from "../../molecules/CouncilLinks";
 import SectionExample from "../../molecules/SectionExample";
 import styles from "./home.module.css";
 import { graphql, useStaticQuery } from "gatsby";
+import { Link } from "gatsby";
 
 export default function Home() {
   const data = useStaticQuery(graphql`
@@ -77,7 +78,7 @@ export default function Home() {
 
   console.log("🚀 ~ file: index.js ~ line 61 ~ Home ~ data", data);
   const homeData = data.allContentfulCityCentreHomepage.edges[0].node;
-  console.log("🚀 ~ file: index.js ~ line 80 ~ Home ~ homeData", homeData)
+  console.log("🚀 ~ file: index.js ~ line 80 ~ Home ~ homeData", homeData);
   const homeSections = [
     {
       id: 1,
@@ -117,24 +118,27 @@ export default function Home() {
           <div className={styles.CameraFeed}>
             <CameraFeed />
           </div>
-          <div className={styles.HowBusyAreRoads}>
+          <Link className={styles.HowBusyAreRoads}  to={'/roads'}>
             <SimpleArticle
               TopText="How Busy Are Roads?"
               BottomText="View live traffic updates of the busiest commuter routes in and out of
           the city centre"
             />
-          </div>
-          <div className={styles.HowBusyAreBuses}>
+          </Link>
+          <Link className={styles.HowBusyAreBuses} to={'/transport'}>
             <SimpleArticle
               TopText="How Busy Are Buses?"
               BottomText="View real time bus data on a map of the region to see exactly where
               your next bus is"
             />
-          </div>
+          </Link>
         </>
 
         <div className={styles.SectionExample}>
-          <SectionExample title={homeData.section1Title} articleSections={homeSections} />
+          <SectionExample
+            title={homeData.section1Title}
+            articleSections={homeSections}
+          />
         </div>
         <div className={styles.CouncilLinks}>
           <CouncilLinks />
