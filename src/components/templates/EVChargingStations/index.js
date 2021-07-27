@@ -1,7 +1,7 @@
 import React from "react";
 import CouncilLinks from "../../molecules/CouncilLinks";
 import EVMaps from "../../molecules/EvMap";
-import SectionExample from "../../molecules/SectionExample";
+import AlternativeTransport from "../../organisms/AlternativeTransport";
 import styles from "./EVChargingStations.module.css";
 
 export default function EVChargingStations() {
@@ -11,7 +11,7 @@ export default function EVChargingStations() {
         <EVMaps />
       </div>
       <div className={styles.SectionExample}>
-        <SectionExample />
+      <AlternativeTransport />
       </div>
       <div className={styles.CouncilLinks}>
         <CouncilLinks />

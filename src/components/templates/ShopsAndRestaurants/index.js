@@ -2,7 +2,7 @@ import React from "react";
 import ShopsRestaurantsMap from "../../atoms/Shops&RestaurantsMap";
 import VisitCitySafetly from "../../atoms/VisitCitySafely";
 import CouncilLinks from "../../molecules/CouncilLinks";
-import SectionExample from "../../molecules/SectionExample";
+import AlternativeTransport from "../../organisms/AlternativeTransport";
 import styles from "./ShopsAndRestaurants.module.css";
 
 export default function ShopsAndRestaurants() {
@@ -16,7 +16,7 @@ export default function ShopsAndRestaurants() {
           <ShopsRestaurantsMap />
         </div>
         <div className={styles.SectionExample}>
-          <SectionExample />
+          <AlternativeTransport />
         </div>
         <div className={styles.CouncilLinks}>
           <CouncilLinks />

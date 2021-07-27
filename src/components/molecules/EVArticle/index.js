@@ -26,6 +26,7 @@ export default function EVArticle() {
       }
     }
   `);
+  console.log("🚀 ~ file: index.js ~ line 29 ~ EVArticle ~ data", data)
 
   return (
     <div className={styles.container}>

@@ -2,7 +2,7 @@ import React from "react";
 import CarParkMap from "../../molecules/CarParkMap";
 import ColorKey from "../../molecules/ColorKey";
 import CouncilLinks from "../../molecules/CouncilLinks";
-import SectionExample from "../../molecules/SectionExample";
+import AlternativeTransport from "../../organisms/AlternativeTransport";
 import styles from "./Parking.module.css";
 
 export default function Parking() {
@@ -13,7 +13,7 @@ export default function Parking() {
         <CarParkMap />
       </div>
       <div className={styles.SectionExample}>
-        <SectionExample />
+        <AlternativeTransport />
       </div>
       <div className={styles.CouncilLinks}>
         <CouncilLinks />

@@ -4,21 +4,41 @@ import ArticleExample from "../../atoms/ArticleExample";
 import Box from "../../atoms/Box";
 import styles from "./sectionExample.module.css";
 
-export default function SectionExample({ homeData }) {
+export default function SectionExample({ articleSections, title }) {
   console.log(
-    "🚀 ~ file: index.js ~ line 8 ~ SectionExample ~ homeData",
-    homeData
+    "🚀 ~ file: index.js ~ line 8 ~ SectionExample ~ articleSections",
+    articleSections
   );
+
   return (
     <div className={styles.SectionExample}>
       <Box>
-        <p className={styles.topFont}>
-          Alternative Tranpsport and Our Green Initiative
-        </p>
+        <p className={styles.topFont}>{title ? title : ""}</p>
       </Box>
 
       <div className={styles.container}>
-        <ArticleExample
+        {articleSections
+          ? articleSections.map(
+              ({ id, Title, Content, LinkTitle, Linkurl, image, alt }) => (
+                <ArticleExample
+                  id={id}
+                  Title={Title}
+                  Content={Content}
+                  LinkTitle={LinkTitle}
+                  Linkurl={Linkurl}
+                >
+                  <div
+                    style={{
+                      backgroundImage: `url(${image})`,
+                    }}
+                    alt={alt}
+                    className={styles.image}
+                  />
+                </ArticleExample>
+              )
+            )
+          : null}
+        {/* <ArticleExample
           Title={homeData.article1Title}
           Content={homeData.arcticleContent1.arcticleContent1}
           LinkTitle={homeData.article1Link}
@@ -30,7 +50,6 @@ export default function SectionExample({ homeData }) {
             }}
             alt={homeData.article1.description}
             className={styles.image}
-            src={homeData.article1.file.url}
           />
         </ArticleExample>
         <ArticleExample
@@ -39,7 +58,6 @@ export default function SectionExample({ homeData }) {
           LinkTitle={homeData.articleLink2}
           Linkurl={homeData.articleUrl2}
         >
-          
           <div
             style={{
               backgroundImage: `url(${homeData.article2Image.file.url})`,
@@ -63,7 +81,7 @@ export default function SectionExample({ homeData }) {
             className={styles.image}
             src={homeData.articleImage3.file.url}
           />
-        </ArticleExample>
+        </ArticleExample> */}
       </div>
     </div>
   );

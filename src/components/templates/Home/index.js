@@ -14,7 +14,7 @@ export default function Home() {
         edges {
           node {
             section1Title
-            article1 {
+            article1image {
               file {
                 url
               }
@@ -74,8 +74,39 @@ export default function Home() {
       }
     }
   `);
+
   console.log("🚀 ~ file: index.js ~ line 61 ~ Home ~ data", data);
   const homeData = data.allContentfulCityCentreHomepage.edges[0].node;
+  console.log("🚀 ~ file: index.js ~ line 80 ~ Home ~ homeData", homeData)
+  const homeSections = [
+    {
+      id: 1,
+      Title: homeData.article1Title,
+      Content: homeData.arcticleContent1.arcticleContent1,
+      LinkTitle: homeData.article1Link,
+      Linkurl: homeData.article1Url,
+      image: homeData.article1image.file.url,
+      alt: homeData.article1image.description,
+    },
+    {
+      id: 2,
+      Title: homeData.articleTitle2,
+      Content: homeData.articleContent2.articleContent2,
+      LinkTitle: homeData.articleLink2,
+      Linkurl: homeData.articleUrl2,
+      image: homeData.article2Image.file.url,
+      alt: homeData.article2Image.description,
+    },
+    {
+      id: 3,
+      Title: homeData.articleTitle3,
+      Content: homeData.articleContent3.articleContent3,
+      LinkTitle: homeData.articleLink3,
+      Linkurl: homeData.linkUrl3,
+      image: homeData.articleImage3.file.url,
+      alt: homeData.articleImage3.description,
+    },
+  ];
   return (
     <>
       <div className={styles.container}>
@@ -103,7 +134,7 @@ export default function Home() {
         </>
 
         <div className={styles.SectionExample}>
-          <SectionExample homeData={homeData} />
+          <SectionExample title={homeData.section1Title} articleSections={homeSections} />
         </div>
         <div className={styles.CouncilLinks}>
           <CouncilLinks />
