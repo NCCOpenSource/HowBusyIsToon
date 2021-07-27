@@ -1,0 +1,95 @@
+@import "../../CSS/variables.css";
+.container {
+  display: grid;
+  gap: var(--grid-gap);
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas:
+    "selectbox  RoadsCameraFeed RoadsCameraFeed"
+    "RoadsLookingBusy RoadsCameraFeed RoadsCameraFeed"
+    "RoadsLookingBusy WalkingOrCycling CycleParking";
+}
+.RoadsCameraFeed {
+  grid-area: RoadsCameraFeed;
+}
+.RoadsLookingBusy {
+  height: 100%;
+  background-color: aqua;
+  grid-area: RoadsLookingBusy;
+  color: var(--black);
+  background-color: var(--color-light-grey);
+  border-radius: var(--border-radius);
+}
+.calloutText {
+  font-family: Lato;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 60px;
+  letter-spacing: 0em;
+  text-align: left;
+  line-height: 125%;
+  padding: 32px;
+}
+
+.WalkingOrCycling {
+  grid-area: WalkingOrCycling;
+  text-decoration: none;
+}
+
+.CycleParking {
+  grid-area: CycleParking;
+  text-decoration: none;
+}
+
+.selectbox {
+  grid-area: selectbox;
+
+  position: relative;
+  width: 100%;
+  height: 48px;
+}
+
+.selectbox::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  margin-top: -6px;
+  right: 0.7rem;
+  width: 0;
+  height: 0;
+  border: solid black;
+  border-width: 0 1px 1px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(45deg);
+}
+
+.selector {
+  border: 1px solid #eee;
+  border-radius: 0.25rem;
+  padding: 0.5rem 1.5rem 0.5rem 0.5rem;
+  display: flex;
+  background-color: white;
+  outline: 0;
+  cursor: pointer;
+  appearance: none;
+  width: 100%;
+  height: 100%;
+  background: var(--color-light-grey);
+  background: var(--color-light-grey);
+  border-radius: var(--border-radius);
+}
+
+@media only screen and (max-width: 1025px) {
+  .container {
+    grid-template-areas:
+      "RoadsLookingBusy"
+      "selectbox"
+      "RoadsCameraFeed"
+      "WalkingOrCycling"
+      "CycleParking";
+    grid-template-rows: 1fr;
+
+    grid-template-columns: 1fr;
+  }
+}

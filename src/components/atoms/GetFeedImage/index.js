@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styles from "./GetFeedImage.module.css";
+
 export default function GetFeedImage({ option }) {
   const [imageList, setImageList] = useState(null);
   const [apiFinished, setApiFinished] = useState(false);
@@ -86,13 +87,19 @@ export default function GetFeedImage({ option }) {
 
   return (
     <>
-      {apiFinished ? (
-        <img
-          src={imageList[option]}
-          alt="Images from street cameras of roads"
+      {imageList !== null && imageList[option] !== null && apiFinished ? (
+        <div
+          style={{
+            backgroundImage: `url(${imageList[option]})`,
+          }}
+          alt="Images from street cameras of City Center"
           className={styles.image}
+          width="1280"
+          height="720"
         />
-      ) : null}
+      ) : (
+        <div className={styles.imagePlaceholder} />
+      )}
     </>
   );
 }

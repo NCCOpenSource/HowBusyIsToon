@@ -14,7 +14,7 @@
 }
 
 .Backgroundgrey {
-  background-color: #f8f8f8;
+  background-color: var(--color-light-grey);
 }
 .Backgroundwhite {
   background-color: #ffffff;
@@ -24,7 +24,7 @@
   color: #000000;
 }
 .Fontgrey {
-  color: #f8f8f8;
+  color: var(--color-light-grey);
 }
 .Fontwhite {
   color: #ffffff;

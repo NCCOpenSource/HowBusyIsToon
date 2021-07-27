@@ -1,0 +1,23 @@
+.carparkspacesmap {
+  font-size: 12px;
+  line-height: 35px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.carparkmarker {
+  text-align: center;
+  position: relative;
+}
+
+.carparkmarker p {
+  font-size: 12px;
+  line-height: 35px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0;
+}

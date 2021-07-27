@@ -2,34 +2,34 @@
   display: grid;
   gap: var(--grid-gap);
 }
-.top {
-}
+
 .topFont {
   font-size: 32px;
 }
-.OuterContainer {
+
+.container {
   display: grid;
   grid-auto-flow: column;
   gap: var(--grid-gap);
-
-  /* display: flex; */
-  /* flex-direction: row; */
-}
-
-.Container {
-  /* grid-auto-flow: row; */
-
-  /* display: flex; */
-  /* flex-direction: column; */
-  /* padding: 32px; */
 }
 
 .image {
   border-radius: var(--border-radius);
+
+  object-fit: contain;
+  background-size: cover;
+  height: 350px;
+  background-position: center;
 }
+
 @media only screen and (max-width: 1025px) {
   .OuterContainer {
     display: flex;
     flex-direction: column;
+  }
+}
+@media only screen and (max-width: 830px) {
+  .container {
+    grid-auto-flow: row;
   }
 }

@@ -1,0 +1,24 @@
+@import "../../CSS/variables.css";
+
+.container {
+  width: 100%;
+  grid-template-areas: none;
+  display: grid;
+  gap: var(--grid-gap);
+  grid-auto-flow: column;
+  grid-template-columns: 1fr 2fr;
+}
+.leftContainer {
+  grid-template-areas: none;
+  display: grid;
+  gap: var(--grid-gap);
+  grid-template-rows: 2fr auto auto;
+}
+
+@media only screen and (max-width: 1025px) {
+  .container {
+    grid-template-areas: none;
+    display: flex;
+    flex-direction: column;
+  }
+}

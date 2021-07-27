@@ -1,0 +1,13 @@
+@import "../../CSS/variables.css";
+.container {
+  gap: var(--grid-gap);
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 1.25fr 2fr;
+}
+@media only screen and (max-width: 1025px) {
+  .container {
+    grid-auto-flow: unset;
+    grid-template-columns: none;
+  }
+}

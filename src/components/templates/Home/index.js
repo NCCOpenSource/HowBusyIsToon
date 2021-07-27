@@ -1,91 +1,141 @@
-import React, { useState } from "react";
-import ShopsRestaurantsMap from "../../atoms/Shops&RestaurantsMap";
-import VisitCitySafetly from "../../atoms/VisitCitySafely";
+import { graphql, Link, useStaticQuery } from "gatsby";
+import React from "react";
+import SimpleArticle from "../../atoms/SimpleArticle";
 import Callout from "../../molecules/Callout";
 import CameraFeed from "../../molecules/CameraFeed";
 import CouncilLinks from "../../molecules/CouncilLinks";
-import HowBusyAreBuses from "../../molecules/HowBusyAreBuses";
-import HowBusyAreRoads from "../../molecules/HowBusyAreRoads";
 import SectionExample from "../../molecules/SectionExample";
-import Nav from "../../organisms/Nav";
-import navStyles from "../../organisms/Nav/navExtension.module.css";
 import styles from "./home.module.css";
 
 export default function Home() {
-  const [state, setState] = useState("FootFall Camera");
+  const data = useStaticQuery(graphql`
+    query Home {
+      allContentfulCityCentreHomepage {
+        edges {
+          node {
+            section1Title
+            article1image {
+              file {
+                url
+              }
+              description
+            }
+            article1Title
+            arcticleContent1 {
+              arcticleContent1
+            }
+            article1Link
+            article1Url
+            article2Image {
+              file {
+                url
+              }
+              description
+              title
+            }
+            articleTitle2
+            articleUrl2
+            articleContent2 {
+              articleContent2
+            }
+            articleLink2
+            articleUrl2
+            articleImage3 {
+              file {
+                url
+              }
+              description
+              title
+            }
+            articleContent3 {
+              articleContent3
+            }
+            articleTitle3
+            articleUrl3
+            articleLink3
 
+            linkTitle1
+            linkTitle2
+            linkTitle3
+            linkUrl1
+            linkurl2
+            linkUrl3
+            linkContent1 {
+              linkContent1
+            }
+            linkContent2 {
+              linkContent2
+            }
+            linkContent3 {
+              linkContent3
+            }
+          }
+        }
+      }
+    }
+  `);
+
+  const homeData = data.allContentfulCityCentreHomepage.edges[0].node;
+  const homeSections = [
+    {
+      id: 1,
+      Title: homeData.article1Title,
+      Content: homeData.arcticleContent1.arcticleContent1,
+      LinkTitle: homeData.article1Link,
+      Linkurl: homeData.article1Url,
+      image: homeData.article1image.file.url,
+      alt: homeData.article1image.description,
+    },
+    {
+      id: 2,
+      Title: homeData.articleTitle2,
+      Content: homeData.articleContent2.articleContent2,
+      LinkTitle: homeData.articleLink2,
+      Linkurl: homeData.articleUrl2,
+      image: homeData.article2Image.file.url,
+      alt: homeData.article2Image.description,
+    },
+    {
+      id: 3,
+      Title: homeData.articleTitle3,
+      Content: homeData.articleContent3.articleContent3,
+      LinkTitle: homeData.articleLink3,
+      Linkurl: homeData.linkUrl3,
+      image: homeData.articleImage3.file.url,
+      alt: homeData.articleImage3.description,
+    },
+  ];
   return (
     <>
-      {/* ////////////////////////////nav//////////////////// */}
-
-      <Nav>
-        <div
-          className={
-            state === "FootFall Camera"
-              ? `${navStyles.NavSubLink} ${navStyles.ActiveNavSubLink} `
-              : `${navStyles.NavSubLink}  `
-          }
-          onClick={() => {
-            setState("FootFall Camera");
-          }}
-        >
-          <p className={navStyles.NavSubLinkText}>FootFall Camera</p>
-        </div>
-
-        <div
-          className={
-            state === "Shops And Resturants"
-              ? `${navStyles.NavSubLink} ${navStyles.ActiveNavSubLink} `
-              : `${navStyles.NavSubLink}`
-          }
-          onClick={() => {
-            setState("Shops And Resturants");
-          }}
-        >
-          <p className={navStyles.NavSubLinkText}>Shops And Resturants</p>
-        </div>
-      </Nav>
-      {/* ////////////////////////////////////////////////////////////// */}
-
-      <div
-        className={
-          state === "FootFall Camera" ? styles.containerFF : styles.containerSR
-        }
-      >
-        {state === "Shops And Resturants" ? (
-          <>
-            <div className={styles.VisitCitySafetly}>
-              <VisitCitySafetly />
-            </div>
-            <div className={styles.ShopsRestaurantsMap}>
-              <ShopsRestaurantsMap />
-            </div>
-          </>
-        ) : (
-          ""
-        )}
-
-        {state === "FootFall Camera" ? (
-          <>
-            <div className={styles.Callout}>
-              <Callout />
-            </div>
-            <div className={styles.CameraFeed}>
-              <CameraFeed />
-            </div>{" "}
-            <div className={styles.HowBusyAreRoads}>
-              <HowBusyAreRoads />
-            </div>
-            <div className={styles.HowBusyAreBuses}>
-              <HowBusyAreBuses />
-            </div>
-          </>
-        ) : (
-          ""
-        )}
+      <div className={styles.container}>
+        <>
+          <div className={styles.Callout}>
+            <Callout />
+          </div>
+          <div className={styles.CameraFeed}>
+            <CameraFeed />
+          </div>
+          <Link className={styles.HowBusyAreRoads} to={"/roads"}>
+            <SimpleArticle
+              TopText="How Busy Are Roads?"
+              BottomText="View live traffic updates of the busiest commuter routes in and out of
+          the city centre"
+            />
+          </Link>
+          <Link className={styles.HowBusyAreBuses} to={"/transport"}>
+            <SimpleArticle
+              TopText="How Busy Are Buses?"
+              BottomText="View real time bus data on a map of the region to see exactly where
+              your next bus is"
+            />
+          </Link>
+        </>
 
         <div className={styles.SectionExample}>
-          <SectionExample />
+          <SectionExample
+            title={homeData.section1Title}
+            articleSections={homeSections}
+          />
         </div>
         <div className={styles.CouncilLinks}>
           <CouncilLinks />

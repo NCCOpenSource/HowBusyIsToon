@@ -1,0 +1,21 @@
+@import "../../CSS/variables.css";
+
+.container {
+  grid-template-areas: none;
+  display: grid;
+  gap: var(--grid-gap);
+  grid-template-rows: 1fr 1fr auto;
+}
+
+.EVMaps {
+  width: 100%;
+  height: 100%;
+}
+
+@media only screen and (max-width: 1025px) {
+  .container {
+    grid-template-areas: none;
+    display: flex;
+    flex-direction: column;
+  }
+}

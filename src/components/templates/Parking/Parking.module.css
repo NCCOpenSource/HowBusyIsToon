@@ -1,0 +1,16 @@
+@import "../../CSS/variables.css";
+
+.container {
+  grid-template-areas: none;
+  display: grid;
+  gap: var(--grid-gap);
+  grid-template-rows: auto 1fr 1fr auto;
+}
+
+@media only screen and (max-width: 1025px) {
+  .container {
+    grid-template-areas: none;
+    display: flex;
+    flex-direction: column;
+  }
+}

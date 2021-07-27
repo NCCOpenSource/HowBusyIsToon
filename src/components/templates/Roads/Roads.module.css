@@ -1,0 +1,34 @@
+@import "../../CSS/variables.css";
+
+.container {
+  width: 100%;
+  grid-template-areas: none;
+  display: grid;
+  gap: var(--grid-gap);
+}
+
+.Callout {
+  grid-area: Callout;
+}
+.CameraFeed {
+  grid-area: CameraFeed;
+}
+.HowBusyAreRoads {
+  grid-area: HowBusyAreRoads;
+}
+.HowBusyAreBuses {
+  grid-area: HowBusyAreBuses;
+}
+.SectionExample {
+  grid-area: SectionExample;
+}
+.CouncilLinks {
+  grid-area: CouncilLinks;
+}
+
+@media only screen and (max-width: 1025px) {
+  .container {
+    grid-auto-flow: unset;
+    grid-template-columns: none;
+  }
+}

@@ -1,8 +1,6 @@
 @import "../../CSS/variables.css";
 
 .calloutContainer {
-  /* width: 442px; */
-  /* height: 889px; */
   height: 100%;
   width: 100%;
   border-radius: var(--border-radius);
@@ -13,30 +11,17 @@
 
 .calloutText {
   color: #ffffff;
-  font-family: "Lato";
   font-style: normal;
   font-weight: bold;
   font-size: 48px;
   line-height: 60px;
   padding: 32px;
-  /* or 125% */
-  /* width: 100%; */
-  /* height: 100%; */
+  letter-spacing: 0em;
+  text-align: left;
 }
-
-/* .calloutIconContainer { */
-  /* width: 100%; */
-  /* height: 100%; */
-  /* padding-bottom: 50px; */
-/* } */
 
 .calloutIcon {
   margin-left: 50px;
-  /* width: 100%; */
-  /* margin-right: 50px; */
-
-  /* height: 100%; */
-  /* margin: 55px    ; */
 }
 
 .calloutIconRoad {
@@ -46,7 +31,6 @@
 
 .red {
   background-color: red;
-  
 }
 .orange {
   background-color: orange;

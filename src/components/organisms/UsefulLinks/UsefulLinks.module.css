@@ -1,0 +1,23 @@
+.SectionExample {
+  display: grid;
+  gap: var(--grid-gap);
+}
+
+.topFont {
+  font-size: 32px;
+}
+.OuterContainer {
+  display: grid;
+  grid-auto-flow: column;
+  gap: var(--grid-gap);
+}
+
+.image {
+  border-radius: var(--border-radius);
+}
+@media only screen and (max-width: 1025px) {
+  .OuterContainer {
+    display: flex;
+    flex-direction: column;
+  }
+}

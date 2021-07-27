@@ -3,7 +3,6 @@ import "../../CSS/variables.css";
 import style from "./box.module.css";
 
 export default function Box({ children, fullBorderRadius, color, fontColor }) {
-  // const [fontColor, setstate] = useState(initialState)
   const [backgroundColor, setBackgroundColor] = useState(style.Backgroundblack);
   const [finalFontColor, setFontColor] = useState(style.Fontwhite);
   const [borderRadius, setBorderRadius] = useState(style.borderRadiusFull);

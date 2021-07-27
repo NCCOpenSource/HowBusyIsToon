@@ -1,0 +1,57 @@
+@import "../../CSS/variables.css";
+
+.container {
+  width: 100%;
+
+  grid-template-areas: none;
+  display: grid;
+  gap: var(--grid-gap);
+
+  grid-template-columns: 33% auto auto;
+  grid-template-areas:
+    "VisitCitySafetly ShopsRestaurantsMap ShopsRestaurantsMap "
+    "VisitCitySafetly ShopsRestaurantsMap ShopsRestaurantsMap "
+    "VisitCitySafetly ShopsRestaurantsMap ShopsRestaurantsMap "
+    "SectionExample SectionExample SectionExample"
+    "CouncilLinks CouncilLinks CouncilLinks";
+}
+
+.Callout {
+  grid-area: Callout;
+}
+.CameraFeed {
+  grid-area: CameraFeed;
+}
+.HowBusyAreRoads {
+  grid-area: HowBusyAreRoads;
+}
+.HowBusyAreBuses {
+  grid-area: HowBusyAreBuses;
+}
+.SectionExample {
+  grid-area: SectionExample;
+}
+.CouncilLinks {
+  grid-area: CouncilLinks;
+}
+
+.VisitCitySafetly {
+  grid-area: VisitCitySafetly;
+}
+.ShopsRestaurantsMap {
+  grid-area: ShopsRestaurantsMap;
+}
+
+@media only screen and (max-width: 1025px) {
+  .container {
+    grid-template-columns: auto;
+    grid-template-rows: 1fr 1fr;
+
+    grid-template-areas:
+      "VisitCitySafetly  "
+      "ShopsRestaurantsMap "
+      "SectionExample"
+      "SectionExample  "
+      "CouncilLinks  ";
+  }
+}

@@ -1,7 +1,9 @@
 @import "../../CSS/variables.css";
 
-.leaflet-container {
+.leafletcontainer {
   height: 100%;
   width: 100%;
   border-radius: var(--border-radius);
+  z-index: 0 !important;
+  height: 600px;
 }

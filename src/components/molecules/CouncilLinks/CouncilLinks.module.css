@@ -1,19 +1,8 @@
 @import "../../CSS/variables.css";
 
 .CouncilLinks {
-  /* width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column; */
-  /* background-color: aqua; */
-
-  /* margin: 24px 32px 24px 32px; */
   display: grid;
   gap: var(--grid-gap);
-
-  /* grid-template-rows: auto auto auto auto ;  */
-  /* refine this */
-  /* grid-template-columns: auto auto ; */
   grid-template-areas:
     "topContainer topContainer topContainer"
     "LeftContainer MiddleContainer RightContainer";
@@ -27,7 +16,7 @@
 }
 
 .LinkBox {
-  background-color: #f8f8f8;
+  background-color: var(--color-light-grey);
   color: black;
   font-weight: normal;
   text-decoration: none;
@@ -48,8 +37,7 @@
   font-size: 25px;
   margin: 0;
 }
-.IconArrow {
-}
+
 .bottomText {
   font-size: 20px;
 }
@@ -59,4 +47,3 @@
     flex-direction: column;
   }
 }
-

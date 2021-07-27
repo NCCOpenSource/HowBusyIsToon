@@ -1,1 +1,69 @@
-{"timestamp": "2021-07-15T12:51:49.481896+00:00", "response_time_us": 538137, "carparks": [{"name": "Eldon Square", "timestamp": "2021-07-15T12:51:00+00:00", "capacity": 458, "occupancy": 198, "reserved_bays": 0, "free_spaces": 260, "state": "average"}, {"name": "Claremont Road", "timestamp": "2021-07-15T12:51:26+00:00", "capacity": 179, "occupancy": 8, "reserved_bays": 0, "free_spaces": 171, "state": "quiet"}, {"name": "Dean Street", "timestamp": "2021-07-15T12:50:28+00:00", "capacity": 160, "occupancy": 154, "reserved_bays": 0, "free_spaces": 6, "state": "busy"}, {"name": "Eldon Garden", "timestamp": "2021-07-15T12:51:08+00:00", "capacity": 325, "occupancy": 186, "reserved_bays": 0, "free_spaces": 139, "state": "average"}, {"name": "Ellison Place", "timestamp": "2021-07-15T12:51:29+00:00", "capacity": 100, "occupancy": 56, "reserved_bays": 0, "free_spaces": 44, "state": "average"}, {"name": "Grainger Town", "timestamp": "2021-07-15T12:50:58+00:00", "capacity": 296, "occupancy": 48, "reserved_bays": 0, "free_spaces": 248, "state": "quiet"}, {"name": "Manors", "timestamp": "2021-07-15T12:51:10+00:00", "capacity": 427, "occupancy": 137, "reserved_bays": 0, "free_spaces": 290, "state": "quiet"}]}
+{
+  "timestamp": "2021-07-15T12:51:49.481896+00:00",
+  "response_time_us": 538137,
+  "carparks": [
+    {
+      "name": "Eldon Square",
+      "timestamp": "2021-07-15T12:51:00+00:00",
+      "capacity": 458,
+      "occupancy": 198,
+      "reserved_bays": 0,
+      "free_spaces": 260,
+      "state": "average"
+    },
+    {
+      "name": "Claremont Road",
+      "timestamp": "2021-07-15T12:51:26+00:00",
+      "capacity": 179,
+      "occupancy": 8,
+      "reserved_bays": 0,
+      "free_spaces": 171,
+      "state": "quiet"
+    },
+    {
+      "name": "Dean Street",
+      "timestamp": "2021-07-15T12:50:28+00:00",
+      "capacity": 160,
+      "occupancy": 154,
+      "reserved_bays": 0,
+      "free_spaces": 6,
+      "state": "busy"
+    },
+    {
+      "name": "Eldon Garden",
+      "timestamp": "2021-07-15T12:51:08+00:00",
+      "capacity": 325,
+      "occupancy": 186,
+      "reserved_bays": 0,
+      "free_spaces": 139,
+      "state": "average"
+    },
+    {
+      "name": "Ellison Place",
+      "timestamp": "2021-07-15T12:51:29+00:00",
+      "capacity": 100,
+      "occupancy": 56,
+      "reserved_bays": 0,
+      "free_spaces": 44,
+      "state": "average"
+    },
+    {
+      "name": "Grainger Town",
+      "timestamp": "2021-07-15T12:50:58+00:00",
+      "capacity": 296,
+      "occupancy": 48,
+      "reserved_bays": 0,
+      "free_spaces": 248,
+      "state": "quiet"
+    },
+    {
+      "name": "Manors",
+      "timestamp": "2021-07-15T12:51:10+00:00",
+      "capacity": 427,
+      "occupancy": 137,
+      "reserved_bays": 0,
+      "free_spaces": 290,
+      "state": "quiet"
+    }
+  ]
+}

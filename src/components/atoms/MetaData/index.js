@@ -11,7 +11,6 @@ export default function index() {
         name="Your home for real time data"
         content="Various Traffic Data sets and real time footfall data associated with NewCastle City Center"
       ></meta>
-
       <link rel="canonical" href="https://dreamy-hbitv2-7b8f2c.netlify.app/" />
     </Helmet>
   );
