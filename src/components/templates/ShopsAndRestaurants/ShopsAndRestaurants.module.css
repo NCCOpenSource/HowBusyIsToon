@@ -1,0 +1,107 @@
+@import "../../CSS/variables.css";
+
+.containerFF {
+  width: 100%;
+  grid-template-areas: none;
+  display: grid;
+  gap: var(--grid-gap);
+
+  grid-template-columns: 33% auto auto;
+  grid-template-areas:
+    "Callout CameraFeed CameraFeed "
+    "Callout CameraFeed CameraFeed "
+    "Callout HowBusyAreBuses HowBusyAreRoads "
+    "SectionExample SectionExample SectionExample"
+    "CouncilLinks CouncilLinks CouncilLinks";
+}
+
+.containerSR {
+  width: 100%;
+
+  grid-template-areas: none;
+  display: grid;
+  gap: var(--grid-gap);
+
+  grid-template-columns: 33% auto auto;
+  /* grid-template-rows: auto auto auto auto; */
+  grid-template-areas:
+    "VisitCitySafetly ShopsRestaurantsMap ShopsRestaurantsMap "
+    "VisitCitySafetly ShopsRestaurantsMap ShopsRestaurantsMap "
+    "VisitCitySafetly ShopsRestaurantsMap ShopsRestaurantsMap "
+    "SectionExample SectionExample SectionExample"
+    "CouncilLinks CouncilLinks CouncilLinks";
+}
+
+.Callout {
+  grid-area: Callout;
+}
+.CameraFeed {
+  grid-area: CameraFeed;
+}
+.HowBusyAreRoads {
+  grid-area: HowBusyAreRoads;
+}
+.HowBusyAreBuses {
+  grid-area: HowBusyAreBuses;
+}
+.SectionExample {
+  grid-area: SectionExample;
+}
+.CouncilLinks {
+  grid-area: CouncilLinks;
+}
+
+.VisitCitySafetly {
+  grid-area: VisitCitySafetly;
+}
+.ShopsRestaurantsMap {
+  grid-area: ShopsRestaurantsMap;
+}
+/* /////////////////////////nav///////////////////////// */
+.NavSubLinkItem {
+  width: 100%;
+  height: 100%;
+}
+.NavSubLink {
+  height: 100%;
+  margin-left: 21px;
+  cursor: pointer;
+  height: 100%;
+  padding: 0 23px;
+  text-align: center;
+}
+.ActiveNavSubLink {
+  background-color: var(--color-dark-grey);
+  color: var(--color-white);
+  border-bottom: 5px solid var(--color-white);
+
+}
+/* /////////////////////////endnav///////////////////////// */
+
+@media only screen and (max-width: 1025px) {
+  .containerFF {
+    /* width: 100%; */
+
+    grid-template-areas: none;
+    display: flex;
+    flex-direction: column;
+    /* margin: 0 18px; */
+  }
+
+  .containerSR {
+    width: 100%;
+
+    grid-template-areas: none;
+    display: flex;
+    flex-direction: column;
+    margin: 0 18px;
+
+    /* grid-auto-flow: column; */
+  }
+}
+
+/* @media only screen and (min-width: 1026px) {
+  .mobileNav {
+    display: none;
+  }
+} */

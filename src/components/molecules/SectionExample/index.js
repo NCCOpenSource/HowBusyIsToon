@@ -4,7 +4,6 @@ import ArticleExample from "../../atoms/ArticleExample";
 import Box from "../../atoms/Box";
 import styles from "./sectionExample.module.css";
 
-
 export default function SectionExample() {
   return (
     <div className={styles.SectionExample}>
@@ -13,9 +12,9 @@ export default function SectionExample() {
           Alternative Tranpsport and Our Green Initiative
         </p>
       </Box>
-      <div className={styles.OuterContainer}>
+
+      <div className={styles.container}>
         <ArticleExample
-          className={styles.ArticleExample}
           Title={"Arriva Guidance"}
           Content={
             "Our buses are running to times similar to their pre-coronavirus timetables, making it even easier to reconnect with the faces and places you love."
@@ -31,7 +30,6 @@ export default function SectionExample() {
           />
         </ArticleExample>
         <ArticleExample
-          className={styles.ArticleExample}
           Title={"Arriva Guidance"}
           Content={
             "Our buses are running to times similar to their pre-coronavirus timetables, making it even easier to reconnect with the faces and places you love."
@@ -47,7 +45,6 @@ export default function SectionExample() {
           />
         </ArticleExample>
         <ArticleExample
-          className={styles.ArticleExample}
           Title={"Arriva Guidance"}
           Content={
             "Our buses are running to times similar to their pre-coronavirus timetables, making it even easier to reconnect with the faces and places you love."

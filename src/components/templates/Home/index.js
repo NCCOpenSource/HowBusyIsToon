@@ -4,11 +4,8 @@ import VisitCitySafetly from "../../atoms/VisitCitySafely";
 import Callout from "../../molecules/Callout";
 import CameraFeed from "../../molecules/CameraFeed";
 import CouncilLinks from "../../molecules/CouncilLinks";
-import HowBusyAreBuses from "../../molecules/HowBusyAreBuses";
-import HowBusyAreRoads from "../../molecules/HowBusyAreRoads";
+import SimpleArticle from "../../atoms/SimpleArticle";
 import SectionExample from "../../molecules/SectionExample";
-import Nav from "../../organisms/Nav";
-import navStyles from "../../organisms/Nav/navExtension.module.css";
 import styles from "./home.module.css";
 
 export default function Home() {
@@ -16,73 +13,29 @@ export default function Home() {
 
   return (
     <>
-      {/* ////////////////////////////nav//////////////////// */}
-
-      <Nav>
-        <div
-          className={
-            state === "FootFall Camera"
-              ? `${navStyles.NavSubLink} ${navStyles.ActiveNavSubLink} `
-              : `${navStyles.NavSubLink}  `
-          }
-          onClick={() => {
-            setState("FootFall Camera");
-          }}
-        >
-          <p className={navStyles.NavSubLinkText}>FootFall Camera</p>
-        </div>
-
-        <div
-          className={
-            state === "Shops And Resturants"
-              ? `${navStyles.NavSubLink} ${navStyles.ActiveNavSubLink} `
-              : `${navStyles.NavSubLink}`
-          }
-          onClick={() => {
-            setState("Shops And Resturants");
-          }}
-        >
-          <p className={navStyles.NavSubLinkText}>Shops And Resturants</p>
-        </div>
-      </Nav>
-      {/* ////////////////////////////////////////////////////////////// */}
-
-      <div
-        className={
-          state === "FootFall Camera" ? styles.containerFF : styles.containerSR
-        }
-      >
-        {state === "Shops And Resturants" ? (
-          <>
-            <div className={styles.VisitCitySafetly}>
-              <VisitCitySafetly />
-            </div>
-            <div className={styles.ShopsRestaurantsMap}>
-              <ShopsRestaurantsMap />
-            </div>
-          </>
-        ) : (
-          ""
-        )}
-
-        {state === "FootFall Camera" ? (
-          <>
-            <div className={styles.Callout}>
-              <Callout />
-            </div>
-            <div className={styles.CameraFeed}>
-              <CameraFeed />
-            </div>{" "}
-            <div className={styles.HowBusyAreRoads}>
-              <HowBusyAreRoads />
-            </div>
-            <div className={styles.HowBusyAreBuses}>
-              <HowBusyAreBuses />
-            </div>
-          </>
-        ) : (
-          ""
-        )}
+      <div className={styles.container}>
+        <>
+          <div className={styles.Callout}>
+            <Callout />
+          </div>
+          <div className={styles.CameraFeed}>
+            <CameraFeed />
+          </div>
+          <div className={styles.HowBusyAreRoads}>
+            <SimpleArticle
+              TopText="How Busy Are Roads?"
+              BottomText="View live traffic updates of the busiest commuter routes in and out of
+          the city centre"
+            />
+          </div>
+          <div className={styles.HowBusyAreBuses}>
+            <SimpleArticle
+              TopText="How Busy Are Buses?"
+              BottomText="View real time bus data on a map of the region to see exactly where
+              your next bus is"
+            />{" "}
+          </div>
+        </>
 
         <div className={styles.SectionExample}>
           <SectionExample />

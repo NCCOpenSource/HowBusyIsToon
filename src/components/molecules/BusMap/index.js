@@ -3,39 +3,42 @@ import L from "leaflet";
 import "leaflet/dist/leaflet";
 import "leaflet/dist/leaflet.css";
 import React, { useEffect, useState } from "react";
-import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
-import customArrow from "../../../images/customarrow.png";
+import { MapContainer, Marker, Popup, TileLayer, ZoomControl } from "react-leaflet";
+import blackbus from "../../../images/blackbus.png";
+import greenbus from "../../../images/greenbus.png";
+import orangebus from "../../../images/orangebus.png";
+import redbus from "../../../images/redbus.png";
 import "./busMap.css";
-import BusMapExampleData from "../../atoms/BusesData/BusDataExample.json";
+import styles from "./BusMap.module.css";
+
 export default function BusMap() {
-  const [input, setInput] = useState("3");
+  // ? to reduce data on first sight
+  // const [input, setInput] = useState(String(Math.floor(Math.random() * 10)));
+  const [input, setInput] = useState("");
   const [data, setData] = useState(null);
   useEffect(() => {
+    callData();
     function callData() {
-      setData(BusMapExampleData);
-
       fetch(
         `https://buses.dev.urbanobservatory.ac.uk/vm
       `
       )
         // .then((response) => {response.json(); console.log(response)})
-        // .then((response) => response.json())
+        .then((response) => response.json())
         .then((response) => {
           setData(response);
-          console.log(
-            "🚀 ~ file: index.js ~ line 25 ~ .then ~ response",
-            response
-          );
         })
         .catch((error) => {
           console.log(error);
         });
     }
-
-    callData();
+    const interval = setInterval(() => {
+      callData();
+    }, 15000);
+    return () => clearInterval(interval);
   }, []);
 
-  // console.log("🚀 ~ file: index.js ~ line 8 ~ BusDataExample", BusDataExample);
+  // ? alternative icon too cool to delete
 
   // if (typeof window !== 'undefined') {
 
@@ -48,13 +51,25 @@ export default function BusMap() {
   // });
   // }
 
-  function createMarkerIcon(bus) {
+  function createMarkerIcon(bus, seatsavailable) {
     if (typeof window !== "undefined") {
-      let icon = L.divIcon({
-        html: `<img alt="marker" style= 'transform: rotate(${bus.VehicleActivity.MonitoredVehicleJourney.Bearing}deg);' src="${customArrow}" />
-  <p>${bus.VehicleActivity.MonitoredVehicleJourney.LineRef}</p>`,
+      let buscolor = blackbus;
+      if (seatsavailable < 5) {
+        buscolor = redbus;
+      }
+      if (seatsavailable > 5) {
+        buscolor = orangebus;
+      }
 
-        iconSize: [50, 50],
+      if (seatsavailable > 20) {
+        buscolor = greenbus;
+      }
+
+      let icon = L.divIcon({
+        html: `<img alt="marker" style= 'transform: rotate(${bus.VehicleActivity.MonitoredVehicleJourney.Bearing}deg);' src="${buscolor}" />
+              <p>${bus.VehicleActivity.MonitoredVehicleJourney.LineRef}</p>`,
+
+        iconSize: [60, 60],
         // iconAnchor: [30, 60],
         className: "busmarker",
       });
@@ -75,6 +90,7 @@ export default function BusMap() {
   return (
     <>
       <input
+        className={styles.search}
         type="text"
         id="header-search"
         placeholder="Search bus number"
@@ -85,12 +101,15 @@ export default function BusMap() {
         <MapContainer
           center={[54.97206769445005, -1.6132124536205563]}
           zoom={14}
+          className={styles.leafletcontainer}
+          zoomControl={false}
         >
           <TileLayer
             maxZoom={19}
             url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"
             attribution='&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
           />
+          <ZoomControl position="topright" />
           {data
             ? filteredBuses.map((bus) => {
                 const seatsavailable =
@@ -117,7 +136,7 @@ export default function BusMap() {
                     <Marker
                       rotationAngle={180}
                       rotationOrigin={"center"}
-                      icon={createMarkerIcon(bus)}
+                      icon={createMarkerIcon(bus, seatsavailable)}
                       rotationAngle={"45"}
                       key={Math.floor(Math.random() * 999999999999)}
                       position={[

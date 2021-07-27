@@ -12,12 +12,7 @@ export default function RoadsCameraFeed() {
   }
   return (
     <div className={styles.cityCenterCameraFeed}>
-      <div className={styles.infoContainer}>
-        <TimeIcon />
-        <p className={styles.info}>
-          Images from webcams update approximately every 5 minutes
-        </p>
-      </div>
+
       <div className={styles.select}>
         <div className={styles.selectbox}>
           <select
@@ -40,20 +35,11 @@ export default function RoadsCameraFeed() {
           </select>
         </div>
 
-        {/* <Filter className={styles.select} onChange={handleChange} /> */}
       </div>
       <div className={styles.feed}>
         <GetRoadFeedImage option={option} />
-        {/* <StaticImage alt=''
-          //   className={styles.Feed}
-            // width={918}
-            // height={615}
-            style={{ height: "100%", width: "100%" }}
-
-          src="../../../images/placeholder.jpg"
-        /> */}
+  
       </div>
-      {/* <GetFeedImage /> */}
     </div>
   );
 }

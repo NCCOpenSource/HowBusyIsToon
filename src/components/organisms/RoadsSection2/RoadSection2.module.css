@@ -1,0 +1,8 @@
+@import "../../CSS/variables.css";
+.container {
+  gap: var(--grid-gap);
+  /* grid-template-: 568px auto; */
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 1.25fr 2fr;
+}

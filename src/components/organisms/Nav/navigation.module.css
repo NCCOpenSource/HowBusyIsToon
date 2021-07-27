@@ -1,27 +1,28 @@
+@import "../../CSS/variables.css";
 .titlecontainer {
-  /* align-items: center;
-  padding: 0 23px 0 23px; */
-  /* display: flex; */
-  height: 112px;
-  line-height: 36px;
+
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  display: flex;
+  width: 100%;
+  text-decoration: none;
+  color: #ffffff;
+  white-space: nowrap;
+}
+.title {
+  /* padding: 0 8px; */
+  font-size: 36px;
+  margin: 0;
+}
+.Tagline {
+  margin: 0;
+  font-size: 18px;
 }
 
 .bottom {
   display: flex;
   align-items: center;
   padding: 0 23px;
-}
-
-@import "../../CSS/variables.css";
-
-.title {
-  padding: 0 8px;
-  text-decoration: none;
-  font-size: 36px;
-  color: #ffffff;
-  white-space: nowrap;
 }
 
 .nav {
@@ -44,32 +45,8 @@
   align-items: center;
 }
 
-.Tagline {
-  font-family: "Europa-Bold";
-  font-family: europa, sans-serif;
 
-  font-style: normal;
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 18px;
-  padding-left: 8px;
 
-  color: #333333;
-  width: 100%;
-  /* white-space: nowrap; */
-}
-/* .location {
-  font-family: "Europa-Bold";
-  font-family: europa, sans-serif;
-
-  font-style: normal;
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 18px;
-  padding-left: 8px;
-
-  color: #333333;
-} */
 
 .linkList {
   width: 100%;

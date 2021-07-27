@@ -4,7 +4,7 @@ export default function DropDown(props) {
   const subInfo = props.subInfo;
 
   const listItems = subInfo.map((subInformation) => (
-    <a classNameName={styles.dropdownLink} href={"/" + subInformation.slug}>
+    <a className={styles.dropdownLink} activeclassName={styles.activedropdownLink} href={"/" + subInformation.slug}>
       {subInformation.subTitles}
     </a>
   ));

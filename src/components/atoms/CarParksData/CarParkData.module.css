@@ -4,11 +4,13 @@
   height: 100%;
   width: 100%;
   border-radius: var(--border-radius);
+  z-index: 0 !important;
+
 }
 
 .spaces {
   font-size: 12px;
-  line-height: 38px;
+  line-height: 60px;
   position: absolute important!;
   top: 0;
   left: 0;
@@ -19,20 +21,8 @@
   text-align: center;
   position: relative;
 }
-.carparkmarker img {
-  height: 60px !important;
-  width: 60px !important;
-}
 
-.carparkmarker span {
-  font-size: 12px;
-  line-height: 38px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-}
-.popup{
-  bottom: 60px !important;
-
+.popup {
+  position: absolute !important;
+  bottom: 35px !important;
 }
