@@ -1,6 +1,6 @@
 import React from "react";
-import styles from "./EmojiconBar.module.css";
 import EmojicomWidget from "../EmojicomWidget";
+import styles from "./EmojiconBar.module.css";
 
 export default function index() {
   return (

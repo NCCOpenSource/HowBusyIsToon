@@ -1,9 +1,9 @@
+import { graphql, useStaticQuery } from "gatsby";
 import React from "react";
 import HowBusyIsAbout from "../../atoms/HowBusyIsAbout";
 import LinkSection from "../../atoms/LinkSection";
 import AboutSection from "../../organisms/AboutSection";
 import styles from "./About.module.css";
-import { graphql, useStaticQuery } from "gatsby";
 
 export default function About() {
   const data = useStaticQuery(graphql`

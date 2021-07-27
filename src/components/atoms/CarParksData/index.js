@@ -70,7 +70,7 @@ export default function CarParksData() {
         `${icon}` +
         '"><p ' +
         ">" +
-        spaces + 
+        spaces +
         "</p>",
       iconSize: [35, 35],
       className: "carparkmarker",

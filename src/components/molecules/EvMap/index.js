@@ -3,6 +3,7 @@ import { MapContainer, TileLayer } from "react-leaflet";
 import EVData from "../../atoms/EVData";
 import "./index.module.css";
 import styles from "./index.module.css";
+
 export default function EvMap() {
   return (
     <MapContainer

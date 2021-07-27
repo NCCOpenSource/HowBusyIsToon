@@ -1,10 +1,9 @@
 import React from "react";
 import Box from "../../atoms/Box";
-import styles from "./AboutSection.module.css";
 import AboutSectionArticle from "../../molecules/AboutSectionArticle";
+import styles from "./AboutSection.module.css";
 
 export default function AboutSection({ Aboutdata }) {
-
   const aboutArticleSections = [
     {
       id: 1,

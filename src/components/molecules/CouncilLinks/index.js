@@ -1,8 +1,8 @@
+import { graphql, useStaticQuery } from "gatsby";
 import React from "react";
 import Box from "../../atoms/Box";
 import LinkSection from "../../atoms/LinkSection";
 import styles from "./CouncilLinks.module.css";
-import { graphql, useStaticQuery } from "gatsby";
 
 export default function CouncilLinks() {
   const data = useStaticQuery(graphql`

@@ -1,6 +1,6 @@
 import React from "react";
-import styles from "./AboutSectionArticle.module.css";
 import Box from "../../atoms/Box";
+import styles from "./AboutSectionArticle.module.css";
 
 export default function AboutSectionArticle({ subHeading, contentText }) {
   return (

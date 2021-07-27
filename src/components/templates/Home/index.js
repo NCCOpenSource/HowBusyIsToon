@@ -1,3 +1,4 @@
+import { graphql, Link, useStaticQuery } from "gatsby";
 import React from "react";
 import SimpleArticle from "../../atoms/SimpleArticle";
 import Callout from "../../molecules/Callout";
@@ -5,8 +6,6 @@ import CameraFeed from "../../molecules/CameraFeed";
 import CouncilLinks from "../../molecules/CouncilLinks";
 import SectionExample from "../../molecules/SectionExample";
 import styles from "./home.module.css";
-import { graphql, useStaticQuery } from "gatsby";
-import { Link } from "gatsby";
 
 export default function Home() {
   const data = useStaticQuery(graphql`
@@ -118,14 +117,14 @@ export default function Home() {
           <div className={styles.CameraFeed}>
             <CameraFeed />
           </div>
-          <Link className={styles.HowBusyAreRoads}  to={'/roads'}>
+          <Link className={styles.HowBusyAreRoads} to={"/roads"}>
             <SimpleArticle
               TopText="How Busy Are Roads?"
               BottomText="View live traffic updates of the busiest commuter routes in and out of
           the city centre"
             />
           </Link>
-          <Link className={styles.HowBusyAreBuses} to={'/transport'}>
+          <Link className={styles.HowBusyAreBuses} to={"/transport"}>
             <SimpleArticle
               TopText="How Busy Are Buses?"
               BottomText="View real time bus data on a map of the region to see exactly where
