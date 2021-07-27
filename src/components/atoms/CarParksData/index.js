@@ -18,7 +18,6 @@ export default function CarParksData() {
     fetch(`https://howbusyistoon.com/ncc-car-parks.json`)
       .then((response) => {
         response.json();
-        console.log(response);
       })
       .then((response) => {
         setData(response);

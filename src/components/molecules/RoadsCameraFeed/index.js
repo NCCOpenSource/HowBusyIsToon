@@ -4,7 +4,6 @@ import styles from "./roadscameraFeed.module.css";
 
 export default function RoadsCameraFeed() {
   const [option, setOption] = useState(0);
-  // console.log("🚀 ~ file: index.js ~ line 6 ~ Filter ~ option", option);
   function handleChange(event) {
     setOption(event.target.value);
   }

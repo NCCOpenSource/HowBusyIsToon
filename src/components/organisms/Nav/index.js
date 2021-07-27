@@ -11,7 +11,6 @@ export default function Nav(props) {
   const [show, setShow] = useState(false);
 
   const showNavOverlay = (event) => {
-    console.log(show);
     event.preventDefault();
     setShow(!show);
   };
