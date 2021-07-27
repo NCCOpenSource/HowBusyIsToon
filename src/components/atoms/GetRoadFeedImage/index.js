@@ -64,8 +64,10 @@ export default function GetRoadFeedImage({ option }) {
   return (
     <>
       {imageList !== null && imageList[option] !== null && apiFinished ? (
-        <img
-          src={imageList[option]}
+        <div
+          style={{
+            backgroundImage: `url(${imageList[option]})`,
+          }}
           alt="Images from street cameras Showing Roads and the traffic on them"
           className={styles.image}
           width="1280"

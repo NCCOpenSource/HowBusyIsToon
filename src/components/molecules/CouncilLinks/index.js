@@ -31,12 +31,7 @@ export default function CouncilLinks() {
     }
   `);
 
-  console.log("🚀 ~ file: index.js ~ line 61 ~ Home ~ data", data);
   const GovLinksData = data.allContentfulCityCentreHomepage.edges[0].node;
-  console.log(
-    "🚀 ~ file: index.js ~ line 36 ~ CouncilLinks ~ GovLinksData",
-    GovLinksData
-  );
   const GovLinks = [
     {
       id: 1,
@@ -75,36 +70,6 @@ export default function CouncilLinks() {
           content={LinkContent}
         />
       ))}
-      {/* 
-      <LinkSection
-        link={
-          "https://newcastle.gov.uk/services/public-health-wellbeing-and-leisure/public-health-services/coronavirus-covid-19"
-        }
-        heading={"Covid Compliance"}
-        content={
-          "Northumberland street has adopted a one-way system which will allow for social distancing. Look for the arrows at on the floor and the barriers placed at shop entrances for customer queues"
-        }
-      />
-
-      <LinkSection
-        link={
-          "https://www.gov.uk/coronavirus?gclid=CjwKCAiAkan9BRAqEiwAP9X6UULwnfwW9PPhWLDxgcsV9SRU4xHQ4pgLU-YAy4KXFvL4EDikA-4RthoCZ10QAvD_BwE"
-        }
-        heading={"Council Guidance"}
-        content={
-          "  Northumberland street has adopted a one-way system which will allow for social distancing. Look for the arrows at on the floor and the barriers placed at shop entrances for customer queues"
-        }
-      />
-
-      <LinkSection
-        link={
-          "https://newcastle.gov.uk/services/public-health-wellbeing-and-leisure/public-health-services/coronavirus-covid-19"
-        }
-        heading={"Onboarding Guide"}
-        content={
-          "Northumberland street has adopted a one-way system which will allow for social distancing. Look for the arrows at on the floor and the barriers placed at shop entrances for customer queues"
-        } 
-      />*/}
     </div>
   );
 }

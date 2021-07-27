@@ -88,8 +88,10 @@ export default function GetFeedImage({ option }) {
   return (
     <>
       {imageList !== null && imageList[option] !== null && apiFinished ? (
-        <img
-          src={imageList[option]}
+        <div
+          style={{
+            backgroundImage: `url(${imageList[option]})`,
+          }}
           alt="Images from street cameras of City Center"
           className={styles.image}
           width="1280"
