@@ -38,7 +38,9 @@ export default function CalloutData() {
       }
     }
     getCalloutData();
+    /* eslint-disable */
   }, []);
+  /* eslint-enable */
 
   return (
     <div className={`${calloutClass} ${styles.calloutContainer} `}>

@@ -18,6 +18,7 @@ export default function RoadsSection() {
             className={styles.selector}
             name="option"
             onChange={handleChange}
+            onBlur={handleChange}
             >
             <option className={styles.option} value="0">
               Stephenson Road

@@ -2,14 +2,16 @@ import React, { useEffect, useState } from "react";
 import "../../CSS/variables.css";
 import style from "./box.module.css";
 
+/* eslint-disable */
 export default function Box({ children, fullBorderRadius, color, fontColor }) {
+  /* eslint-enable */
   const [backgroundColor, setBackgroundColor] = useState(style.Backgroundblack);
   const [finalFontColor, setFontColor] = useState(style.Fontwhite);
   const [borderRadius, setBorderRadius] = useState(style.borderRadiusFull);
 
   const ContainerClassName = style.Container;
 
-  useEffect(() => {
+  useEffect((color, fontColor, fullBorderRadius) => {
     if (color === "black") {
       setBackgroundColor(style.Backgroundblack);
     }
