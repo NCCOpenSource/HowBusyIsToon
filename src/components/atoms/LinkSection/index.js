@@ -1,5 +1,5 @@
 import React from "react";
-import IconArrow from "../../../assets/icons/arrowb.svg";
+import IconArrow from "../../../assets/icons/arrowB.svg";
 import styles from "./LinkSection.module.css";
 
 export default function LinkSection({ link, heading, content }) {
