@@ -22,6 +22,7 @@ export default function CameraFeed() {
             className={styles.selector}
             name="option"
             onChange={handleChange}
+            onBlur={handleChange}
           >
             <option className={styles.option} value="0">
               GREY STREET
