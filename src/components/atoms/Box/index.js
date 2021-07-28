@@ -38,9 +38,7 @@ export default function Box({ children, fullBorderRadius, color, fontColor }) {
     if (fullBorderRadius === "full") {
       setBorderRadius(style.borderRadiusFull);
     }
-    /* eslint-disable */
   }, []);
-  /* eslint-enable */
 
   return (
     <div
