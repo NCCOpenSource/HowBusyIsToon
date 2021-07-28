@@ -15,7 +15,7 @@ export default function SectionExample({ articleSections, title }) {
           ? articleSections.map(
               ({ id, Title, Content, LinkTitle, Linkurl, image, alt }) => (
                 <ArticleExample
-                  id={id}
+                  key={id}
                   Title={Title}
                   Content={Content}
                   LinkTitle={LinkTitle}
