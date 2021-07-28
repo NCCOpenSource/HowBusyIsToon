@@ -8,8 +8,10 @@ export default function NavLinkItems() {
       <Link
         className={styles.navLinkItems}
         activeClassName={styles.navLinkItemsGrey}
+        /* eslint-disable */
         to="/shopsandrestaurants"
         to="/"
+        /* eslint-enable */
       >
         <p className={styles.navLinkItemText}>City Center</p>
         <div className={styles.subnavLinkItems}>
@@ -32,9 +34,11 @@ export default function NavLinkItems() {
       <Link
         className={styles.navLinkItems}
         activeClassName={styles.navLinkItemsGrey}
+        /* eslint-disable */
         to="/parking"
         to="/evcharging"
         to="/roads"
+        /* eslint-enable */
       >
         <p className={styles.navLinkItemText}>Driving</p>
         <div className={styles.subnavLinkItems}>
@@ -65,8 +69,10 @@ export default function NavLinkItems() {
       <Link
         className={styles.navLinkItems}
         activeClassName={styles.navLinkItemsGrey}
+        /* eslint-disable */
         to="/nexus"
         to="/transport"
+        /* eslint-enable */
       >
         <p className={styles.navLinkItemText}>Public Transport</p>
 

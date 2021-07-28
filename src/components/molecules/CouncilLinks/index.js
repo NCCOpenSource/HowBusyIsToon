@@ -64,7 +64,7 @@ export default function CouncilLinks() {
       </div>
       {GovLinks.map(({ id, LinkTitle, LinkContent, LinkUrl }) => (
         <LinkSection
-          id={id}
+          key={id}
           link={LinkUrl}
           heading={LinkTitle}
           content={LinkContent}

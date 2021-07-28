@@ -157,6 +157,8 @@ export default function BusMap() {
                       </Popup>
                     </Marker>
                   );
+                } else {
+                  return <></>;
                 }
               })
             : null}
