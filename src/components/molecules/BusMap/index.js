@@ -68,12 +68,17 @@ export default function BusMap() {
   }
 
   const filteredBuses = data
-    ? data.filter((bus) =>
+    ? data.filter((bus, index) =>
         bus.VehicleActivity.MonitoredVehicleJourney.LineRef
           ? bus.VehicleActivity.MonitoredVehicleJourney.LineRef.includes(input)
           : null
       )
     : null;
+
+  console.log(
+    "🚀 ~ file: index.js ~ line 71 ~ BusMap ~ filteredBuses",
+    filteredBuses
+  );
 
   function onChange(event) {
     setInput(event.target.value);
@@ -103,7 +108,7 @@ export default function BusMap() {
           />
           <ZoomControl position="topright" />
           {data
-            ? filteredBuses.map((bus) => {
+            ? filteredBuses.map((bus, index) => {
                 const seatsavailable =
                   bus.VehicleActivity.Extensions.VehicleJourney.SeatedCapacity -
                   bus.VehicleActivity.Extensions.VehicleJourney.SeatedOccupancy;
@@ -127,7 +132,7 @@ export default function BusMap() {
                   return (
                     <Marker
                       icon={createMarkerIcon(bus, seatsavailable)}
-                      key={Math.floor(Math.random() * 999999999999)}
+                      key={index}
                       position={[
                         bus.VehicleActivity.MonitoredVehicleJourney
                           .VehicleLocation.Latitude,
