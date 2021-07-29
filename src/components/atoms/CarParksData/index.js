@@ -7,24 +7,10 @@ import Average from "../../../images/carparkiconsOrange.png";
 import Busy from "../../../images/carparkiconsred.png";
 import "./CarPark.css";
 import styles from "./CarParkData.module.css";
-import StaticCarParkData from "./carparkHardData.json";
 
 export default function CarParksData({ data, option }) {
-  const [carParks, setCarParks] = useState(null);
-
-  useEffect(() => {
-    let carParkTemp = [];
-    for (var i = 0; i < data.carparks.length; i++) {
-      carParkTemp.push(data.carparks[i]);
-    }
-    for (var i = 0; i < StaticCarParkData.length; i++) {
-      carParkTemp.push(StaticCarParkData[i]);
-    }
-    setCarParks(carParkTemp);
-  }, []);
-
-  const filteredCarPark = carParks
-    ? carParks.filter((carPark) => carPark.name.includes(option))
+  const filteredCarPark = data
+    ? data.filter((carPark) => carPark.name.includes(option))
     : null;
 
   function getLatLon(carParkName) {
