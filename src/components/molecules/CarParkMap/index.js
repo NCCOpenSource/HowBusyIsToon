@@ -3,7 +3,7 @@ import { MapContainer, TileLayer } from "react-leaflet";
 import CarParksData from "../../atoms/CarParksData";
 import styles from "./index.module.css";
 
-export default function CarParkMap() {
+export default function CarParkMap({ data, option }) {
   return (
     <MapContainer
       preferCanvas={false}
@@ -16,7 +16,7 @@ export default function CarParkMap() {
         url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"
         attribution='&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
       />
-      <CarParksData />
+      <CarParksData data={data} option={option} />
     </MapContainer>
   );
 }

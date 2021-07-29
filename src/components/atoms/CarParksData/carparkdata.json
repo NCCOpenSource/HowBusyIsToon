@@ -9,7 +9,9 @@
       "occupancy": 198,
       "reserved_bays": 0,
       "free_spaces": 260,
-      "state": "average"
+      "state": "average",
+      "location": [54.97606277765559, -1.6153922618257768]
+
     },
     {
       "name": "Claremont Road",
@@ -18,7 +20,9 @@
       "occupancy": 8,
       "reserved_bays": 0,
       "free_spaces": 171,
-      "state": "quiet"
+      "state": "quiet",
+      "location": [54.97606277765559, -1.6153922618257768]
+
     },
     {
       "name": "Dean Street",
@@ -27,7 +31,8 @@
       "occupancy": 154,
       "reserved_bays": 0,
       "free_spaces": 6,
-      "state": "busy"
+      "state": "busy",
+      "location": [54.97029586400192, -1.6092526293900549]
     },
     {
       "name": "Eldon Garden",
@@ -36,7 +41,8 @@
       "occupancy": 186,
       "reserved_bays": 0,
       "free_spaces": 139,
-      "state": "average"
+      "state": "average",
+      "location": [54.97595271085387, -1.6164735647720887]
     },
     {
       "name": "Ellison Place",
@@ -45,7 +51,8 @@
       "occupancy": 56,
       "reserved_bays": 0,
       "free_spaces": 44,
-      "state": "average"
+      "state": "average",
+      "location": [54.97602915540869, -1.6082014049543143]
     },
     {
       "name": "Grainger Town",
@@ -54,7 +61,8 @@
       "occupancy": 48,
       "reserved_bays": 0,
       "free_spaces": 248,
-      "state": "quiet"
+      "state": "quiet",
+      "location": [54.96944396927636, -1.6213144796203964]
     },
     {
       "name": "Manors",
@@ -63,7 +71,8 @@
       "occupancy": 137,
       "reserved_bays": 0,
       "free_spaces": 290,
-      "state": "quiet"
+      "state": "quiet",
+      "location": [54.97269238272554, -1.6062653286128759]
     }
   ]
 }

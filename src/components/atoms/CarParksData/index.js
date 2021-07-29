@@ -6,27 +6,26 @@ import Unkown from "../../../images/carparkiconsBlack.png";
 import Average from "../../../images/carparkiconsOrange.png";
 import Busy from "../../../images/carparkiconsred.png";
 import "./CarPark.css";
-import CarParkExampleData from "./carparkdata.json";
 import styles from "./CarParkData.module.css";
 import StaticCarParkData from "./carparkHardData.json";
 
-export default function CarParksData() {
-  const [data, setData] = useState(null);
+export default function CarParksData({ data, option }) {
+  const [carParks, setCarParks] = useState(null);
 
-  console.log("testingApi");
   useEffect(() => {
-    fetch(`https://howbusyistoon.com/ncc-car-parks.json`)
-      .then((response) => {
-        response.json();
-      })
-      .then((response) => {
-        setData(response);
-        setData(CarParkExampleData);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+    let carParkTemp = [];
+    for (var i = 0; i < data.carparks.length; i++) {
+      carParkTemp.push(data.carparks[i]);
+    }
+    for (var i = 0; i < StaticCarParkData.length; i++) {
+      carParkTemp.push(StaticCarParkData[i]);
+    }
+    setCarParks(carParkTemp);
   }, []);
+
+  const filteredCarPark = carParks
+    ? carParks.filter((carPark) => carPark.name.includes(option))
+    : null;
 
   function getLatLon(carParkName) {
     if (carParkName === "Eldon Square")
@@ -79,34 +78,34 @@ export default function CarParksData() {
 
   return (
     <>
-      {data
-        ? data.carparks.map((carPark) => (
-            <Marker
-              icon={createMarkerIcon(carPark)}
-              key={Math.floor(Math.random() * 999999999999)}
-              position={getLatLon(carPark.name)}
-              // className="carparkmarker"
-            >
-              <Popup className={styles.popup}>
-                <h1>{carPark.name}</h1>
-                <p>{carPark.occupancy} spaces remaining</p>
-              </Popup>
-            </Marker>
-          ))
-        : null}
-      {StaticCarParkData.map((carPark) => (
-        <Marker
-          icon={createMarkerIcon(carPark)}
-          key={Math.floor(Math.random() * 999999999999)}
-          position={carPark.location}
-        >
-          <Popup className={styles.popup}>
-            <h1>{carPark.name}</h1>
+      {filteredCarPark
+        ? filteredCarPark.map((carPark, index) =>
+            carPark.occupancy ? (
+              <Marker
+                icon={createMarkerIcon(carPark)}
+                key={index}
+                position={getLatLon(carPark.name)}
+              >
+                <Popup className={styles.popup}>
+                  <h1>{carPark.name}</h1>
+                  <p>{carPark.occupancy} spaces remaining</p>
+                </Popup>
+              </Marker>
+            ) : (
+              <Marker
+                icon={createMarkerIcon(carPark)}
+                key={Math.floor(Math.random() * 999999999999)}
+                position={carPark.location}
+              >
+                <Popup className={styles.popup}>
+                  <h1>{carPark.name}</h1>
 
-            <p>There are {carPark.capacity} potential spaces available</p>
-          </Popup>
-        </Marker>
-      ))}
+                  <p>There are {carPark.capacity} potential spaces available</p>
+                </Popup>
+              </Marker>
+            )
+          )
+        : null}
       ;
     </>
   );
