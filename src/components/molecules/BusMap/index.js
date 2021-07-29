@@ -68,17 +68,12 @@ export default function BusMap() {
   }
 
   const filteredBuses = data
-    ? data.filter((bus, index) =>
+    ? data.filter((bus) =>
         bus.VehicleActivity.MonitoredVehicleJourney.LineRef
           ? bus.VehicleActivity.MonitoredVehicleJourney.LineRef.includes(input)
           : null
       )
     : null;
-
-  console.log(
-    "🚀 ~ file: index.js ~ line 71 ~ BusMap ~ filteredBuses",
-    filteredBuses
-  );
 
   function onChange(event) {
     setInput(event.target.value);
