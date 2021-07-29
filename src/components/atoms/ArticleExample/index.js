@@ -13,7 +13,9 @@ export default function ArticleExample({
       {children}
       {Title ? <p>{Title}</p> : ""}
       <p>{Content}</p>
-      <a href={Linkurl}>{LinkTitle}</a>
+      <a target="_blank" rel="noreferrer" href={Linkurl}>
+        {LinkTitle}
+      </a>
     </div>
   );
 }

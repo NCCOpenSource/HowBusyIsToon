@@ -19,7 +19,7 @@ export default function RoadsSection() {
             name="option"
             onChange={handleChange}
             onBlur={handleChange}
-            >
+          >
             <option className={styles.option} value="0">
               Stephenson Road
             </option>
@@ -47,6 +47,8 @@ export default function RoadsSection() {
         </h1>
       </div>
       <a
+        target="_blank"
+        rel="noreferrer"
         href="https://www.google.co.uk/maps"
         className={styles.WalkingOrCycling}
       >
@@ -56,6 +58,8 @@ export default function RoadsSection() {
         />
       </a>
       <a
+        target="_blank"
+        rel="noreferrer"
         href={"https://www.nexus.org.uk/cycle"}
         className={styles.CycleParking}
       >
