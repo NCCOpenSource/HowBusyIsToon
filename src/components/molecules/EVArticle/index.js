@@ -37,7 +37,10 @@ export default function EVArticle() {
         LinkTitle={data.allContentfulEvChargingStations.edges[0].node.hyperLink}
         Linkurl={data.allContentfulEvChargingStations.edges[0].node.url}
       >
-        <img
+        <div
+           style={{
+            backgroundImage: `url(${ data.allContentfulEvChargingStations.edges[0].node.image.file.url})`,
+          }}
           className={styles.image}
           src={
             data.allContentfulEvChargingStations.edges[0].node.image.file.url

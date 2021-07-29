@@ -10,4 +10,9 @@
 }
 .image {
   border-radius: var(--border-radius);
+
+  object-fit: contain;
+  background-size: cover;
+  height: 350px;
+  background-position: center;
 }
