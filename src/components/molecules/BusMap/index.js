@@ -7,7 +7,7 @@ import {
   Marker,
   Popup,
   TileLayer,
-  ZoomControl,
+  ZoomControl
 } from "react-leaflet";
 import blackbus from "../../../images/blackbus.png";
 import greenbus from "../../../images/greenbus.png";
