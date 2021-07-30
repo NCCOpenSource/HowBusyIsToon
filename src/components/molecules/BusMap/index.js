@@ -7,7 +7,7 @@ import {
   Marker,
   Popup,
   TileLayer,
-  ZoomControl
+  ZoomControl,
 } from "react-leaflet";
 import blackbus from "../../../images/blackbus.png";
 import greenbus from "../../../images/greenbus.png";
@@ -103,7 +103,7 @@ export default function BusMap() {
           />
           <ZoomControl position="topright" />
           {data
-            ? filteredBuses.map((bus, index) => {
+            ? filteredBuses.map((bus, id) => {
                 const seatsavailable =
                   bus.VehicleActivity.Extensions.VehicleJourney.SeatedCapacity -
                   bus.VehicleActivity.Extensions.VehicleJourney.SeatedOccupancy;
@@ -127,7 +127,7 @@ export default function BusMap() {
                   return (
                     <Marker
                       icon={createMarkerIcon(bus, seatsavailable)}
-                      key={index}
+                      key={id}
                       position={[
                         bus.VehicleActivity.MonitoredVehicleJourney
                           .VehicleLocation.Latitude,
