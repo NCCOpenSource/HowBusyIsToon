@@ -67,9 +67,9 @@ export default function Parking() {
                 Show Every Car Park
               </option>
               {carParks
-                ? carParks.map((carPark, id) => (
+                ? carParks.map((carPark) => (
                     <option
-                      key={id}
+                      key={carPark.id}
                       className={styles.option}
                       value={carPark.name}
                     >
