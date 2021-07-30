@@ -3,11 +3,11 @@ import styles from "./FloatingFeedback.module.css";
 import EmojicomWidget from "../../molecules/EmojicomWidget";
 
 export default function FloatingFeedback() {
-  const [show, setShow] = useState(true);
+  const [isFloatShowing, setIsFloatShowing] = useState(true);
 
   const showFloat = (event) => {
     event.preventDefault();
-    setShow(!show);
+    setIsFloatShowing(!isFloatShowing);
   };
 
   return (
@@ -20,9 +20,7 @@ export default function FloatingFeedback() {
           </a>
           <p onClick={showFloat}>x</p>
         </div>
-      ) : (
-        <h1>HELLO</h1>
-      )}
+      ) : null}
     </>
   );
 }
