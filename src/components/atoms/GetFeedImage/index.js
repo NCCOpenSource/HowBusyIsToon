@@ -92,6 +92,8 @@ export default function GetFeedImage({ option }) {
           style={{
             backgroundImage: `url(${imageList[option]})`,
           }}
+          role="img"
+          aria-label={"Images from street cameras of City Center"}
           alt="Images from street cameras of City Center"
           className={styles.image}
           width="1280"

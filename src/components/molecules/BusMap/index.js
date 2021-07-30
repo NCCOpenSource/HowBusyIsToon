@@ -103,7 +103,7 @@ export default function BusMap() {
           />
           <ZoomControl position="topright" />
           {data
-            ? filteredBuses.map((bus) => {
+            ? filteredBuses.map((bus, id) => {
                 const seatsavailable =
                   bus.VehicleActivity.Extensions.VehicleJourney.SeatedCapacity -
                   bus.VehicleActivity.Extensions.VehicleJourney.SeatedOccupancy;
@@ -127,7 +127,7 @@ export default function BusMap() {
                   return (
                     <Marker
                       icon={createMarkerIcon(bus, seatsavailable)}
-                      key={Math.floor(Math.random() * 999999999999)}
+                      key={id}
                       position={[
                         bus.VehicleActivity.MonitoredVehicleJourney
                           .VehicleLocation.Latitude,

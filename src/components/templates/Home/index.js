@@ -1,7 +1,7 @@
 import { graphql, Link, useStaticQuery } from "gatsby";
 import React from "react";
-import SimpleArticle from "../../atoms/SimpleArticle";
 import CalloutData from "../../atoms/CalloutData";
+import SimpleArticle from "../../atoms/SimpleArticle";
 import CameraFeed from "../../molecules/CameraFeed";
 import CouncilLinks from "../../molecules/CouncilLinks";
 import SectionExample from "../../molecules/SectionExample";

@@ -19,6 +19,7 @@ export default function NexusArticle() {
         title="Nexus"
         LinkTitle="Go to Nexus"
         Content="Plan your journey, view an interactive travel map and discover how Nexus is keeping you sage with the latest COVID-19 updates."
+        Linkurl="https://livemap.nexus.org.uk/"
       />
     </div>
   );

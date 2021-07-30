@@ -1,4 +1,3 @@
-import { Link } from "gatsby";
 import React from "react";
 import styles from "./ArticleExample.module.css";
 
@@ -14,7 +13,9 @@ export default function ArticleExample({
       {children}
       {Title ? <p>{Title}</p> : ""}
       <p>{Content}</p>
-      <Link to={Linkurl}>{LinkTitle}</Link>
+      <a target="_blank" rel="noreferrer" href={Linkurl}>
+        {LinkTitle}
+      </a>
     </div>
   );
 }

@@ -25,22 +25,22 @@ export default function CameraFeed() {
             onBlur={handleChange}
           >
             <option className={styles.option} value="0">
-              GREY STREET
+              Grey Street
             </option>
             <option className={styles.option} value="1">
               Collingwood Street
             </option>
             <option className={styles.option} value="2">
-              NORTHUMBERLAND STREET
+              Northumberland Street
             </option>
             <option className={styles.option} value="3">
-              Barrack Road - Gallowgate / St James' Boulevard
+              Barrack Road 
             </option>
             <option className={styles.option} value="4">
-              blackett-street-pilgrim-street{" "}
+              Blackett Street
             </option>
             <option className={styles.option} value="5">
-              Blackett Street / Blackett Place
+              Blackett Street
             </option>
           </select>
         </div>

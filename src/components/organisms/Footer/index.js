@@ -1,6 +1,6 @@
 import { StaticImage } from "gatsby-plugin-image";
 import React from "react";
-import EmojicomWidget from "../../molecules/EmojicomWidget";
+import FloatingFeedback from "../../molecules/FloatingFeedback";
 import styles from "./footer.module.css";
 
 export default function Footer() {
@@ -8,7 +8,7 @@ export default function Footer() {
     <div className={styles.Footer}>
       <div>
         <div className={styles.top}>
-          <ul className={styles.logoList}>
+          <div className={styles.logoList}>
             <StaticImage
               alt=""
               src="../../../images/logo.png"
@@ -45,10 +45,10 @@ export default function Footer() {
               height={50}
               className={styles.logoItem}
             ></StaticImage>
-          </ul>
+          </div>
         </div>
       </div>
-      <EmojicomWidget />
+      <FloatingFeedback />
     </div>
   );
 }

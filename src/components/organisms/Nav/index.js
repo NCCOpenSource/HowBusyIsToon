@@ -18,7 +18,7 @@ export default function Nav(props) {
   return (
     <div>
       <Box fullBorderRadius="full">
-        <Link href="/" className={styles.titlecontainer}>
+        <Link to="/" className={styles.titlecontainer}>
           <h1 className={styles.title}>How Busy Is...</h1>
           <p className={styles.Tagline}>Your home for real time data</p>
         </Link>
