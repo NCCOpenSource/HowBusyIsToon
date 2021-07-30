@@ -1,17 +1,21 @@
 import { Link } from "gatsby";
-import React from "react";
+import React, { useState } from "react";
 import styles from "./NavLinkItems.module.css";
+import { useLocation } from "@reach/router";
 
 export default function NavLinkItems() {
+  /* eslint-disable */
+  const [path, setPath] = useState(useLocation().pathname);
+  /* eslint-enable */
+
   return (
     <>
-      <Link
-        className={styles.navLinkItems}
-        activeClassName={styles.navLinkItemsGrey}
-        /* eslint-disable */
-        to="/shopsandrestaurants"
-        to="/"
-        /* eslint-enable */
+      <div
+        className={
+          path === "/shopsandrestaurants/" || path === "/"
+            ? `${styles.navLinkItems} ${styles.navLinkItemsGrey}  `
+            : `${styles.navLinkItems}`
+        }
       >
         <p className={styles.navLinkItemText}>City Center</p>
         <div className={styles.subnavLinkItems}>
@@ -23,81 +27,77 @@ export default function NavLinkItems() {
             City Center
           </Link>
           <Link
-            to="/shopsandrestaurants"
+            to="/shopsandrestaurants/"
             activeClassName={styles.activesubnavLinkItemText}
             className={styles.subnavLinkItemText}
           >
             Shopping And Restaurants
           </Link>
         </div>
-      </Link>
-      <Link
-        className={styles.navLinkItems}
-        activeClassName={styles.navLinkItemsGrey}
-        /* eslint-disable */
-        to="/parking"
-        to="/evcharging"
-        to="/roads"
-        /* eslint-enable */
+      </div>
+      <div
+        className={
+          path === "/parking/" || path === "/evcharging/" || path === "/roads/"
+            ? `${styles.navLinkItems} ${styles.navLinkItemsGrey}  `
+            : `${styles.navLinkItems}`
+        }
       >
         <p className={styles.navLinkItemText}>Driving</p>
         <div className={styles.subnavLinkItems}>
           <Link
-            to="/roads"
+            to="/roads/"
             activeClassName={styles.activesubnavLinkItemText}
             className={styles.subnavLinkItemText}
           >
             Roads
           </Link>
           <Link
-            to="/parking"
+            to="/parking/"
             activeClassName={styles.activesubnavLinkItemText}
             className={styles.subnavLinkItemText}
           >
             Parking
           </Link>
           <Link
-            to="/evcharging"
+            to="/evcharging/"
             activeClassName={styles.activesubnavLinkItemText}
             className={styles.subnavLinkItemText}
           >
             EV Charging Stations
           </Link>
         </div>
-      </Link>
+      </div>
 
-      <Link
-        className={styles.navLinkItems}
-        activeClassName={styles.navLinkItemsGrey}
-        /* eslint-disable */
-        to="/nexus"
-        to="/transport"
-        /* eslint-enable */
+      <div
+        className={
+          path === "/nexus/" || path === "/transport/"
+            ? `${styles.navLinkItems} ${styles.navLinkItemsGrey}  `
+            : `${styles.navLinkItems}`
+        }
       >
         <p className={styles.navLinkItemText}>Public Transport</p>
-
         <div className={styles.subnavLinkItems}>
           <Link
-            to="/transport"
+            to="/transport/"
             activeClassName={styles.activesubnavLinkItemText}
             className={styles.subnavLinkItemText}
           >
             Buses
           </Link>
           <Link
-            to="/nexus"
+            to="/nexus/"
             activeClassName={styles.activesubnavLinkItemText}
             className={styles.subnavLinkItemText}
           >
             Nexus
           </Link>
         </div>
-      </Link>
+      </div>
 
       <Link
         className={styles.navLinkItems}
         activeClassName={styles.navLinkItemsGrey}
-        to="/about"
+        to="/about/"
       >
         <p className={styles.navLinkItemText}>About</p>
       </Link>
