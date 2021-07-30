@@ -30,3 +30,10 @@
 .activesubnavLinkItemText {
   background-color: var(--color-dark-grey);
 }
+
+@media only screen and (max-width: 525px) {
+  .subnavLinkItemText {
+  font-size: 18px;
+
+  }
+}

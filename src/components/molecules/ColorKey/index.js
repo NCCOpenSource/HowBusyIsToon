@@ -6,7 +6,7 @@ import styles from "./ColorKey.module.css";
 export default function ColorKey() {
   return (
     <Box color="grey" fontColor="black">
-      <key className={styles.key}>
+      <div className={styles.key}>
         <StaticImage width={24} src="../../../images/carparkiconsred.png" />
         <p className={styles.keyText}>Limited Spaces</p>
         <StaticImage width={24} src="../../../images/carparkiconsOrange.png" />
@@ -15,7 +15,7 @@ export default function ColorKey() {
         <p className={styles.keyText}>Many Spaces Available</p>
         <StaticImage width={24} src="../../../images/carparkiconsBlack.png" />
         <p className={styles.keyText}>No Data</p>
-      </key>
+      </div>
     </Box>
   );
 }
