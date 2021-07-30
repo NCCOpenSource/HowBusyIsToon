@@ -1,5 +1,5 @@
 import L from "leaflet";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Marker, Popup } from "react-leaflet";
 import Quiet from "../../../images/carparkicons.png";
 import Unkown from "../../../images/carparkiconsBlack.png";
@@ -85,7 +85,6 @@ export default function CarParksData({ data, option }) {
               >
                 <Popup className={styles.popup}>
                   <h1>{carPark.name}</h1>
-
                   <p>There are {carPark.capacity} potential spaces available</p>
                 </Popup>
               </Marker>

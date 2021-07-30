@@ -23,7 +23,7 @@ export default function Parking() {
           carParkTemp.push(data.carparks[i]);
         }
       } else {
-        for (var i = 0; i < CarParkExampleData.carparks.length; i++) {
+        for ( i = 0; i < CarParkExampleData.carparks.length; i++) {
           carParkTemp.push(CarParkExampleData.carparks[i]);
         }
       }
@@ -45,7 +45,7 @@ export default function Parking() {
       .catch((error) => {
         console.log(error);
       });
-  }, []);
+  }, [data]);
 
   return (
     <div className={styles.container}>
