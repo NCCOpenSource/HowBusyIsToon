@@ -36,6 +36,7 @@ export default function AboutSection({ Aboutdata }) {
       </div>
       {aboutArticleSections.map(({ id, subHeading, contentText }) => (
         <AboutSectionArticle
+          key={id}
           subHeading={subHeading}
           contentText={contentText}
         />

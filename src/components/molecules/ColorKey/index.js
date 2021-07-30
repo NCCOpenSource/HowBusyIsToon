@@ -7,13 +7,29 @@ export default function ColorKey() {
   return (
     <Box color="grey" fontColor="black">
       <div className={styles.key}>
-        <StaticImage width={24} src="../../../images/carparkiconsred.png" />
+        <StaticImage
+          alt="car park icon red Limited Spaces"
+          width={24}
+          src="../../../images/carparkiconsred.png"
+        />
         <p className={styles.keyText}>Limited Spaces</p>
-        <StaticImage width={24} src="../../../images/carparkiconsOrange.png" />
+        <StaticImage
+          alt="car park icon orange Moderatly Busy"
+          width={24}
+          src="../../../images/carparkiconsOrange.png"
+        />
         <p className={styles.keyText}>Moderatly Busy</p>
-        <StaticImage width={24} src="../../../images/carparkicons.png" />
+        <StaticImage
+          alt="car park icon green Many Spaces Available"
+          width={24}
+          src="../../../images/carparkicons.png"
+        />
         <p className={styles.keyText}>Many Spaces Available</p>
-        <StaticImage width={24} src="../../../images/carparkiconsBlack.png" />
+        <StaticImage
+          alt="car park icon black No Data"
+          width={24}
+          src="../../../images/carparkiconsBlack.png"
+        />
         <p className={styles.keyText}>No Data</p>
       </div>
     </Box>

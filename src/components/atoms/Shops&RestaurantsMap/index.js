@@ -10,8 +10,8 @@ export default function ShopsRestaurantsMap() {
         width="100%"
         height="100%"
         border-radius="8px"
-        style={{ border: 0, "border-radius": "8px" }}
-        allowfullscreen=""
+        style={{ border: 0, borderRadius: "8px" }}
+        allowFullScreen=""
         loading="lazy"
       ></iframe>
     </div>
