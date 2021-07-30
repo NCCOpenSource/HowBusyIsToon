@@ -18,12 +18,12 @@ export default function Parking() {
   useEffect(() => {
     function mergeCarData() {
       let carParkTemp = [];
-      if (data.carparks.length == null) {
+      if (!data.carparks.length) {
         for (var i = 0; i < data.carparks.length; i++) {
           carParkTemp.push(data.carparks[i]);
         }
       } else {
-        for ( i = 0; i < CarParkExampleData.carparks.length; i++) {
+        for (i = 0; i < CarParkExampleData.carparks.length; i++) {
           carParkTemp.push(CarParkExampleData.carparks[i]);
         }
       }
@@ -50,7 +50,6 @@ export default function Parking() {
   return (
     <div className={styles.container}>
       <div className={styles.topContainer}>
-        {/* ////////////////////Selector/////////////////////// */}
         <div className={styles.select}>
           <div className={styles.selectbox}>
             <select
@@ -64,8 +63,12 @@ export default function Parking() {
                 Show Every Car Park
               </option>
               {carParks
-                ? carParks.map((carPark) => (
-                    <option className={styles.option} value={carPark.name}>
+                ? carParks.map((carPark, id) => (
+                    <option
+                      key={id}
+                      className={styles.option}
+                      value={carPark.name}
+                    >
                       {carPark.name}
                     </option>
                   ))
@@ -73,7 +76,6 @@ export default function Parking() {
             </select>
           </div>
         </div>
-        {/* /////////////////////////////////////////// */}
         <div className={styles.ColorKey}>
           <ColorKey />
         </div>
