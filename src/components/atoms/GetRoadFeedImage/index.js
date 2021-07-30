@@ -68,6 +68,10 @@ export default function GetRoadFeedImage({ option }) {
           style={{
             backgroundImage: `url(${imageList[option]})`,
           }}
+          role="img"
+          aria-label={
+            "Images from street cameras Showing Roads and the traffic on them"
+          }
           alt="Images from street cameras Showing Roads and the traffic on them"
           className={styles.image}
           width="1280"
