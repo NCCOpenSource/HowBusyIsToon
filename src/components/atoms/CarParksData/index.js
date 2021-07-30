@@ -80,7 +80,7 @@ export default function CarParksData({ data, option }) {
             ) : (
               <Marker
                 icon={createMarkerIcon(carPark)}
-                key={Math.floor(Math.random() * 999999999999)}
+                key={id}
                 position={carPark.location}
               >
                 <Popup className={styles.popup}>
