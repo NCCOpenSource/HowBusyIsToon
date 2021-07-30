@@ -6,6 +6,53 @@
   gap: var(--grid-gap);
   grid-template-rows: auto 1fr 1fr auto;
 }
+.topContainer {
+  display: flex;
+  align-items: center;
+}
+
+.selectbox {
+  position: relative;
+  width: 100%;
+  height: 48px;
+}
+
+.selectbox::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  margin-top: -6px;
+  right: 0.7rem;
+  width: 0;
+  height: 0;
+  border: solid black;
+  border-width: 0 1px 1px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(45deg);
+}
+
+.selector {
+  border: 1px solid #eee;
+  border-radius: 0.25rem;
+  padding: 0.5rem 2.5rem 0.5rem 0.5rem;
+  display: flex;
+  background-color: white;
+  outline: 0;
+  cursor: pointer;
+  appearance: none;
+  width: 100%;
+  height: 100%;
+  background: var(--color-light-grey);
+  background: var(--color-light-grey);
+  border-radius: var(--border-radius);
+}
+.option {
+  padding: 18px;
+}
+.ColorKey {
+  margin-left: auto;
+}
 
 @media only screen and (max-width: 1025px) {
   .container {
