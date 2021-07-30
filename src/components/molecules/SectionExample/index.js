@@ -25,6 +25,8 @@ export default function SectionExample({ articleSections, title }) {
                     style={{
                       backgroundImage: `url(${image})`,
                     }}
+                    role="img"
+                    aria-label={alt}
                     alt={alt}
                     className={styles.image}
                   />
