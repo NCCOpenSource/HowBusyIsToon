@@ -1,15 +1,22 @@
 import React from "react";
-import { TwitterTimelineEmbed } from "react-twitter-embed";
 import styles from "./twitterFeed.module.css";
 
 const TwitterFeedNELive = () => {
   return (
     <div className={styles.TrafficFeed}>
-      <TwitterTimelineEmbed
-        sourceType="profile"
-        screenName="NELiveTraffic"
-        options={{ height: 709 }}
-      />
+      <a
+        class="twitter-timeline"
+        data-height="700"
+        data-theme="light"
+        href="https://twitter.com/NELiveTraffic?ref_src=twsrc%5Etfw"
+      >
+        Tweets by NELiveTraffic
+      </a>
+      <script
+        async
+        src="https://platform.twitter.com/widgets.js"
+        charset="utf-8"
+      ></script>
     </div>
   );
 };
