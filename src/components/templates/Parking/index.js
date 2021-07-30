@@ -17,19 +17,23 @@ export default function Parking() {
 
   useEffect(() => {
     function mergeCarData() {
+      let id = 0;
       let carParkTemp = [];
       if (!data.carparks.length) {
         for (var i = 0; i < data.carparks.length; i++) {
           carParkTemp.push(data.carparks[i]);
+          carParkTemp[i].id = id++;
         }
       } else {
         for (i = 0; i < CarParkExampleData.carparks.length; i++) {
           carParkTemp.push(CarParkExampleData.carparks[i]);
+          carParkTemp[i].id = id++;
         }
       }
 
       for (i = 0; i < StaticCarParkData.length; i++) {
         carParkTemp.push(StaticCarParkData[i]);
+        carParkTemp[i].id = id++;
       }
       setCarParks(carParkTemp);
     }

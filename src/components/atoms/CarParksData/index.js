@@ -65,11 +65,11 @@ export default function CarParksData({ data, option }) {
   return (
     <>
       {filteredCarPark
-        ? filteredCarPark.map((carPark, id) =>
+        ? filteredCarPark.map((carPark) =>
             carPark.occupancy ? (
               <Marker
                 icon={createMarkerIcon(carPark)}
-                key={id}
+                key={carPark.id}
                 position={getLatLon(carPark.name)}
               >
                 <Popup className={styles.popup}>
@@ -80,7 +80,7 @@ export default function CarParksData({ data, option }) {
             ) : (
               <Marker
                 icon={createMarkerIcon(carPark)}
-                key={id}
+                key={carPark.id}
                 position={carPark.location}
               >
                 <Popup className={styles.popup}>
