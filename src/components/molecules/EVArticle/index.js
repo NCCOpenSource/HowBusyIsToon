@@ -38,9 +38,13 @@ export default function EVArticle() {
         Linkurl={data.allContentfulEvChargingStations.edges[0].node.url}
       >
         <div
-           style={{
-            backgroundImage: `url(${ data.allContentfulEvChargingStations.edges[0].node.image.file.url})`,
+          style={{
+            backgroundImage: `url(${data.allContentfulEvChargingStations.edges[0].node.image.file.url})`,
           }}
+          role="img"
+          aria-label={
+            data.allContentfulEvChargingStations.edges[0].node.image.description
+          }
           className={styles.image}
           src={
             data.allContentfulEvChargingStations.edges[0].node.image.file.url
