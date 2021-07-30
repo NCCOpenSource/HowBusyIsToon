@@ -50,7 +50,11 @@ export default function EVData() {
                       ? "Open 24/7"
                       : "Check Website For Opening Hours"}
                   </p>
-                  <a href={ChargeDevice.DeviceOwner.Website}>
+                  <a
+                    target="_blank"
+                    rel="noreferrer"
+                    href={ChargeDevice.DeviceOwner.Website}
+                  >
                     {ChargeDevice.DeviceOwner.Website}
                   </a>
                 </Popup>

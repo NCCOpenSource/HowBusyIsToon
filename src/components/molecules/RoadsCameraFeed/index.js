@@ -23,10 +23,10 @@ export default function RoadsCameraFeed() {
               Stamfordham Road
             </option>
             <option className={styles.option} value="2">
-              A186 Pilgrim Street / Mosley Street
+              Pilgrim Street
             </option>
             <option className={styles.option} value="3">
-              B1318 High Street / A191 Church Road & Salters' Road
+              High Street
             </option>
           </select>
         </div>
