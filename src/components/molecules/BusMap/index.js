@@ -3,11 +3,11 @@ import "leaflet/dist/leaflet";
 import "leaflet/dist/leaflet.css";
 import React, { useEffect, useState } from "react";
 import {
-    MapContainer,
-    Marker,
-    Popup,
-    TileLayer,
-    ZoomControl
+  MapContainer,
+  Marker,
+  Popup,
+  TileLayer,
+  ZoomControl,
 } from "react-leaflet";
 import blackbus from "../../../images/blackbus.png";
 import greenbus from "../../../images/greenbus.png";
@@ -74,10 +74,6 @@ export default function BusMap() {
           : null
       )
     : null;
-  console.log(
-    "🚀 ~ file: index.js ~ line 71 ~ BusMap ~ filteredBuses",
-    filteredBuses
-  );
 
   function onChange(event) {
     setInput(event.target.value);
@@ -124,7 +120,7 @@ export default function BusMap() {
                     bus.VehicleActivity.Extensions.VehicleJourney
                       .SeatedOccupancy;
 
-                  const WheelChaireseatsavailable =
+                  const wheelChairSeatsAvailable =
                     bus.VehicleActivity.Extensions.VehicleJourney
                       .WheelchairCapacity -
                     bus.VehicleActivity.Extensions.VehicleJourney
@@ -151,9 +147,9 @@ export default function BusMap() {
                           ""
                         )}
 
-                        {WheelChaireseatsavailable ? (
+                        {wheelChairSeatsAvailable ? (
                           <h2>
-                            {WheelChaireseatsavailable} wheelchair seats
+                            {wheelChairSeatsAvailable} wheelchair seats
                             available
                           </h2>
                         ) : (
