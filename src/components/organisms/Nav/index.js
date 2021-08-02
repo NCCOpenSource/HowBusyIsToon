@@ -27,7 +27,6 @@ export default function Nav(props) {
             <NavLinkItems />
           </ul>
         </nav>
-        {/* mobileNav */}
         <nav className={styles.mobileNav}>
           {show ? (
             <CloseIcon
@@ -42,7 +41,6 @@ export default function Nav(props) {
           )}
           {show ? <NavOverlay /> : null}
         </nav>
-        {/* endMobileNav */}
       </Box>
     </div>
   );
