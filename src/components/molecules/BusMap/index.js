@@ -132,9 +132,7 @@ export default function BusMap() {
                   return (
                     <Marker
                       icon={createMarkerIcon(bus, seatsavailable)}
-                      key={
-                        bus.VehicleActivity.ItemIdentifier
-                      }
+                      key={bus.VehicleActivity.ItemIdentifier}
                       position={[
                         bus.VehicleActivity.MonitoredVehicleJourney
                           .VehicleLocation.Latitude,
