@@ -39,6 +39,12 @@ export default function index() {
         content="Various Traffic Data sets and real time footfall data associated with NewCastle City Center"
       />
       <meta property="twitter:image" content={metaScreenshot}></meta>
+      <script
+        async
+        src="https://platform.twitter.com/widgets.js"
+        charset="utf-8"
+        async
+      ></script>
     </Helmet>
   );
 }

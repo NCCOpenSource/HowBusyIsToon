@@ -1,22 +1,30 @@
 import React from "react";
-import { TwitterTimelineEmbed } from "react-twitter-embed";
 import styles from "./twitterFeed.module.css";
+import { Timeline } from "react-twitter-widgets";
 
 const TwitterFeedNexus = () => {
+  const timeline = (
+    <Timeline
+      dataSource={{
+        sourceType: "profile",
+        screenName: "My_Metro",
+      }}
+      options={{ id: "profile:My_Metro", height: "700" }}
+    />
+  );
   return (
     <div className={styles.TrafficFeed}>
-      <a
-        class="twitter-timeline"
-        data-height="700"
-        href="https://twitter.com/My_Metro?ref_src=twsrc%5Etfw"
-      >
-        Tweets by My_Metro
-      </a>
-      <script
-        async
-        src="https://platform.twitter.com/widgets.js"
-        charset="utf-8"
-      ></script>
+      {timeline ? (
+        timeline
+      ) : (
+        <a
+          class="twitter-timeline"
+          data-height="700"
+          href="https://twitter.com/My_Metro?ref_src=twsrc%5Etfw"
+        >
+          Tweets by My_Metro
+        </a>
+      )}
     </div>
   );
 };
