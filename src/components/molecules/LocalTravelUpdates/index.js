@@ -1,6 +1,6 @@
 import React from "react";
 import Box from "../../atoms/Box";
-import TwitterFeedNexus from "../../atoms/TwitterFeedNexus";
+import TwitterFeed from "../../atoms/TwitterFeed";
 import styles from "./LocalTravelUpdates.module.css";
 
 export default function LocalTravelUpdates() {
@@ -9,7 +9,7 @@ export default function LocalTravelUpdates() {
       <Box>
         <p className={styles.topFont}>Local Travel Updates</p>
       </Box>
-      <TwitterFeedNexus />
+      <TwitterFeed profile={"My_Metro"} />
     </div>
   );
 }
