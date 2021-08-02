@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import styles from "./FloatingFeedback.module.css";
 import EmojicomWidget from "../../molecules/EmojicomWidget";
+import styles from "./FloatingFeedback.module.css";
 
 export default function FloatingFeedback() {
   const [isFloatShowing, setIsFloatShowing] = useState(true);

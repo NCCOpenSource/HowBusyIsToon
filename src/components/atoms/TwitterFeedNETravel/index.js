@@ -1,6 +1,6 @@
 import React from "react";
-import styles from "./twitterFeed.module.css";
 import { Timeline } from "react-twitter-widgets";
+import styles from "./twitterFeed.module.css";
 
 const TwitterFeedNELive = () => {
   const timeline = (
