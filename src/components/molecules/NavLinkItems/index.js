@@ -1,7 +1,7 @@
+import { useLocation } from "@reach/router";
 import { Link } from "gatsby";
 import React, { useState } from "react";
 import styles from "./NavLinkItems.module.css";
-import { useLocation } from "@reach/router";
 
 export default function NavLinkItems() {
   /* eslint-disable */

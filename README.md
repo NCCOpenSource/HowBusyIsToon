@@ -1,64 +1,59 @@
-# Contentful Gatsby Starter Blog
+# How Busy Is Town
 
-Create a [Gatsby](http://gatsbyjs.com/) blog powered by [Contentful](https://www.contentful.com).
+## To Run Website Locally
 
-![The index page of the starter blog](https://rawgit.com/contentful/starter-gatsby-blog/master/screenshot.jpg "The index page of the starter blog")
+- clone repo
+- npm install
+- npm run dev
 
-Static sites are scalable, secure and have very little required maintenance. They come with a drawback though. Not everybody feels good editing files, building a project and uploading it somewhere. This is where Contentful comes into play.
+If this fails:
+Inside .env files, replace CONTENTFUL_ACCESS_TOKEN with your new Contentful Access token.
 
-With Contentful and Gatsby you can connect your favorite static site generator with an API that provides an easy to use interface for people writing content and automate the publishing using services like [Travis CI](https://travis-ci.org/) or [Netlify](https://www.netlify.com/).
+## Structure:
 
-## Features
+- Atom Methodology
 
-- Simple content model and structure. Easy to adjust to your needs.
-- Use the [synchronization feature](https://www.contentful.com/developers/docs/references/content-delivery-api/#/reference/synchronization) of our [Delivery API](https://www.contentful.com/developers/docs/references/content-delivery-api/).
-- Responsive/adaptive images via [gatsby-image](https://www.gatsbyjs.org/packages/gatsby-image/) and our [Images API](https://www.contentful.com/developers/docs/references/content-delivery-api/#/reference/synchronization/initial-synchronization-of-entries-of-a-specific-content-type).
+- Created With Gatsby
 
-## Getting started
+- Content Editable with Contentful
 
-See our [official Contentful getting started guide](https://www.contentful.com/developers/docs/tutorials/general/get-started/).
+  - Inside .env files, replace CONTENTFUL_ACCESS_TOKEN with your new Contentful Access token.
 
-### Get the source code and install dependencies.
+- [Emojicom Ratings found here](https://emojicom.io/report/CeaqsIJ2ffeo5lrlG1ym)
+  - To Replace Emojicom Campaign open src/components/molecules/FloatingFeedback/index.js
+  - <EmojicomWidget campaignId={place new campaign Id Here} />
 
-```
-$ git clone https://github.com/contentful/starter-gatsby-blog.git
-$ npm install
-```
+Note: Make sure when creating a new campaign that the Embed type is equal to 'Floating'. If this setting is not selected, the Emojicom won't appear.
 
-Or use the [Gatsby CLI](https://www.npmjs.com/package/gatsby-cli).
+## To Edit Contentful Content (Articles/Sections)
 
-```
-$ gatsby new contentful-starter-blog https://github.com/contentful/starter-gatsby-blog/
-```
+https://app.contentful.com/spaces/hk6oui71f47k/entries?id=O2aP4gJdNKjbcGGd&searchText=%20&order.fieldId=updatedAt&order.direction=descending&displayedFieldIds=contentType&displayedFieldIds=updatedAt&displayedFieldIds=author
 
-### Set up of the needed content model and create a configuration file
+- Select Content from the space 'How Busy Is Town Content'
+- Edit content
+- Publish Changes
 
-This project comes with a Contentful setup command `npm run setup`.
+#### Accesibility
 
-This command will ask you for a space ID, and access tokens for the Contentful Management and Delivery API and then import the needed content model into the space you define and write a config file (`./.contentful.json`).
+When changing images, try to be descriptive in the description, this will be used for Accessibility reasons. This will be used as a placeholder to allow screen readers to understand what's the image representing.
 
-`npm run setup` automates that for you but if you want to do it yourself rename `.contentful.json.sample` to `.contentful.json` and add your configuration in this file.
+#### Content Model
 
-## Crucial Commands
+Content is organized via page and as its own section.
+In the content description, you will find corresponding pages that the content appears on.
 
-### `npm run dev`
+## Scripts
 
-Run the project locally with live reload in development mode.
+With the old website, there are scripts (python) that access lots of different APIs and creates a JSON file.
 
-### `npm run build`
+- https://howbusyistoon.com/ncc-car-parks.json
+- https://howbusyistoon.com/ncc-city-state.json
 
-Run a production build into `./public`. The result is ready to be put on any static hosting you prefer.
+once the scripts are running, replace the fetch URL with the path to the newly generated scripts
 
-### `npm run serve`
-
-Spin up a production-ready server with your blog. Don't forget to build your page beforehand.
-
-## Deployment
-
-See the [official Contentful getting started guide](https://www.contentful.com/developers/docs/tutorials/general/get-started/).
-
-## Contribution
-
-Feel free to open pull requests to fix bugs. If you want to add features, please have a look at the [original version](https://github.com/contentful-userland/gatsby-contentful-starter). It is always open to contributions and pull requests.
-
-You can learn more about how Contentful userland is organized by visiting [our about repository](https://github.com/contentful-userland/about).
+- src/components/atoms/calloutData
+  fetch(`https://howbusyistoon.com/ncc-city-state.json`)
+  fetch( _new cityState path here_ )
+- src/components/templates/Parking
+  fetch(`https://howbusyistoon.com/ncc-car-parks.json`)
+  fetch( _new carPark path here_ )
