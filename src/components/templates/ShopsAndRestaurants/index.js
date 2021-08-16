@@ -15,9 +15,9 @@ export default function ShopsAndRestaurants() {
         <div className={styles.ShopsRestaurantsMap}>
           <ShopsRestaurantsMap />
         </div>
-        <div className={styles.SectionExample}>
+        {/* <div className={styles.SectionExample}>
           <AlternativeTransport />
-        </div>
+        </div> */}
         <div className={styles.CouncilLinks}>
           <CouncilLinks />
         </div>

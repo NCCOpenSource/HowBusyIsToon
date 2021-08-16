@@ -7,7 +7,7 @@ export default function index() {
   return (
     <Helmet>
       <html lang="en"></html>
-      <title>How Busy Is Newcastle?</title>
+      <title>How Busy Is Toon?</title>
       <link rel="canonical" href={website} />
       <meta
         charSet="utf-8"
