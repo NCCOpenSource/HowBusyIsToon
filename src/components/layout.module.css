@@ -1,7 +1,8 @@
 @import "./CSS/variables.css";
 
 .containerGrid {
-  margin: 48px;
+  max-width: 1440px;
+  margin: 48px auto;
   display: grid;
   gap: var(--grid-gap);
 }

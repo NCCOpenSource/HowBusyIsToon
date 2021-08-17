@@ -6,7 +6,7 @@
   grid-template-areas:
     "selectbox  RoadsCameraFeed RoadsCameraFeed"
     "RoadsLookingBusy RoadsCameraFeed RoadsCameraFeed"
-    "RoadsLookingBusy WalkingOrCycling CycleParking";
+    "48px WalkingOrCycling CycleParking";
 }
 .RoadsCameraFeed {
   grid-area: RoadsCameraFeed;
