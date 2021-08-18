@@ -7,7 +7,7 @@ export default function index() {
   return (
     <Helmet>
       <html lang="en"></html>
-      <title>How Busy Is Newcastle?</title>
+      <title>How Busy Is Toon?</title>
       <link rel="canonical" href={website} />
       <meta
         charSet="utf-8"
@@ -39,6 +39,12 @@ export default function index() {
         content="Various Traffic Data sets and real time footfall data associated with NewCastle City Center"
       />
       <meta property="twitter:image" content={metaScreenshot}></meta>
+      <script
+        async
+        src="https://platform.twitter.com/widgets.js"
+        charset="utf-8"
+        async
+      ></script>
     </Helmet>
   );
 }

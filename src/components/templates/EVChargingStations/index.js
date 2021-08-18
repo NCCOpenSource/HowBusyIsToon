@@ -15,9 +15,9 @@ export default function EVChargingStations() {
           allow="geolocation"
         ></iframe>
       </div>
-      <div className={styles.SectionExample}>
+      {/* <div className={styles.SectionExample}>
         <AlternativeTransport />
-      </div>
+      </div> */}
       <div className={styles.CouncilLinks}>
         <CouncilLinks />
       </div>

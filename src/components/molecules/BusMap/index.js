@@ -103,17 +103,7 @@ export default function BusMap() {
           />
           <ZoomControl position="topright" />
           {data
-            ? filteredBuses.map((bus, id) => {
-                const seatsavailable =
-                  bus.VehicleActivity.Extensions.VehicleJourney.SeatedCapacity -
-                  bus.VehicleActivity.Extensions.VehicleJourney.SeatedOccupancy;
-
-                const WheelChaireseatsavailable =
-                  bus.VehicleActivity.Extensions.VehicleJourney
-                    .WheelchairCapacity -
-                  bus.VehicleActivity.Extensions.VehicleJourney
-                    .WheelchairOccupancy;
-
+            ? filteredBuses.map((bus) => {
                 if (
                   bus.VehicleActivity.MonitoredVehicleJourney.VehicleLocation
                     .Latitude < 55.02255 &&
@@ -124,10 +114,21 @@ export default function BusMap() {
                   bus.VehicleActivity.MonitoredVehicleJourney.VehicleLocation
                     .Longitude > -1.7132124536205563
                 ) {
+                  const seatsavailable =
+                    bus.VehicleActivity.Extensions.VehicleJourney
+                      .SeatedCapacity -
+                    bus.VehicleActivity.Extensions.VehicleJourney
+                      .SeatedOccupancy;
+
+                  const wheelChairSeatsAvailable =
+                    bus.VehicleActivity.Extensions.VehicleJourney
+                      .WheelchairCapacity -
+                    bus.VehicleActivity.Extensions.VehicleJourney
+                      .WheelchairOccupancy;
                   return (
                     <Marker
                       icon={createMarkerIcon(bus, seatsavailable)}
-                      key={id}
+                      key={bus.VehicleActivity.ItemIdentifier}
                       position={[
                         bus.VehicleActivity.MonitoredVehicleJourney
                           .VehicleLocation.Latitude,
@@ -146,9 +147,9 @@ export default function BusMap() {
                           ""
                         )}
 
-                        {WheelChaireseatsavailable ? (
+                        {wheelChairSeatsAvailable ? (
                           <h2>
-                            {WheelChaireseatsavailable} wheelchair seats
+                            {wheelChairSeatsAvailable} wheelchair seats
                             available
                           </h2>
                         ) : (

@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 import CarParkExampleData from "../../atoms/CarParksData/carparkdata.json";
+import StaticCarParkData from "../../atoms/CarParksData/carparkHardData.json";
 import CarParkMap from "../../molecules/CarParkMap";
 import ColorKey from "../../molecules/ColorKey";
 import CouncilLinks from "../../molecules/CouncilLinks";
 import AlternativeTransport from "../../organisms/AlternativeTransport";
 import styles from "./Parking.module.css";
-import StaticCarParkData from "../../atoms/CarParksData/carparkHardData.json";
 
 export default function Parking() {
   const [data, setData] = useState(CarParkExampleData);
@@ -87,9 +87,9 @@ export default function Parking() {
       <div className={styles.SectionExample}>
         <CarParkMap data={carParks} option={option} />
       </div>
-      <div className={styles.SectionExample}>
+      {/* <div className={styles.SectionExample}>
         <AlternativeTransport />
-      </div>
+      </div> */}
       <div className={styles.CouncilLinks}>
         <CouncilLinks />
       </div>

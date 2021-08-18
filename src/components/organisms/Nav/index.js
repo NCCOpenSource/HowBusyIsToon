@@ -19,7 +19,7 @@ export default function Nav(props) {
     <div>
       <Box fullBorderRadius="full">
         <Link to="/" className={styles.titlecontainer}>
-          <h1 className={styles.title}>How Busy Is...</h1>
+          <h1 className={styles.title}>How Busy Is Toon...</h1>
           <p className={styles.Tagline}>Your home for real time data</p>
         </Link>
         <nav className={styles.nav}>
@@ -27,7 +27,6 @@ export default function Nav(props) {
             <NavLinkItems />
           </ul>
         </nav>
-        {/* mobileNav */}
         <nav className={styles.mobileNav}>
           {show ? (
             <CloseIcon
@@ -42,7 +41,6 @@ export default function Nav(props) {
           )}
           {show ? <NavOverlay /> : null}
         </nav>
-        {/* endMobileNav */}
       </Box>
     </div>
   );
