@@ -22,7 +22,7 @@
   margin: 0;
   height: 100%;
   align-self: center;
-  padding: 0 18px;
+  padding: 0 16px;
   line-height: 112px;
 }
 .navLinkItems:hover .navLinkItemText {

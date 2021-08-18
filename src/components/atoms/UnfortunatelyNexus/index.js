@@ -5,8 +5,7 @@ export default function UnfortunatelyNexus() {
   return (
     <div className={styles.calloutContainer}>
       <h1 className={styles.calloutText}>
-        Unfortunaly Nexus don’t share data openly. Follow their Twitter feed for
-        the latest Metro travel infomation.
+        Using the Metro? Keep up to date with the latest travel updates from Nexus
       </h1>
     </div>
   );
