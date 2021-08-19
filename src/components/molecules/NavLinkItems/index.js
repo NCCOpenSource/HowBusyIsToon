@@ -68,7 +68,7 @@ export default function NavLinkItems() {
         </div>
       </div>
 
-      <div
+      {/* <div
         className={
           path === "/nexus/" || path === "/transport/"
             ? `${styles.navLinkItems} ${styles.navLinkItemsGrey}  `
@@ -92,8 +92,14 @@ export default function NavLinkItems() {
             Nexus
           </Link>
         </div>
-      </div>
-
+      </div> */}
+      <Link
+        className={styles.navLinkItems}
+        activeClassName={styles.navLinkItemsGrey}
+        to="/transport/"
+      >
+        <p className={styles.navLinkItemText}>Public Transport</p>
+      </Link>
       <Link
         className={styles.navLinkItems}
         activeClassName={styles.navLinkItemsGrey}

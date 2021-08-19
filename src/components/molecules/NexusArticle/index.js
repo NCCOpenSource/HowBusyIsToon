@@ -13,13 +13,13 @@ export default function NexusArticle() {
       <StaticImage
         alt=""
         className={styles.image}
-        src={"../../../images/bus-Example.jpg"}
+        src={"../../../images/metro-01.png"}
       />
       <ArticleExample
         title="Nexus"
         LinkTitle="Go to Nexus"
-        Content="Plan your journey, view an interactive travel map and discover how Nexus is keeping you sage with the latest COVID-19 updates."
-        Linkurl="https://livemap.nexus.org.uk/"
+        Content="Find out how how busy the Metro stations are, see which trains are busy or quiet and let Nexus know how busy the train you have travelled on was"
+        Linkurl="https://www.nexus.org.uk/metro/how-busy"
       />
     </div>
   );
