@@ -7,23 +7,26 @@ export default function VisitCitySafetly() {
       <p className={styles.title}>
         How to Visit the City Center in a Safe Manner
       </p>
-      <p className={styles.subTitle}>1. One Way System</p>
       <p className={styles.text}>
-        Northumberland street has adopted a one-way system which will allow for
-        social distancing. Look for the arrows at on the floor and the barriers
-        placed at shop entrances for customer queues
+      Google Maps provides information on your favourite shops and restaurants.
       </p>
-      <p className={styles.subTitle}>2. Protecting Others</p>
       <p className={styles.text}>
-        If you’re visiting the city centre it’s important that you wear a face
-        covering if you are using public transport or you are in shops, banks or
-        other indoor spaces.
+      You can use the map to select your chosen location, if you click on ‘view larger map’ it will open a new window to Google Maps.
       </p>
-      <p className={styles.subTitle}>3. Social Distancing</p>
       <p className={styles.text}>
-        Northumberland street has adopted a one-way system which will allow for
-        social distancing. Look for the arrows at on the floor and the barriers
-        placed at shop entrances for customer queues
+      From here you may see:
+      </p>
+      <p className={styles.subTitle}>1. Open Hours</p>
+      <p className={styles.text}>
+        If the location is currently open and the hours they are operated and when this information was last updated.
+      </p>
+      <p className={styles.subTitle}>2. Forecasting</p>
+      <p className={styles.text}>
+      A busy period forecasting tool which allows you to see by the hour what the busy and quiet periods are.
+      </p>
+      <p className={styles.subTitle}>3. Customer Reviews</p>
+      <p className={styles.text}>
+      Customer reviews which include photographs detailing the safety measures that the restaurant/shop have implemented and how successful they are.
       </p>
     </div>
   );
