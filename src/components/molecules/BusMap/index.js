@@ -1,4 +1,5 @@
 import L from "leaflet";
+import { GestureHandling } from "leaflet-gesture-handling";
 import "leaflet/dist/leaflet";
 import "leaflet/dist/leaflet.css";
 import React, { useEffect, useState } from "react";
@@ -15,7 +16,6 @@ import orangebus from "../../../images/orangebus.png";
 import redbus from "../../../images/redbus.png";
 import "./busMap.css";
 import styles from "./BusMap.module.css";
-import { GestureHandling } from "leaflet-gesture-handling";
 
 export default function BusMap() {
   const [input, setInput] = useState("");
