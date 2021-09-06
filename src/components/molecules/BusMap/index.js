@@ -15,6 +15,7 @@ import orangebus from "../../../images/orangebus.png";
 import redbus from "../../../images/redbus.png";
 import "./busMap.css";
 import styles from "./BusMap.module.css";
+import { GestureHandling } from "leaflet-gesture-handling";
 
 export default function BusMap() {
   const [input, setInput] = useState("");
@@ -79,6 +80,23 @@ export default function BusMap() {
     setInput(event.target.value);
   }
 
+  L.Map.addInitHook("addHandler", "gestureHandling", GestureHandling);
+
+  if (typeof window !== "undefined") {
+    var mapOptions = {
+      // attributionControl: false,
+      gestureHandling: true,
+      // dragging: !L.Browser.mobile,
+      // tap: !L.Browser.mobile,
+      gestureHandlingOptions: {
+        text: {
+          touch: "Hey bro, use two fingers to move the map",
+          scroll: "Hey bro, use ctrl + scroll to zoom the map",
+          scrollMac: "Hey bro, use \u2318 + scroll to zoom the map",
+        },
+      },
+    };
+  }
   return (
     <>
       <input
@@ -95,6 +113,7 @@ export default function BusMap() {
           zoom={14}
           className={styles.leafletcontainer}
           zoomControl={false}
+          {...mapOptions}
         >
           <TileLayer
             maxZoom={19}

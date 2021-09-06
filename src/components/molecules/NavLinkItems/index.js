@@ -17,7 +17,7 @@ export default function NavLinkItems() {
             : `${styles.navLinkItems}`
         }
       >
-        <p className={styles.navLinkItemText}>City Center</p>
+        <p className={styles.navLinkItemText}>City Centre</p>
         <div className={styles.subnavLinkItems}>
           <Link
             to="/"

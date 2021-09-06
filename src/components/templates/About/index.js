@@ -54,7 +54,7 @@ export default function About() {
           link={Aboutdata.linkUrl1}
           heading={Aboutdata.linkTitle1}
           content={Aboutdata.linkContent1.linkContent1}
-        />``
+        />
         <LinkSection
           link={Aboutdata.linkUrl2}
           heading={Aboutdata.linkTitle2}
