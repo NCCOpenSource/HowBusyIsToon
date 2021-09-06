@@ -4,18 +4,16 @@ import styles from "./GetFeedImage.module.css";
 export default function GetFeedImage({ option }) {
   const [imageList, setImageList] = useState(null);
   const [apiFinished, setApiFinished] = useState(false);
+  const imageArray = [];
 
   useEffect(() => {
     function fetchFeedImages() {
-      const imageArray = [];
       fetch(
         `https://api.newcastle.urbanobservatory.ac.uk/api/v2/sensors/timeseries/685e0b8e-9c97-41df-94db-c039205814d1`
       )
         .then((response) => response.json())
         .then((response) => {
           imageArray[0] = response.latest.value;
-          setImageList(imageArray);
-          setApiFinished(true);
         })
         .catch((error) => {
           console.log(error);
@@ -27,7 +25,6 @@ export default function GetFeedImage({ option }) {
         .then((response) => response.json())
         .then((response) => {
           imageArray[1] = response.feed[3].timeseries[0].latest.value;
-          setImageList(imageArray);
         })
         .catch((error) => {
           console.log(error);
@@ -39,7 +36,6 @@ export default function GetFeedImage({ option }) {
         .then((response) => response.json())
         .then((response) => {
           imageArray[2] = response.latest.value;
-          setImageList(imageArray);
         })
         .catch((error) => {
           console.log(error);
@@ -51,7 +47,6 @@ export default function GetFeedImage({ option }) {
         .then((response) => response.json())
         .then((response) => {
           imageArray[3] = response.timeseries[0].latest.value;
-          setImageList(imageArray);
         })
         .catch((error) => {
           console.log(error);
@@ -63,7 +58,6 @@ export default function GetFeedImage({ option }) {
         .then((response) => response.json())
         .then((response) => {
           imageArray[4] = response.latest.value;
-          setImageList(imageArray);
         })
         .catch((error) => {
           console.log(error);
@@ -75,14 +69,23 @@ export default function GetFeedImage({ option }) {
         .then((response) => response.json())
         .then((response) => {
           imageArray[5] = response.latest.value;
-          setImageList(imageArray);
         })
         .catch((error) => {
           console.log(error);
         });
+
+      setApiFinished(false);
+      setImageList(imageArray);
+      setApiFinished(true);
     }
 
     fetchFeedImages();
+
+    const interval = setInterval(() => {
+      fetchFeedImages();
+    }, 3000);
+
+    return () => clearInterval(interval);
   }, []);
 
   return (
