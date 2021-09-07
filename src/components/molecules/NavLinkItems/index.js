@@ -24,7 +24,7 @@ export default function NavLinkItems() {
             activeClassName={styles.activesubnavLinkItemText}
             className={styles.subnavLinkItemText}
           >
-            City Center
+            City Centre
           </Link>
           <Link
             to="/shopsandrestaurants/"
