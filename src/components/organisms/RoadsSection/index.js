@@ -21,41 +21,22 @@ export default function RoadsSection() {
             onBlur={handleChange}
           >
             <option className={styles.option} value="0">
-              Coast Road
+              Coast Road (Corner House 1)
             </option>
             <option className={styles.option} value="1">
-              Cowgate Roundabout 1
+              Coast Road (Corner House 2)
             </option>
             <option className={styles.option} value="2">
-              Cowgate Roundabout 2
+              Cowgate junction
             </option>
             <option className={styles.option} value="3">
-              Cowgate Roundabout 3
+              Mosley St (Tyne Bridge)
             </option>
             <option className={styles.option} value="4">
-              Cowgate Roundabout 4
+              Gosforth High Street (Church Road)
             </option>
-
             <option className={styles.option} value="5">
-              Pilgrim Street 1
-            </option>
-            <option className={styles.option} value="6">
-              Pilgrim Street 2
-            </option>
-            <option className={styles.option} value="7">
-              Mosley Street 1
-            </option>
-            <option className={styles.option} value="8">
-              Mosley Street 2
-            </option>
-            <option className={styles.option} value="9">
-              Gosforth High Street
-            </option>
-            <option className={styles.option} value="10">
-              Church Road
-            </option>
-            <option className={styles.option} value="1">
-              Salters Road
+              Gosforth High Street (Salters Road)
             </option>
           </select>
         </div>

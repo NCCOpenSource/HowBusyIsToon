@@ -9,12 +9,11 @@ export default function GetRoadFeedImage({ option }) {
     async function fetchFeedImages() {
       const imageArray = [];
       fetch(
-        `https://api.newcastle.urbanobservatory.ac.uk/api/v2/sensors/feed/camera-mounted-at-newcastle-a1058-stephenson-road-heaton-road-newton-road-corner-house/camera-image`
+        `https://api.newcastle.urbanobservatory.ac.uk/api/v2/sensors/timeseries/camera-mounted-at-newcastle-a1058-stephenson-road-heaton-road-newton-road-corner-house/camera-image-view-02/raw`
       )
         .then((response) => response.json())
         .then((response) => {
-     
-          imageArray[0] = response.timeseries[0].latest.value;
+          imageArray[0] = response.latest.value;
 
           setImageList(imageArray);
           setApiFinished(true);
@@ -24,14 +23,25 @@ export default function GetRoadFeedImage({ option }) {
         });
 
       fetch(
-        "https://api.newcastle.urbanobservatory.ac.uk/api/v2/sensors/entity/camera-mounted-at-newcastle-a167-ponteland-road-stamfordham-road-b1305-two-ball-lonnen"
+        `https://api.newcastle.urbanobservatory.ac.uk/api/v2/sensors/timeseries/camera-mounted-at-newcastle-a1058-stephenson-road-heaton-road-newton-road-corner-house/camera-image/raw`
       )
         .then((response) => response.json())
         .then((response) => {
-          imageArray[1] = response.feed[0].timeseries[0].latest.value;
-          imageArray[2] = response.feed[1].timeseries[0].latest.value;
-          imageArray[3] = response.feed[2].timeseries[0].latest.value;
-          imageArray[4] = response.feed[3].timeseries[0].latest.value;
+          imageArray[1] = response.latest.value;
+
+          setImageList(imageArray);
+          setApiFinished(true);
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+
+      fetch(
+        "https://api.newcastle.urbanobservatory.ac.uk/api/v2/sensors/timeseries/camera-mounted-at-newcastle-a167-ponteland-road-stamfordham-road-b1305-two-ball-lonnen/camera-image-view-03/raw"
+      )
+        .then((response) => response.json())
+        .then((response) => {
+          imageArray[2] = response.latest.value;
           setImageList(imageArray);
         })
         .catch((error) => {
@@ -43,10 +53,7 @@ export default function GetRoadFeedImage({ option }) {
       )
         .then((response) => response.json())
         .then((response) => {
-          imageArray[5] = response.feed[0].timeseries[0].latest.value;
-          imageArray[6] = response.feed[1].timeseries[0].latest.value;
-          imageArray[7] = response.feed[2].timeseries[0].latest.value;
-          imageArray[8] = response.feed[3].timeseries[0].latest.value;
+          imageArray[3] = response.feed[3].timeseries[0].latest.value;
           setImageList(imageArray);
         })
         .catch((error) => {
@@ -54,22 +61,11 @@ export default function GetRoadFeedImage({ option }) {
         });
 
       fetch(
-        "https://api.newcastle.urbanobservatory.ac.uk/api/v2/sensors/timeseries/camera-mounted-at-newcastle-b1318-high-street-a191-church-road-salters-road/camera-image-view-01/raw"
-      )
-        .then((response) => response.json())
-        .then((response) => {
-          imageArray[9] = response.latest.value;
-          setImageList(imageArray);
-        })
-        .catch((error) => {
-          console.log(error);
-        });
-      fetch(
         "https://api.newcastle.urbanobservatory.ac.uk/api/v2/sensors/timeseries/camera-mounted-at-newcastle-b1318-high-street-a191-church-road-salters-road/camera-image-view-02/raw"
       )
         .then((response) => response.json())
         .then((response) => {
-          imageArray[10] = response.latest.value;
+          imageArray[4] = response.latest.value;
           setImageList(imageArray);
         })
         .catch((error) => {
@@ -80,7 +76,7 @@ export default function GetRoadFeedImage({ option }) {
       )
         .then((response) => response.json())
         .then((response) => {
-          imageArray[11] = response.latest.value;
+          imageArray[5] = response.latest.value;
           setImageList(imageArray);
         })
         .catch((error) => {
