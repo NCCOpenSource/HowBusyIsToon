@@ -10,7 +10,7 @@ export default function GetRoadFeedImage({ option }) {
     async function fetchFeedImages() {
       const imageArray = [];
       fetch(
-        `https://api.newcastle.urbanobservatory.ac.uk/api/v2/sensors/timeseries/camera-mounted-at-newcastle-a1058-stephenson-road-heaton-road-newton-road-corner-house/camera-image-view-02/raw`
+        `https://api.newcastle.urbanobservatory.ac.uk/api/v2/sensors/timeseries/camera-mounted-at-newcastle-a1058-stephenson-road-heaton-road-newton-road-corner-house/camera-image-view-01/raw`
       )
         .then((response) => response.json())
         .then((response) => {
