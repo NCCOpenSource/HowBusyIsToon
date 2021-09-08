@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styles from "./GetRoadFeedImage.module.css";
+import loader from "../../../images/loading.gif";
 
 export default function GetRoadFeedImage({ option }) {
   const [imageList, setImageList] = useState(null);
@@ -92,7 +93,9 @@ export default function GetRoadFeedImage({ option }) {
       {imageList !== null && imageList[option] !== null && apiFinished ? (
         <div
           style={{
-            backgroundImage: `url(${imageList[option]})`,
+            backgroundImage: imageList[option]
+              ? `url(${imageList[option]})`
+              : `url(${loader})`,
           }}
           role="img"
           aria-label={

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styles from "./GetFeedImage.module.css";
+import loader from "../../../images/loading.gif";
 
 export default function GetFeedImage({ option }) {
   const [imageList, setImageList] = useState(null);
@@ -7,6 +8,8 @@ export default function GetFeedImage({ option }) {
   const imageArray = [];
 
   useEffect(() => {
+    fetchFeedImages();
+
     function fetchFeedImages() {
       fetch(
         `https://api.newcastle.urbanobservatory.ac.uk/api/v2/sensors/timeseries/685e0b8e-9c97-41df-94db-c039205814d1`
@@ -14,6 +17,10 @@ export default function GetFeedImage({ option }) {
         .then((response) => response.json())
         .then((response) => {
           imageArray[0] = response.latest.value;
+
+          setApiFinished(false);
+          setImageList(imageArray);
+          setApiFinished(true);
         })
         .catch((error) => {
           console.log(error);
@@ -75,11 +82,10 @@ export default function GetFeedImage({ option }) {
         });
 
       setApiFinished(false);
+      console.log("test");
       setImageList(imageArray);
       setApiFinished(true);
     }
-
-    fetchFeedImages();
 
     const interval = setInterval(() => {
       fetchFeedImages();
@@ -93,7 +99,9 @@ export default function GetFeedImage({ option }) {
       {imageList !== null && imageList[option] !== null && apiFinished ? (
         <div
           style={{
-            backgroundImage: `url(${imageList[option]})`,
+            backgroundImage: imageList[option]
+              ? `url(${imageList[option]})`
+              : `url(${loader})`,
           }}
           role="img"
           aria-label={"Images from street cameras of City Centre"}
