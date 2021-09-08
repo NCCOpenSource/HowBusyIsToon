@@ -82,7 +82,6 @@ export default function GetFeedImage({ option }) {
         });
 
       setApiFinished(false);
-      console.log("test");
       setImageList(imageArray);
       setApiFinished(true);
     }
