@@ -33,10 +33,7 @@ export default function RoadsSection() {
               Mosley St (Tyne Bridge)
             </option>
             <option className={styles.option} value="4">
-              Gosforth High Street (Church Road)
-            </option>
-            <option className={styles.option} value="5">
-              Gosforth High Street (Salters Road)
+              Gosforth High St
             </option>
           </select>
         </div>

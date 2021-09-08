@@ -62,22 +62,11 @@ export default function GetRoadFeedImage({ option }) {
         });
 
       fetch(
-        "https://api.newcastle.urbanobservatory.ac.uk/api/v2/sensors/timeseries/camera-mounted-at-newcastle-b1318-high-street-a191-church-road-salters-road/camera-image-view-02/raw"
-      )
-        .then((response) => response.json())
-        .then((response) => {
-          imageArray[4] = response.latest.value;
-          setImageList(imageArray);
-        })
-        .catch((error) => {
-          console.log(error);
-        });
-      fetch(
         "https://api.newcastle.urbanobservatory.ac.uk/api/v2/sensors/timeseries/camera-mounted-at-newcastle-b1318-high-street-a191-church-road-salters-road/camera-image-view-03/raw"
       )
         .then((response) => response.json())
         .then((response) => {
-          imageArray[5] = response.latest.value;
+          imageArray[4] = response.latest.value;
           setImageList(imageArray);
         })
         .catch((error) => {
