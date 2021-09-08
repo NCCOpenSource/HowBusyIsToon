@@ -8,35 +8,47 @@ export default function ColorKey() {
     <Box color="grey" fontColor="black">
       <div className={styles.key}>
         <div className={styles.keyItem}>
-          <StaticImage
-            width={24}
-            height={24}
-            src={"../../../images/carparkiconsred.png"}
-          />
+          <div className={styles.image}>
+            <StaticImage
+              width={24}
+              height={24}
+              className={styles.image}
+              src={"../../../images/carparkiconsred.png"}
+            />
+          </div>
           <p className={styles.keyText}>Limited Spaces</p>
         </div>
         <div className={styles.keyItem}>
-          <StaticImage
-            width={24}
-            height={24}
-            src={"../../../images/carparkiconsOrange.png"}
-          />
+          <div className={styles.image}>
+            <StaticImage
+              width={24}
+              height={24}
+              className={styles.image}
+              src={"../../../images/carparkiconsOrange.png"}
+            />
+          </div>
           <p className={styles.keyText}>Moderatly Busy</p>
         </div>
         <div className={styles.keyItem}>
-          <StaticImage
-            width={24}
-            height={24}
-            src={"../../../images/carparkicons.png"}
-          />
+          <div className={styles.image}>
+            <StaticImage
+              width={24}
+              height={24}
+              className={styles.image}
+              src={"../../../images/carparkicons.png"}
+            />
+          </div>
           <p className={styles.keyText}>Many Spaces Available</p>
         </div>
         <div className={styles.keyItem}>
-          <StaticImage
-            width={24}
-            height={24}
-            src={"../../../images/carparkiconsBlack.png"}
-          />
+          <div className={styles.image}>
+            <StaticImage
+              width={24}
+              height={24}
+              className={styles.image}
+              src={"../../../images/carparkiconsBlack.png"}
+            />
+          </div>
           <p className={styles.keyText}>No Data</p>
         </div>
       </div>
