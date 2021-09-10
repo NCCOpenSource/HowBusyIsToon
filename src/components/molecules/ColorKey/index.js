@@ -16,7 +16,7 @@ export default function ColorKey() {
               src={"../../../images/carparkiconsred.png"}
             />
           </div>
-          <p className={styles.keyText}>Limited Spaces</p>
+          <p className={styles.keyText}>Limited Seats</p>
         </div>
         <div className={styles.keyItem}>
           <div className={styles.image}>
@@ -38,7 +38,7 @@ export default function ColorKey() {
               src={"../../../images/carparkicons.png"}
             />
           </div>
-          <p className={styles.keyText}>Many Spaces Available</p>
+          <p className={styles.keyText}>Many Seats Available</p>
         </div>
         <div className={styles.keyItem}>
           <div className={styles.image}>
