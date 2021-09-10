@@ -81,7 +81,7 @@ export default function Parking() {
           </div>
         </div>
         <div className={styles.ColorKey}>
-          <ColorKey />
+          <ColorKey ToggleCarPark />
         </div>
       </div>
       <div className={styles.SectionExample}>

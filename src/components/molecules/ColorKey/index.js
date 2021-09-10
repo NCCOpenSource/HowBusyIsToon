@@ -3,7 +3,7 @@ import React from "react";
 import Box from "../../atoms/Box";
 import styles from "./ColorKey.module.css";
 
-export default function ColorKey() {
+export default function ColorKey({ ToggleCarPark }) {
   return (
     <Box color="grey" fontColor="black">
       <div className={styles.key}>
@@ -16,7 +16,7 @@ export default function ColorKey() {
               src={"../../../images/carparkiconsred.png"}
             />
           </div>
-          <p className={styles.keyText}>Limited Spaces</p>
+          <p className={styles.keyText}>Limited spaces</p>
         </div>
         <div className={styles.keyItem}>
           <div className={styles.image}>
@@ -27,7 +27,7 @@ export default function ColorKey() {
               src={"../../../images/carparkiconsOrange.png"}
             />
           </div>
-          <p className={styles.keyText}>Moderately Busy</p>
+          <p className={styles.keyText}>Moderately busy</p>
         </div>
         <div className={styles.keyItem}>
           <div className={styles.image}>
@@ -38,7 +38,9 @@ export default function ColorKey() {
               src={"../../../images/carparkicons.png"}
             />
           </div>
-          <p className={styles.keyText}>Many Spaces Available</p>
+          <p className={styles.keyText}>
+            Many {ToggleCarPark ? "spaces" : "seats"} available
+          </p>
         </div>
         <div className={styles.keyItem}>
           <div className={styles.image}>
@@ -49,7 +51,9 @@ export default function ColorKey() {
               src={"../../../images/carparkiconsBlack.png"}
             />
           </div>
-          <p className={styles.keyText}>No Data</p>
+          <p className={styles.keyText}>
+            {ToggleCarPark ? "no real time data available" : "No data"}
+          </p>
         </div>
       </div>
     </Box>
