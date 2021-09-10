@@ -27,7 +27,7 @@ export default function ColorKey() {
               src={"../../../images/carparkiconsOrange.png"}
             />
           </div>
-          <p className={styles.keyText}>Moderatly Busy</p>
+          <p className={styles.keyText}>Moderately Busy</p>
         </div>
         <div className={styles.keyItem}>
           <div className={styles.image}>

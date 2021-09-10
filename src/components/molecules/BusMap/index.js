@@ -8,7 +8,7 @@ import {
   Marker,
   Popup,
   TileLayer,
-  ZoomControl
+  ZoomControl,
 } from "react-leaflet";
 import blackbus from "../../../images/blackbus.png";
 import greenbus from "../../../images/greenbus.png";
@@ -32,7 +32,9 @@ export default function BusMap() {
       )
         .then((response) => response.json())
         .then((response) => {
-          setData(response);
+          if (response.length > 1) {
+            setData(response);
+          }
         })
         .catch((error) => {
           console.log(error);
@@ -83,7 +85,6 @@ export default function BusMap() {
   }
 
   L.Map.addInitHook("addHandler", "gestureHandling", GestureHandling);
-
 
   return (
     <>
@@ -144,23 +145,28 @@ export default function BusMap() {
                       ]}
                     >
                       <Popup className={styles.Popup}>
-                        <h1>
-                          Bus :
+                        <h3>
+                          Bus :{" "}
                           {bus.VehicleActivity.MonitoredVehicleJourney.LineRef}
-                        </h1>
+                        </h3>
                         {seatsavailable ? (
-                          <h2>{seatsavailable} seats available</h2>
+                          <p>
+                            {seatsavailable} seat
+                            {seatsavailable == 1 ? " " : "s "}
+                            available
+                          </p>
                         ) : (
-                          ""
+                          <p>No data on seat availability</p>
                         )}
 
                         {wheelChairSeatsAvailable ? (
-                          <h2>
-                            {wheelChairSeatsAvailable} wheelchair seats
+                          <p>
+                            {wheelChairSeatsAvailable} wheelchair space
+                            {wheelChairSeatsAvailable == 1 ? " " : "s "}
                             available
-                          </h2>
+                          </p>
                         ) : (
-                          ""
+                          <p>No data on space availability</p>
                         )}
                       </Popup>
                     </Marker>

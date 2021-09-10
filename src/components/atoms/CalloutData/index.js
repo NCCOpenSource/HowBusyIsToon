@@ -1,6 +1,8 @@
+import { StaticImage } from "gatsby-plugin-image";
 import React, { useEffect, useState } from "react";
 import styles from "./callout.module.css";
 import footfallData from "./footfallbusyData.json";
+import WalkingIcon from "../../../assets/icons/Walking.svg";
 
 export default function CalloutData() {
   const [data, setData] = useState(footfallData);
@@ -45,6 +47,7 @@ export default function CalloutData() {
   return (
     <div className={`${calloutClass} ${styles.calloutContainer} `}>
       <h1 className={styles.calloutText}>{header}</h1>
+      <WalkingIcon className={styles.image} />
     </div>
   );
 }

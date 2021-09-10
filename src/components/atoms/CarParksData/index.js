@@ -73,7 +73,7 @@ export default function CarParksData({ data, option }) {
                 position={getLatLon(carPark.name)}
               >
                 <Popup className={styles.popup}>
-                  <h1>{carPark.name}</h1>
+                  <h3>{carPark.name}</h3>
                   <p>{carPark.occupancy} spaces remaining</p>
                 </Popup>
               </Marker>
@@ -84,7 +84,7 @@ export default function CarParksData({ data, option }) {
                 position={carPark.location}
               >
                 <Popup className={styles.popup}>
-                  <h1>{carPark.name}</h1>
+                  <h3>{carPark.name}</h3>
                   <p>There are {carPark.capacity} potential spaces available</p>
                 </Popup>
               </Marker>
