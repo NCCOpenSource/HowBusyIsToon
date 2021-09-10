@@ -26,8 +26,7 @@
   text-align: center;
   font-size: 31px;
 }
-.tellUsMore p {
-  position: absolute;
+.tellUsMore button {
   position: fixed;
   bottom: 140px;
   right: 35px;
@@ -35,4 +34,37 @@
   padding: 15px;
   margin: 0;
   cursor: pointer;
+
+  border: none;
+  padding: 1rem 2rem;
+  margin: 0;
+  text-decoration: none;
+  background: none;
+  cursor: pointer;
+  text-align: center;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  font-size: 31px;
+}
+
+@media only screen and (max-width: 830px) {
+  .tellUsMore {
+    height: 15vw;
+    width: 35vw;
+  }
+  .tellUsMore a {
+    position: absolute;
+    left: 0;
+    right: 0;
+    /* top: 3.5vw; */
+    top: 0;
+    bottom: 0;
+    width: 35vw;
+    height: 15vw;
+    line-height: 15vw;
+    font-size: 3.5vw;
+  }
+  .tellUsMore button {
+    display: none;
+  }
 }

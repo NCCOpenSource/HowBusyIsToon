@@ -4,9 +4,10 @@
   gap: var(--grid-gap);
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-areas:
+    "RoadsLookingBusy RoadsLookingBusy RoadsLookingBusy"
     "selectbox  RoadsCameraFeed RoadsCameraFeed"
-    "RoadsLookingBusy RoadsCameraFeed RoadsCameraFeed"
-    "48px WalkingOrCycling CycleParking";
+    "WalkingOrCycling RoadsCameraFeed RoadsCameraFeed"
+    "CycleParking RoadsCameraFeed RoadsCameraFeed";
 }
 .RoadsCameraFeed {
   grid-area: RoadsCameraFeed;
