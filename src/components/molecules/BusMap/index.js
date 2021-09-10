@@ -156,7 +156,7 @@ export default function BusMap() {
                             available
                           </p>
                         ) : (
-                          ""
+                          <p>No data on seat availability</p>
                         )}
 
                         {wheelChairSeatsAvailable ? (
@@ -166,7 +166,7 @@ export default function BusMap() {
                             available
                           </p>
                         ) : (
-                          ""
+                          <p>No data on space availability</p>
                         )}
                       </Popup>
                     </Marker>
