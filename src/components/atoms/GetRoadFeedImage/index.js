@@ -80,20 +80,16 @@ export default function GetRoadFeedImage({ option }) {
   return (
     <>
       {imageList !== null && imageList[option] !== null && apiFinished ? (
-        <div
-          style={{
-            backgroundImage: imageList[option]
-              ? `url(${imageList[option]})`
-              : `url(${loader})`,
-          }}
+        <img
+          src={imageList[option] ? imageList[option] : loader}
           role="img"
           aria-label={
             "Images from street cameras Showing Roads and the traffic on them"
           }
           alt="Images from street cameras Showing Roads and the traffic on them"
           className={styles.image}
-          width="1280"
-          height="720"
+          width="950"
+          height="550"
         />
       ) : (
         <div className={styles.imagePlaceholder} />

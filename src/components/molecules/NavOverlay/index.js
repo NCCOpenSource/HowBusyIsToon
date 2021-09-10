@@ -8,7 +8,7 @@ import {
 export default function NavOverlay({ children }) {
   return (
     <div className={stylesOverlay.overlay}>
-      <ul className={stylesOverlay.overlayList}>
+      <div className={stylesOverlay.overlayList}>
         <Link
           to="/"
           activeClassName={styles.activesubnavLinkItemText}
@@ -68,7 +68,7 @@ export default function NavOverlay({ children }) {
         >
           About
         </Link>
-      </ul>
+      </div>
     </div>
   );
 }

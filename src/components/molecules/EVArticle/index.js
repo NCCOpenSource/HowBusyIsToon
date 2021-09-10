@@ -30,7 +30,7 @@ export default function EVArticle() {
   return (
     <div className={styles.container}>
       <Box>
-        <p className={styles.topFont}>EV Charging Stations</p>
+        <h2 className={styles.topFont}>EV charging stations</h2>
       </Box>
       <ArticleExample
         Content={data.allContentfulEvChargingStations.edges[0].node.content}

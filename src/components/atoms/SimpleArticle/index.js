@@ -5,9 +5,9 @@ import styles from "./SimpleArticle.module.css";
 
 export default function SimpleArticle({ TopText, BottomText }) {
   return (
-    <div className={styles.container}>
+    <div className={styles.container} role="main" aria-labelledby={TopText}>
       <Box fullBorderRadius="top">
-        <p className={styles.topFont}>{TopText}</p>
+        <h2 className={styles.topFont}>{TopText}</h2>
         <Arrow className={styles.arrow} />
       </Box>
       <Box color="grey" fontColor="black" fullBorderRadius="bottom">

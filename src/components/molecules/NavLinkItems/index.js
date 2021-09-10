@@ -25,14 +25,14 @@ export default function NavLinkItems() {
             activeClassName={styles.activesubnavLinkItemText}
             className={styles.subnavLinkItemText}
           >
-            City Centre
+            City centre
           </Link>
           <Link
             to="/shopsandrestaurants/"
             activeClassName={styles.activesubnavLinkItemText}
             className={styles.subnavLinkItemText}
           >
-            Shopping And Restaurants
+            Shopping and restaurants
           </Link>
         </li>
       </li>
@@ -64,7 +64,7 @@ export default function NavLinkItems() {
             activeClassName={styles.activesubnavLinkItemText}
             className={styles.subnavLinkItemText}
           >
-            EV Charging Stations
+            EV charging stations
           </Link>
         </li>
       </li>

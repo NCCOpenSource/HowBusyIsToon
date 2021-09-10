@@ -21,7 +21,7 @@ export default function FloatingFeedback() {
           >
             Tell Us More...
           </a>
-          <p onClick={showFloat}>x</p>
+          <button onClick={showFloat}>x</button>
         </div>
       ) : null}
     </>

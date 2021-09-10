@@ -10,37 +10,37 @@ export default function Footer() {
         <div className={styles.top}>
           <div className={styles.logoList}>
             <StaticImage
-              alt=""
+              alt="Urban Observatory Logo"
               src="../../../images/logo.png"
               height={50}
               className={styles.logoItem}
             ></StaticImage>
             <StaticImage
-              alt=""
+              alt="National Innovation Center Data Logo"
               src="../../../images/logo2.png"
               height={50}
               className={styles.logoItem}
             ></StaticImage>
             <StaticImage
-              alt=""
+              alt="Newcastle University Logo"
               src="../../../images/logo3.png"
               height={50}
               className={styles.logoItem}
             ></StaticImage>
             <StaticImage
-              alt=""
+              alt="Newcastle City Council Logo"
               src="../../../images/logo4.png"
               height={50}
               className={styles.logoItem}
             ></StaticImage>
             <StaticImage
-              alt=""
+              alt="Newcastle Business Improvement District logo"
               src="../../../images/logo5.png"
               height={50}
               className={styles.logoItem}
             ></StaticImage>
             <StaticImage
-              alt=""
+              alt="Hedgehog Labs Logo"
               src="../../../images/logo1.png"
               height={50}
               className={styles.logoItem}
