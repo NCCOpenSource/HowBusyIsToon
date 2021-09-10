@@ -16,7 +16,7 @@ export default function Nav(props) {
   };
 
   return (
-    <div>
+    <nav>
       <Box fullBorderRadius="full">
         <Link to="/" className={styles.titlecontainer}>
           <h1 className={styles.title}>How Busy Is Toon</h1>
@@ -42,6 +42,6 @@ export default function Nav(props) {
           {show ? <NavOverlay /> : null}
         </nav>
       </Box>
-    </div>
+    </nav>
   );
 }

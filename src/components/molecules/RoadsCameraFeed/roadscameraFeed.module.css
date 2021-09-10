@@ -76,3 +76,8 @@
   border-radius: var(--border-radius);
   font-size: 999px;
 }
+
+.selector:focus{
+  background-color: #eee;
+}
+

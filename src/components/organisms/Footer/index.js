@@ -5,7 +5,7 @@ import styles from "./footer.module.css";
 
 export default function Footer() {
   return (
-    <div className={styles.Footer}>
+    <footer className={styles.Footer}>
       <div>
         <div className={styles.top}>
           <div className={styles.logoList}>
@@ -49,6 +49,6 @@ export default function Footer() {
         </div>
       </div>
       <FloatingFeedback />
-    </div>
+    </footer>
   );
 }

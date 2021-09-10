@@ -47,6 +47,11 @@
   background: var(--color-light-grey);
   border-radius: var(--border-radius);
 }
+
+.selector:focus{
+  background-color: #eee;
+}
+
 .option {
   padding: 18px;
 }

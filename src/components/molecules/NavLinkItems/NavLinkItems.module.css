@@ -52,6 +52,6 @@
 .subnavLinkItems .subnavLinkItemText:hover {
   background-color: #ddd;
 }
-.navLinkItems:hover .subnavLinkItems {
+.navLinkItems:hover .subnavLinkItems, .navLinkItems:focus .subnavLinkItems, .navLinkItems:focus-within .subnavLinkItems  {
   display: block;
 }
