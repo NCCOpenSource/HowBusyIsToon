@@ -13,7 +13,7 @@ export default function CameraFeed() {
       <div className={styles.infoContainer}>
         <TimeIcon />
         <p className={styles.info}>
-          Images from webcams update approximately every 5 minutes
+          Feed updated approximately every 5 minutes
         </p>
       </div>
       <div className={styles.select}>

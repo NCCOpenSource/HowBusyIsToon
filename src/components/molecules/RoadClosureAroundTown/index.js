@@ -21,7 +21,7 @@ export default function RoadClosureAroundTown() {
       >
         <StaticImage
           alt=""
-          className={styles.image}
+          className={articleExampleImage, styles.image}
           src={"../../../images/bus-Example.jpg"}
         />
       </ArticleExample>

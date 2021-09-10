@@ -3,9 +3,7 @@
 .top {
   background: rgba(0, 0, 0, 0.05);
   border-radius: var(--border-radius);
-
-  display: flex;
-  padding: 10px 24px 10px 24px;
+  padding: 24px;
 }
 
 .logoContainer {
@@ -15,14 +13,14 @@
 
 .logoList {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   width: 100%;
   flex-flow: wrap;
+  justify-content: space-between;
 }
 
 .logoItem {
-  margin: 10px;
+  max-width: 150px; 
 }
 
 .bottom {
