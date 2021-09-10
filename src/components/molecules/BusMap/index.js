@@ -1,4 +1,5 @@
 import L from "leaflet";
+import { GestureHandling } from "leaflet-gesture-handling";
 import "leaflet/dist/leaflet";
 import "leaflet/dist/leaflet.css";
 import React, { useEffect, useState } from "react";
@@ -7,12 +8,14 @@ import {
   Marker,
   Popup,
   TileLayer,
-  ZoomControl,
+  ZoomControl
 } from "react-leaflet";
 import blackbus from "../../../images/blackbus.png";
 import greenbus from "../../../images/greenbus.png";
 import orangebus from "../../../images/orangebus.png";
 import redbus from "../../../images/redbus.png";
+import { isWindowDefined } from "../../../utility/undefinedWindow";
+import { mapOptions } from "../../../utility/variables";
 import "./busMap.css";
 import styles from "./BusMap.module.css";
 
@@ -43,7 +46,7 @@ export default function BusMap() {
   }, []);
 
   function createMarkerIcon(bus, seatsavailable) {
-    if (typeof window !== "undefined") {
+    if (isWindowDefined) {
       let buscolor = blackbus;
       if (seatsavailable < 5) {
         buscolor = redbus;
@@ -79,6 +82,9 @@ export default function BusMap() {
     setInput(event.target.value);
   }
 
+  L.Map.addInitHook("addHandler", "gestureHandling", GestureHandling);
+
+
   return (
     <>
       <input
@@ -89,12 +95,13 @@ export default function BusMap() {
         name="s"
         onChange={onChange}
       />
-      {typeof window !== "undefined" ? (
+      {isWindowDefined ? (
         <MapContainer
           center={[54.97206769445005, -1.6132124536205563]}
           zoom={14}
           className={styles.leafletcontainer}
           zoomControl={false}
+          {...mapOptions}
         >
           <TileLayer
             maxZoom={19}

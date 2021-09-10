@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styles from "./GetRoadFeedImage.module.css";
+import loader from "../../../images/loading.gif";
 
 export default function GetRoadFeedImage({ option }) {
   const [imageList, setImageList] = useState(null);
@@ -9,11 +10,12 @@ export default function GetRoadFeedImage({ option }) {
     async function fetchFeedImages() {
       const imageArray = [];
       fetch(
-        `https://api.newcastle.urbanobservatory.ac.uk/api/v2/sensors/timeseries/aeafb185-4463-4ac0-b048-7579d604d792`
+        `https://api.newcastle.urbanobservatory.ac.uk/api/v2/sensors/timeseries/camera-mounted-at-newcastle-a1058-stephenson-road-heaton-road-newton-road-corner-house/camera-image-view-01/raw`
       )
         .then((response) => response.json())
         .then((response) => {
           imageArray[0] = response.latest.value;
+
           setImageList(imageArray);
           setApiFinished(true);
         })
@@ -22,19 +24,21 @@ export default function GetRoadFeedImage({ option }) {
         });
 
       fetch(
-        "https://api.newcastle.urbanobservatory.ac.uk/api/v2/sensors/timeseries/b2363f18-0696-4381-8461-a351ef51bbb1"
+        `https://api.newcastle.urbanobservatory.ac.uk/api/v2/sensors/timeseries/camera-mounted-at-newcastle-a1058-stephenson-road-heaton-road-newton-road-corner-house/camera-image/raw`
       )
         .then((response) => response.json())
         .then((response) => {
           imageArray[1] = response.latest.value;
+
           setImageList(imageArray);
+          setApiFinished(true);
         })
         .catch((error) => {
           console.log(error);
         });
 
       fetch(
-        `https://api.newcastle.urbanobservatory.ac.uk/api/v2/sensors/timeseries/d93ca40c-183a-433a-9834-959943477bc4`
+        "https://api.newcastle.urbanobservatory.ac.uk/api/v2/sensors/timeseries/camera-mounted-at-newcastle-a167-ponteland-road-stamfordham-road-b1305-two-ball-lonnen/camera-image-view-03/raw"
       )
         .then((response) => response.json())
         .then((response) => {
@@ -46,11 +50,23 @@ export default function GetRoadFeedImage({ option }) {
         });
 
       fetch(
-        "https://api.newcastle.urbanobservatory.ac.uk/api/v2/sensors/timeseries/5baa2ac0-b2d7-4273-8007-09e253f7a8b9"
+        "https://api.newcastle.urbanobservatory.ac.uk/api/v2/sensors/entity/camera-mounted-at-newcastle-a186-pilgrim-street-mosley-street"
       )
         .then((response) => response.json())
         .then((response) => {
-          imageArray[3] = response.latest.value;
+          imageArray[3] = response.feed[3].timeseries[0].latest.value;
+          setImageList(imageArray);
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+
+      fetch(
+        "https://api.newcastle.urbanobservatory.ac.uk/api/v2/sensors/timeseries/camera-mounted-at-newcastle-b1318-high-street-a191-church-road-salters-road/camera-image-view-03/raw"
+      )
+        .then((response) => response.json())
+        .then((response) => {
+          imageArray[4] = response.latest.value;
           setImageList(imageArray);
         })
         .catch((error) => {
@@ -66,7 +82,9 @@ export default function GetRoadFeedImage({ option }) {
       {imageList !== null && imageList[option] !== null && apiFinished ? (
         <div
           style={{
-            backgroundImage: `url(${imageList[option]})`,
+            backgroundImage: imageList[option]
+              ? `url(${imageList[option]})`
+              : `url(${loader})`,
           }}
           role="img"
           aria-label={

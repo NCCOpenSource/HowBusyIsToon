@@ -17,14 +17,14 @@ export default function NavLinkItems() {
             : `${styles.navLinkItems}`
         }
       >
-        <p className={styles.navLinkItemText}>City Center</p>
+        <p className={styles.navLinkItemText}>City Centre</p>
         <div className={styles.subnavLinkItems}>
           <Link
             to="/"
             activeClassName={styles.activesubnavLinkItemText}
             className={styles.subnavLinkItemText}
           >
-            City Center
+            City Centre
           </Link>
           <Link
             to="/shopsandrestaurants/"

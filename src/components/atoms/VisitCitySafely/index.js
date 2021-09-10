@@ -5,7 +5,7 @@ export default function VisitCitySafetly() {
   return (
     <div className={styles.container}>
       <p className={styles.title}>
-        How to Visit the City Center in a Safe Manner
+        How to Visit the City Centre in a Safe Manner
       </p>
       <p className={styles.text}>
       Google Maps provides information on your favourite shops and restaurants.

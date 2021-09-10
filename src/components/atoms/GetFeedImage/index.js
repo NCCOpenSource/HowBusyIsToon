@@ -1,19 +1,24 @@
 import React, { useEffect, useState } from "react";
 import styles from "./GetFeedImage.module.css";
+import loader from "../../../images/loading.gif";
 
 export default function GetFeedImage({ option }) {
   const [imageList, setImageList] = useState(null);
   const [apiFinished, setApiFinished] = useState(false);
+  const imageArray = [];
 
   useEffect(() => {
+    fetchFeedImages();
+
     function fetchFeedImages() {
-      const imageArray = [];
       fetch(
         `https://api.newcastle.urbanobservatory.ac.uk/api/v2/sensors/timeseries/685e0b8e-9c97-41df-94db-c039205814d1`
       )
         .then((response) => response.json())
         .then((response) => {
           imageArray[0] = response.latest.value;
+
+          setApiFinished(false);
           setImageList(imageArray);
           setApiFinished(true);
         })
@@ -27,7 +32,6 @@ export default function GetFeedImage({ option }) {
         .then((response) => response.json())
         .then((response) => {
           imageArray[1] = response.feed[3].timeseries[0].latest.value;
-          setImageList(imageArray);
         })
         .catch((error) => {
           console.log(error);
@@ -39,7 +43,6 @@ export default function GetFeedImage({ option }) {
         .then((response) => response.json())
         .then((response) => {
           imageArray[2] = response.latest.value;
-          setImageList(imageArray);
         })
         .catch((error) => {
           console.log(error);
@@ -51,7 +54,6 @@ export default function GetFeedImage({ option }) {
         .then((response) => response.json())
         .then((response) => {
           imageArray[3] = response.timeseries[0].latest.value;
-          setImageList(imageArray);
         })
         .catch((error) => {
           console.log(error);
@@ -63,7 +65,6 @@ export default function GetFeedImage({ option }) {
         .then((response) => response.json())
         .then((response) => {
           imageArray[4] = response.latest.value;
-          setImageList(imageArray);
         })
         .catch((error) => {
           console.log(error);
@@ -75,14 +76,21 @@ export default function GetFeedImage({ option }) {
         .then((response) => response.json())
         .then((response) => {
           imageArray[5] = response.latest.value;
-          setImageList(imageArray);
         })
         .catch((error) => {
           console.log(error);
         });
+
+      setApiFinished(false);
+      setImageList(imageArray);
+      setApiFinished(true);
     }
 
-    fetchFeedImages();
+    const interval = setInterval(() => {
+      fetchFeedImages();
+    }, 3000);
+
+    return () => clearInterval(interval);
   }, []);
 
   return (
@@ -90,11 +98,13 @@ export default function GetFeedImage({ option }) {
       {imageList !== null && imageList[option] !== null && apiFinished ? (
         <div
           style={{
-            backgroundImage: `url(${imageList[option]})`,
+            backgroundImage: imageList[option]
+              ? `url(${imageList[option]})`
+              : `url(${loader})`,
           }}
           role="img"
-          aria-label={"Images from street cameras of City Center"}
-          alt="Images from street cameras of City Center"
+          aria-label={"Images from street cameras of City Centre"}
+          alt="Images from street cameras of City Centre"
           className={styles.image}
           width="1280"
           height="720"

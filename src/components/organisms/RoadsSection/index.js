@@ -21,16 +21,19 @@ export default function RoadsSection() {
             onBlur={handleChange}
           >
             <option className={styles.option} value="0">
-              Stephenson Road
+              Coast Road (Corner House 1)
             </option>
             <option className={styles.option} value="1">
-              Stamfordham Road
+              Coast Road (Corner House 2)
             </option>
             <option className={styles.option} value="2">
-              A186 Pilgrim Street / Mosley Street
+              Cowgate junction
             </option>
             <option className={styles.option} value="3">
-              B1318 High Street / A191 Church Road & Salters' Road
+              Mosley St (Tyne Bridge)
+            </option>
+            <option className={styles.option} value="4">
+              Gosforth High St
             </option>
           </select>
         </div>
