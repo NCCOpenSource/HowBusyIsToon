@@ -16,7 +16,7 @@ export default function GetFeedImage({ option }) {
       )
         .then((response) => response.json())
         .then((response) => {
-          imageArray[0] = response.latest.value;
+          imageArray[2] = response.latest.value;
 
           setApiFinished(false);
           setImageList(imageArray);
@@ -42,7 +42,7 @@ export default function GetFeedImage({ option }) {
       )
         .then((response) => response.json())
         .then((response) => {
-          imageArray[2] = response.latest.value;
+          imageArray[0] = response.latest.value;
         })
         .catch((error) => {
           console.log(error);
@@ -96,12 +96,8 @@ export default function GetFeedImage({ option }) {
   return (
     <>
       {imageList !== null && imageList[option] !== null && apiFinished ? (
-        <div
-          style={{
-            backgroundImage: imageList[option]
-              ? `url(${imageList[option]})`
-              : `url(${loader})`,
-          }}
+        <img
+          src={imageList[option] ? imageList[option] : loader}
           role="img"
           aria-label={"Images from street cameras of City Centre"}
           alt="Images from street cameras of City Centre"

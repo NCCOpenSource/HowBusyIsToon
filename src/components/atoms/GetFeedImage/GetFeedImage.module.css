@@ -1,11 +1,18 @@
 .image {
+  /* border-radius: var(--border-radius);
+  background-size: contain;
+  background-position: top;
+  background-repeat: no-repeat;
+  height: 630px; */
+
+
   border-radius: var(--border-radius);
   max-width: 100%;
   height: auto;
-  height: 720px;
-  object-fit: contain;
+  /* height: 720px; */
+  /* object-fit: contain;
   background-size: cover;
-  background-position: center;
+  background-position: center; */
 }
 .imagePlaceholder {
   width: 1280px;
