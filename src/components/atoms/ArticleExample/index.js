@@ -7,6 +7,7 @@ export default function ArticleExample({
   Content,
   LinkTitle,
   Linkurl,
+  inline,
 }) {
   return (
     <div
@@ -17,7 +18,7 @@ export default function ArticleExample({
       {children}
       {Title ? <h3>{Title}</h3> : ""}
       <p>{Content}</p>
-      <a target="_blank" rel="noreferrer" href={Linkurl}>
+      <a target={inline ? "" : "_blank"} rel="noreferrer" href={Linkurl}>
         {LinkTitle}
       </a>
     </div>
