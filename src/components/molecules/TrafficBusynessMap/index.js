@@ -3,11 +3,12 @@ import { GestureHandling } from "leaflet-gesture-handling";
 import "leaflet/dist/leaflet.css";
 import React from "react";
 import { MapContainer, TileLayer } from "react-leaflet";
+import { isWindowDefined } from "../../../utility/undefinedWindow";
 import styles from "./TrafficBusynessMap.module.css";
 
 export default function TrafficBusynessMap() {
   L.Map.addInitHook("addHandler", "gestureHandling", GestureHandling);
-  if (typeof window !== "undefined") {
+  if (isWindowDefined) {
     var mapOptions = {
       // attributionControl: false,
       gestureHandling: true,

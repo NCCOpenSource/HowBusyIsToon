@@ -2,13 +2,14 @@ import L from "leaflet";
 import { GestureHandling } from "leaflet-gesture-handling";
 import React from "react";
 import { MapContainer, TileLayer } from "react-leaflet";
+import { isWindowDefined } from "../../../utility/undefinedWindow";
 import EVData from "../../atoms/EVData";
 import "./index.module.css";
 import styles from "./index.module.css";
 
 export default function EvMap() {
   L.Map.addInitHook("addHandler", "gestureHandling", GestureHandling);
-  if (typeof window !== "undefined") {
+  if (isWindowDefined) {
     var mapOptions = {
       // attributionControl: false,
       gestureHandling: true,
