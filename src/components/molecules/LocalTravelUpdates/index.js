@@ -7,7 +7,7 @@ export default function LocalTravelUpdates() {
   return (
     <div className={styles.container}>
       <Box>
-        <p className={styles.topFont}>Local Travel Updates</p>
+        <h2 className={styles.topFont}>Local travel updates</h2>
       </Box>
       <TwitterFeed profile={"My_Metro"} />
     </div>

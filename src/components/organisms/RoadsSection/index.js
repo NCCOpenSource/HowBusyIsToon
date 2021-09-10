@@ -57,7 +57,7 @@ export default function RoadsSection() {
       >
         <SimpleArticle
           TopText="Walking or Cycling?"
-          BottomText="User Google Maps to help you decide on which route you’d like to take"
+          BottomText="Use Google Maps to help you decide on which route you’d like to take"
         />
       </a>
       <a
@@ -68,7 +68,7 @@ export default function RoadsSection() {
       >
         <SimpleArticle
           TopText="Cycle Parking?"
-          BottomText=" Nexus Cycle lockers are located around the City Centre. Find out where
+          BottomText=" Nexus cycle lockers are located around the City Centre. Find out where
       they are located here"
         />
       </a>

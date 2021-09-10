@@ -57,9 +57,9 @@ export default function CouncilLinks() {
     <div className={styles.CouncilLinks}>
       <div className={styles.topContainer}>
         <Box fontColor="white" fullBorderRadius="full" color="black">
-          <p className={styles.heading}>
-            How Newcastle City Council is Protecting You
-          </p>
+          <h2 className={styles.heading}>
+            How newcastle city council is protecting you
+          </h2>
         </Box>
       </div>
       {GovLinks.map(({ id, LinkTitle, LinkContent, LinkUrl }) => (

@@ -7,7 +7,7 @@ export default function LocalRoadUpdates() {
   return (
     <div className={styles.container}>
       <Box>
-        <p className={styles.topFont}>Local Road Updates</p>
+        <h2 className={styles.topFont}>Local road updates</h2>
       </Box>
       <TwitterFeed profile={"NELiveTraffic"} />
     </div>

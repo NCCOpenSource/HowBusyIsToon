@@ -17,21 +17,21 @@ export default function NavLinkItems() {
             : `${styles.navLinkItems}`
         }
       >
-        <p className={styles.navLinkItemText}>City Centre</p>
+        <p className={styles.navLinkItemText}>City centre</p>
         <div className={styles.subnavLinkItems}>
           <Link
             to="/"
             activeClassName={styles.activesubnavLinkItemText}
             className={styles.subnavLinkItemText}
           >
-            City Centre
+            City centre
           </Link>
           <Link
             to="/shopsandrestaurants/"
             activeClassName={styles.activesubnavLinkItemText}
             className={styles.subnavLinkItemText}
           >
-            Shopping And Restaurants
+            Shopping and restaurants
           </Link>
         </div>
       </div>
@@ -63,7 +63,7 @@ export default function NavLinkItems() {
             activeClassName={styles.activesubnavLinkItemText}
             className={styles.subnavLinkItemText}
           >
-            EV Charging Stations
+            EV charging stations
           </Link>
         </div>
       </div>
@@ -98,7 +98,7 @@ export default function NavLinkItems() {
         activeClassName={styles.navLinkItemsGrey}
         to="/transport/"
       >
-        <p className={styles.navLinkItemText}>Public Transport</p>
+        <p className={styles.navLinkItemText}>Public transport</p>
       </Link>
       <Link
         className={styles.navLinkItems}
