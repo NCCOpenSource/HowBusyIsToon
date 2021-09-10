@@ -8,13 +8,14 @@ import {
   Marker,
   Popup,
   TileLayer,
-  ZoomControl,
+  ZoomControl
 } from "react-leaflet";
 import blackbus from "../../../images/blackbus.png";
 import greenbus from "../../../images/greenbus.png";
 import orangebus from "../../../images/orangebus.png";
 import redbus from "../../../images/redbus.png";
 import { isWindowDefined } from "../../../utility/undefinedWindow";
+import { mapOptions } from "../../../utility/variables";
 import "./busMap.css";
 import styles from "./BusMap.module.css";
 
@@ -83,11 +84,7 @@ export default function BusMap() {
 
   L.Map.addInitHook("addHandler", "gestureHandling", GestureHandling);
 
-  if (isWindowDefined) {
-    var mapOptions = {
-      gestureHandling: true,
-    };
-  }
+
   return (
     <>
       <input

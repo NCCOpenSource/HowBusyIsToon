@@ -3,16 +3,12 @@ import { GestureHandling } from "leaflet-gesture-handling";
 import "leaflet/dist/leaflet.css";
 import React from "react";
 import { MapContainer, TileLayer } from "react-leaflet";
-import { isWindowDefined } from "../../../utility/undefinedWindow";
+import { mapOptions } from "../../../utility/variables";
 import styles from "./TrafficBusynessMap.module.css";
 
 export default function TrafficBusynessMap() {
   L.Map.addInitHook("addHandler", "gestureHandling", GestureHandling);
-  if (isWindowDefined) {
-    var mapOptions = {
-      gestureHandling: true,
-    };
-  }
+
   return (
     <MapContainer
       center={[54.97206769445005, -1.6132124536205563]}

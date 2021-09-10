@@ -2,17 +2,13 @@ import L from "leaflet";
 import { GestureHandling } from "leaflet-gesture-handling";
 import React from "react";
 import { MapContainer, TileLayer } from "react-leaflet";
-import { isWindowDefined } from "../../../utility/undefinedWindow";
+import { mapOptions } from "../../../utility/variables";
 import CarParksData from "../../atoms/CarParksData";
 import styles from "./index.module.css";
 
 export default function CarParkMap({ data, option }) {
   L.Map.addInitHook("addHandler", "gestureHandling", GestureHandling);
-  if (isWindowDefined) {
-    var mapOptions = {
-      gestureHandling: true,
-    };
-  }
+
   return (
     <MapContainer
       preferCanvas={false}
