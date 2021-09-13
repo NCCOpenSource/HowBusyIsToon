@@ -7,7 +7,7 @@ import CarParksData from "../../atoms/CarParksData";
 import styles from "./index.module.css";
 
 export default function CarParkMap({ data, option }) {
-  L.Map.addInitHook("addHandler", "gestureHandling", GestureHandling);
+  // L.Map.addInitHook("addHandler", "gestureHandling", GestureHandling);
 
   return (
     <MapContainer
