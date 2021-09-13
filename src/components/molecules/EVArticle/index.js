@@ -35,7 +35,8 @@ export default function EVArticle() {
       <ArticleExample
         Content={data.allContentfulEvChargingStations.edges[0].node.content}
         LinkTitle={data.allContentfulEvChargingStations.edges[0].node.hyperLink}
-        Linkurl={data.allContentfulEvChargingStations.edges[0].node.url}
+        Linkurl={"/evcharging/"}
+        inline
       >
         <div
           style={{
