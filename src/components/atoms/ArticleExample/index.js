@@ -13,7 +13,6 @@ export default function ArticleExample({
     <div
       className={styles.articleExampleContainer}
       role="main"
-      aria-labelledby={Title}
     >
       {children}
       {Title ? <h3>{Title}</h3> : ""}
