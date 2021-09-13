@@ -7,7 +7,7 @@ import { mapOptions } from "../../../utility/variables";
 import styles from "./TrafficBusynessMap.module.css";
 
 export default function TrafficBusynessMap() {
-  L.Map.addInitHook("addHandler", "gestureHandling", GestureHandling);
+  // L.Map.addInitHook("addHandler", "gestureHandling", GestureHandling);
 
   return (
     <MapContainer
