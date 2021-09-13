@@ -13,7 +13,7 @@ export default function CameraFeed() {
       <div className={styles.infoContainer}>
         <TimeIcon />
         <p className={styles.info}>
-          Images from webcams update approximately every 5 minutes
+          Feed updated approximately every 5 minutes
         </p>
       </div>
       <div className={styles.select}>
@@ -27,18 +27,18 @@ export default function CameraFeed() {
             {" "}
             <option
               className={styles.option}
+              value="1"
+              label="Collingwood Street"
+            >
+              Collingwood Street
+            </option>
+            <option
+              className={styles.option}
               value="0"
               label="Northumberland Street"
             >
               Northumberland Street
             </option>
-            <option
-              className={styles.option}
-              value="1"
-              label="Collingwood Street"
-            >
-              Collingwood Street
-            </option>{" "}
             <option className={styles.option} value="2" label="Grey Street">
               Grey Street
             </option>

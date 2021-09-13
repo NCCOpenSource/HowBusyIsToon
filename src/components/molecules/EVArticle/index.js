@@ -42,16 +42,16 @@ export default function EVArticle() {
             backgroundImage: `url(${data.allContentfulEvChargingStations.edges[0].node.image.file.url})`,
           }}
           role="img"
-          aria-label={
-            data.allContentfulEvChargingStations.edges[0].node.image.description
-          }
+          // aria-label={
+          //   data.allContentfulEvChargingStations.edges[0].node.image.description
+          // }
           className={styles.image}
           src={
             data.allContentfulEvChargingStations.edges[0].node.image.file.url
           }
-          alt={
-            data.allContentfulEvChargingStations.edges[0].node.image.description
-          }
+          // alt={
+          //   data.allContentfulEvChargingStations.edges[0].node.image.description
+          // }
         />
       </ArticleExample>
     </div>

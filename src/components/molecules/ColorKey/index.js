@@ -16,7 +16,9 @@ export default function ColorKey({ ToggleCarPark }) {
               src={"../../../images/carparkiconsred.png"}
             />
           </div>
-          <p className={styles.keyText}>Limited spaces</p>
+          <p className={styles.keyText}>
+            Limited {ToggleCarPark ? "spaces" : "seats"}{" "}
+          </p>
         </div>
         <div className={styles.keyItem}>
           <div className={styles.image}>

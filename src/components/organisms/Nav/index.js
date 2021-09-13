@@ -18,16 +18,16 @@ export default function Nav(props) {
  
 
   return (
-    <div role="banner">
+    <header>
       <Box fullBorderRadius="full">
         <Link to="/" className={styles.titlecontainer}>
           <h1 className={styles.title}>How Busy Is Toon</h1>
           <h2 className={styles.Tagline}>Your home for real time data</h2>
         </Link>
         <nav className={styles.nav}>
-          <div className={styles.NavLinkList}>
+          <ul className={styles.NavLinkList}>
             <NavLinkItems />
-          </div>
+          </ul>
         </nav>
         <nav className={styles.mobileNav}>
           {show ? (
@@ -44,6 +44,6 @@ export default function Nav(props) {
           {show ? <NavOverlay /> : null}
         </nav>
       </Box>
-    </div>
+    </header>
   );
 }
