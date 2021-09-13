@@ -2,7 +2,17 @@
 .container {
   padding: 0;
   margin: 0;
+  text-decoration: none;
 }
+
+.container .arrow{
+  transition: .5s;
+}
+
+.container:hover .arrow{
+  transform: translateX(.5rem);
+}
+
 .top {
   font-size: 31px;
   font-style: normal;
@@ -14,6 +24,7 @@
 .arrow {
   margin-left: auto;
 }
+
 .topFont {
   font-size: 31px;
   font-style: normal;
@@ -24,11 +35,8 @@
 }
 
 .bottomFont {
-  font-size: 25px;
   font-style: normal;
   font-weight: 400;
-  line-height: 38px;
-
   letter-spacing: 0em;
   text-align: left;
   margin: 0;

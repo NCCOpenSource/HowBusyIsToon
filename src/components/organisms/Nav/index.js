@@ -15,12 +15,14 @@ export default function Nav(props) {
     setShow(!show);
   };
 
+ 
+
   return (
-    <div>
+    <header>
       <Box fullBorderRadius="full">
         <Link to="/" className={styles.titlecontainer}>
           <h1 className={styles.title}>How Busy Is Toon</h1>
-          <p className={styles.Tagline}>Your home for real time data</p>
+          <h2 className={styles.Tagline}>Your home for real time data</h2>
         </Link>
         <nav className={styles.nav}>
           <ul className={styles.NavLinkList}>
@@ -31,7 +33,7 @@ export default function Nav(props) {
           {show ? (
             <CloseIcon
               onClick={showNavOverlay}
-              className={styles.exit_button}
+              className={styles.exitbutton}
             ></CloseIcon>
           ) : (
             <BurgerIcon
@@ -42,6 +44,6 @@ export default function Nav(props) {
           {show ? <NavOverlay /> : null}
         </nav>
       </Box>
-    </div>
+    </header>
   );
 }

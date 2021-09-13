@@ -31,7 +31,7 @@ export default function AboutSection({ Aboutdata }) {
     <div className={styles.container}>
       <div className={styles.topContainer}>
         <Box fontColor="white" fullBorderRadius="full" color="black">
-          <p className={styles.topFont}>About How Busy Is Toon</p>
+          <h2 className={styles.topFont}>About How Busy Is Toon</h2>
         </Box>
       </div>
       {aboutArticleSections.map(({ id, subHeading, contentText }) => (

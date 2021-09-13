@@ -24,6 +24,7 @@
     "gatsby-transformer-sharp": "^2.12.1",
     "gh-pages": "^3.2.3",
     "leaflet": "^1.7.1",
+    "leaflet-gesture-handling": "^1.2.1",
     "leaflet-marker-rotation": "^0.4.0",
     "leaflet-rotatedmarker": "^0.2.0",
     "lodash": "^4.17.21",

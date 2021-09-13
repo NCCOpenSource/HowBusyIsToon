@@ -12,11 +12,11 @@ export default function index() {
       <meta
         charSet="utf-8"
         name="Your home for real time data"
-        content="Various Traffic Data sets and real time footfall data associated with NewCastle City Center"
-      ></meta>
+        content="Various Traffic Data sets and real time footfall data associated with NewCastle City Centre"
+      ></meta>Centre
       <meta
         name="description"
-        content="Various Traffic Data sets and real time footfall data associated with NewCastle City Center"
+        content="Various Traffic Data sets and real time footfall data associated with NewCastle City Centre"
       ></meta>
       <meta
         name="keywords"
@@ -28,7 +28,7 @@ export default function index() {
       <meta property="og:title" content="How Busy Is Newcastle?" />
       <meta
         property="og:description"
-        content="Various Traffic Data sets and real time footfall data associated with NewCastle City Center"
+        content="Various Traffic Data sets and real time footfall data associated with NewCastle City Centre"
       />
       <meta property="og:image" content={metaScreenshot} />
       <meta property="twitter:card" content="summary_large_image" />
@@ -36,7 +36,7 @@ export default function index() {
       <meta property="twitter:title" content="How Busy Is Newcastle?" />
       <meta
         property="twitter:description"
-        content="Various Traffic Data sets and real time footfall data associated with NewCastle City Center"
+        content="Various Traffic Data sets and real time footfall data associated with NewCastle City Centre"
       />
       <meta property="twitter:image" content={metaScreenshot}></meta>
       <script

@@ -2,11 +2,11 @@
 .container {
   display: grid;
   gap: var(--grid-gap);
-  grid-template-columns: 1fr 1fr 1fr;
   grid-template-areas:
-    "selectbox  RoadsCameraFeed RoadsCameraFeed"
+    "RoadsLookingBusy selectbox selectbox"
     "RoadsLookingBusy RoadsCameraFeed RoadsCameraFeed"
-    "48px WalkingOrCycling CycleParking";
+    "RoadsLookingBusy RoadsCameraFeed RoadsCameraFeed"
+    "RoadsLookingBusy WalkingOrCycling CycleParking";
 }
 .RoadsCameraFeed {
   grid-area: RoadsCameraFeed;
@@ -78,7 +78,16 @@
   background: var(--color-light-grey);
   background: var(--color-light-grey);
   border-radius: var(--border-radius);
+  font-size: 20px;
+  line-height: 20px;
+  font-style: normal;
+  font-family: "Europa-Bold";
 }
+
+.selector:focus{
+  background-color: #eee;
+}
+
 
 @media only screen and (max-width: 1025px) {
   .container {

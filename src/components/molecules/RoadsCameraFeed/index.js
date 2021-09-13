@@ -16,16 +16,20 @@ export default function RoadsCameraFeed() {
             name="option"
             onChange={handleChange}
           >
-            <option className={styles.option} value="0">
+            <option className={styles.option} value="0" label="Stephenson Road">
               Stephenson Road
             </option>
-            <option className={styles.option} value="1">
+            <option
+              className={styles.option}
+              value="1"
+              label="Stamfordham Road"
+            >
               Stamfordham Road
             </option>
-            <option className={styles.option} value="2">
+            <option className={styles.option} value="2" label="Pilgrim Street">
               Pilgrim Street
             </option>
-            <option className={styles.option} value="3">
+            <option className={styles.option} value="3" label="High Road">
               High Street
             </option>
           </select>

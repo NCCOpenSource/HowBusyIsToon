@@ -1,4 +1,5 @@
 import L from "leaflet";
+import { GestureHandling } from "leaflet-gesture-handling";
 import "leaflet/dist/leaflet";
 import "leaflet/dist/leaflet.css";
 import React, { useEffect, useState } from "react";
@@ -13,6 +14,8 @@ import blackbus from "../../../images/blackbus.png";
 import greenbus from "../../../images/greenbus.png";
 import orangebus from "../../../images/orangebus.png";
 import redbus from "../../../images/redbus.png";
+import { isWindowDefined } from "../../../utility/undefinedWindow";
+import { mapOptions } from "../../../utility/variables";
 import "./busMap.css";
 import styles from "./BusMap.module.css";
 
@@ -29,7 +32,9 @@ export default function BusMap() {
       )
         .then((response) => response.json())
         .then((response) => {
-          setData(response);
+          if (response.length > 1) {
+            setData(response);
+          }
         })
         .catch((error) => {
           console.log(error);
@@ -43,7 +48,7 @@ export default function BusMap() {
   }, []);
 
   function createMarkerIcon(bus, seatsavailable) {
-    if (typeof window !== "undefined") {
+    if (isWindowDefined) {
       let buscolor = blackbus;
       if (seatsavailable < 5) {
         buscolor = redbus;
@@ -79,6 +84,8 @@ export default function BusMap() {
     setInput(event.target.value);
   }
 
+  // L.Map.addInitHook("addHandler", "gestureHandling", GestureHandling);
+
   return (
     <>
       <input
@@ -89,12 +96,13 @@ export default function BusMap() {
         name="s"
         onChange={onChange}
       />
-      {typeof window !== "undefined" ? (
+      {isWindowDefined ? (
         <MapContainer
           center={[54.97206769445005, -1.6132124536205563]}
           zoom={14}
           className={styles.leafletcontainer}
           zoomControl={false}
+          {...mapOptions}
         >
           <TileLayer
             maxZoom={19}
@@ -137,23 +145,28 @@ export default function BusMap() {
                       ]}
                     >
                       <Popup className={styles.Popup}>
-                        <h1>
-                          Bus :
+                        <h3>
+                          Bus :{" "}
                           {bus.VehicleActivity.MonitoredVehicleJourney.LineRef}
-                        </h1>
+                        </h3>
                         {seatsavailable ? (
-                          <h2>{seatsavailable} seats available</h2>
+                          <p>
+                            {seatsavailable} seat
+                            {seatsavailable == 1 ? " " : "s "}
+                            available
+                          </p>
                         ) : (
-                          ""
+                          <p>No data on seat availability</p>
                         )}
 
                         {wheelChairSeatsAvailable ? (
-                          <h2>
-                            {wheelChairSeatsAvailable} wheelchair seats
+                          <p>
+                            {wheelChairSeatsAvailable} wheelchair space
+                            {wheelChairSeatsAvailable == 1 ? " " : "s "}
                             available
-                          </h2>
+                          </p>
                         ) : (
-                          ""
+                          <p>No data on space availability</p>
                         )}
                       </Popup>
                     </Marker>

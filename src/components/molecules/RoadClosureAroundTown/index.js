@@ -8,7 +8,7 @@ export default function RoadClosureAroundTown() {
   return (
     <div className={styles.container}>
       <Box>
-        <p className={styles.topFont}>Road Closures Around Town</p>
+        <h2 className={styles.topFont}>Road closures around town</h2>
       </Box>
       <ArticleExample
         //   className={styles.ArticleExample}
@@ -21,7 +21,7 @@ export default function RoadClosureAroundTown() {
       >
         <StaticImage
           alt=""
-          className={styles.image}
+          className={articleExampleImage, styles.image}
           src={"../../../images/bus-Example.jpg"}
         />
       </ArticleExample>

@@ -5,9 +5,9 @@ import styles from "./sectionExample.module.css";
 
 export default function SectionExample({ articleSections, title }) {
   return (
-    <div className={styles.SectionExample}>
+    <div className={styles.SectionExample} role="main" aria-labelledby={title}>
       <Box>
-        <p className={styles.topFont}>{title ? title : ""}</p>
+        <h2 className={styles.topFont}>{title ? title : ""}</h2>
       </Box>
 
       <div className={styles.container}>
@@ -28,7 +28,7 @@ export default function SectionExample({ articleSections, title }) {
                     role="img"
                     aria-label={alt}
                     alt={alt}
-                    className={styles.image}
+                    className={`articleExampleImage ${styles.image}`}
                   />
                 </ArticleExample>
               )

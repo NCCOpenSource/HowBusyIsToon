@@ -7,7 +7,7 @@ export default function AboutSectionArticle({ subHeading, contentText }) {
     <Box color="grey" fontColor="black" fullBorderRadius="bottom">
       <div className={styles.LinkBox}>
         <div className={styles.subHeading}>
-          <h1 className={styles.subHeadingText}>{subHeading}</h1>
+          <h2 className={styles.subHeadingText}>{subHeading}</h2>
         </div>
         <p className={styles.contentText}>{contentText}</p>
       </div>

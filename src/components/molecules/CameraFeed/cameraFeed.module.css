@@ -13,25 +13,31 @@
   font-family: Europa-Bold;
   font-style: normal;
   font-weight: bold;
-  font-size: 16px;
-  line-height: 16px;
+  font-size: 20px;
+  line-height: 20px;
+  height: auto;
 }
 
 .infoContainer {
   background: var(--color-light-grey);
   border-radius: var(--border-radius);
+  border: 1px solid #eee;
   grid-area: a;
-  height: 48px;
   padding: 0 16px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
-
   color: #333333;
 }
 
-.infoContainer svg{
+.infoContainer svg {
   margin-right: 16px;
+  line-height: 20px;
+}
+
+.infoContainer p {
+  margin: 0;
+  line-height: 20px;
 }
 
 .timeIcon {
@@ -40,6 +46,7 @@
 
 .select {
   grid-area: b;
+  height: auto;
 }
 
 .feed {
@@ -65,12 +72,30 @@
   display: inline-block;
   padding: 3px;
   transform: rotate(45deg);
+  /* background-image: url("../../../images/Camera.png");
+  width: 24px;
+  height: 24px;
+  background-size: contain;
+  background-repeat: no-repeat; */
+}
+
+.selectbox::after {
+  content: "";
+  left: 0.7em;
+  top: calc(50% - 11px);
+  height: 100%;
+  position: absolute;
+  background-image: url("../../../images/Camera.png");
+  width: 24px;
+  height: 24px;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .selector {
   border: 1px solid #eee;
   border-radius: 0.25rem;
-  padding: 0.5rem 1.5rem 0.5rem 0.5rem;
+  padding: 0.5rem 2.5rem 0.5rem 3rem;
   display: flex;
   background-color: white;
   outline: 0;
@@ -80,7 +105,16 @@
   height: 100%;
   background: var(--color-light-grey);
   border-radius: var(--border-radius);
+  font-style: normal;
+  font-family: "Europa-Bold";
+  font-size: 20px;
+  line-height: 20px;
 }
+
+.selector:focus {
+  background-color: #eee;
+}
+
 @media only screen and (max-width: 830px) {
   .cityCenterCameraFeed {
     grid-template-areas:

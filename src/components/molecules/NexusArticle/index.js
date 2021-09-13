@@ -8,10 +8,10 @@ export default function NexusArticle() {
   return (
     <div className={styles.ArticleExample}>
       <Box>
-        <p className={styles.topFont}>Nexus</p>
+        <h2 className={styles.topFont}>Nexus</h2>
       </Box>
       <StaticImage
-        alt=""
+        alt="Nexus Logo"
         className={styles.image}
         src={"../../../images/metro-01.png"}
       />

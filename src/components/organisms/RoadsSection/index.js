@@ -21,16 +21,19 @@ export default function RoadsSection() {
             onBlur={handleChange}
           >
             <option className={styles.option} value="0">
-              Stephenson Road
+              Coast Road (Corner House 1)
             </option>
             <option className={styles.option} value="1">
-              Stamfordham Road
+              Coast Road (Corner House 2)
             </option>
             <option className={styles.option} value="2">
-              A186 Pilgrim Street / Mosley Street
+              Cowgate junction
             </option>
             <option className={styles.option} value="3">
-              B1318 High Street / A191 Church Road & Salters' Road
+              Mosley St (Tyne Bridge)
+            </option>
+            <option className={styles.option} value="4">
+              Gosforth High St
             </option>
           </select>
         </div>
@@ -41,10 +44,10 @@ export default function RoadsSection() {
       </div>
 
       <div className={styles.RoadsLookingBusy}>
-        <h1 className={styles.calloutText}>
+        <p className={styles.calloutText}>
           Roads looking busy? Have you considered cycling or walking instead?
           Our useful links provide tools to help you plan your journey.
-        </h1>
+        </p>
       </div>
       <a
         target="_blank"
@@ -54,7 +57,7 @@ export default function RoadsSection() {
       >
         <SimpleArticle
           TopText="Walking or Cycling?"
-          BottomText="User Google Maps to help you decide on which route you’d like to take"
+          BottomText="Use Google Maps to help you decide on which route you’d like to take"
         />
       </a>
       <a
@@ -65,7 +68,7 @@ export default function RoadsSection() {
       >
         <SimpleArticle
           TopText="Cycle Parking?"
-          BottomText=" Nexus Cycle lockers are located around the City Centre. Find out where
+          BottomText=" Nexus cycle lockers are located around the City Centre. Find out where
       they are located here"
         />
       </a>

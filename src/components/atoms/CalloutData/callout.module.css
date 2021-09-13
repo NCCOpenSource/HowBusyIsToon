@@ -28,7 +28,17 @@
   border-top: 2.5px solid white;
   margin-top: -5px;
 }
-
+.image {
+  margin-top: auto;
+  margin-bottom: 40px;
+  width: 100%;
+  height: auto;
+  /* height: 100%;
+  width: 130%;
+  min-width: 400px;
+  min-height: 500px;
+  bottom: 40px; */
+}
 .red {
   background-color: red;
 }
@@ -37,4 +47,9 @@
 }
 .green {
   background-color: green;
+}
+@media only screen and (max-width: 1025px) {
+  .image {
+    display: none;
+  }
 }

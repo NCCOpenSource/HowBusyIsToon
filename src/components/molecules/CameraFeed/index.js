@@ -13,7 +13,7 @@ export default function CameraFeed() {
       <div className={styles.infoContainer}>
         <TimeIcon />
         <p className={styles.info}>
-          Images from webcams update approximately every 5 minutes
+          Feed updated approximately every 5 minutes
         </p>
       </div>
       <div className={styles.select}>
@@ -24,22 +24,39 @@ export default function CameraFeed() {
             onChange={handleChange}
             onBlur={handleChange}
           >
-            <option className={styles.option} value="0">
-              Grey Street
-            </option>
-            <option className={styles.option} value="1">
-              Collingwood Street
-            </option>
-            <option className={styles.option} value="2">
+            {" "}
+            <option
+              className={styles.option}
+              value="0"
+              label="Northumberland Street"
+            >
               Northumberland Street
             </option>
-            <option className={styles.option} value="3">
-              Barrack Road 
+            <option
+              className={styles.option}
+              value="1"
+              label="Collingwood Street"
+            >
+              Collingwood Street
+            </option>{" "}
+            <option className={styles.option} value="2" label="Grey Street">
+              Grey Street
             </option>
-            <option className={styles.option} value="4">
+            <option className={styles.option} value="3" label="Barrack Road">
+              Barrack Road
+            </option>
+            <option
+              className={styles.option}
+              value="4"
+              label="Blackett Street 1"
+            >
               Blackett Street 1
             </option>
-            <option className={styles.option} value="5">
+            <option
+              className={styles.option}
+              value="5"
+              label="Blackett Street 2"
+            >
               Blackett Street 2
             </option>
           </select>

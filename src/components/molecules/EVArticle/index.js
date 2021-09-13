@@ -30,28 +30,29 @@ export default function EVArticle() {
   return (
     <div className={styles.container}>
       <Box>
-        <p className={styles.topFont}>EV Charging Stations</p>
+        <h2 className={styles.topFont}>EV charging stations</h2>
       </Box>
       <ArticleExample
         Content={data.allContentfulEvChargingStations.edges[0].node.content}
         LinkTitle={data.allContentfulEvChargingStations.edges[0].node.hyperLink}
-        Linkurl={data.allContentfulEvChargingStations.edges[0].node.url}
+        Linkurl={"/evcharging/"}
+        inline
       >
         <div
           style={{
             backgroundImage: `url(${data.allContentfulEvChargingStations.edges[0].node.image.file.url})`,
           }}
           role="img"
-          aria-label={
-            data.allContentfulEvChargingStations.edges[0].node.image.description
-          }
+          // aria-label={
+          //   data.allContentfulEvChargingStations.edges[0].node.image.description
+          // }
           className={styles.image}
           src={
             data.allContentfulEvChargingStations.edges[0].node.image.file.url
           }
-          alt={
-            data.allContentfulEvChargingStations.edges[0].node.image.description
-          }
+          // alt={
+          //   data.allContentfulEvChargingStations.edges[0].node.image.description
+          // }
         />
       </ArticleExample>
     </div>

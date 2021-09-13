@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
+import Box from "../../atoms/Box";
 import CarParkExampleData from "../../atoms/CarParksData/carparkdata.json";
-import StaticCarParkData from "../../atoms/CarParksData/carparkHardData.json";
+// import StaticCarParkData from "../../atoms/CarParksData/carparkHardData.json";
 import CarParkMap from "../../molecules/CarParkMap";
 import ColorKey from "../../molecules/ColorKey";
 import CouncilLinks from "../../molecules/CouncilLinks";
@@ -31,10 +32,10 @@ export default function Parking() {
         }
       }
 
-      for (i = 0; i < StaticCarParkData.length; i++) {
-        carParkTemp.push(StaticCarParkData[i]);
-        carParkTemp[i].id = id++;
-      }
+      // for (i = 0; i < StaticCarParkData.length; i++) {
+      //   carParkTemp.push(StaticCarParkData[i]);
+      //   carParkTemp[i].id = id++;
+      // }
       setCarParks(carParkTemp);
     }
 
@@ -53,6 +54,9 @@ export default function Parking() {
 
   return (
     <div className={styles.container}>
+      <div className={styles.calloutContainer}>
+        <h1 className={styles.calloutText}>Real Time Parking Data</h1>
+      </div>
       <div className={styles.topContainer}>
         <div className={styles.select}>
           <div className={styles.selectbox}>
@@ -80,8 +84,9 @@ export default function Parking() {
             </select>
           </div>
         </div>
+
         <div className={styles.ColorKey}>
-          <ColorKey />
+          <ColorKey ToggleCarPark />
         </div>
       </div>
       <div className={styles.SectionExample}>
