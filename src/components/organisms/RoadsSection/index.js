@@ -46,8 +46,6 @@ export default function RoadsSection() {
       <div className={styles.RoadsLookingBusy}>
         <p className={styles.calloutText}>
           Roads looking busy? Have you considered cycling or walking instead?
-          <br />
-   
           Our useful links provide tools to help you plan your journey.
         </p>
       </div>
