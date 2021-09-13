@@ -8,7 +8,7 @@
   list-style-type: none;
   text-align: right;
   /* padding: 15px; */
-  height: 48px;
+  min-height: 48px;
   padding: 0 8px;
 }
 .keyItem {
@@ -39,6 +39,5 @@
     flex-direction: column;
     height: auto;
     width: 100vw;
-
   }
 }

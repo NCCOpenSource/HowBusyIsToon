@@ -6,6 +6,23 @@ import styles from "./EVChargingStations.module.css";
 export default function EVChargingStations() {
   return (
     <div className={styles.container}>
+      <div className={styles.calloutContainer}>
+        <p className={styles.calloutText}>
+          {" "}
+          The information provided here is publicly available and accurate to
+          the best of our knowledge. Unfortunately we do not have access to real
+          time data on EV charging station usage, location or functionality. We
+          are currently engaging with Government on a national project to make
+          more EV charging data openly available in real time for citizens.
+        </p>
+      </div>
+      {/* <p className={styles.disclaimer}>
+        The information provided here is publicly available and accurate to the
+        best of our knowledge. Unfortunately we do not have access to real time
+        data on EV charging station usage, location or functionality. We are
+        currently engaging with Government on a national project to make more EV
+        charging data openly available in real time for citizens.
+      </p> */}
       <div className={styles.EVMaps}>
         <iframe
           title="Electric vehichle map"

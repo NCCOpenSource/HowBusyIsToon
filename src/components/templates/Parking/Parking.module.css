@@ -4,16 +4,43 @@
   grid-template-areas: none;
   display: grid;
   gap: var(--grid-gap);
-  grid-template-rows: auto;
+  /* grid-template-rows: auto; */
+  grid-template-columns: 33% 33% 33%;
+
+  grid-template-areas:
+    "top top top"
+    "a b b"
+    "a b b"
+    "c c c";
+}
+.calloutContainer {
+  grid-area: a;
+
+  color: var(--black);
+  background-color: var(--color-light-grey);
+  border-radius: var(--border-radius);
+}
+
+.calloutText {
+  /* color: #ffffff; */
+  font-style: normal;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 60px;
+  padding: 32px;
+  letter-spacing: 0em;
+  text-align: left;
 }
 .topContainer {
+  grid-area: top;
+
   display: flex;
   align-items: center;
 }
 
 .selectbox {
   position: relative;
-  width: 100%;
+  /* width: 100%; */
   height: 48px;
 }
 
@@ -51,7 +78,7 @@
   border-radius: var(--border-radius);
 }
 
-.selector:focus{
+.selector:focus {
   background-color: #eee;
 }
 
@@ -61,11 +88,20 @@
 .ColorKey {
   margin-left: auto;
 }
-
+.SectionExample {
+  grid-area: b;
+}
+.CouncilLinks {
+  grid-area: c;
+}
 @media only screen and (max-width: 1025px) {
   .container {
     grid-template-areas: none;
     display: flex;
     flex-direction: column;
+  }
+  .topContainer {
+    display: grid;
+    gap: var(--grid-gap);
   }
 }
