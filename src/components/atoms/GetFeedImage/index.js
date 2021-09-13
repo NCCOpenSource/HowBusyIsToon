@@ -81,8 +81,8 @@ export default function GetFeedImage({ option }) {
           console.log(error);
         });
 
-      setApiFinished(false);
       setImageList(imageArray);
+      setApiFinished(false);
       setApiFinished(true);
     }
 
@@ -97,7 +97,7 @@ export default function GetFeedImage({ option }) {
     <>
       {imageList !== null && apiFinished ? (
         <img
-          src={imageList[option] ? imageList[option] : loader}
+          src={apiFinished ? imageList[option] : loader}
           role="img"
           aria-label={"Images from street cameras of City Centre"}
           alt="Images from street cameras of City Centre"
@@ -111,7 +111,7 @@ export default function GetFeedImage({ option }) {
           role="img"
           aria-label={"Images from street cameras of City Centre"}
           alt="Images from street cameras of City Centre"
-          className={styles.image}
+          className={styles.imagePlaceholder}
           width="1280"
           height="720"
         />
