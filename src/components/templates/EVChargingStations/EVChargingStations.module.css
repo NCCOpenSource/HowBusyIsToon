@@ -4,12 +4,52 @@
   grid-template-areas: none;
   display: grid;
   gap: var(--grid-gap);
-  grid-template-rows: auto;
+  /* grid-template-rows: auto; */
+  grid-template-columns: 1fr 33% 33%;
+
+  grid-template-areas:
+    "a b b"
+    "a b b"
+    "a b b"
+    "c c c";
+}
+.calloutContainer {
+  grid-area: a;
+  color: var(--black);
+  background-color: var(--color-light-grey);
+  border-radius: var(--border-radius);
+}
+
+.calloutText {
+  /* color: #ffffff; */
+  font-style: normal;
+  font-weight: bold;
+  /* font-size: 48px; */
+  /* line-height: 60px; */
+  padding: 32px;
+  letter-spacing: 0em;
+  text-align: left;
 }
 
 .EVMaps {
+  grid-area: b;
+
   width: 100%;
   height: 100%;
+}
+.disclaimer {
+  background: var(--color-light-grey);
+  border-radius: var(--border-radius);
+  border: 1px solid #eee;
+  /* grid-area: a; */
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: #333333;
+}
+.CouncilLinks {
+  grid-area: c;
 }
 
 @media only screen and (max-width: 1025px) {

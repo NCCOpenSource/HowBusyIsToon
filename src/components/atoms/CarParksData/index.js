@@ -78,16 +78,7 @@ export default function CarParksData({ data, option }) {
                 </Popup>
               </Marker>
             ) : (
-              <Marker
-                icon={createMarkerIcon(carPark)}
-                key={carPark.id}
-                position={carPark.location}
-              >
-                <Popup className={styles.popup}>
-                  <h3>{carPark.name}</h3>
-                  <p>There are {carPark.capacity} potential spaces available</p>
-                </Popup>
-              </Marker>
+              ""
             )
           )
         : null}
