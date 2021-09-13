@@ -84,7 +84,7 @@ export default function BusMap() {
     setInput(event.target.value);
   }
 
-  L.Map.addInitHook("addHandler", "gestureHandling", GestureHandling);
+  // L.Map.addInitHook("addHandler", "gestureHandling", GestureHandling);
 
   return (
     <>
