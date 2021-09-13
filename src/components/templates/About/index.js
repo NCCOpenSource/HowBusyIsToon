@@ -1,9 +1,10 @@
-import { graphql, useStaticQuery } from "gatsby";
+import { graphql, Link, useStaticQuery } from "gatsby";
 import React from "react";
 import HowBusyIsAbout from "../../atoms/HowBusyIsAbout";
 import LinkSection from "../../atoms/LinkSection";
 import AboutSection from "../../organisms/AboutSection";
 import styles from "./About.module.css";
+import SimpleArticle from "../../atoms/SimpleArticle";
 
 export default function About() {
   const data = useStaticQuery(graphql`
@@ -50,7 +51,7 @@ export default function About() {
     <div className={styles.container}>
       <div className={styles.leftContainer}>
         <HowBusyIsAbout calloutText={Aboutdata.calloutText} />
-        <LinkSection
+        {/* <LinkSection
           link={Aboutdata.linkUrl1}
           heading={Aboutdata.linkTitle1}
           content={Aboutdata.linkContent1.linkContent1}
@@ -59,7 +60,19 @@ export default function About() {
           link={Aboutdata.linkUrl2}
           heading={Aboutdata.linkTitle2}
           content={Aboutdata.linkContent2.linkContent2}
-        />
+        /> */}
+        <Link className={styles.sidebarLink} to={Aboutdata.linkUrl1}>
+          <SimpleArticle
+            TopText={Aboutdata.linkTitle1}
+            BottomText={Aboutdata.linkContent1.linkContent1}
+          />
+        </Link>
+        <Link className={styles.sidebarLink} to={Aboutdata.linkUrl2}>
+          <SimpleArticle
+            TopText={Aboutdata.linkTitle2}
+            BottomText={Aboutdata.linkContent2.linkContent2}
+          />
+        </Link>
       </div>
 
       <AboutSection Aboutdata={Aboutdata} />

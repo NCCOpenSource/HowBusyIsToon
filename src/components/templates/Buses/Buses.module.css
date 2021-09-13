@@ -29,6 +29,7 @@
 }
 .SectionExample {
   grid-area: SectionExample;
+  padding: 80px 0;
 }
 .CouncilLinks {
   grid-area: CouncilLinks;

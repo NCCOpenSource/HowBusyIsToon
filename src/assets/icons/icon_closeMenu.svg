@@ -1,20 +1,12 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 24.3.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 49 64" style="enable-background:new 0 0 49 64;" xml:space="preserve">
-<style type="text/css">
-	.st0{fill:none;stroke:#C6CBDA;stroke-width:6;}
-	.st1{fill:#FFFFFF;}
-	.st2{fill-rule:evenodd;clip-rule:evenodd;fill:#8E98B5;}
-</style>
-<g id="Page-1">
-	<g id="iPhone-menu" transform="translate(-342.000000, -102.000000)">
-		<g id="icon_closeMenu" transform="translate(342.272078, 102.000000)">
-			<path id="Combined-Shape-Copy" class="st0" d="M44.7,3v58h-29V3H44.7z"/>
-			<rect x="-0.3" y="19.3" class="st1" width="25.7" height="25.5"/>
-			<path id="Combined-Shape" class="st2" d="M22.6,19.3l2.8,2.8L15.6,32l9.9,9.9l-2.8,2.8l-9.9-9.9l-9.9,9.9L0,41.9L9.9,32L0,22.1
-				l2.8-2.8l9.9,9.9L22.6,19.3z"/>
-		</g>
-	</g>
+<svg width="49" height="64" viewBox="0 0 49 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0)">
+<path d="M44.9727 3V61H15.9727V3H44.9727Z" stroke="white" stroke-width="6"/>
+<path d="M25.6727 19.3H-0.0273438V44.8H25.6727V19.3Z" fill="black"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M22.8734 19.3L25.6734 22.1L15.8734 32L25.7734 41.9001L22.9734 44.7001L13.0734 34.8L3.17344 44.7001L0.273438 41.9001L10.1734 32L0.273438 22.1L3.07344 19.3L12.9734 29.2001L22.8734 19.3Z" fill="white"/>
 </g>
+<defs>
+<clipPath id="clip0">
+<rect width="49" height="64" fill="white"/>
+</clipPath>
+</defs>
 </svg>

@@ -12,7 +12,9 @@ export default function Layout(props) {
     <Container>
       <div className={styles.containerGrid}>
         <Nav />
-        {children}
+        <main>
+          {children}
+        </main>
         <Footer />
       </div>
     </Container>

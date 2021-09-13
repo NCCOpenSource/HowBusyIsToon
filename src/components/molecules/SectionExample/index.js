@@ -28,7 +28,7 @@ export default function SectionExample({ articleSections, title }) {
                     role="img"
                     aria-label={alt}
                     alt={alt}
-                    className={styles.image}
+                    className={`articleExampleImage ${styles.image}`}
                   />
                 </ArticleExample>
               )

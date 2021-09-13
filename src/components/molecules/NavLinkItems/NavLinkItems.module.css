@@ -15,7 +15,6 @@
   color: #ffffff;
   text-decoration: none;
   background: rgba(255, 255, 255, 0.2);
-  border-bottom: 5px solid #f2f2f2;
 }
 
 .navLinkItemText {
@@ -24,6 +23,8 @@
   align-self: center;
   padding: 0 16px;
   line-height: 112px;
+  font-size: 24px;
+  display: block;
 }
 .navLinkItems:hover .navLinkItemText {
   background: rgba(255, 255, 255, 0.2);
@@ -52,6 +53,6 @@
 .subnavLinkItems .subnavLinkItemText:hover {
   background-color: #ddd;
 }
-.navLinkItems:hover .subnavLinkItems {
+.navLinkItems:hover .subnavLinkItems, .navLinkItems:focus .subnavLinkItems, .navLinkItems:focus-within .subnavLinkItems  {
   display: block;
 }

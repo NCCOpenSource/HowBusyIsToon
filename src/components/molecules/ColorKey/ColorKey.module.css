@@ -9,14 +9,13 @@
   text-align: right;
   /* padding: 15px; */
   height: 48px;
-  padding: 0 15px;
+  padding: 0 8px;
 }
 .keyItem {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 0 15px;
   min-width: 24px;
 }
 .keyText {
@@ -26,10 +25,13 @@
   line-height: 14px;
   letter-spacing: 0em;
   text-align: left;
-  padding: 0 15px;
+  padding: 0;
+  margin: 0 32px 0 0;
 }
+
 .image {
   width: 24px;
+  margin-right: 8px;
 }
 
 @media only screen and (max-width: 500px) {

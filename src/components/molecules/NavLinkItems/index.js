@@ -10,15 +10,16 @@ export default function NavLinkItems() {
 
   return (
     <>
-      <div
+      <li
+        tabindex="0"
         className={
           path === "/shopsandrestaurants/" || path === "/"
             ? `${styles.navLinkItems} ${styles.navLinkItemsGrey}  `
             : `${styles.navLinkItems}`
         }
       >
-        <p className={styles.navLinkItemText}>City centre</p>
-        <div className={styles.subnavLinkItems}>
+        <a className={styles.navLinkItemText}>City Centre</a>
+        <li className={styles.subnavLinkItems}>
           <Link
             to="/"
             activeClassName={styles.activesubnavLinkItemText}
@@ -33,17 +34,17 @@ export default function NavLinkItems() {
           >
             Shopping and restaurants
           </Link>
-        </div>
-      </div>
-      <div
+        </li>
+      </li>
+      <li tabIndex="0"
         className={
           path === "/parking/" || path === "/evcharging/" || path === "/roads/"
             ? `${styles.navLinkItems} ${styles.navLinkItemsGrey}  `
             : `${styles.navLinkItems}`
         }
       >
-        <p className={styles.navLinkItemText}>Driving</p>
-        <div className={styles.subnavLinkItems}>
+        <a className={styles.navLinkItemText}>Driving</a>
+        <li className={styles.subnavLinkItems}>
           <Link
             to="/roads/"
             activeClassName={styles.activesubnavLinkItemText}
@@ -65,8 +66,8 @@ export default function NavLinkItems() {
           >
             EV charging stations
           </Link>
-        </div>
-      </div>
+        </li>
+      </li>
 
       {/* <div
         className={
@@ -93,20 +94,24 @@ export default function NavLinkItems() {
           </Link>
         </div>
       </div> */}
-      <Link
-        className={styles.navLinkItems}
-        activeClassName={styles.navLinkItemsGrey}
-        to="/transport/"
-      >
-        <p className={styles.navLinkItemText}>Public transport</p>
-      </Link>
-      <Link
-        className={styles.navLinkItems}
-        activeClassName={styles.navLinkItemsGrey}
-        to="/about/"
-      >
-        <p className={styles.navLinkItemText}>About</p>
-      </Link>
+      <li>
+        <Link
+          className={styles.navLinkItems}
+          activeClassName={styles.navLinkItemsGrey}
+          to="/transport/"
+        >
+          <p className={styles.navLinkItemText}>Public Transport</p>
+        </Link>
+      </li>
+      <li>
+        <Link
+          className={styles.navLinkItems}
+          activeClassName={styles.navLinkItemsGrey}
+          to="/about/"
+        >
+          <p className={styles.navLinkItemText}>About</p>
+        </Link>
+      </li>
     </>
   );
 }
