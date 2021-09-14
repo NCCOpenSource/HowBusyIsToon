@@ -56,8 +56,12 @@ p {
   line-height: 37.5px;
 }
 
-p:first-of-type{
+p:first-of-type {
   margin-top: 0;
+}
+
+a {
+  color: #2e4a99;
 }
 
 @media only screen and (max-width: 1025px) {

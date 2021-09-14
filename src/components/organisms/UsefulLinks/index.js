@@ -84,6 +84,11 @@ export default function UsefulLinks() {
   ];
 
   return (
-    <SectionExample title={UsefulData.title} articleSections={altSections} />
+    <SectionExample
+      backgroundColor={"none"}
+      fontColor={"black"}
+      title={UsefulData.title}
+      articleSections={altSections}
+    />
   );
 }
