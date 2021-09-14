@@ -5,7 +5,7 @@
   display: grid;
   gap: var(--grid-gap);
   /* grid-template-rows: auto; */
-  grid-template-columns: 33% 33% 33%;
+  grid-template-columns: 33% 33% auto;
 
   grid-template-areas:
     "top top top"
@@ -21,12 +21,23 @@
   border-radius: var(--border-radius);
 }
 
-.calloutText {
+.calloutHeadText {
   /* color: #ffffff; */
   font-style: normal;
   font-weight: bold;
   font-size: 48px;
   line-height: 60px;
+  padding: 32px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.calloutText {
+  /* color: #ffffff; */
+  font-style: normal;
+  font-weight: bold;
+  /* font-size: 48px; */
+  /* line-height: 60px; */
   padding: 32px;
   letter-spacing: 0em;
   text-align: left;

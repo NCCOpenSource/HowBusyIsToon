@@ -14,12 +14,21 @@ export default function PublicTransport() {
       <div className={styles.ColorKey}>
         <ColorKey />
       </div>
-      <div className={styles.BusMap}>
-        <BusMap />
+      <div className={styles.middleContainer}>
+        <div className={styles.calloutContainer}>
+          <p className={styles.calloutText}>
+            Use our interactive map to find the real time location information
+            for buses across all bus operators
+          </p>
+        </div>
+        <div className={styles.BusMap}>
+          <BusMap />
+        </div>{" "}
       </div>
-      <div className={styles2.Innercontainer}>
+
+      <div className={styles.Innercontainer}>
         <NexusArticle />
-        <div className={styles2.SectionExample}>
+        <div className={styles.SectionExample}>
           <LocalTravelUpdates />
         </div>
       </div>
