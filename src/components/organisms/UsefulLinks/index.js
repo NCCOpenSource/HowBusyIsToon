@@ -85,6 +85,7 @@ export default function UsefulLinks() {
 
   return (
     <SectionExample
+      noPadding={"noPadding"}
       backgroundColor={"none"}
       fontColor={"black"}
       title={UsefulData.title}
