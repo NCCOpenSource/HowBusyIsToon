@@ -40,13 +40,18 @@
   bottom: 40px; */
 }
 .red {
-  background-color: red;
+  background-color: #FC4C56;
 }
+
+.red h1{
+  color: #FFF0F1;
+}
+
 .orange {
-  background-color: orange;
+  background-color: #F3984C;
 }
 .green {
-  background-color: green;
+  background-color: #1BB57D;
 }
 @media only screen and (max-width: 1025px) {
   .image {
