@@ -19,6 +19,10 @@ export default function Box({ children, fullBorderRadius, color, fontColor }) {
     if (color === "white") {
       setBackgroundColor(style.Backgroundwhite);
     }
+
+    if (color === "none") {
+      setBackgroundColor(style.Backgroundnone);
+    }
     if (fontColor === "black") {
       setFontColor(style.Fontblack);
     }

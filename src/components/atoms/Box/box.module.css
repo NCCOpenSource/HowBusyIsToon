@@ -20,6 +20,10 @@
   background-color: #ffffff;
 }
 
+.Backgroundnone {
+  background-color: none;
+}
+
 .Fontblack {
   color: #000000;
 }
