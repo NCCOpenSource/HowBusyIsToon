@@ -19,6 +19,8 @@
   grid-template-columns: 33% auto;
 }
 .calloutContainer {
+  font-family: lato !important;
+
   grid-area: a;
 
   height: 100%;
@@ -28,7 +30,7 @@
   border-radius: var(--border-radius);
 }
 .calloutText {
-  font-family: Lato;
+  font-family: lato !important;
   font-size: 48px;
   font-style: normal;
   font-weight: 700;
@@ -64,8 +66,9 @@
   .middleContainer {
     display: grid;
     gap: var(--grid-gap);
-    grid-template-areas: "a a"
-    "b b";
+    grid-template-areas:
+      "a a"
+      "b b";
     grid-template-columns: 33% auto;
   }
 }
