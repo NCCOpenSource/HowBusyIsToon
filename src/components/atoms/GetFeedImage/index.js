@@ -95,7 +95,7 @@ export default function GetFeedImage({ option }) {
 
   return (
     <>
-      {imageList !== null && apiFinished ? (
+      {imageList !== null && apiFinished && imageList[option] ? (
         <img
           src={apiFinished ? imageList[option] : loader}
           role="img"
@@ -111,9 +111,7 @@ export default function GetFeedImage({ option }) {
           role="img"
           aria-label={"Images from street cameras of City Centre"}
           alt="Images from street cameras of City Centre"
-          className={styles.imagePlaceholder}
-          width="1280"
-          height="720"
+          className={styles.image}
         />
       )}
     </>
