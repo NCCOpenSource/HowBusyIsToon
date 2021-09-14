@@ -7,9 +7,11 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  font-family: lato;
 }
 
 .calloutText {
+  font-family: lato;
   color: #ffffff;
   font-style: normal;
   font-weight: bold;

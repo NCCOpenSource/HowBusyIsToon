@@ -1,3 +1,4 @@
+import { Link } from "gatsby";
 import React, { useEffect, useState } from "react";
 import Box from "../../atoms/Box";
 import CarParkExampleData from "../../atoms/CarParksData/carparkdata.json";
@@ -55,7 +56,21 @@ export default function Parking() {
   return (
     <div className={styles.container}>
       <div className={styles.calloutContainer}>
-        <h1 className={styles.calloutText}>Real Time Parking Data</h1>
+        <h1 className={styles.calloutHeadText}>Real Time Parking Data</h1>
+        <p className={styles.calloutText}>
+          Real time parking data for key car parks based on in/out ANPR counts
+          providing an indicator of the available spaces. Some of these spaces
+          may be limited to certain users. Information on other car parking
+          without real time occupancy information is available{" "}
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href="https://community2.newcastle.gov.uk/apps2/car-parks"
+          >
+            here
+          </a>
+          .
+        </p>
       </div>
       <div className={styles.topContainer}>
         <div className={styles.select}>

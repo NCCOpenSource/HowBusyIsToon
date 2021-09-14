@@ -1,8 +1,8 @@
 import { Link } from "gatsby";
 import React from "react";
 import {
-    default as styles,
-    default as stylesOverlay
+  default as styles,
+  default as stylesOverlay,
 } from "./navOverlay.module.css";
 
 export default function NavOverlay({ children }) {
@@ -14,7 +14,7 @@ export default function NavOverlay({ children }) {
           activeClassName={styles.activesubnavLinkItemText}
           className={styles.subnavLinkItemText}
         >
-          City Center
+          City Centre
         </Link>
         <Link
           to="/shopsandrestaurants"
