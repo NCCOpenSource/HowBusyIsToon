@@ -1,12 +1,16 @@
 @import "../../CSS/variables.css";
 
 .calloutContainer {
+  font-family: lato !important;
+
   border-radius: var(--border-radius);
   color: var(--black);
   background-color: var(--color-light-grey);
 }
 
 .calloutText {
+  font-family: lato !important;
+
   font-size: 48px;
   font-style: normal;
   font-weight: 700;

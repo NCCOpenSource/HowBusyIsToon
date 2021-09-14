@@ -14,6 +14,7 @@
     "c c c";
 }
 .calloutContainer {
+  font-family: lato !important;
   grid-area: a;
   color: var(--black);
   background-color: var(--color-light-grey);
@@ -21,6 +22,7 @@
 }
 
 .calloutText {
+  font-family: lato !important;
   /* color: #ffffff; */
   font-style: normal;
   font-weight: bold;

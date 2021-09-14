@@ -7,11 +7,12 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  font-family: lato;
+  font-family: lato !important;
 }
 
 .calloutText {
-  font-family: lato;
+  font-family: lato !important;
+
   color: #ffffff;
   font-style: normal;
   font-weight: bold;
@@ -42,18 +43,18 @@
   bottom: 40px; */
 }
 .red {
-  background-color: #FC4C56;
+  background-color: #fc4c56;
 }
 
-.red h1{
-  color: #FFF0F1;
+.red h1 {
+  color: #fff0f1;
 }
 
 .orange {
-  background-color: #F3984C;
+  background-color: #f3984c;
 }
 .green {
-  background-color: #1BB57D;
+  background-color: #1bb57d;
 }
 @media only screen and (max-width: 1025px) {
   .image {
