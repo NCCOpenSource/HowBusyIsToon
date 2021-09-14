@@ -58,7 +58,7 @@ export default function CouncilLinks() {
       <div className={styles.topContainer}>
         <Box fontColor="white" fullBorderRadius="full" color="black">
           <h2 className={styles.heading}>
-            How newcastle city council is protecting you
+            How Newcastle City Council is protecting you
           </h2>
         </Box>
       </div>

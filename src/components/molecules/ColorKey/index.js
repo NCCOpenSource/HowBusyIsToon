@@ -44,19 +44,23 @@ export default function ColorKey({ ToggleCarPark }) {
             Many {ToggleCarPark ? "spaces" : "seats"} available
           </p>
         </div>
-        <div className={styles.keyItem}>
-          <div className={styles.image}>
-            <StaticImage
-              width={24}
-              height={24}
-              className={styles.image}
-              src={"../../../images/carparkiconsBlack.png"}
-            />
+        {!ToggleCarPark ? (
+          <div className={styles.keyItem}>
+            <div className={styles.image}>
+              <StaticImage
+                width={24}
+                height={24}
+                className={styles.image}
+                src={"../../../images/carparkiconsBlack.png"}
+              />
+            </div>
+            <p className={styles.keyText}>
+              {ToggleCarPark ? "no real time data available" : "No data"}
+            </p>
           </div>
-          <p className={styles.keyText}>
-            {ToggleCarPark ? "no real time data available" : "No data"}
-          </p>
-        </div>
+        ) : (
+          ""
+        )}
       </div>
     </Box>
   );

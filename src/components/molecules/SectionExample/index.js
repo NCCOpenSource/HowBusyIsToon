@@ -3,10 +3,16 @@ import ArticleExample from "../../atoms/ArticleExample";
 import Box from "../../atoms/Box";
 import styles from "./sectionExample.module.css";
 
-export default function SectionExample({ articleSections, title }) {
+export default function SectionExample({
+  articleSections,
+  title,
+  backgroundColor,
+  fontColor,
+  noPadding,
+}) {
   return (
     <div className={styles.SectionExample} role="main" aria-labelledby={title}>
-      <Box>
+      <Box fontColor={fontColor} color={backgroundColor} noPadding={noPadding}>
         <h2 className={styles.topFont}>{title ? title : ""}</h2>
       </Box>
 

@@ -20,6 +20,10 @@
   background-color: #ffffff;
 }
 
+.Backgroundnone {
+  background-color: none;
+}
+
 .Fontblack {
   color: #000000;
 }
@@ -38,4 +42,8 @@
 }
 .borderRadiusBottom {
   border-radius: 0 0 var(--border-radius) var(--border-radius);
+}
+
+.noPadding {
+  padding: 0;
 }

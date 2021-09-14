@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import GetRoadFeedImage from "../../atoms/GetRoadFeedImage";
 import SimpleArticle from "../../atoms/SimpleArticle";
 import styles from "./RoadSection.module.css";
+import TimeIcon from "../../../assets/icons/time.svg";
 
 export default function RoadsSection() {
   const [option, setOption] = useState(0);
@@ -11,6 +12,12 @@ export default function RoadsSection() {
 
   return (
     <div className={styles.container}>
+      <div className={styles.infoContainer}>
+        <TimeIcon />
+        <p className={styles.info}>
+          Feed updated approximately every 15 minutes
+        </p>
+      </div>
       {/* ////////////////////Selector/////////////////////// */}
       <div className={styles.select}>
         <div className={styles.selectbox}>
