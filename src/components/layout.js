@@ -11,11 +11,14 @@ export default function Layout(props) {
   return (
     <Container>
       <div className={styles.containerGrid}>
-        <Nav />
-        <main>
-          {children}
-        </main>
-        <Footer />
+        <header className={styles.header}>
+          <Nav />
+        </header>
+
+        <main className={styles.main}>{children}</main>
+        <footer className={styles.footer}>
+          <Footer />
+        </footer>
       </div>
     </Container>
   );
