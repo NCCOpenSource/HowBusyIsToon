@@ -133,8 +133,8 @@ export default function Home() {
 
         <div className={styles.SectionExample}>
           <SectionExample
-            noPadding={"noPadding"}
-            backgroundColor={"none"}
+            noPadding={""}
+            backgroundColor={"black"}
             fontColor={"black"}
             title={homeData.section1Title}
             articleSections={homeSections}
