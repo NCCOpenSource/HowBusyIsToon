@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@200;300;400;500&display=swap");
+
 @font-face {
   font-family: "Europa-Bold";
   font-style: normal;
@@ -7,7 +9,7 @@
   src: url("../../fonts/Europa\ Regular.woff2") format("woff2");
 }
 
-@font-face {
+/* @font-face {
   font-family: "Lato";
   font-size: 24px;
   font-style: normal;
@@ -16,8 +18,8 @@
   letter-spacing: 0em;
   text-align: center;
 
-  src: url("../../fonts/Lato-Regular.ttf") format("woff2");
-}
+  src: url("https://fonts.googleapis.com/css2?family=Lato:wght@200;300;400;500&display=swap");
+} */
 
 body {
   font-family: "Europa-Bold";
