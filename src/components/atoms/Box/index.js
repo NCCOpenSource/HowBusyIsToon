@@ -7,21 +7,30 @@ export default function Box({
   fullBorderRadius,
   color,
   fontColor,
+  addheight,
   noPadding,
 }) {
   const [backgroundColor, setBackgroundColor] = useState(style.Backgroundblack);
   const [finalFontColor, setFontColor] = useState(style.Fontwhite);
   const [borderRadius, setBorderRadius] = useState(style.borderRadiusFull);
   const [padding, setPadding] = useState(style.noPadding);
+  const [withheight, setaddheight] = useState(style.addheight);
 
   const ContainerClassName = style.Container;
 
   useEffect(() => {
+    if (addheight === "true") {
+      setaddheight(style.addheight);
+    } else {
+      setaddheight("");
+    }
+
     if (noPadding === "noPadding") {
       setPadding(style.noPadding);
     } else {
       setPadding("");
     }
+
     if (color === "black") {
       setBackgroundColor(style.Backgroundblack);
     }
@@ -58,7 +67,7 @@ export default function Box({
 
   return (
     <div
-      className={`${ContainerClassName}  ${backgroundColor}   ${finalFontColor} ${borderRadius} ${padding}`}
+      className={`${ContainerClassName}  ${backgroundColor}   ${finalFontColor} ${borderRadius} ${padding} ${withheight}`}
     >
       {children}
     </div>
