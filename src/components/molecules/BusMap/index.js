@@ -60,6 +60,9 @@ export default function BusMap() {
       if (seatsavailable > 20) {
         buscolor = greenbus;
       }
+      if (seatsavailable < 0) {
+        buscolor = blackbus;
+      }
 
       let icon = L.divIcon({
         html: `<img alt="marker" style= 'transform: rotate(${bus.VehicleActivity.MonitoredVehicleJourney.Bearing}deg);' src="${buscolor}" />
