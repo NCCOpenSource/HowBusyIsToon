@@ -21,7 +21,13 @@ export default function CalloutData() {
         })
         .catch((error) => {
           console.log(error);
+          setCalloutDataError();
         });
+    }
+
+    function setCalloutDataError() {
+      setHeader("Data is Currently Unavailable");
+      setcalloutClass(styles.black);
     }
     function setCalloutData() {
       if (data.city_state === "busy") {

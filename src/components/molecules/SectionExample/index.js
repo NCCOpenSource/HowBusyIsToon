@@ -12,7 +12,7 @@ export default function SectionExample({
 }) {
   return (
     <div className={styles.SectionExample} role="main" aria-labelledby={title}>
-      <Box fontColor={fontColor} color={backgroundColor} noPadding={noPadding}>
+      <Box >
         <h2 className={styles.topFont}>{title ? title : ""}</h2>
       </Box>
 
