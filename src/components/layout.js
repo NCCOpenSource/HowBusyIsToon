@@ -14,10 +14,13 @@ export default function Layout(props) {
       <div className={styles.closed}>
         <div>
           <Box>
-            <h1 className="">Closed for maintenance</h1>
+            <h1>How Busy Is Toon is currently closed for maintenance</h1>
           </Box>
           <Box color={"grey"} fontColor={"black"}>
-            <h1> We are experience a disturbance in our real time data</h1>
+            <h1>
+              We will be back shortly with more real time data about your city
+              centre
+            </h1>
           </Box>
         </div>
       </div>
