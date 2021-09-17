@@ -15,35 +15,31 @@ export default function Nav(props) {
     setShow(!show);
   };
 
- 
-
   return (
-    <header>
-      <Box fullBorderRadius="full">
-        <Link to="/" className={styles.titlecontainer}>
-          <h1 className={styles.title}>How Busy Is Toon</h1>
-          <h2 className={styles.Tagline}>Your home for real time data</h2>
-        </Link>
-        <nav className={styles.nav}>
-          <ul className={styles.NavLinkList}>
-            <NavLinkItems />
-          </ul>
-        </nav>
-        <nav className={styles.mobileNav}>
-          {show ? (
-            <CloseIcon
-              onClick={showNavOverlay}
-              className={styles.exitbutton}
-            ></CloseIcon>
-          ) : (
-            <BurgerIcon
-              onClick={showNavOverlay}
-              className={styles.mobile_Burger_menu}
-            ></BurgerIcon>
-          )}
-          {show ? <NavOverlay /> : null}
-        </nav>
-      </Box>
-    </header>
+    <Box fullBorderRadius="full" addheight={"true"}>
+      <Link to="/" className={styles.titlecontainer}>
+        <h1 className={styles.title}>How Busy Is Toon</h1>
+        <h2 className={styles.Tagline}>Your home for real time data</h2>
+      </Link>
+      <nav className={styles.nav}>
+        <ul className={styles.NavLinkList}>
+          <NavLinkItems />
+        </ul>
+      </nav>
+      <nav className={styles.mobileNav}>
+        {show ? (
+          <CloseIcon
+            onClick={showNavOverlay}
+            className={styles.exitbutton}
+          ></CloseIcon>
+        ) : (
+          <BurgerIcon
+            onClick={showNavOverlay}
+            className={styles.mobile_Burger_menu}
+          ></BurgerIcon>
+        )}
+        {show ? <NavOverlay /> : null}
+      </nav>
+    </Box>
   );
 }

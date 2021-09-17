@@ -31,7 +31,7 @@
 }
 .SectionExample {
   grid-area: SectionExample;
-  padding: 80px 0;
+  padding: 3.5vw 0;
 }
 .CouncilLinks {
   grid-area: CouncilLinks;
@@ -42,5 +42,8 @@
     grid-template-areas: none;
     display: flex;
     flex-direction: column;
+  }
+  .SectionExample {
+    padding: 0;
   }
 }

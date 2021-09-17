@@ -60,6 +60,9 @@ export default function BusMap() {
       if (seatsavailable > 20) {
         buscolor = greenbus;
       }
+      if (seatsavailable < 0) {
+        buscolor = blackbus;
+      }
 
       let icon = L.divIcon({
         html: `<img alt="marker" style= 'transform: rotate(${bus.VehicleActivity.MonitoredVehicleJourney.Bearing}deg);' src="${buscolor}" />
@@ -72,13 +75,19 @@ export default function BusMap() {
     }
   }
 
-  const filteredBuses = data
-    ? data.filter((bus) =>
-        bus.VehicleActivity.MonitoredVehicleJourney.LineRef
-          ? bus.VehicleActivity.MonitoredVehicleJourney.LineRef.includes(input)
-          : null
-      )
-    : null;
+  const filteredBuses =
+    input === ""
+      ? data
+      : data
+      ? data.filter(
+          (bus) => bus.VehicleActivity.MonitoredVehicleJourney.LineRef === input
+        )
+      : null;
+
+  console.log(
+    "🚀 ~ file: index.js ~ line 76 ~ BusMap ~ filteredBuses",
+    filteredBuses
+  );
 
   function onChange(event) {
     setInput(event.target.value);
@@ -149,7 +158,7 @@ export default function BusMap() {
                           Bus :{" "}
                           {bus.VehicleActivity.MonitoredVehicleJourney.LineRef}
                         </h3>
-                        {seatsavailable ? (
+                        {seatsavailable > 0 ? (
                           <p>
                             {seatsavailable} seat
                             {seatsavailable == 1 ? " " : "s "}
@@ -159,7 +168,7 @@ export default function BusMap() {
                           <p>No data on seat availability</p>
                         )}
 
-                        {wheelChairSeatsAvailable ? (
+                        {wheelChairSeatsAvailable > 0 ? (
                           <p>
                             {wheelChairSeatsAvailable} wheelchair space
                             {wheelChairSeatsAvailable == 1 ? " " : "s "}
