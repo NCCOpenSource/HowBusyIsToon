@@ -31,10 +31,6 @@ export default function GetFeedImage({ option }) {
       )
         .then((response) => response.json())
         .then((response) => {
-          console.log(
-            "🚀 ~ file: index.js ~ line 34 ~ .then ~ response",
-            response
-          );
           imageArray[1] = response.feed[3].timeseries[0].latest.value;
         })
         .catch((error) => {

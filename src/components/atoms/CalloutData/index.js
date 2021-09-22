@@ -5,55 +5,53 @@ import footfallData from "./footfallbusyData.json";
 import WalkingIcon from "../../../assets/icons/Walking.svg";
 
 export default function CalloutData() {
-  const [data, setData] = useState(footfallData);
   const [header, setHeader] = useState("");
   const [calloutClass, setcalloutClass] = useState("");
 
   useEffect(() => {
-    function getCalloutData() {
-      fetch(
+    async function getCalloutData() {
+      const Response = await fetch(
         `https://howbusyistoon.dev.urbanobservatory.ac.uk/ncc-city-state.json`
-      )
-        .then((response) => {
-          response.json();
-        })
-        .then((response) => {
-          console.log(
-            "🚀 ~ file: index.js ~ line 19 ~ .then ~ response",
-            response
-          );
-          setData(response);
-          setCalloutData();
-        })
-        .catch((error) => {
-          console.log(error);
-          setCalloutDataError();
-        });
+      );
+      const res = await Response.json();
+
+      return res;
     }
 
-    function setCalloutDataError() {
-      setHeader("Data is Currently Unavailable");
-      setcalloutClass(styles.black);
-    }
-    function setCalloutData() {
-      if (data.city_state === "busy") {
-        setHeader(
-          "More people than normal are visiting the city centre right now."
-        );
-
-        setcalloutClass(styles.red);
-      } else if (data.city_state === "average") {
-        setHeader("The number of people in the city centre is about normal.");
-
-        setcalloutClass(styles.orange);
-      } else {
-        setHeader("There are not many people in the city centre right now.");
-        setcalloutClass(styles.green);
-      }
-    }
-    getCalloutData();
-    /* eslint-disable */
+    getCalloutData().then((res) => {
+      setCalloutData(res);
+    });
   }, []);
+  function setCalloutDataError() {
+    setHeader("Data is Currently Unavailable");
+    setcalloutClass(styles.black);
+  }
+  function setCalloutData(data) {
+    if (data == null) {
+      setCalloutDataError();
+      return;
+    }
+
+    if (data.city_state === "busy") {
+      setHeader(
+        "More people than normal are visiting the city centre right now."
+      );
+
+      setcalloutClass(styles.red);
+    } else if (data.city_state === "average") {
+      setHeader("The number of people in the city centre is about normal.");
+
+      setcalloutClass(styles.orange);
+    } else if (data.city_state === "quiet") {
+      setHeader("There are not many people in the city centre right now.");
+      setcalloutClass(styles.green);
+    } else {
+      setCalloutDataError();
+    }
+  }
+
+  /* eslint-disable */
+
   /* eslint-enable */
 
   return (
