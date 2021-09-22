@@ -10,12 +10,9 @@ export default function ArticleExample({
   inline,
 }) {
   return (
-    <div
-      className={styles.articleExampleContainer}
-      role="main"
-    >
+    <div className={styles.articleExampleContainer} role="main">
       {children}
-      {Title ? <h3>{Title}</h3> : ""}
+      {Title ? <h3>{Title}</h3> : <br />}
       <p>{Content}</p>
       <a target={inline ? "" : "_blank"} rel="noreferrer" href={Linkurl}>
         {LinkTitle}
