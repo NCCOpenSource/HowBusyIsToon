@@ -57,7 +57,7 @@ export default function Parking() {
     <div className={styles.container}>
       <div className={styles.calloutContainer}>
         <h1 className={styles.calloutHeadText}>Real Time Parking Data</h1>
-        <p className={styles.calloutText}>
+        <h3 className={styles.calloutText}>
           Real time parking data for key car parks based on in/out ANPR counts
           providing an indicator of the available spaces. Some of these spaces
           may be limited to certain users. Information on other car parking
@@ -70,7 +70,7 @@ export default function Parking() {
             here
           </a>
           .
-        </p>
+        </h3>
       </div>
       <div className={styles.topContainer}>
         <div className={styles.select}>
