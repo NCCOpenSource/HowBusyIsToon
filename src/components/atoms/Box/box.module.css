@@ -16,6 +16,9 @@
 .Backgroundgrey {
   background-color: var(--color-light-grey);
 }
+.BackgroundMediumgrey {
+  background-color: var(--color-medium-grey);
+}
 .Backgroundwhite {
   background-color: #ffffff;
 }

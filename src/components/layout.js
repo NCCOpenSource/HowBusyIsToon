@@ -11,7 +11,7 @@ export default function Layout(props) {
 
   return (
     <Container>
-      <div className={styles.closed}>
+      {/* <div className={styles.closed}>
         <div>
           <Box>
             <h1>How Busy Is Toon is currently closed for maintenance</h1>
@@ -23,7 +23,7 @@ export default function Layout(props) {
             </h1>
           </Box>
         </div>
-      </div>
+      </div> */}
       <div className={styles.containerGrid}>
         <header className={styles.header}>
           <Nav />

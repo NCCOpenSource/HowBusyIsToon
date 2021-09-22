@@ -109,26 +109,11 @@ export default function Home() {
     <>
       <div className={styles.container}>
         <>
-          <div className={styles.Callout}>
-            <CalloutData />
-          </div>
+         
           <div className={styles.CameraFeed}>
             <CameraFeed />
-          </div>
-          <Link className={styles.HowBusyAreRoads} to={"/roads"}>
-            <SimpleArticle
-              TopText="How Busy Are Roads?"
-              BottomText="View live traffic updates of the busiest commuter routes in and out of
-          the city centre"
-            />
-          </Link>
-          <Link className={styles.HowBusyAreBuses} to={"/transport"}>
-            <SimpleArticle
-              TopText="How Busy Are Buses?"
-              BottomText="View real time bus data on a map of the region to see exactly where
-              your next bus is"
-            />
-          </Link>
+          </div >
+     
         </>
 
         <div className={styles.SectionExample}>

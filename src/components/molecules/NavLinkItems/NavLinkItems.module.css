@@ -29,6 +29,12 @@
   line-height: 112px;
   font-size: 24px;
   display: block;
+
+  font-family: Lato !important;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+
 }
 .navLinkItems:hover .navLinkItemText {
   background: rgba(255, 255, 255, 0.2);
