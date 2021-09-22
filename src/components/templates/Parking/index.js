@@ -40,7 +40,7 @@ export default function Parking() {
       setCarParks(carParkTemp);
     }
 
-    fetch(`https://howbusyistoon.com/ncc-car-parks.json`)
+    fetch(`https://howbusyistoon.dev.urbanobservatory.ac.uk/ncc-car-parks.json`)
       .then((response) => {
         response.json();
       })
