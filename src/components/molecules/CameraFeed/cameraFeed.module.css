@@ -5,12 +5,15 @@
   height: 100%;
   display: grid;
   gap: var(--grid-gap);
+  grid-template-columns: 33% auto auto;
+  grid-template-rows: 100px auto auto auto;
 
   grid-template-areas:
-    "a b"
-    "c c";
+    "infoSelectContainer c  c"
+    "Callout c c"
+    "Callout c c"
+    "Callout HowBusyAreRoads HowBusyAreBuses";
 
-  font-family: Europa-Bold;
   font-style: normal;
   font-weight: bold;
   font-size: 20px;
@@ -18,6 +21,9 @@
   height: auto;
 }
 
+.infoSelectContainer {
+  grid-area: infoSelectContainer;
+}
 .infoContainer {
   background: var(--color-light-grey);
   border-radius: var(--border-radius);
@@ -28,6 +34,7 @@
   align-items: center;
   justify-content: flex-start;
   color: #333333;
+  min-height: 48px;
 }
 
 .infoContainer svg {
@@ -40,12 +47,16 @@
   line-height: 20px;
   margin-top: 4px;
   margin-bottom: 4px;
+  font-size: 16px;
+  font-weight: 700;
 }
 
 .timeIcon {
   padding: 12px, 16px, 12px, 16px;
 }
-
+.Callout {
+  grid-area: Callout;
+}
 .select {
   grid-area: b;
   height: auto;
@@ -53,6 +64,15 @@
 
 .feed {
   grid-area: c;
+}
+
+.HowBusyAreRoads {
+  grid-area: HowBusyAreRoads;
+  text-decoration: none;
+}
+.HowBusyAreBuses {
+  grid-area: HowBusyAreBuses;
+  text-decoration: none;
 }
 
 .selectbox {
@@ -83,7 +103,7 @@
 
 .selectbox::after {
   content: "";
-  left: 0.7em;
+  left: 16px;
   top: calc(50% - 11px);
   height: 100%;
   position: absolute;
@@ -97,7 +117,7 @@
 .selector {
   border: 1px solid #eee;
   border-radius: 0.25rem;
-  padding: 0.5rem 2.5rem 0.5rem 3rem;
+  padding: 0.5rem 2.5rem 0.5rem 3.5rem;
   display: flex;
   background-color: white;
   outline: 0;
@@ -109,7 +129,7 @@
   border-radius: var(--border-radius);
   font-style: normal;
   font-family: "Europa-Bold";
-  font-size: 20px;
+  font-size: 16px;
   line-height: 20px;
 }
 
@@ -117,11 +137,18 @@
   background-color: #eee;
 }
 
-@media only screen and (max-width: 830px) {
+@media only screen and (max-width: 1024px) {
   .cityCenterCameraFeed {
+    grid-template-columns: auto;
+    grid-template-rows: auto;
     grid-template-areas:
-      "a"
-      "b"
-      "c";
+      "infoSelectContainer"
+      "c"
+      "Callout"
+      "HowBusyAreRoads"
+      "HowBusyAreBuses";
+  }
+  .infoContainer {
+    margin-bottom: var(--grid-gap);
   }
 }

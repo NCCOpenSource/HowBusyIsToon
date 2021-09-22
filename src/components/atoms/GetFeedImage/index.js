@@ -16,7 +16,7 @@ export default function GetFeedImage({ option }) {
       )
         .then((response) => response.json())
         .then((response) => {
-          imageArray[2] = response.latest.value;
+          imageArray[0] = response.latest.value;
 
           setApiFinished(false);
           setImageList(imageArray);
@@ -31,18 +31,11 @@ export default function GetFeedImage({ option }) {
       )
         .then((response) => response.json())
         .then((response) => {
+          console.log(
+            "🚀 ~ file: index.js ~ line 34 ~ .then ~ response",
+            response
+          );
           imageArray[1] = response.feed[3].timeseries[0].latest.value;
-        })
-        .catch((error) => {
-          console.log(error);
-        });
-
-      fetch(
-        `https://api.newcastle.urbanobservatory.ac.uk/api/v2/sensors/timeseries/b0cf0739-8bf0-4edc-83ff-99be42d0dc21`
-      )
-        .then((response) => response.json())
-        .then((response) => {
-          imageArray[0] = response.latest.value;
         })
         .catch((error) => {
           console.log(error);

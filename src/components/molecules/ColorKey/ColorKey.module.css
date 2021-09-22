@@ -38,6 +38,6 @@
   .key {
     flex-direction: column;
     height: auto;
-    width: 100vw;
+    min-width: 320px;
   }
 }
