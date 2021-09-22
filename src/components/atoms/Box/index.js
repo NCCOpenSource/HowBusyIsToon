@@ -56,6 +56,8 @@ export default function Box({
 
     if (fullBorderRadius === "top") {
       setBorderRadius(style.borderRadiusTop);
+      setBackgroundColor(style.BackgroundMediumgrey);
+      setFontColor(style.Fontblack);
     }
     if (fullBorderRadius === "bottom") {
       setBorderRadius(style.borderRadiusBottom);

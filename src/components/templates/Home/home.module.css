@@ -6,29 +6,16 @@
   display: grid;
   gap: var(--grid-gap);
 
-  grid-template-columns: 33% auto auto;
   grid-template-areas:
-    "Callout CameraFeed CameraFeed "
-    "Callout CameraFeed CameraFeed "
-    "Callout HowBusyAreBuses HowBusyAreRoads "
-    "SectionExample SectionExample SectionExample"
-    "CouncilLinks CouncilLinks CouncilLinks";
+    "CameraFeed   "
+    "SectionExample  "
+    "CouncilLinks  ";
 }
 
-.Callout {
-  grid-area: Callout;
-}
 .CameraFeed {
   grid-area: CameraFeed;
 }
-.HowBusyAreRoads {
-  grid-area: HowBusyAreRoads;
-  text-decoration: none;
-}
-.HowBusyAreBuses {
-  grid-area: HowBusyAreBuses;
-  text-decoration: none;
-}
+
 .SectionExample {
   grid-area: SectionExample;
   padding: 3.5vw 0;

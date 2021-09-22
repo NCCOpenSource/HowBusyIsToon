@@ -1,13 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@200;300;400;500&display=swap");
+@import url("//db.onlinewebfonts.com/c/d3bfee78e8ead45d9057a95bb6ff5de8?family=Europa-Bold");
+@import url("//db.onlinewebfonts.com/c/23c0fcab84d99da0de762de7e220a6e1?family=Europa");
 
-@font-face {
+/* @font-face {
   font-family: "Europa-Bold";
   font-style: normal;
   font-weight: 700;
   line-height: 36px;
   letter-spacing: 0em;
   src: url("../../fonts/Europa\ Regular.woff2") format("woff2");
-}
+} */
 
 /* @font-face {
   font-family: "Lato";
@@ -52,10 +54,10 @@ h3 {
   margin-top: 0;
 }
 p {
-  font-style: normal !important;
-  font-family: "Europa-Bold" !important;
+  font-family: "Europa" !important;
   font-size: 20px;
   line-height: 37.5px;
+  font-weight: 400;
 }
 
 p:first-of-type {
@@ -91,8 +93,6 @@ a {
   p {
     font-size: 1.1875em !important;
     line-height: 30px !important;
-    font-style: normal;
-    font-weight: 400;
     letter-spacing: 0em;
   }
 }

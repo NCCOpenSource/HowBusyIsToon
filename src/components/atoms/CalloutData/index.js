@@ -11,11 +11,17 @@ export default function CalloutData() {
 
   useEffect(() => {
     function getCalloutData() {
-      fetch(`https://howbusyistoon.com/ncc-city-state.json`)
+      fetch(
+        `https://howbusyistoon.dev.urbanobservatory.ac.uk/ncc-city-state.json`
+      )
         .then((response) => {
           response.json();
         })
         .then((response) => {
+          console.log(
+            "🚀 ~ file: index.js ~ line 19 ~ .then ~ response",
+            response
+          );
           setData(response);
           setCalloutData();
         })

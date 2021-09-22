@@ -13,7 +13,6 @@
 .calloutText {
   font-family: lato !important;
 
-  color: #ffffff;
   font-style: normal;
   font-weight: bold;
   font-size: 48px;
@@ -52,9 +51,11 @@
 
 .orange {
   background-color: #f3984c;
+  color: #fff0f1;
 }
 .green {
   background-color: #1bb57d;
+  color: #fff0f1;
 }
 @media only screen and (max-width: 1025px) {
   .image {
