@@ -12,7 +12,6 @@
   border-radius: var(--border-radius);
   z-index: 0 !important;
   position: relative !important;
-  height: 600px;
 }
 .search {
   position: absolute;

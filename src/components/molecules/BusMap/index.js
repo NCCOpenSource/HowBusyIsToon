@@ -84,10 +84,6 @@ export default function BusMap() {
         )
       : null;
 
-  console.log(
-    "🚀 ~ file: index.js ~ line 76 ~ BusMap ~ filteredBuses",
-    filteredBuses
-  );
 
   function onChange(event) {
     setInput(event.target.value);
