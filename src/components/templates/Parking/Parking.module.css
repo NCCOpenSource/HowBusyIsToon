@@ -8,11 +8,32 @@
   grid-template-columns: 33% 33% auto;
 
   grid-template-areas:
-    "top top top"
-    "a b b"
-    "a b b"
-    "c c c";
+    "select CarParkMap CarParkMap"
+    "ColorKey CarParkMap CarParkMap"
+    "a CarParkMap CarParkMap"
+    "a CarParkMap CarParkMap"
+    "SectionExample SectionExample SectionExample"
+    "CouncilLinks CouncilLinks CouncilLinks";
 }
+.CarParkMap {
+  grid-area: CarParkMap;
+}
+.select {
+  grid-area: select;
+}
+.option {
+  padding: 18px;
+}
+.ColorKey {
+  grid-area: ColorKey;
+}
+.SectionExample {
+  grid-area: SectionExample;
+}
+.CouncilLinks {
+  grid-area: CouncilLinks;
+}
+
 .calloutContainer {
   font-family: lato !important;
 
@@ -21,6 +42,7 @@
   color: var(--black);
   background-color: var(--color-light-grey);
   border-radius: var(--border-radius);
+  border: 1px solid #dfdfdf;
 }
 
 .calloutHeadText {
@@ -46,12 +68,6 @@
   padding: 32px;
   letter-spacing: 0em;
   text-align: left;
-}
-.topContainer {
-  grid-area: top;
-
-  display: flex;
-  align-items: center;
 }
 
 .selectbox {
@@ -98,18 +114,6 @@
   background-color: #eee;
 }
 
-.option {
-  padding: 18px;
-}
-.ColorKey {
-  margin-left: auto;
-}
-.SectionExample {
-  grid-area: b;
-}
-.CouncilLinks {
-  grid-area: c;
-}
 @media only screen and (max-width: 1025px) {
   .container {
     grid-template-areas: none;

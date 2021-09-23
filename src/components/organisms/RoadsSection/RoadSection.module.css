@@ -42,6 +42,7 @@
   color: var(--black);
   background-color: var(--color-light-grey);
   border-radius: var(--border-radius);
+  border: 1px solid #dfdfdf;
 }
 .calloutText {
   font-family: Lato;

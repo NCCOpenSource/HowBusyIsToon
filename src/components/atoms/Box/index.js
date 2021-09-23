@@ -53,6 +53,7 @@ export default function Box({
     if (fontColor === "white") {
       setFontColor(style.Fontwhite);
     }
+    
 
     if (fullBorderRadius === "top") {
       setBorderRadius(style.borderRadiusTop);

@@ -72,39 +72,36 @@ export default function Parking() {
           .
         </h3>
       </div>
-      <div className={styles.topContainer}>
-        <div className={styles.select}>
-          <div className={styles.selectbox}>
-            <select
-              className={styles.selector}
-              name="option"
-              onChange={handleChange}
-              onBlur={handleChange}
-            >
-              {" "}
-              <option className={styles.option} value="">
-                Show Every Car Park
-              </option>
-              {carParks
-                ? carParks.map((carPark) => (
-                    <option
-                      key={carPark.id}
-                      className={styles.option}
-                      value={carPark.name}
-                    >
-                      {carPark.name}
-                    </option>
-                  ))
-                : null}
-            </select>
-          </div>
-        </div>
-
-        <div className={styles.ColorKey}>
-          <ColorKey ToggleCarPark />
+      <div className={styles.select}>
+        <div className={styles.selectbox}>
+          <select
+            className={styles.selector}
+            name="option"
+            onChange={handleChange}
+            onBlur={handleChange}
+          >
+            {" "}
+            <option className={styles.option} value="">
+              Show Every Car Park
+            </option>
+            {carParks
+              ? carParks.map((carPark) => (
+                  <option
+                    key={carPark.id}
+                    className={styles.option}
+                    value={carPark.name}
+                  >
+                    {carPark.name}
+                  </option>
+                ))
+              : null}
+          </select>
         </div>
       </div>
-      <div className={styles.SectionExample}>
+      <div className={styles.ColorKey}>
+        <ColorKey ToggleCarPark />
+      </div>
+      <div className={styles.CarParkMap}>
         <CarParkMap data={carParks} option={option} />
       </div>
       {/* <div className={styles.SectionExample}>
