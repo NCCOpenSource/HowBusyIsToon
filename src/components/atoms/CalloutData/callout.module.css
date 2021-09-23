@@ -8,6 +8,7 @@
   flex-direction: column;
   justify-content: flex-start;
   font-family: lato !important;
+  border: 1px solid #dfdfdf;
 }
 
 .calloutText {

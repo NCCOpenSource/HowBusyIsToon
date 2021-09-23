@@ -11,10 +11,12 @@ import styles2 from "../Nexus/Nexus.module.css";
 export default function PublicTransport() {
   return (
     <div className={styles.container}>
-      <div className={styles.ColorKey}>
+ 
+      <div className={styles.middleContainer}>
+        
+     <div className={styles.ColorKey}>
         <ColorKey />
       </div>
-      <div className={styles.middleContainer}>
         <div className={styles.calloutContainer}>
           <p className={styles.calloutText}>
             Use our interactive map to find the real time location information
@@ -23,7 +25,8 @@ export default function PublicTransport() {
         </div>
         <div className={styles.BusMap}>
           <BusMap />
-        </div>{" "}
+        </div>
+
       </div>
 
       <div className={styles.Innercontainer}>

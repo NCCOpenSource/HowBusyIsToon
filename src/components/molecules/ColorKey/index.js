@@ -5,7 +5,10 @@ import styles from "./ColorKey.module.css";
 
 export default function ColorKey({ ToggleCarPark }) {
   return (
-    <Box color="grey" fontColor="black">
+    <>
+      <div className={styles.top} fullBorderRadius={"top"}>
+        How busy is your car park?
+      </div>
       <div className={styles.key}>
         <div className={styles.keyItem}>
           <div className={styles.image}>
@@ -62,6 +65,6 @@ export default function ColorKey({ ToggleCarPark }) {
           ""
         )}
       </div>
-    </Box>
+    </>
   );
 }

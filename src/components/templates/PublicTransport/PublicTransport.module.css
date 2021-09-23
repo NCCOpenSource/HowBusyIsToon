@@ -11,12 +11,17 @@
   display: flex;
   align-items: center;
   margin-left: auto;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
 }
 .middleContainer {
   display: grid;
   gap: var(--grid-gap);
-  grid-template-areas: "a b";
-  grid-template-columns: 33% auto;
+  grid-template-areas:
+    "ColorKey b b"
+    "a b b";
+  grid-template-columns: 33% auto auto;
 }
 .calloutContainer {
   font-family: lato !important;
@@ -27,6 +32,8 @@
   background-color: aqua;
   color: var(--black);
   background-color: var(--color-light-grey);
+  border: 1px solid #dfdfdf;
+
   border-radius: var(--border-radius);
 }
 .calloutText {
@@ -67,9 +74,11 @@
     display: grid;
     gap: var(--grid-gap);
     grid-template-areas:
-      "a a"
-      "b b";
-    grid-template-columns: 33% auto;
+      "a"
+      "ColorKey"
+      "b";
+    grid-template-rows: auto auto 600px;
+    grid-template-columns: auto;
   }
 }
 

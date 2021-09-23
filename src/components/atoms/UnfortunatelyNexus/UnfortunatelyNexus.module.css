@@ -4,6 +4,8 @@
   border-radius: var(--border-radius);
   color: var(--black);
   background-color: var(--color-light-grey);
+  border: 1px solid #dfdfdf;
+
   font-family: lato !important;
 }
 
