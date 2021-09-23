@@ -1,8 +1,6 @@
-import { StaticImage } from "gatsby-plugin-image";
 import React, { useEffect, useState } from "react";
-import styles from "./callout.module.css";
-import footfallData from "./footfallbusyData.json";
 import WalkingIcon from "../../../assets/icons/Walking.svg";
+import styles from "./callout.module.css";
 
 export default function CalloutData() {
   const [header, setHeader] = useState("");
@@ -22,10 +20,12 @@ export default function CalloutData() {
       setCalloutData(res);
     });
   }, []);
+
   function setCalloutDataError() {
     setHeader("Data is Currently Unavailable");
     setcalloutClass(styles.black);
   }
+
   function setCalloutData(data) {
     if (data == null) {
       setCalloutDataError();
