@@ -7,7 +7,7 @@ export default function ColorKey({ ToggleCarPark }) {
   return (
     <>
       <div className={styles.top} fullBorderRadius={"top"}>
-        How busy is your car park?
+        How busy is your {ToggleCarPark ? "car park?" : "bus?"}
       </div>
       <div className={styles.key}>
         <div className={styles.keyItem}>
