@@ -58,13 +58,11 @@ once the scripts are running, replace the fetch URL with the path to the newly g
   fetch(`https://howbusyistoon.com/ncc-car-parks.json`)
   fetch( _new carPark path here_ )
 
-  ## Closed For Maintenance
+## Closed For Maintenance
 
-  To Put the Site in a Closed for Maintenance state , you need to configure
+To Put the Site in a Closed for Maintenance state , you need to configure
+` const IsThisSiteClosedForMaintenece = true;`
+to Revert , change value to false
+This is located inside
 
-  ` const IsThisSiteClosedForMaintenece = true;`
-
-  to Revert , change value to false
-  This is located inside
-
-  - src/components/layout.js
+- src/components/layout.js
