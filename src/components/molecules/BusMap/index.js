@@ -33,20 +33,17 @@ export default function BusMap() {
       const res = await Response.json();
       if (res.length > 1) {
         filterData(res);
-        console.log("test3");
       }
       return res;
     }
 
     callData().then((res) => {
       if (res.length > 1) {
-        console.log("test2");
         filterData(res);
       }
     });
 
     const interval = setInterval(() => {
-      console.log("test");
       callData();
     }, 4000);
     return () => clearInterval(interval);
