@@ -9,7 +9,7 @@ import { ClosedForMaintenance } from "./atoms/ClosedForMaintenance";
 
 export default function Layout(props) {
   const { children } = props;
-  const IsThisSiteClosedForMaintenece = true;
+  const IsThisSiteClosedForMaintenece = false;
 
   return (
     <Container>
