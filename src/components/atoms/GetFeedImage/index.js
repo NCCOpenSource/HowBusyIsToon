@@ -11,8 +11,9 @@ export default function GetFeedImage({ option }) {
     fetchFeedImages();
 
     function fetchFeedImages() {
+      // Grey St old URL `https://api.newcastle.urbanobservatory.ac.uk/api/v2/sensors/timeseries/685e0b8e-9c97-41df-94db-c039205814d1`
       fetch(
-        `https://api.newcastle.urbanobservatory.ac.uk/api/v2/sensors/timeseries/685e0b8e-9c97-41df-94db-c039205814d1`
+        "https://api.vision.urbanobservatory.ac.uk/stills/image?location=GreyStTheatreSouth"
       )
         .then((response) => response.json())
         .then((response) => {
