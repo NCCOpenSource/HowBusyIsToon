@@ -43,16 +43,17 @@ export default function CameraFeed() {
               <option className={styles.option} value="0" label="Grey Street">
                 Grey Street
               </option>
-              <option
+              {/* <option
                 className={styles.option}
                 value="1"
                 label="Collingwood Street"
               >
                 Collingwood Street
-              </option>{" "}
-              <option className={styles.option} value="3" label="Barrack Road">
+              </option> */}
+              {" "}
+              {/* <option className={styles.option} value="3" label="Barrack Road">
                 Barrack Road
-              </option>
+              </option> */}
               <option
                 className={styles.option}
                 value="4"
