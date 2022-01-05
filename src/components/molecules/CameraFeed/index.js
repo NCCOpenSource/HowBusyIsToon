@@ -68,6 +68,13 @@ export default function CameraFeed() {
               >
                 Blackett Street 2
               </option>
+              <option
+                className={styles.option}
+                value="6"
+                label="Northumberland Street"
+              >
+                Northumberland Street
+              </option>
             </select>
           </div>
         </div>
