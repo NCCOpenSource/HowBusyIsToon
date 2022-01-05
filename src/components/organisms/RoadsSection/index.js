@@ -30,9 +30,9 @@ export default function RoadsSection() {
             <option className={styles.option} value="0">
               Coast Road (Corner House 1)
             </option>
-            <option className={styles.option} value="1">
+{/*<option className={styles.option} value="1">
               Coast Road (Corner House 2)
-            </option>
+            </option>*/}
             <option className={styles.option} value="2">
               Cowgate junction
             </option>
