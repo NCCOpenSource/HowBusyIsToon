@@ -11,7 +11,7 @@ export default function GetRoadFeedImage({ option }) {
       const imageArray = [];
       /* old URL `https://api.newcastle.urbanobservatory.ac.uk/api/v2/sensors/timeseries/camera-mounted-at-newcastle-a1058-stephenson-road-heaton-road-newton-road-corner-house/camera-image-view-01/raw` */
       fetch(
-        `https://netrafficcams.co.uk/newcastle-a1058-coast-road-jesmond-road-cradlewell-osborne-avenue-0`
+        `https://netrafficcams.co.uk/sites/default/files/images/cameras//NC_A1058A1.jpg`
       )
         .then((response) => response.json())
         .then((response) => {
