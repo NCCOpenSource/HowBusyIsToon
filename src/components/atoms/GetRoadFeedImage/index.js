@@ -23,7 +23,7 @@ export default function GetRoadFeedImage({ option }) {
         .catch((error) => {
           console.log(error);
         });
-
+      imageArray[0] = "https://netrafficcams.co.uk/sites/default/files/images/cameras//NC_A1058A1.jpg";
       fetch(
         `https://api.newcastle.urbanobservatory.ac.uk/api/v2/sensors/timeseries/camera-mounted-at-newcastle-a1058-stephenson-road-heaton-road-newton-road-corner-house/camera-image/raw`
       )
