@@ -72,7 +72,7 @@ export default function GetFeedImage({ option }) {
         });
       /* Northumberland Street */ 
       fetch(
-        "https://api.vision.urbanobservatory.ac.uk/stills/image?location=NorthumberlandStSavilleRowNorth"
+        "https://api.vision.urbanobservatory.ac.uk/stills/image_json?location=NorthumberlandStSavilleRowNorth"
       )
         .then((response) => response.json())
         .then((response) => {
