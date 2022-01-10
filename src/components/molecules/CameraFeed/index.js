@@ -40,7 +40,14 @@ export default function CameraFeed() {
             >
               Northumberland Street
             </option> */}{" "}
-              <option className={styles.option} value="0" label="Grey Street">
+             <option
+                className={styles.option}
+                value="4"
+                label="Blackett Street 1"
+              >
+                Blackett Street 1
+              </option>
+             <option className={styles.option} value="0" label="Grey Street">
                 Grey Street
               </option>
               {/* <option
@@ -54,13 +61,7 @@ export default function CameraFeed() {
               {/* <option className={styles.option} value="3" label="Barrack Road">
                 Barrack Road
               </option> */}
-              <option
-                className={styles.option}
-                value="4"
-                label="Blackett Street 1"
-              >
-                Blackett Street 1
-              </option>
+              
               <option
                 className={styles.option}
                 value="5"
