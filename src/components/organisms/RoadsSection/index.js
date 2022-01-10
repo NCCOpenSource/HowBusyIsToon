@@ -28,7 +28,7 @@ export default function RoadsSection() {
             onBlur={handleChange}
           >
             <option className={styles.option} value="0">
-              Coast Road (Corner House 1)
+              Coast Road
             </option>
 {/*<option className={styles.option} value="1">
               Coast Road (Corner House 2)
