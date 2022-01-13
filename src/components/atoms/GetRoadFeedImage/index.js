@@ -40,7 +40,7 @@ export default function GetRoadFeedImage({ option }) {
         .catch((error) => {
           console.log(error);
         });
-
+      /*
       fetch(
         "https://api.newcastle.urbanobservatory.ac.uk/api/v2/sensors/timeseries/camera-mounted-at-newcastle-a167-ponteland-road-stamfordham-road-b1305-two-ball-lonnen/camera-image-view-03/raw"
       )
@@ -52,7 +52,8 @@ export default function GetRoadFeedImage({ option }) {
         .catch((error) => {
           console.log(error);
         });
-
+        */
+          imageArray[2] = "https://community.newcastle.gov.uk/HBITcache/index.php?image=CowgateJunction.jpg";
       fetch(
         "https://api.newcastle.urbanobservatory.ac.uk/api/v2/sensors/entity/camera-mounted-at-newcastle-a186-pilgrim-street-mosley-street"
       )
