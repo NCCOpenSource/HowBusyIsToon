@@ -10,6 +10,7 @@ export default function GetRoadFeedImage({ option }) {
     async function fetchFeedImages() {
       const imageArray = [];
       /* old URL `https://api.newcastle.urbanobservatory.ac.uk/api/v2/sensors/timeseries/camera-mounted-at-newcastle-a1058-stephenson-road-heaton-road-newton-road-corner-house/camera-image-view-01/raw` */
+      /*
       fetch(
         `https://netrafficcams.co.uk/sites/default/files/images/cameras//NC_A1058A1.jpg`
       )
@@ -23,7 +24,9 @@ export default function GetRoadFeedImage({ option }) {
         .catch((error) => {
           console.log(error);
         });
-      imageArray[0] = "https://netrafficcams.co.uk/sites/default/files/images/cameras//NC_A1058A1.jpg";
+      */
+      imageArray[0] = "https://community.newcastle.gov.uk/HBITcache/index.php?image=CoastRd.jpg"; // coast road
+      
       fetch(
         `https://api.newcastle.urbanobservatory.ac.uk/api/v2/sensors/timeseries/camera-mounted-at-newcastle-a1058-stephenson-road-heaton-road-newton-road-corner-house/camera-image/raw`
       )
