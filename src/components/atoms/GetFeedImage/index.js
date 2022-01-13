@@ -29,6 +29,8 @@ export default function GetFeedImage({ option }) {
         });
       */
       imageArray[0] = "https://community.newcastle.gov.uk/HBITcache/index.php?image=GreySt.jpg";
+      
+      /*
       fetch(
         "https://api.newcastle.urbanobservatory.ac.uk/api/v2/sensors/entity/239cb433-d521-4e07-a239-eff22b826342"
       )
@@ -39,7 +41,8 @@ export default function GetFeedImage({ option }) {
         .catch((error) => {
           console.log(error);
         });
-
+      */
+      /*
       fetch(
         "https://api.newcastle.urbanobservatory.ac.uk/api/v2/sensors/feed/a9f0600c-7967-4c4a-83e1-0a37dbf7981a"
       )
@@ -50,6 +53,7 @@ export default function GetFeedImage({ option }) {
         .catch((error) => {
           console.log(error);
         });
+        */
       /* Blackett Street 1 */
       /*
       fetch(
