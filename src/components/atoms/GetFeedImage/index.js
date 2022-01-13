@@ -76,7 +76,7 @@ export default function GetFeedImage({ option }) {
       // Blackett St 2
        imageArray[5] = "https://community.newcastle.gov.uk/HBITcache/index.php?image=BlackettStreet2.jpg";
       /* Northumberland Street */ 
-      
+      /*
       fetch(
         "https://api.vision.urbanobservatory.ac.uk/stills/image_json?location=NorthumberlandStSavilleRowNorth"
       )
@@ -87,8 +87,8 @@ export default function GetFeedImage({ option }) {
         .catch((error) => {
           console.log(error);
         });
-      
-      imageArray[6] = "https://api.vision.urbanobservatory.ac.uk/stills/image?location=NorthumberlandStSavilleRowNorth";
+      */
+      imageArray[6] = "https://community.newcastle.gov.uk/HBITcache/index.php?image=NorthumberlandSt.jpg";
       setImageList(imageArray);
       setApiFinished(false);
       setApiFinished(true);
