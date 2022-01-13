@@ -68,6 +68,8 @@ export default function GetRoadFeedImage({ option }) {
         });
         */
      imageArray[3] = "https://community.newcastle.gov.uk/HBITcache/index.php?image=MosleySt.jpg"
+      
+      /*
       fetch(
         "https://api.newcastle.urbanobservatory.ac.uk/api/v2/sensors/timeseries/camera-mounted-at-newcastle-b1318-high-street-a191-church-road-salters-road/camera-image-view-03/raw"
       )
@@ -79,6 +81,8 @@ export default function GetRoadFeedImage({ option }) {
         .catch((error) => {
           console.log(error);
         });
+        */
+       imageArray[4] = "https://community.newcastle.gov.uk/HBITcache/index.php?image=GosforthHighSt.jpg";
     }
 
     fetchFeedImages();
