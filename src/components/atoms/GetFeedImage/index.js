@@ -12,12 +12,13 @@ export default function GetFeedImage({ option }) {
 
     function fetchFeedImages() {
      // Grey St old URL `https://api.newcastle.urbanobservatory.ac.uk/api/v2/sensors/timeseries/685e0b8e-9c97-41df-94db-c039205814d1`
+     /*
       fetch(
         `https://api.newcastle.urbanobservatory.ac.uk/api/v2/sensors/timeseries/685e0b8e-9c97-41df-94db-c039205814d1`
       )
         .then((response) => response.json())
         .then((response) => {
-          imageArray[0] = "https://api.vision.urbanobservatory.ac.uk/stills/image?location=GreyStTheatreSouth"; // supplied with new feed that isn't JSON
+          imageArray[0] = "https://api.vision.urbanobservatory.ac.uk/stills/image?location=GreyStTheatreSouth"; 
 
           setApiFinished(false);
           setImageList(imageArray);
@@ -26,7 +27,8 @@ export default function GetFeedImage({ option }) {
         .catch((error) => {
           console.log(error);
         });
-
+      */
+      imageArray[0] = "https://community.newcastle.gov.uk/HBITcache/index.php?image=GreySt.jpg";
       fetch(
         "https://api.newcastle.urbanobservatory.ac.uk/api/v2/sensors/entity/239cb433-d521-4e07-a239-eff22b826342"
       )
