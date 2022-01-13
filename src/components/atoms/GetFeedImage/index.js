@@ -61,7 +61,7 @@ export default function GetFeedImage({ option }) {
         .catch((error) => {
           console.log(error);
         });
-
+      /*
       fetch(
         "https://api.newcastle.urbanobservatory.ac.uk/api/v2/sensors/timeseries/36dbe148-6e59-4538-91d6-ffeea1e262a9"
       )
@@ -72,6 +72,9 @@ export default function GetFeedImage({ option }) {
         .catch((error) => {
           console.log(error);
         });
+        */
+      // Blackett St 2
+       imageArray[5] = "https://community.newcastle.gov.uk/HBITcache/index.php?image=BlackettStreet2.jpg";
       /* Northumberland Street */ 
       
       fetch(
