@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import CloseIcon from "../../../assets/icons/icon_closeMenu.svg";
 import BurgerIcon from "../../../assets/icons/icon_mobileNavButton.svg";
 import Box from "../../atoms/Box";
-import NavLinkItems from "../../molecules/NavLinkItems";
+//import NavLinkItems from "../../molecules/NavLinkItems";
 import NavOverlay from "../../molecules/NavOverlay";
 import styles from "./navigation.module.css";
 
