@@ -7,11 +7,10 @@ export default function NavLinkItems() {
   /* eslint-disable */
   const [path, setPath] = useState(useLocation().pathname);
   /* eslint-enable */
- return(<>);
         
   return (
     <>
-      {/*
+      
       <li>
         <ul
           tabIndex="0"
@@ -40,7 +39,7 @@ export default function NavLinkItems() {
           </li>
         </ul>
       </li>
-      */}
+      
       <li>
         <ul
           tabIndex="0"
