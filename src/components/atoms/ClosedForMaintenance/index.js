@@ -8,12 +8,11 @@ export const ClosedForMaintenance = () => {
       <div className={styles.closed}>
         <div>
           <Box>
-            <h1>How Busy Is Toon is currently closed for maintenance</h1>
+            <h1>How Busy Is Toon is no longer available</h1>
           </Box>
           <Box color={"grey"} fontColor={"black"}>
             <h1>
-              We will be back shortly with more real time data about your city
-              centre
+              Check back for real time bus data soon
             </h1>
           </Box>
         </div>
