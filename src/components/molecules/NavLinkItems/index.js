@@ -11,6 +11,7 @@ export default function NavLinkItems() {
         
   return (
     <>
+      {/*
       <li>
         <ul
           tabIndex="0"
@@ -39,6 +40,7 @@ export default function NavLinkItems() {
           </li>
         </ul>
       </li>
+      */}
       <li>
         <ul
           tabIndex="0"
