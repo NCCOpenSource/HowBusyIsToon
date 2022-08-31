@@ -6,7 +6,7 @@ import {
 } from "./navOverlay.module.css";
 
 export default function NavOverlay({ children }) {
-  return ();
+  
   return (
     <div className={stylesOverlay.overlay}>
       <div className={stylesOverlay.overlayList}>
