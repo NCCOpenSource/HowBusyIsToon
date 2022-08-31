@@ -14,6 +14,14 @@ export default function Nav(props) {
     event.preventDefault();
     setShow(!show);
   };
+ return (
+    <Box fullBorderRadius="full" addheight={"true"}>
+      <Link to="/" className={styles.titlecontainer}>
+        <h1 className={styles.title}>How Busy Is Toon</h1>
+        <h2 className={styles.Tagline}>Your home for real time data</h2>
+      </Link>
+    </Box>
+  );
 
   return (
     <Box fullBorderRadius="full" addheight={"true"}>
