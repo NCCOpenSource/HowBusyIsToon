@@ -80,6 +80,7 @@
   line-height: 112px;
 
   z-index: 2;
+  display:none;
 }
 .mobile_Burger_menu {
   z-index: 2;
