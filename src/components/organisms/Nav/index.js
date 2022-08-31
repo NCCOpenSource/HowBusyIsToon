@@ -22,9 +22,11 @@ export default function Nav(props) {
         <h2 className={styles.Tagline}>Your home for real time data</h2>
       </Link>
       <nav className={styles.nav}>
+        <!--
         <ul className={styles.NavLinkList}>
           <NavLinkItems />
         </ul>
+       -->
       </nav>
       <nav className={styles.mobileNav}>
         {show ? (
